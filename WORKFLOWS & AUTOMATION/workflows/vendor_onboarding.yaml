@@ -1,0 +1,307 @@
+name: vendor_onboarding
+version: "2.0"
+description: "Complete vendor onboarding and qualification process"
+category: "vendor_management"
+owner: "procurement_team"
+
+triggers:
+  - type: "manual"
+    description: "Manual initiation by procurement team"
+  - type: "automatic"
+    description: "Triggered when new vendor is created in system"
+    conditions:
+      - "vendor.status == 'pending'"
+
+steps:
+  - id: "initial_screening"
+    name: "Initial Vendor Screening"
+    description: "Initial assessment and document collection"
+    assignee: "procurement_specialist"
+    required_actions:
+      - "validate_business_registration"
+      - "collect_financial_statements"
+      - "verify_tax_compliance"
+      - "check_insurance_coverage"
+    inputs:
+      - name: "vendor_documents"
+        type: "file_upload"
+        required: true
+        description: "Business registration, financial statements, insurance certificates"
+      - name: "vendor_questionnaire"
+        type: "form"
+        required: true
+        description: "Vendor capability and capacity assessment"
+    outputs:
+      - name: "screening_score"
+        type: "number"
+        description: "Initial screening score (0-100)"
+      - name: "screening_recommendation"
+        type: "string"
+        description: "Recommendation for next steps"
+    timeout_hours: 48
+    escalation_rules:
+      - after_hours: 24
+        escalate_to: "procurement_manager"
+      - after_hours: 36
+        escalate_to: "procurement_director"
+    next_steps:
+      - condition: "screening_score >= 70"
+        goto: "due_diligence"
+      - condition: "screening_score < 70"
+        goto: "rejection_review"
+
+  - id: "due_diligence"
+    name: "Due Diligence Process"
+    description: "Comprehensive background check and risk assessment"
+    assignee: "compliance_team"
+    required_actions:
+      - "conduct_background_check"
+      - "assess_financial_stability"
+      - "review_legal_compliance"
+      - "evaluate_operational_capability"
+    inputs:
+      - name: "background_check_report"
+        type: "file_upload"
+        required: true
+      - name: "financial_analysis"
+        type: "report"
+        required: true
+      - name: "compliance_checklist"
+        type: "form"
+        required: true
+    outputs:
+      - name: "due_diligence_score"
+        type: "number"
+        description: "Due diligence assessment score"
+      - name: "risk_level"
+        type: "string"
+        description: "Assigned risk level (Low/Medium/High)"
+      - name: "mitigation_requirements"
+        type: "array"
+        description: "List of required risk mitigation actions"
+    timeout_hours: 72
+    approval_required: true
+    approvers:
+      - "compliance_manager"
+      - "risk_officer"
+    next_steps:
+      - condition: "due_diligence_score >= 80"
+        goto: "contract_negotiation"
+      - condition: "due_diligence_score >= 60 and due_diligence_score < 80"
+        goto: "conditional_approval"
+      - condition: "due_diligence_score < 60"
+        goto: "rejection_review"
+
+  - id: "conditional_approval"
+    name: "Conditional Approval Review"
+    description: "Review and approval with specific conditions"
+    assignee: "vendor_committee"
+    required_actions:
+      - "review_mitigation_plan"
+      - "define_approval_conditions"
+      - "set_monitoring_requirements"
+    inputs:
+      - name: "mitigation_plan"
+        type: "document"
+        required: true
+      - name: "conditional_terms"
+        type: "text"
+        required: true
+    outputs:
+      - name: "approval_decision"
+        type: "string"
+        description: "Approval decision with conditions"
+      - name: "monitoring_period"
+        type: "number"
+        description: "Enhanced monitoring period in months"
+    timeout_hours: 48
+    approval_required: true
+    approvers:
+      - "procurement_director"
+      - "legal_counsel"
+    next_steps:
+      - condition: "approval_decision == 'approved'"
+        goto: "contract_negotiation"
+      - condition: "approval_decision == 'rejected'"
+        goto: "rejection_process"
+
+  - id: "contract_negotiation"
+    name: "Contract Negotiation"
+    description: "Drafting and negotiation of vendor agreement"
+    assignee: "legal_team"
+    required_actions:
+      - "draft_standard_agreement"
+      - "negotiate_terms_conditions"
+      - "finalize_pricing_structure"
+      - "define_service_levels"
+    inputs:
+      - name: "negotiation_notes"
+        type: "text"
+        required: true
+      - name: "agreed_terms"
+        type: "document"
+        required: true
+    outputs:
+      - name: "contract_draft"
+        type: "file"
+        description: "Final contract draft"
+      - name: "negotiation_summary"
+        type: "report"
+        description: "Summary of negotiated terms"
+    timeout_hours: 120
+    approval_required: true
+    approvers:
+      - "legal_director"
+      - "business_owner"
+    next_steps:
+      - condition: "contract_draft != null"
+        goto: "final_approval"
+
+  - id: "final_approval"
+    name: "Final Approval"
+    description: "Executive approval and system setup"
+    assignee: "vendor_manager"
+    required_actions:
+      - "obtain_executive_signature"
+      - "setup_vendor_portal"
+      - "configure_payment_terms"
+      - "activate_vendor_account"
+    inputs:
+      - name: "executive_approval"
+        type: "signature"
+        required: true
+      - name: "vendor_portal_config"
+        type: "configuration"
+        required: true
+    outputs:
+      - name: "vendor_status"
+        type: "string"
+        description: "Final vendor status"
+      - name: "onboarding_complete"
+        type: "boolean"
+        description: "Onboarding completion flag"
+    timeout_hours: 24
+    approval_required: true
+    approvers:
+      - "chief_procurement_officer"
+    next_steps:
+      - condition: "onboarding_complete == true"
+        goto: "completed"
+      - condition: "onboarding_complete == false"
+        goto: "rejection_process"
+
+  - id: "rejection_review"
+    name: "Rejection Review"
+    description: "Formal vendor rejection process"
+    assignee: "procurement_manager"
+    required_actions:
+      - "document_rejection_reasons"
+      - "notify_vendor"
+      - "update_system_records"
+    inputs:
+      - name: "rejection_justification"
+        type: "text"
+        required: true
+    outputs:
+      - name: "rejection_letter"
+        type: "document"
+        description: "Formal rejection communication"
+    timeout_hours: 24
+    next_steps:
+      - condition: "rejection_letter != null"
+        goto: "rejection_process"
+
+  - id: "completed"
+    name: "Onboarding Completed"
+    description: "Finalize onboarding process"
+    assignee: "system"
+    required_actions:
+      - "send_welcome_package"
+      - "schedule_orientation"
+      - "initiate_performance_tracking"
+    outputs:
+      - name: "onboarding_summary"
+        type: "report"
+        description: "Complete onboarding summary report"
+    next_steps: []
+
+  - id: "rejection_process"
+    name: "Rejection Process Complete"
+    description: "Formal closure of rejected application"
+    assignee: "system"
+    required_actions:
+      - "archive_documents"
+      - "update_blacklist_if_needed"
+    outputs:
+      - name: "rejection_summary"
+        type: "report"
+        description: "Rejection process summary"
+    next_steps: []
+
+notifications:
+  - trigger: "step_started"
+    recipients: ["assignee", "process_owner"]
+    template: "step_started_notification"
+  
+  - trigger: "step_completed"
+    recipients: ["next_assignee", "process_owner"]
+    template: "step_completed_notification"
+  
+  - trigger: "timeout_warning"
+    recipients: ["assignee", "escalation_contact"]
+    template: "timeout_warning_notification"
+  
+  - trigger: "process_completed"
+    recipients: ["process_owner", "business_stakeholders"]
+    template: "process_completed_notification"
+
+escalation_paths:
+  - level: "manager"
+    contact: "procurement_manager"
+    conditions: ["step_timeout > 24h", "quality_issue_detected"]
+  
+  - level: "director"
+    contact: "procurement_director"
+    conditions: ["step_timeout > 48h", "major_risk_identified"]
+  
+  - level: "executive"
+    contact: "chief_procurement_officer"
+    conditions: ["process_stalled", "strategic_impact"]
+
+metrics:
+  - name: "onboarding_duration"
+    description: "Total time from initiation to completion"
+    target: "14 days"
+  
+  - name: "approval_rate"
+    description: "Percentage of vendors successfully onboarded"
+    target: "85%"
+  
+  - name: "step_compliance"
+    description: "Percentage of steps completed on time"
+    target: "90%"
+  
+  - name: "stakeholder_satisfaction"
+    description: "Satisfaction score from business stakeholders"
+    target: "4.5/5"
+
+integration_points:
+  - system: "ERP"
+    actions: ["create_vendor_record", "setup_payment_terms"]
+  
+  - system: "CRM"
+    actions: ["create_vendor_profile", "setup_communication_channels"]
+  
+  - system: "Document_Management"
+    actions: ["store_contracts", "archive_documents"]
+
+version_control:
+  last_updated: "2024-01-15"
+  updated_by: "workflow_administrator"
+  change_log:
+    - version: "2.0"
+      date: "2024-01-15"
+      changes: ["Added conditional approval step", "Enhanced risk assessment criteria"]
+    - version: "1.0"
+      date: "2023-10-01"
+      changes: ["Initial workflow implementation"]

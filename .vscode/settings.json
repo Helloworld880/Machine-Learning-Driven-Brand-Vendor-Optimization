@@ -1,0 +1,8 @@
+{
+    "python.defaultInterpreterPath": "C:\\Users\\yashd\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+    "editor.formatOnSave": true,
+    "files.autoSave": "afterDelay",
+    "python.analysis.diagnosticSeverityOverrides": {
+        "reportMissingImports": "none"
+    }
+}

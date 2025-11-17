@@ -1,0 +1,51 @@
+vendor_id,name,category,contact_email,contact_phone,contract_value,start_date,end_date,status,risk_level
+1,Tech Solutions Inc.,Strategic,contact@techsolutions.com,+1-555-0101,750000,2023-01-15,2025-12-31,Active,Low
+2,Global Logistics Ltd,Tactical,info@globallogistics.com,+1-555-0102,450000,2023-03-20,2024-12-31,Active,Medium
+3,Quality Manufacturing Co,Commodity,sales@qualitymfg.com,+1-555-0103,280000,2023-02-10,2024-08-15,Active,High
+4,Innovative Services LLC,Specialized,support@innovativeservices.com,+1-555-0104,520000,2023-04-05,2025-06-30,Active,Medium
+5,Reliable Supplies Corp,Commodity,orders@reliablesupplies.com,+1-555-0105,190000,2023-01-30,2024-09-30,Active,Low
+6,Advanced Tech Partners,Strategic,partner@advancedtech.com,+1-555-0106,890000,2023-06-15,2026-03-31,Active,Low
+7,Prime Delivery Systems,Tactical,service@primedelivery.com,+1-555-0107,320000,2023-05-20,2024-11-30,Active,Medium
+8,Precision Components Inc,Commodity,info@precisioncomp.com,+1-555-0108,210000,2023-07-10,2024-10-15,Active,High
+9,Digital Innovation Labs,Specialized,hello@digitalabs.com,+1-555-0109,680000,2023-08-05,2025-09-30,Active,Low
+10,Global Supply Chain Co,Tactical,contact@globalsupply.com,+1-555-0110,380000,2023-09-12,2024-12-31,Active,Medium
+11,Elite Manufacturing,Strategic,info@elitemfg.com,+1-555-0111,950000,2023-10-18,2026-06-30,Active,Low
+12,Quick Response Logistics,Tactical,support@quicklogistics.com,+1-555-0112,290000,2023-11-22,2024-08-31,Active,High
+13,Smart Tech Solutions,Specialized,contact@smarttech.com,+1-555-0113,710000,2023-12-05,2025-11-30,Active,Medium
+14,Reliable Parts Inc,Commodity,orders@reliableparts.com,+1-555-0114,240000,2024-01-15,2024-12-31,Active,Low
+15,Innovation Hub LLC,Strategic,hello@innovationhub.com,+1-555-0115,820000,2024-02-20,2026-04-30,Active,Low
+16,Proactive Solutions Inc,Tactical,info@proactivesolutions.com,+1-555-0116,410000,2023-02-28,2024-10-31,Active,Medium
+17,Advanced Materials Co,Commodity,sales@advancedmaterials.com,+1-555-0117,270000,2023-04-15,2024-09-30,Active,High
+18,Digital Transformation Ltd,Specialized,contact@digitaltrans.com,+1-555-0118,590000,2023-05-22,2025-08-31,Active,Low
+19,Supply Chain Experts,Tactical,service@supplychainexp.com,+1-555-0119,330000,2023-06-30,2024-11-30,Active,Medium
+20,Quality Assurance Inc,Commodity,info@qualityassurance.com,+1-555-0120,220000,2023-08-12,2024-10-15,Active,High
+21,Strategic Partners LLC,Strategic,partner@strategicpartners.com,+1-555-0121,880000,2023-09-18,2026-05-31,Active,Low
+22,Logistics Masters,Tactical,support@logisticsmasters.com,+1-555-0122,370000,2023-10-25,2024-12-15,Active,Medium
+23,Manufacturing Excellence,Commodity,contact@mfg excellence.com,+1-555-0123,260000,2023-11-30,2024-09-30,Active,High
+24,Tech Innovation Group,Specialized,hello@techinnovation.com,+1-555-0124,640000,2023-12-28,2025-10-31,Active,Low
+25,Global Operations Ltd,Tactical,info@globalops.com,+1-555-0125,350000,2024-01-10,2024-11-30,Active,Medium
+26,Precision Engineering,Commodity,sales@precisioneng.com,+1-555-0126,230000,2024-02-15,2024-10-31,Active,High
+27,Digital Solutions Co,Specialized,contact@digitalsolutions.com,+1-555-0127,670000,2024-03-20,2025-12-31,Active,Low
+28,Supply Chain Pros,Tactical,service@supplychainpros.com,+1-555-0128,390000,2024-04-25,2024-12-31,Active,Medium
+29,Quality Components Inc,Commodity,info@qualitycomponents.com,+1-555-0129,250000,2024-05-30,2024-11-30,Active,High
+30,Innovation Labs LLC,Strategic,hello@innovationlabs.com,+1-555-0130,910000,2024-06-15,2026-07-31,Active,Low
+31,Advanced Logistics,Tactical,support@advancedlogistics.com,+1-555-0131,420000,2024-07-20,2025-01-31,Active,Medium
+32,Manufacturing Partners,Commodity,contact@mfgpartners.com,+1-555-0132,300000,2024-08-25,2024-12-31,Active,High
+33,Tech Services Group,Specialized,info@techservicesgroup.com,+1-555-0133,730000,2024-09-30,2026-03-31,Active,Low
+34,Global Supply Solutions,Tactical,service@globalsupplysolutions.com,+1-555-0134,440000,2024-10-05,2025-02-28,Active,Medium
+35,Precision Manufacturing,Commodity,sales@precisionmfg.com,+1-555-0135,310000,2024-11-10,2025-01-31,Active,High
+36,Digital Partners LLC,Specialized,partner@digitalpartners.com,+1-555-0136,780000,2024-12-15,2026-06-30,Active,Low
+37,Strategic Solutions Inc,Strategic,info@strategicsolutions.com,+1-555-0137,860000,2023-07-15,2025-12-31,Active,Low
+38,Logistics Network,Tactical,support@logisticsnetwork.com,+1-555-0138,460000,2023-08-20,2024-12-31,Active,Medium
+39,Quality Systems Co,Commodity,contact@qualitysystems.com,+1-555-0139,320000,2023-09-25,2024-11-30,Active,High
+40,Innovation Technologies,Specialized,hello@innovationtech.com,+1-555-0140,690000,2023-10-30,2025-09-30,Active,Low
+41,Global Partners Ltd,Tactical,info@globalpartners.com,+1-555-0141,480000,2023-11-05,2024-12-31,Active,Medium
+42,Manufacturing Solutions,Commodity,sales@mfg solutions.com,+1-555-0142,340000,2023-12-10,2024-11-30,Active,High
+43,Tech Development Group,Specialized,contact@techdevelopment.com,+1-555-0143,750000,2024-01-15,2026-02-28,Active,Low
+44,Supply Chain Masters,Tactical,service@supplychainmasters.com,+1-555-0144,500000,2024-02-20,2025-01-31,Active,Medium
+45,Precision Solutions,Commodity,info@precisionsolutions.com,+1-555-0145,360000,2024-03-25,2024-12-31,Active,High
+46,Digital Enterprise Ltd,Specialized,hello@digitalenterprise.com,+1-555-0146,810000,2024-04-30,2026-04-30,Active,Low
+47,Strategic Operations,Tactical,support@strategicops.com,+1-555-0147,520000,2024-05-05,2025-02-28,Active,Medium
+48,Quality Engineering,Commodity,contact@qualityeng.com,+1-555-0148,380000,2024-06-10,2025-01-31,Active,High
+49,Innovation Systems,Specialized,info@innovationsystems.com,+1-555-0149,840000,2024-07-15,2026-05-31,Active,Low
+50,Global Manufacturing,Tactical,service@globalmfg.com,+1-555-0150,540000,2024-08-20,2025-03-31,Active,Medium

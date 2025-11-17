@@ -1,0 +1,317 @@
+/* Dark theme for Vendor Dashboard */
+
+/* Dark theme variables */
+:root {
+    --dark-bg-primary: #1a202c;
+    --dark-bg-secondary: #2d3748;
+    --dark-bg-tertiary: #4a5568;
+    --dark-text-primary: #f7fafc;
+    --dark-text-secondary: #e2e8f0;
+    --dark-text-muted: #a0aec0;
+    --dark-border: #4a5568;
+    --dark-accent: #4299e1;
+    --dark-success: #48bb78;
+    --dark-warning: #ed8936;
+    --dark-error: #f56565;
+}
+
+/* Dark theme base styles */
+.dark-theme {
+    background-color: var(--dark-bg-primary);
+    color: var(--dark-text-primary);
+}
+
+.dark-theme .main-header {
+    color: var(--dark-text-primary);
+}
+
+.dark-theme .metric-card {
+    background-color: var(--dark-bg-secondary);
+    border-left: 4px solid var(--dark-accent);
+    color: var(--dark-text-primary);
+}
+
+.dark-theme .alert-card {
+    background-color: #2d3748;
+    border-left: 4px solid var(--dark-warning);
+    color: var(--dark-text-primary);
+}
+
+/* Streamlit component overrides for dark theme */
+.dark-theme .stApp {
+    background-color: var(--dark-bg-primary);
+    color: var(--dark-text-primary);
+}
+
+.dark-theme .css-1d391kg,
+.dark-theme .css-1y4p8pa {
+    background-color: var(--dark-bg-primary);
+}
+
+.dark-theme .stButton>button {
+    background-color: var(--dark-bg-secondary);
+    color: var(--dark-text-primary);
+    border: 1px solid var(--dark-border);
+}
+
+.dark-theme .stButton>button:hover {
+    background-color: var(--dark-bg-tertiary);
+    border-color: var(--dark-accent);
+}
+
+.dark-theme .stSelectbox>div>div,
+.dark-theme .stTextInput>div>div>input,
+.dark-theme .stNumberInput>div>div>input,
+.dark-theme .stTextArea>div>div>textarea {
+    background-color: var(--dark-bg-secondary);
+    color: var(--dark-text-primary);
+    border: 1px solid var(--dark-border);
+}
+
+.dark-theme .stDataFrame {
+    background-color: var(--dark-bg-secondary);
+    color: var(--dark-text-primary);
+}
+
+.dark-theme .stTable {
+    background-color: var(--dark-bg-secondary);
+    color: var(--dark-text-primary);
+}
+
+.dark-theme .stTable table {
+    background-color: var(--dark-bg-secondary);
+    color: var(--dark-text-primary);
+}
+
+.dark-theme .stTable th {
+    background-color: var(--dark-bg-tertiary);
+    color: var(--dark-text-primary);
+}
+
+.dark-theme .stTable td {
+    background-color: var(--dark-bg-secondary);
+    color: var(--dark-text-primary);
+    border-color: var(--dark-border);
+}
+
+/* Sidebar dark theme */
+.dark-theme .css-1d391kg {
+    background-color: var(--dark-bg-secondary);
+}
+
+.dark-theme .css-1y4p8pa {
+    background-color: var(--dark-bg-primary);
+}
+
+/* Chart adjustments for dark theme */
+.dark-theme .js-plotly-plot .plotly .modebar {
+    background: var(--dark-bg-secondary) !important;
+}
+
+.dark-theme .js-plotly-plot .plotly .modebar-btn {
+    color: var(--dark-text-primary) !important;
+}
+
+/* Metric cards in dark theme */
+.dark-theme .stMetric {
+    background-color: var(--dark-bg-secondary);
+    border: 1px solid var(--dark-border);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.dark-theme .stMetric label {
+    color: var(--dark-text-muted) !important;
+}
+
+.dark-theme .stMetric div {
+    color: var(--dark-text-primary) !important;
+}
+
+/* Expander in dark theme */
+.dark-theme .streamlit-expanderHeader {
+    background-color: var(--dark-bg-secondary);
+    color: var(--dark-text-primary);
+    border: 1px solid var(--dark-border);
+}
+
+.dark-theme .streamlit-expanderContent {
+    background-color: var(--dark-bg-secondary);
+    color: var(--dark-text-primary);
+    border: 1px solid var(--dark-border);
+    border-top: none;
+}
+
+/* Tabs in dark theme */
+.dark-theme .stTabs [data-baseweb="tab-list"] {
+    background-color: var(--dark-bg-secondary);
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.dark-theme .stTabs [data-baseweb="tab"] {
+    background-color: var(--dark-bg-secondary);
+    color: var(--dark-text-muted);
+}
+
+.dark-theme .stTabs [aria-selected="true"] {
+    background-color: var(--dark-bg-primary);
+    color: var(--dark-text-primary);
+}
+
+/* Custom dark theme classes */
+.dark-card {
+    background: var(--dark-bg-secondary);
+    border: 1px solid var(--dark-border);
+    border-radius: 8px;
+    padding: 20px;
+    margin: 10px 0;
+    color: var(--dark-text-primary);
+}
+
+.dark-table {
+    background: var(--dark-bg-secondary);
+    color: var(--dark-text-primary);
+    border: 1px solid var(--dark-border);
+}
+
+.dark-table th {
+    background: var(--dark-bg-tertiary);
+    color: var(--dark-text-primary);
+    border-bottom: 1px solid var(--dark-border);
+}
+
+.dark-table td {
+    border-bottom: 1px solid var(--dark-border);
+    color: var(--dark-text-primary);
+}
+
+.dark-input {
+    background: var(--dark-bg-secondary) !important;
+    color: var(--dark-text-primary) !important;
+    border: 1px solid var(--dark-border) !important;
+}
+
+.dark-input:focus {
+    border-color: var(--dark-accent) !important;
+    box-shadow: 0 0 0 1px var(--dark-accent) !important;
+}
+
+/* Status indicators in dark theme */
+.dark-theme .status-indicator {
+    border: 1px solid var(--dark-border);
+}
+
+.dark-theme .status-active {
+    background: var(--dark-success);
+    border-color: var(--dark-success);
+}
+
+.dark-theme .status-pending {
+    background: var(--dark-warning);
+    border-color: var(--dark-warning);
+}
+
+.dark-theme .status-inactive {
+    background: var(--dark-error);
+    border-color: var(--dark-error);
+}
+
+/* Performance score colors in dark theme */
+.dark-theme .score-excellent {
+    color: var(--dark-success);
+}
+
+.dark-theme .score-good {
+    color: #68d391; /* Lighter green for dark theme */
+}
+
+.dark-theme .score-average {
+    color: var(--dark-warning);
+}
+
+.dark-theme .score-poor {
+    color: var(--dark-error);
+}
+
+/* Risk level colors in dark theme */
+.dark-theme .risk-low {
+    color: var(--dark-success);
+    background: rgba(72, 187, 120, 0.2);
+}
+
+.dark-theme .risk-medium {
+    color: var(--dark-warning);
+    background: rgba(237, 137, 54, 0.2);
+}
+
+.dark-theme .risk-high {
+    color: var(--dark-error);
+    background: rgba(245, 101, 101, 0.2);
+}
+
+/* Mobile dark theme adjustments */
+.dark-theme .mobile-card {
+    background: var(--dark-bg-secondary);
+    border: 1px solid var(--dark-border);
+    color: var(--dark-text-primary);
+}
+
+.dark-theme .mobile-metric {
+    background: linear-gradient(135deg, var(--dark-bg-tertiary) 0%, var(--dark-bg-secondary) 100%);
+    color: var(--dark-text-primary);
+}
+
+.dark-theme .mobile-alert {
+    background: rgba(237, 137, 54, 0.1);
+    border-left: 4px solid var(--dark-warning);
+    color: var(--dark-text-primary);
+}
+
+.dark-theme .mobile-button {
+    background: var(--dark-bg-tertiary);
+    color: var(--dark-text-primary);
+    border: 1px solid var(--dark-border);
+}
+
+.dark-theme .mobile-button:hover {
+    background: var(--dark-accent);
+    border-color: var(--dark-accent);
+}
+
+/* Print styles for dark theme */
+@media print {
+    .dark-theme {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .dark-theme .metric-card,
+    .dark-theme .alert-card,
+    .dark-theme .dark-card {
+        background: white !important;
+        color: black !important;
+        border: 1px solid #ddd !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .dark-theme {
+        --dark-border: #ffffff;
+        --dark-text-primary: #ffffff;
+        --dark-text-secondary: #e0e0e0;
+    }
+    
+    .dark-theme .metric-card {
+        border: 2px solid var(--dark-border);
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .dark-theme * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

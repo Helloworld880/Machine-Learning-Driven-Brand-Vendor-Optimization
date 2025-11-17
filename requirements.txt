@@ -1,0 +1,46 @@
+# Core Data Science & Analytics
+streamlit==1.28.0
+pandas==2.1.0
+numpy==1.24.0
+plotly==5.15.0
+
+# Database & Data Processing
+sqlite3
+SQLAlchemy==2.0.23
+
+# Authentication & Security
+PyJWT==2.8.0
+cryptography==41.0.7
+bcrypt==4.0.1
+
+# Email & Notifications
+secure-smtplib==0.1.1
+email-validator==2.1.0
+
+# Date & Time Handling
+python-dateutil==2.8.2
+pytz==2023.3
+
+# Data Visualization
+matplotlib==3.7.0
+seaborn==0.12.2
+
+# Reporting & Export
+openpyxl==3.1.2
+xlsxwriter==3.1.2
+reportlab==4.0.4
+
+# Web Framework & API
+flask==2.3.3
+flask-cors==4.0.0
+requests==2.31.0
+
+# Utilities & Helpers
+python-dotenv==1.0.0
+click==8.1.7
+typing-extensions==4.8.0
+
+# Development & Testing
+pytest==7.4.2
+black==23.9.1
+flake8==6.1.0

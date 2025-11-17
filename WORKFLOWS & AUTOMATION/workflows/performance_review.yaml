@@ -1,0 +1,307 @@
+name: performance_review
+version: "1.2"
+description: "Quarterly vendor performance review and improvement planning"
+category: "vendor_management"
+owner: "vendor_relationship_team"
+
+triggers:
+  - type: "scheduled"
+    description: "Automatically triggered quarterly"
+    schedule: "0 0 1 */3 *"  # Every 3 months on 1st
+  - type: "manual"
+    description: "Manual initiation by vendor manager"
+  - type: "event_based"
+    description: "Triggered by performance threshold breach"
+    conditions:
+      - "vendor.performance_score < 60"
+      - "vendor.risk_level == 'High'"
+
+steps:
+  - id: "data_collection"
+    name: "Performance Data Collection"
+    description: "Gather and compile performance metrics and reports"
+    assignee: "analytics_team"
+    required_actions:
+      - "extract_performance_metrics"
+      - "compile_financial_data"
+      - "gather_stakeholder_feedback"
+      - "collect_incident_reports"
+    inputs:
+      - name: "review_period"
+        type: "date_range"
+        required: true
+        description: "Period for performance review"
+      - name: "vendor_list"
+        type: "array"
+        required: true
+        description: "List of vendors to be reviewed"
+    outputs:
+      - name: "performance_report"
+        type: "report"
+        description: "Comprehensive performance analysis"
+      - name: "metric_dashboard"
+        type: "dashboard"
+        description: "Interactive performance dashboard"
+    timeout_hours: 48
+    auto_advance: true
+    next_steps: ["review_preparation"]
+
+  - id: "review_preparation"
+    name: "Review Meeting Preparation"
+    description: "Prepare materials and schedule review meetings"
+    assignee: "vendor_manager"
+    required_actions:
+      - "schedule_review_meetings"
+      - "prepare_presentation_materials"
+      - "invite_stakeholders"
+      - "set_meeting_agendas"
+    inputs:
+      - name: "performance_report"
+        type: "report"
+        required: true
+      - name: "stakeholder_list"
+        type: "array"
+        required: true
+    outputs:
+      - name: "meeting_schedule"
+        type: "calendar"
+        description: "Scheduled review meetings"
+      - name: "review_package"
+        type: "document"
+        description: "Complete review package for meetings"
+    timeout_hours: 72
+    next_steps: ["review_meeting"]
+
+  - id: "review_meeting"
+    name: "Performance Review Meeting"
+    description: "Conduct performance review with stakeholders"
+    assignee: "vendor_manager"
+    required_actions:
+      - "present_performance_data"
+      - "discuss_strengths_weaknesses"
+      - "identify_improvement_areas"
+      - "document_feedback"
+    inputs:
+      - name: "review_package"
+        type: "document"
+        required: true
+      - name: "meeting_attendees"
+        type: "array"
+        required: true
+    outputs:
+      - name: "meeting_minutes"
+        type: "document"
+        description: "Detailed meeting minutes and decisions"
+      - name: "performance_assessment"
+        type: "assessment"
+        description: "Formal performance assessment"
+    timeout_hours: 168  # 1 week for all meetings
+    approval_required: true
+    approvers: ["business_stakeholders"]
+    next_steps: ["action_plan_development"]
+
+  - id: "action_plan_development"
+    name: "Improvement Action Plan"
+    description: "Develop performance improvement action plan"
+    assignee: "vendor_relationship_manager"
+    required_actions:
+      - "define_improvement_goals"
+      - "set_measurable_targets"
+      - "assign_responsibilities"
+      - "establish_timeline"
+    inputs:
+      - name: "performance_assessment"
+        type: "assessment"
+        required: true
+      - name: "stakeholder_feedback"
+        type: "feedback"
+        required: true
+    outputs:
+      - name: "improvement_plan"
+        type: "document"
+        description: "Detailed improvement action plan"
+      - name: "success_metrics"
+        type: "metrics"
+        description: "Measurable success criteria"
+    timeout_hours: 48
+    approval_required: true
+    approvers: ["vendor_manager", "business_owner"]
+    next_steps: ["vendor_communication"]
+
+  - id: "vendor_communication"
+    name: "Vendor Feedback Session"
+    description: "Communicate review results and improvement plan to vendor"
+    assignee: "vendor_relationship_manager"
+    required_actions:
+      - "schedule_vendor_meeting"
+      - "present_review_findings"
+      - "discuss_improvement_plan"
+      - "obtain_vendor_commitment"
+    inputs:
+      - name: "improvement_plan"
+        type: "document"
+        required: true
+      - name: "performance_assessment"
+        type: "assessment"
+        required: true
+    outputs:
+      - name: "vendor_feedback"
+        type: "feedback"
+        description: "Vendor response and commitments"
+      - name: "agreed_actions"
+        type: "action_items"
+        description: "Mutually agreed action items"
+    timeout_hours: 72
+    next_steps: ["plan_implementation"]
+
+  - id: "plan_implementation"
+    name: "Plan Implementation"
+    description: "Execute improvement plan and monitor progress"
+    assignee: "vendor_relationship_manager"
+    required_actions:
+      - "initiate_improvement_actions"
+      - "setup_monitoring_framework"
+      - "track_progress_against_targets"
+      - "adjust_plan_as_needed"
+    inputs:
+      - name: "agreed_actions"
+        type: "action_items"
+        required: true
+      - name: "success_metrics"
+        type: "metrics"
+        required: true
+    outputs:
+      - name: "implementation_tracker"
+        type: "tracker"
+        description: "Progress tracking dashboard"
+      - name: "mid_term_review"
+        type: "report"
+        description: "Mid-term progress assessment"
+    timeout_hours: 720  # 30 days for initial implementation
+    next_steps: ["follow_up_review"]
+
+  - id: "follow_up_review"
+    name: "Follow-up and Monitoring"
+    description: "Monitor ongoing performance and adjust strategies"
+    assignee: "vendor_manager"
+    required_actions:
+      - "conduct_follow_up_reviews"
+      - "assess_improvement_impact"
+      - "update_performance_records"
+      - "close_review_cycle"
+    inputs:
+      - name: "implementation_tracker"
+        type: "tracker"
+        required: true
+      - name: "performance_data"
+        type: "data"
+        required: true
+    outputs:
+      - name: "review_summary"
+        type: "report"
+        description: "Complete review cycle summary"
+      - name: "updated_performance_score"
+        type: "number"
+        description: "Revised performance score"
+    timeout_hours: 360  # 15 days for follow-up
+    next_steps: ["completed"]
+
+  - id: "completed"
+    name: "Review Cycle Completed"
+    description: "Formal closure of review cycle"
+    assignee: "system"
+    required_actions:
+      - "archive_review_documents"
+      - "update_vendor_records"
+      - "schedule_next_review"
+    outputs:
+      - name: "cycle_summary"
+        type: "report"
+        description: "Final review cycle summary"
+    next_steps: []
+
+escalation_paths:
+  - level: "manager"
+    contact: "vendor_director"
+    conditions: ["vendor_resistance", "major_performance_issues"]
+  
+  - level: "executive"
+    contact: "chief_procurement_officer"
+    conditions: ["strategic_vendor_issues", "significant_financial_impact"]
+
+notifications:
+  - trigger: "review_scheduled"
+    recipients: ["vendor_manager", "business_stakeholders"]
+    template: "review_scheduled_notification"
+  
+  - trigger: "meeting_reminder"
+    recipients: ["meeting_attendees"]
+    template: "meeting_reminder_notification"
+  
+  - trigger: "action_plan_ready"
+    recipients: ["vendor_contacts", "implementation_team"]
+    template: "action_plan_notification"
+  
+  - trigger: "review_completed"
+    recipients: ["all_stakeholders", "vendor_management_team"]
+    template: "review_completed_notification"
+
+metrics:
+  - name: "review_cycle_duration"
+    description: "Time from initiation to completion"
+    target: "45 days"
+  
+  - name: "improvement_plan_adoption"
+    description: "Percentage of agreed actions implemented"
+    target: "85%"
+  
+  - name: "performance_improvement"
+    description: "Average performance score improvement"
+    target: "10%"
+  
+  - name: "stakeholder_satisfaction"
+    description: "Satisfaction with review process"
+    target: "4.0/5"
+
+integration_points:
+  - system: "Performance_Management"
+    actions: ["update_performance_scores", "track_improvement_metrics"]
+  
+  - system: "Vendor_Portal"
+    actions: ["publish_review_results", "share_improvement_plans"]
+  
+  - system: "ERP"
+    actions: ["update_vendor_ratings", "adjust_contract_terms"]
+
+templates:
+  meeting_agenda:
+    sections:
+      - "Performance Overview"
+      - "Strengths and Achievements"
+      - "Areas for Improvement"
+      - "Stakeholder Feedback"
+      - "Action Plan Discussion"
+  
+  improvement_plan:
+    structure:
+      - "Executive Summary"
+      - "Performance Assessment"
+      - "Improvement Objectives"
+      - "Action Items"
+      - "Success Metrics"
+      - "Timeline"
+      - "Responsibilities"
+
+version_control:
+  last_updated: "2024-01-15"
+  updated_by: "vendor_management_lead"
+  change_log:
+    - version: "1.2"
+      date: "2024-01-15"
+      changes: ["Added vendor communication step", "Enhanced metrics tracking"]
+    - version: "1.1"
+      date: "2023-11-01"
+      changes: ["Extended implementation timeline", "Added escalation paths"]
+    - version: "1.0"
+      date: "2023-07-01"
+      changes: ["Initial workflow implementation"]
