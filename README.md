@@ -192,6 +192,41 @@ Workflow configurations are defined using **YAML files**.
 
 ---
 
+# Future Enhancements
+
+The following improvements can further enhance the platform:
+
+### Machine Learning Integration
+• Implement vendor performance prediction models  
+• Risk scoring using ML algorithms  
+• Demand forecasting for vendor supply chains  
+
+### Advanced Analytics
+• Real-time analytics dashboards  
+• Interactive data visualization  
+• Vendor benchmarking against industry standards  
+
+### Cloud Deployment
+• Deploy dashboard using cloud platforms (AWS / Azure / GCP)  
+• Containerization using Docker  
+• CI/CD pipeline for automated deployment  
+
+### Security Improvements
+• Role-based access control (RBAC)  
+• OAuth authentication integration  
+• API security enhancements  
+
+### Data Integration
+• Integration with ERP systems  
+• External vendor data APIs  
+• Real-time data ingestion pipelines  
+
+### Mobile Accessibility
+• Mobile optimized dashboard interface  
+• Vendor mobile monitoring app
+
+
+---
 # Author
 
 Yash Dudhani
