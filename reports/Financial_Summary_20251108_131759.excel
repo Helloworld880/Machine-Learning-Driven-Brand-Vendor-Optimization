@@ -1,6 +1,0 @@
-vendor_id,name,category,risk_level,contract_value,performance_score,metric_date
-2,Global Logistics Ltd,Tactical,Medium,250000.0,75.9678389313621,2025-11-08
-4,Innovative Services LLC,Specialized,Medium,350000.0,84.02572603695256,2025-11-08
-3,Quality Manufacturing Co,Commodity,High,150000.0,86.69331042189204,2025-11-08
-5,Reliable Supplies Corp,Commodity,Low,120000.0,83.90307060873813,2025-11-08
-1,Tech Solutions Inc.,Strategic,Low,500000.0,78.01265011171921,2025-11-08

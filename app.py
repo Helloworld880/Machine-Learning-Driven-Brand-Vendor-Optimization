@@ -1,29 +1,110 @@
+#!/usr/bin/env python3
+"""
+app.py - Vendor Performance Dashboard (fixed)
+"""
+
 import streamlit as st
+
+# MUST BE FIRST STREAMLIT COMMAND
+st.set_page_config(page_title="Vendor Performance Dashboard", page_icon="📊", layout="wide")
+
 import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
-from datetime import datetime, timedelta
+from datetime import datetime
 import os
+import base64
 import warnings
-warnings.filterwarnings('ignore')
+warnings.filterwarnings("ignore")
 
-# Import custom modules
+# local modules (ensure these files exist in your project)
 from core_modules.auth import Authentication
 from core_modules.database import DatabaseManager
 from core_modules.analytics import AnalyticsEngine
 from core_modules.email_service import EmailService
 from core_modules.config import Config
 from core_modules.api import APIManager
+
+# Import ReportGenerator with lazy loading to avoid circular imports
+REPORT_GENERATOR_AVAILABLE = True
+ReportGenerator = None
+
+try:
+    from enhancements.report_generator import ReportGenerator as RG
+    ReportGenerator = RG
+except ImportError as e:
+    st.error(f"⚠️ Report Generator not available: {e}")
+    REPORT_GENERATOR_AVAILABLE = False
+    # Create a dummy class for fallback
+    class ReportGenerator:
+        def __init__(self, db):
+            self.db = db
+        def generate_report(self, report_type, format_type):
+            return f"❌ Report generator not available. Please check the installation."
+        def get_generated_reports(self):
+            return []
+
+# Other enhancements
 from enhancements.financial_analytics import FinancialAnalytics
 from enhancements.predictive_analytics import PredictiveAnalytics
 from enhancements.compliance_manager import ComplianceManager
 from enhancements.workflow_engine import WorkflowEngine
-from enhancements.report_generator import ReportGenerator
 from enhancements.benchmarking import Benchmarking
 from enhancements.vendor_collaboration import VendorCollaboration
 
+# -------------------------
+# Helpers
+# -------------------------
+def to_dataframe(obj):
+    """Convert various DB return shapes to pandas.DataFrame safely."""
+    if isinstance(obj, pd.DataFrame):
+        return obj.copy()
+    if obj is None:
+        return pd.DataFrame()
+    if isinstance(obj, list):
+        try:
+            return pd.DataFrame(obj)
+        except Exception:
+            return pd.DataFrame()
+    try:
+        # try to consume iterable
+        return pd.DataFrame(list(obj))
+    except Exception:
+        try:
+            return pd.DataFrame(obj)
+        except Exception:
+            return pd.DataFrame()
 
+def ensure_numeric_columns(df, defaults):
+    for col, default in defaults.items():
+        if col not in df.columns:
+            df[col] = default
+        else:
+            df[col] = pd.to_numeric(df[col], errors="coerce").fillna(default)
+    return df
+
+def safe_get_vendors(db):
+    try:
+        if db and hasattr(db, "get_vendors"):
+            res = db.get_vendors()
+            return to_dataframe(res)
+    except Exception as e:
+        print("[app] get_vendors error:", e)
+    return pd.DataFrame()
+
+def safe_get_vendors_with_performance(db):
+    try:
+        if db and hasattr(db, "get_vendors_with_performance"):
+            res = db.get_vendors_with_performance()
+            return to_dataframe(res)
+    except Exception as e:
+        print("[app] get_vendors_with_performance error:", e)
+    return pd.DataFrame()
+
+# -------------------------
+# VendorDashboard
+# -------------------------
 class VendorDashboard:
     def __init__(self):
         self.config = Config()
@@ -36,52 +117,57 @@ class VendorDashboard:
         self.predictive_analytics = PredictiveAnalytics(self.db)
         self.compliance_manager = ComplianceManager(self.db)
         self.workflow_engine = WorkflowEngine(self.db)
-        self.report_generator = ReportGenerator(self.db)
         self.benchmarking = Benchmarking(self.db)
         self.vendor_collaboration = VendorCollaboration(self.db)
 
-        self.setup_page_config()
+        # Lazy initialization for ReportGenerator
+        self._report_generator = None
+
+        self.setup_page_styles()  # Changed from setup_page_config
         self.initialize_session_state()
 
-    # -------------------------------------------------
-    # SESSION CONFIG
-    # -------------------------------------------------
+    @property
+    def report_generator(self):
+        """Lazy loader for report generator to avoid circular imports"""
+        if self._report_generator is None:
+            if REPORT_GENERATOR_AVAILABLE and ReportGenerator is not None:
+                try:
+                    self._report_generator = ReportGenerator(self.db)
+                except Exception as e:
+                    print(f"[app] ReportGenerator init error: {e}")
+                    # Fallback to dummy generator
+                    self._report_generator = ReportGenerator(self.db)
+            else:
+                self._report_generator = ReportGenerator(self.db)
+        return self._report_generator
+
     def initialize_session_state(self):
-        if 'selected_vendor' not in st.session_state:
+        if "selected_vendor" not in st.session_state:
             st.session_state.selected_vendor = None
-        if 'performance_threshold' not in st.session_state:
+        if "performance_threshold" not in st.session_state:
             st.session_state.performance_threshold = 70
-        if 'auto_refresh' not in st.session_state:
+        if "auto_refresh" not in st.session_state:
             st.session_state.auto_refresh = False
+        if "selected_nav" not in st.session_state:
+            st.session_state.selected_nav = "Overview Dashboard"
+        if "user" not in st.session_state:
+            st.session_state.user = None
 
-    def setup_page_config(self):
-        st.set_page_config(page_title="Vendor Performance Dashboard", page_icon="📊", layout="wide")
-        st.markdown("""
+    def setup_page_styles(self):
+        """Only setup styles, not page config (already done at top)"""
+        st.markdown(
+            """
         <style>
-        .main-header {
-            font-size: 2.3rem;
-            color: #1f77b4;
-            text-align: center;
-            margin-bottom: 1.5rem;
-            font-weight: 600;
-        }
-        .metric-card {
-            background-color: #f8f9fa;
-            padding: 1.2rem;
-            border-radius: 8px;
-            border-left: 4px solid #1f77b4;
-            border: 1px solid #e9ecef;
-        }
+        .main-header {font-size: 2.1rem; color: #1f77b4; text-align: center; margin-bottom: 1rem; font-weight: 600;}
         </style>
-        """, unsafe_allow_html=True)
+        """,
+            unsafe_allow_html=True,
+        )
 
-    # -------------------------------------------------
-    # SIDEBAR
-    # -------------------------------------------------
+    # Sidebar
     def render_sidebar(self):
         with st.sidebar:
             st.title("Vendor Dashboard")
-
             col1, col2 = st.columns(2)
             with col1:
                 if st.button("🔄 Refresh Data", use_container_width=True):
@@ -91,9 +177,6 @@ class VendorDashboard:
                     st.session_state.selected_nav = "Overview Dashboard"
                     st.rerun()
 
-            if 'user' not in st.session_state:
-                st.session_state.user = None
-
             if st.session_state.user is None:
                 with st.form("login_form"):
                     username = st.text_input("Username")
@@ -102,12 +185,12 @@ class VendorDashboard:
                         user = self.auth.authenticate(username, password)
                         if user:
                             st.session_state.user = user
-                            st.success(f"Welcome {user['name']}!")
+                            st.success(f"Welcome {user.get('name', username)}!")
                             st.rerun()
                         else:
                             st.error("Invalid credentials")
             else:
-                st.success(f"👋 {st.session_state.user['name']}")
+                st.success(f"👋 {st.session_state.user.get('name','User')}")
                 if st.button("Logout"):
                     st.session_state.user = None
                     st.rerun()
@@ -124,316 +207,192 @@ class VendorDashboard:
                     "Compliance",
                     "Reports",
                     "Vendor Portal",
-                    "Settings"
+                    "Settings",
                 ]
-                st.session_state.selected_nav = st.selectbox("Go to", nav_options, key="nav_select")
+                current_index = nav_options.index(st.session_state.get("selected_nav", nav_options[0])) if st.session_state.get("selected_nav") in nav_options else 0
+                st.session_state.selected_nav = st.selectbox("Go to", nav_options, index=current_index)
 
                 st.divider()
                 st.subheader("Filters")
-                st.session_state.filters = {
-                    'time_period': st.selectbox("Time Period", ["Last 7 days", "Last 30 days", "Last 90 days", "All Time"]),
-                    'performance_threshold': st.slider("Performance Alert Threshold", 0, 100, 70),
-                }
+                time_period = st.selectbox("Time Period", ["Last 7 days", "Last 30 days", "Last 90 days", "All Time"])
+                perf_threshold = st.slider("Performance Alert Threshold", 0, 100, st.session_state.performance_threshold)
+                st.session_state.filters = {"time_period": time_period, "performance_threshold": perf_threshold}
+                st.session_state.performance_threshold = perf_threshold
 
-        # -------------------------------------------------
-    # OVERVIEW DASHBOARD
-    # -------------------------------------------------
+    # Overview
     def render_overview_dashboard(self):
         st.markdown('<div class="main-header">📈 Vendor Performance Overview</div>', unsafe_allow_html=True)
 
-        # Get vendor data directly
-        vendors = self.db.get_vendors()
+        vendors = safe_get_vendors(self.db)
+        vendors = ensure_numeric_columns(vendors, {"deliveries": 0, "on_time_pct": 0.0, "defect_rate_pct": 0.0, "contract_value": 0, "brand_score": 0.0})
+
         total_vendors = len(vendors) if not vendors.empty else 0
-        
-        # Calculate metrics based on your actual columns
+
         if not vendors.empty:
-            # Calculate average contract value as performance proxy
-            if 'contract_value' in vendors.columns:
-                avg_contract_value = vendors['contract_value'].mean()
-                # Convert to performance score (0-100 scale)
-                max_contract = vendors['contract_value'].max()
-                avg_perf = (avg_contract_value / max_contract * 100) if max_contract > 0 else 75.0
-            else:
-                avg_perf = 75.0
-            
-            # Calculate risk count based on your risk_level column
-            if 'risk_level' in vendors.columns:
-                risk_count = (vendors['risk_level'].str.lower() == 'high').sum()
-            else:
-                risk_count = 0
-            
-            # Calculate active vendors based on status
-            if 'status' in vendors.columns:
-                active_vendors = (vendors['status'].str.lower() == 'active').sum()
-            else:
-                active_vendors = total_vendors
-            
-            # Calculate total contract value
-            if 'contract_value' in vendors.columns:
-                total_contract_value = vendors['contract_value'].sum()
-            else:
-                total_contract_value = 0
+            avg_contract_value = vendors["contract_value"].mean() if "contract_value" in vendors.columns else 0
+            max_contract = vendors["contract_value"].max() if "contract_value" in vendors.columns else 0
+            avg_perf = (avg_contract_value / max_contract * 100) if max_contract > 0 else 75.0
+
+            risk_count = (vendors["risk_level"].astype(str).str.lower() == "high").sum() if "risk_level" in vendors.columns else 0
+            active_vendors = (vendors["status"].astype(str).str.lower() == "active").sum() if "status" in vendors.columns else total_vendors
+            total_contract_value = int(vendors["contract_value"].sum()) if "contract_value" in vendors.columns else 0
         else:
             avg_perf = 75.0
             risk_count = 0
             active_vendors = 0
             total_contract_value = 0
 
-        # Display metrics
-        col1, col2, col3, col4 = st.columns(4)
-        col1.metric("Total Vendors", total_vendors)
-        col2.metric("Active Vendors", active_vendors)
-        col3.metric("High Risk Vendors", risk_count)
-        col4.metric("Total Contract Value", f"${total_contract_value:,.0f}")
+        c1, c2, c3, c4 = st.columns(4)
+        c1.metric("Total Vendors", total_vendors)
+        c2.metric("Active Vendors", active_vendors)
+        c3.metric("High Risk Vendors", risk_count)
+        c4.metric("Total Contract Value", f"${total_contract_value:,.0f}")
 
         st.divider()
         st.subheader("Performance Insights")
 
-        if not vendors.empty:
-            # Use contract value as performance indicator
-            if 'contract_value' in vendors.columns and 'name' in vendors.columns:
-                # Show top vendors by contract value
-                top_vendors = vendors.nlargest(15, 'contract_value')
-                fig_bar = px.bar(top_vendors, x='name', y='contract_value',
-                                 color='contract_value', color_continuous_scale="Blues",
-                                 title="Top 15 Vendors by Contract Value",
-                                 labels={'contract_value': 'Contract Value ($)', 'name': 'Vendor Name'})
-                fig_bar.update_layout(xaxis_tickangle=-45)
-                st.plotly_chart(fig_bar, use_container_width=True)
-                
-                # Vendor distribution by category
-                if 'category' in vendors.columns:
-                    st.subheader("Vendor Distribution by Category")
-                    category_counts = vendors['category'].value_counts().reset_index()
-                    category_counts.columns = ['category', 'count']
-                    
-                    col1, col2 = st.columns(2)
-                    with col1:
-                        fig_pie = px.pie(category_counts, names='category', values='count',
-                                       title="Vendor Distribution by Category")
-                        st.plotly_chart(fig_pie, use_container_width=True)
-                    
-                    with col2:
-                        # Average contract value by category
-                        category_contracts = vendors.groupby('category')['contract_value'].mean().reset_index()
-                        fig_bar_cat = px.bar(category_contracts, x='category', y='contract_value',
-                                           title="Average Contract Value by Category",
-                                           color='contract_value', color_continuous_scale="Viridis",
-                                           labels={'contract_value': 'Avg Contract Value ($)', 'category': 'Category'})
-                        st.plotly_chart(fig_bar_cat, use_container_width=True)
-                
-                # Risk distribution
-                if 'risk_level' in vendors.columns:
-                    st.subheader("Risk Level Distribution")
-                    risk_counts = vendors['risk_level'].value_counts().reset_index()
-                    risk_counts.columns = ['risk_level', 'count']
-                    
-                    fig_risk = px.pie(risk_counts, names='risk_level', values='count',
-                                    title="Vendor Risk Level Distribution",
-                                    color='risk_level',
-                                    color_discrete_map={'Low': 'green', 'Medium': 'orange', 'High': 'red'})
-                    st.plotly_chart(fig_risk, use_container_width=True)
-                
-                # Contract status overview
-                if 'status' in vendors.columns:
-                    st.subheader("Contract Status Overview")
-                    status_counts = vendors['status'].value_counts().reset_index()
-                    status_counts.columns = ['status', 'count']
-                    
-                    fig_status = px.bar(status_counts, x='status', y='count',
-                                      title="Vendor Contract Status",
-                                      color='status', text_auto=True)
-                    st.plotly_chart(fig_status, use_container_width=True)
-            
+        if not vendors.empty and "contract_value" in vendors.columns and "name" in vendors.columns:
+            top_vendors = vendors.nlargest(15, "contract_value")
+            fig_bar = px.bar(top_vendors, x="name", y="contract_value", color="contract_value", color_continuous_scale="Blues", title="Top 15 Vendors by Contract Value", labels={"contract_value": "Contract Value ($)", "name": "Vendor Name"})
+            fig_bar.update_layout(xaxis_tickangle=-45)
+            st.plotly_chart(fig_bar, use_container_width=True)
+
+            if "category" in vendors.columns:
+                st.subheader("Vendor Distribution by Category")
+                category_counts = vendors["category"].value_counts().reset_index()
+                category_counts.columns = ["category", "count"]
+                col1, col2 = st.columns(2)
+                with col1:
+                    fig_pie = px.pie(category_counts, names="category", values="count", title="Vendor Distribution by Category")
+                    st.plotly_chart(fig_pie, use_container_width=True)
+                with col2:
+                    category_contracts = vendors.groupby("category")["contract_value"].mean().reset_index()
+                    fig_bar_cat = px.bar(category_contracts, x="category", y="contract_value", title="Average Contract Value by Category", color="contract_value", color_continuous_scale="Viridis")
+                    st.plotly_chart(fig_bar_cat, use_container_width=True)
+        else:
+            if vendors.empty:
+                st.info("No vendor data available.")
             else:
                 st.warning(f"Available columns: {list(vendors.columns)}")
-                
-                # Show basic data table if we can't create charts
-                st.subheader("Vendor Data Overview")
                 st.dataframe(vendors.head(10), use_container_width=True)
-        else:
-            st.info("No vendor data available.")
-      # -------------------------------------------------
-    # VENDOR PERFORMANCE
-    # -------------------------------------------------
+
+    # Vendor Performance
     def render_vendor_performance(self):
         st.markdown('<div class="main-header">📊 Vendor Performance Analysis</div>', unsafe_allow_html=True)
-        
-        # Get vendor data
-        vendors_data = self.db.get_vendors_with_performance()
-        
-        # If empty, try alternative method
+
+        vendors_data = safe_get_vendors_with_performance(self.db)
         if vendors_data.empty:
-            vendors_data = self.db.get_vendors()
-        
+            vendors_data = safe_get_vendors(self.db)
+
+        vendors_data = ensure_numeric_columns(vendors_data, {"deliveries": 0, "on_time_pct": 0.0, "defect_rate_pct": 0.0, "contract_value": 0, "brand_score": 0.0})
+
         st.success(f"📊 Loaded {len(vendors_data)} vendor records")
-        
+
         if not vendors_data.empty:
-            # Show data structure info
             with st.expander("🔍 View Data Structure"):
                 st.write("Available columns:", list(vendors_data.columns))
                 st.dataframe(vendors_data.head(), use_container_width=True)
-            
-            # Vendor Comparison Section - Using contract value as performance metric
-            st.subheader("🔍 Compare Vendors")
-            
-            # Use contract value as the main metric since we don't have performance_score
-            vendor_name_col = 'name' if 'name' in vendors_data.columns else vendors_data.columns[0]
-            performance_col = 'contract_value' if 'contract_value' in vendors_data.columns else None
-            
+
+            vendor_name_col = "name" if "name" in vendors_data.columns else (vendors_data.columns[0] if len(vendors_data.columns) > 0 else None)
+            performance_col = "contract_value" if "contract_value" in vendors_data.columns else None
+
             if vendor_name_col and performance_col:
                 col1, col2 = st.columns(2)
                 with col1:
-                    vendor_options = vendors_data[vendor_name_col].unique()
+                    vendor_options = vendors_data[vendor_name_col].dropna().unique().tolist()
                     v1 = st.selectbox("Select Vendor 1", vendor_options)
                 with col2:
-                    v2 = st.selectbox("Select Vendor 2", [v for v in vendor_options if v != v1])
+                    v2 = st.selectbox("Select Vendor 2", [v for v in vendor_options if v != v1] if v1 else vendor_options)
 
                 if v1 and v2:
-                    # Get vendor data
                     v1_data = vendors_data[vendors_data[vendor_name_col] == v1]
                     v2_data = vendors_data[vendors_data[vendor_name_col] == v2]
-                    
                     if not v1_data.empty and not v2_data.empty:
                         v1_value = float(v1_data[performance_col].iloc[0])
                         v2_value = float(v2_data[performance_col].iloc[0])
                         diff = v1_value - v2_value
-                        
-                        col1, col2, col3 = st.columns(3)
-                        col1.metric(v1, f"${v1_value:,.0f}")
-                        col2.metric(v2, f"${v2_value:,.0f}")
-                        col3.metric("Difference", f"${diff:,.0f}")
-
-                        # Comparison chart
+                        c1, c2, c3 = st.columns(3)
+                        c1.metric(v1, f"${v1_value:,.0f}")
+                        c2.metric(v2, f"${v2_value:,.0f}")
+                        c3.metric("Difference", f"${diff:,.0f}")
                         st.divider()
                         comparison_data = vendors_data[vendors_data[vendor_name_col].isin([v1, v2])]
-                        fig_comp = px.bar(comparison_data, x=vendor_name_col, y=performance_col, 
-                                        color=vendor_name_col, 
-                                        title="Vendor Contract Value Comparison", 
-                                        labels={performance_col: 'Contract Value ($)', vendor_name_col: 'Vendor'},
-                                        text_auto=True)
+                        fig_comp = px.bar(comparison_data, x=vendor_name_col, y=performance_col, color=vendor_name_col, title="Vendor Contract Value Comparison", labels={performance_col: "Contract Value ($)", vendor_name_col: "Vendor"}, text_auto=True)
                         st.plotly_chart(fig_comp, use_container_width=True)
-            
-            # Contract Value Distribution
+
             st.subheader("📈 Contract Value Distribution")
-            
             if performance_col:
                 col1, col2 = st.columns(2)
-                
                 with col1:
-                    # Histogram of contract values
-                    fig_hist = px.histogram(vendors_data, x=performance_col, 
-                                          title="Contract Value Distribution",
-                                          nbins=10, color_discrete_sequence=['#1f77b4'],
-                                          labels={performance_col: 'Contract Value ($)'})
+                    fig_hist = px.histogram(vendors_data, x=performance_col, title="Contract Value Distribution", nbins=10, labels={performance_col: "Contract Value ($)"})
                     st.plotly_chart(fig_hist, use_container_width=True)
-                
                 with col2:
-                    # Top 10 vendors by contract value
                     top_vendors = vendors_data.nlargest(10, performance_col)
-                    fig_bar = px.bar(top_vendors, x=vendor_name_col, y=performance_col,
-                                   title="Top 10 Vendors by Contract Value",
-                                   color=performance_col,
-                                   color_continuous_scale="Viridis",
-                                   labels={performance_col: 'Contract Value ($)', vendor_name_col: 'Vendor'})
+                    fig_bar = px.bar(top_vendors, x=vendor_name_col, y=performance_col, title="Top 10 Vendors by Contract Value", color=performance_col, color_continuous_scale="Viridis")
                     fig_bar.update_layout(xaxis_tickangle=-45)
                     st.plotly_chart(fig_bar, use_container_width=True)
 
-            # Analysis by Category
-            category_col = 'category' if 'category' in vendors_data.columns else None
+            category_col = "category" if "category" in vendors_data.columns else None
             if category_col and performance_col:
                 st.subheader("🏷️ Analysis by Category")
-                
-                col1, col2 = st.columns(2)
-                with col1:
-                    # Average contract value by category
+                c1, c2 = st.columns(2)
+                with c1:
                     category_avg = vendors_data.groupby(category_col)[performance_col].mean().reset_index()
-                    fig_cat_avg = px.bar(category_avg, x=category_col, y=performance_col,
-                                       title="Average Contract Value by Category",
-                                       text_auto=True,
-                                       labels={performance_col: 'Avg Contract Value ($)', category_col: 'Category'})
+                    fig_cat_avg = px.bar(category_avg, x=category_col, y=performance_col, title="Average Contract Value by Category", text_auto=True)
                     st.plotly_chart(fig_cat_avg, use_container_width=True)
-                
-                with col2:
-                    # Vendor count by category
+                with c2:
                     category_count = vendors_data[category_col].value_counts().reset_index()
-                    category_count.columns = [category_col, 'count']
-                    fig_cat_count = px.pie(category_count, names=category_col, values='count',
-                                         title="Vendor Count by Category")
+                    category_count.columns = [category_col, "count"]
+                    fig_cat_count = px.pie(category_count, names=category_col, values="count", title="Vendor Count by Category")
                     st.plotly_chart(fig_cat_count, use_container_width=True)
 
-            # Risk Analysis
-            if 'risk_level' in vendors_data.columns:
+            if "risk_level" in vendors_data.columns:
                 st.subheader("⚠️ Risk Analysis")
-                
-                col1, col2 = st.columns(2)
-                with col1:
-                    # Risk level distribution
-                    risk_counts = vendors_data['risk_level'].value_counts().reset_index()
-                    risk_counts.columns = ['risk_level', 'count']
-                    fig_risk = px.pie(risk_counts, names='risk_level', values='count',
-                                    title="Risk Level Distribution",
-                                    color='risk_level',
-                                    color_discrete_map={'Low': 'green', 'Medium': 'orange', 'High': 'red'})
+                c1, c2 = st.columns(2)
+                with c1:
+                    risk_counts = vendors_data["risk_level"].value_counts().reset_index()
+                    risk_counts.columns = ["risk_level", "count"]
+                    fig_risk = px.pie(risk_counts, names="risk_level", values="count", title="Risk Level Distribution")
                     st.plotly_chart(fig_risk, use_container_width=True)
-                
-                with col2:
-                    # Average contract value by risk level
+                with c2:
                     if performance_col:
-                        risk_contracts = vendors_data.groupby('risk_level')[performance_col].mean().reset_index()
-                        fig_risk_contracts = px.bar(risk_contracts, x='risk_level', y=performance_col,
-                                                  title="Avg Contract Value by Risk Level",
-                                                  color='risk_level',
-                                                  color_discrete_map={'Low': 'green', 'Medium': 'orange', 'High': 'red'},
-                                                  labels={performance_col: 'Avg Contract Value ($)', 'risk_level': 'Risk Level'})
+                        risk_contracts = vendors_data.groupby("risk_level")[performance_col].mean().reset_index()
+                        fig_risk_contracts = px.bar(risk_contracts, x="risk_level", y=performance_col, title="Avg Contract Value by Risk Level")
                         st.plotly_chart(fig_risk_contracts, use_container_width=True)
 
-            # Vendor Performance Table with Filters
             st.subheader("📋 Vendor Details")
-            
-            # Add filters
             col1, col2, col3 = st.columns(3)
             filtered_data = vendors_data.copy()
-            
             with col1:
                 if vendor_name_col:
-                    selected_vendors = st.multiselect("Filter by Vendor", vendors_data[vendor_name_col].unique())
+                    selected_vendors = st.multiselect("Filter by Vendor", vendors_data[vendor_name_col].unique().tolist())
                     if selected_vendors:
                         filtered_data = filtered_data[filtered_data[vendor_name_col].isin(selected_vendors)]
-            
             with col2:
                 if category_col:
-                    selected_categories = st.multiselect("Filter by Category", vendors_data[category_col].unique())
+                    selected_categories = st.multiselect("Filter by Category", vendors_data[category_col].unique().tolist())
                     if selected_categories:
                         filtered_data = filtered_data[filtered_data[category_col].isin(selected_categories)]
-            
             with col3:
-                if 'risk_level' in vendors_data.columns:
-                    selected_risks = st.multiselect("Filter by Risk Level", vendors_data['risk_level'].unique())
+                if "risk_level" in vendors_data.columns:
+                    selected_risks = st.multiselect("Filter by Risk Level", vendors_data["risk_level"].unique().tolist())
                     if selected_risks:
-                        filtered_data = filtered_data[filtered_data['risk_level'].isin(selected_risks)]
-            
-            # Contract value filter
-            if performance_col:
-                min_val = int(vendors_data[performance_col].min())
-                max_val = int(vendors_data[performance_col].max())
-                value_range = st.slider("Contract Value Range", 
-                                      min_value=min_val, 
-                                      max_value=max_val,
-                                      value=(min_val, max_val))
-                filtered_data = filtered_data[(filtered_data[performance_col] >= value_range[0]) & 
-                                           (filtered_data[performance_col] <= value_range[1])]
-            
+                        filtered_data = filtered_data[filtered_data["risk_level"].isin(selected_risks)]
+
+            if performance_col and not vendors_data.empty:
+                try:
+                    min_val = int(vendors_data[performance_col].min())
+                    max_val = int(vendors_data[performance_col].max())
+                    value_range = st.slider("Contract Value Range", min_value=min_val, max_value=max_val, value=(min_val, max_val))
+                    filtered_data = filtered_data[(filtered_data[performance_col] >= value_range[0]) & (filtered_data[performance_col] <= value_range[1])]
+                except Exception:
+                    pass
+
             st.dataframe(filtered_data, use_container_width=True)
-            
-            # Export option
-            csv = filtered_data.to_csv(index=False)
-            st.download_button(
-                label="📥 Download Filtered Data as CSV",
-                data=csv,
-                file_name="vendor_analysis.csv",
-                mime="text/csv"
-            )
+            csv_bytes = filtered_data.to_csv(index=False).encode("utf-8")
+            st.download_button(label="📥 Download Filtered Data as CSV", data=csv_bytes, file_name="vendor_analysis.csv", mime="text/csv")
+        else:
+            st.info("No vendor performance data available.")
 
     # -------------------------------------------------
     # FINANCIAL ANALYTICS
@@ -644,11 +603,24 @@ class VendorDashboard:
         # Compliance Data Table
         st.subheader("Compliance Details")
         st.dataframe(compliance_data, use_container_width=True)
+
     # -------------------------------------------------
     # REPORTS
     # -------------------------------------------------
     def render_reports(self):
         st.markdown('<div class="main-header">📄 Reports & Analytics</div>', unsafe_allow_html=True)
+
+        # Show warning if report generator is not available
+        if not REPORT_GENERATOR_AVAILABLE:
+            st.error("""
+            ⚠️ **Report Generator is not available!**
+            
+            Please make sure:
+            1. The `enhancements/report_generator.py` file exists
+            2. All required dependencies are installed: `pip install pandas matplotlib jinja2 reportlab xlsxwriter`
+            3. The file structure is correct
+            """)
+            return
 
         st.subheader("Generate Reports")
 
@@ -687,41 +659,42 @@ class VendorDashboard:
                     st.markdown(f"**📁 Saved at:** `{filepath}`")
 
                     # Show actual download button
-                    with open(filepath, "rb") as f:
-                        file_bytes = f.read()
+                    try:
+                        with open(filepath, "rb") as f:
+                            file_bytes = f.read()
 
-                        # Display PDF preview if PDF selected
-                        if format_type == "PDF":
-                            st.download_button(
-                                label="⬇️ Download PDF Report",
-                                data=file_bytes,
-                                file_name=os.path.basename(filepath),
-                                mime="application/pdf",
-                            )
+                            # Display PDF preview if PDF selected
+                            if format_type == "PDF":
+                                st.download_button(
+                                    label="⬇️ Download PDF Report",
+                                    data=file_bytes,
+                                    file_name=os.path.basename(filepath),
+                                    mime="application/pdf",
+                                )
 
-                            # Preview PDF in browser window
-                            base64_pdf = f"data:application/pdf;base64,{file_bytes.decode('latin1')}"
-                            st.markdown(
-                                f'<iframe src="data:application/pdf;base64,{file_bytes.decode("latin1")}" '
-                                f'width="100%" height="700px" type="application/pdf"></iframe>',
-                                unsafe_allow_html=True,
-                            )
+                                # Preview PDF in browser window
+                                st.markdown(
+                                    f'<iframe src="{filepath}" width="100%" height="700px" type="application/pdf"></iframe>',
+                                    unsafe_allow_html=True,
+                                )
 
-                        elif format_type == "Excel":
-                            st.download_button(
-                                label="⬇️ Download Excel Report",
-                                data=file_bytes,
-                                file_name=os.path.basename(filepath),
-                                mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                            )
+                            elif format_type == "Excel":
+                                st.download_button(
+                                    label="⬇️ Download Excel Report",
+                                    data=file_bytes,
+                                    file_name=os.path.basename(filepath),
+                                    mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                                )
 
-                        elif format_type == "HTML":
-                            st.download_button(
-                                label="⬇️ Download HTML Report",
-                                data=file_bytes,
-                                file_name=os.path.basename(filepath),
-                                mime="text/html",
-                            )
+                            elif format_type == "HTML":
+                                st.download_button(
+                                    label="⬇️ Download HTML Report",
+                                    data=file_bytes,
+                                    file_name=os.path.basename(filepath),
+                                    mime="text/html",
+                                )
+                    except Exception as e:
+                        st.error(f"Error accessing generated file: {e}")
                 else:
                     st.error(result)
 
@@ -735,6 +708,7 @@ class VendorDashboard:
             st.dataframe(df[["name", "size", "created"]], use_container_width=True)
         else:
             st.info("No reports generated yet.")
+
     # -------------------------------------------------
     # VENDOR PORTAL
     # -------------------------------------------------

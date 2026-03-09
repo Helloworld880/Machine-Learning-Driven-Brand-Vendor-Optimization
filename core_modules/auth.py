@@ -17,7 +17,7 @@ class Authentication:
     def authenticate(self, username: str, password: str) -> Optional[Dict]:
         """Authenticate user"""
         # Simple authentication for demo
-        if username == '' and password == '':
+        if username == 'admin' and password == 'admin123':
             return {
                 'id': 1,
                 'username': 'admin',
