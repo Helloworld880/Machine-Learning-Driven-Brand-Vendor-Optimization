@@ -1,7 +1,7 @@
 from flask import Blueprint, request, jsonify
 from flask_jwt_extended import jwt_required, get_jwt_identity
-from core.database import DatabaseManager
-from core.auth import Authentication
+from core_modules.database import DatabaseManager
+from core_modules.auth import Authentication
 import logging
 
 vendors_bp = Blueprint('vendors', __name__)
