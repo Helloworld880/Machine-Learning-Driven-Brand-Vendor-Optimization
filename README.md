@@ -8,7 +8,7 @@ The system provides a Streamlit dashboard, automated workflows, predictive analy
 
 # Overview
 
-Machine-Learning-Driven-Brand-Vendor-Optimization enables organizations to:
+Vendor-Insight-360 to:
 
 • Analyze vendor performance
 • Track compliance and risk metrics
@@ -71,7 +71,7 @@ Monitor system health and track alerts related to vendor performance.
 # Project Structure
 
 ```
-Machine-Learning-Driven-Brand-Vendor-Optimization
+Vendor-Insight-360
 │
 ├── app.py
 ├── run.py
@@ -125,13 +125,13 @@ Machine-Learning-Driven-Brand-Vendor-Optimization
 Clone the repository
 
 ```
-git clone https://github.com/Helloworld880/Machine-Learning-Driven-Brand-Vendor-Optimization.git
+git clone https://github.com/Helloworld880/Vendor-Insight-360.git
 ```
 
 Navigate to the project directory
 
 ```
-cd Machine-Learning-Driven-Brand-Vendor-Optimization
+cd Vendor-Insight-360
 ```
 
 Install dependencies
