@@ -1,4 +1,4 @@
-# Machine-Learning-Driven-Brand-Vendor-Optimization
+# Vendor-Insight-360
 
 A data-driven analytics platform designed to help organizations evaluate vendor performance, monitor compliance, and optimize vendor relationships using analytics, automation, and reporting tools.
 
