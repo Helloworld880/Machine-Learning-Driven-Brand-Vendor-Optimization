@@ -1,0 +1,491 @@
+outcome_id,vendor_id,vendor_name,period,contract_renewed,renewal_term_months,churned,escalation_flag,incident_count,sla_breach_flag,payment_dispute_flag,relationship_health
+1,1,TechCorp Inc,2023-Q4,1,6,0,0,0,0,0,Strong
+2,1,TechCorp Inc,2024-Q1,0,0,0,0,1,0,0,Strong
+3,1,TechCorp Inc,2024-Q2,1,12,0,0,0,0,0,Strong
+4,1,TechCorp Inc,2024-Q3,1,6,0,0,0,0,0,Strong
+5,1,TechCorp Inc,2024-Q4,0,0,0,0,1,0,0,Strong
+6,2,Global Supplies Ltd,2023-Q4,1,12,0,0,0,0,0,Strong
+7,2,Global Supplies Ltd,2024-Q1,0,0,0,0,0,0,0,Strong
+8,2,Global Supplies Ltd,2024-Q2,1,12,0,0,0,0,0,Strong
+9,2,Global Supplies Ltd,2024-Q3,0,0,0,0,0,0,0,Strong
+10,2,Global Supplies Ltd,2024-Q4,1,36,0,0,1,0,0,Strong
+11,3,Quality Parts Co,2023-Q4,0,0,0,1,5,0,1,Weak
+12,3,Quality Parts Co,2024-Q1,0,0,0,0,6,1,1,Weak
+13,3,Quality Parts Co,2024-Q2,0,0,0,1,0,1,1,Weak
+14,3,Quality Parts Co,2024-Q3,0,0,0,1,5,1,1,Weak
+15,3,Quality Parts Co,2024-Q4,0,0,0,1,4,1,1,Weak
+16,4,Innovative Solutions,2023-Q4,1,6,0,0,1,0,0,Strong
+17,4,Innovative Solutions,2024-Q1,1,6,0,0,1,0,0,Strong
+18,4,Innovative Solutions,2024-Q2,0,0,0,0,0,0,0,Strong
+19,4,Innovative Solutions,2024-Q3,1,36,0,0,1,0,0,Strong
+20,4,Innovative Solutions,2024-Q4,1,24,0,0,0,0,0,Strong
+21,5,Reliable Services LLC,2023-Q4,1,12,0,0,1,0,0,Strong
+22,5,Reliable Services LLC,2024-Q1,1,36,0,0,0,0,0,Strong
+23,5,Reliable Services LLC,2024-Q2,1,24,0,0,0,0,0,Strong
+24,5,Reliable Services LLC,2024-Q3,1,12,0,0,1,0,0,Strong
+25,5,Reliable Services LLC,2024-Q4,1,6,0,0,0,0,0,Strong
+26,6,Apex Delivery Co,2023-Q4,0,0,0,0,2,0,0,Strong
+27,6,Apex Delivery Co,2024-Q1,0,0,0,0,1,0,0,Strong
+28,6,Apex Delivery Co,2024-Q2,0,0,0,0,2,0,0,Strong
+29,6,Apex Delivery Co,2024-Q3,0,0,0,0,2,0,0,Strong
+30,6,Apex Delivery Co,2024-Q4,0,0,0,0,0,0,0,Strong
+31,7,BlueStar Tech,2023-Q4,1,12,0,0,1,0,0,Strong
+32,7,BlueStar Tech,2024-Q1,1,6,0,0,1,0,0,Strong
+33,7,BlueStar Tech,2024-Q2,1,36,0,0,0,0,0,Strong
+34,7,BlueStar Tech,2024-Q3,1,6,0,0,1,0,0,Strong
+35,7,BlueStar Tech,2024-Q4,1,24,0,0,0,0,0,Strong
+36,8,PrimeCast Mfg,2023-Q4,1,24,0,0,0,0,0,Strong
+37,8,PrimeCast Mfg,2024-Q1,1,6,0,0,1,0,0,Strong
+38,8,PrimeCast Mfg,2024-Q2,1,6,0,0,0,0,0,Strong
+39,8,PrimeCast Mfg,2024-Q3,1,6,0,0,1,0,0,Strong
+40,8,PrimeCast Mfg,2024-Q4,1,24,0,0,0,0,0,Strong
+41,9,SwiftRoute Express,2023-Q4,1,24,0,0,1,0,0,Strong
+42,9,SwiftRoute Express,2024-Q1,1,24,0,0,0,0,0,Strong
+43,9,SwiftRoute Express,2024-Q2,1,36,0,0,0,0,0,Strong
+44,9,SwiftRoute Express,2024-Q3,1,12,0,0,0,0,0,Strong
+45,9,SwiftRoute Express,2024-Q4,1,36,0,0,0,0,0,Strong
+46,10,Omega Consult Group,2023-Q4,0,0,0,0,0,0,0,Strong
+47,10,Omega Consult Group,2024-Q1,1,36,0,0,0,0,0,Strong
+48,10,Omega Consult Group,2024-Q2,1,12,0,0,0,0,0,Strong
+49,10,Omega Consult Group,2024-Q3,1,24,0,0,1,0,0,Strong
+50,10,Omega Consult Group,2024-Q4,1,12,0,0,1,0,0,Strong
+51,11,NovaMat Supplies,2023-Q4,1,6,0,0,0,0,0,Strong
+52,11,NovaMat Supplies,2024-Q1,1,36,0,0,1,0,0,Strong
+53,11,NovaMat Supplies,2024-Q2,1,24,0,0,1,0,0,Strong
+54,11,NovaMat Supplies,2024-Q3,0,0,0,0,0,0,0,Strong
+55,11,NovaMat Supplies,2024-Q4,1,12,0,0,0,0,0,Strong
+56,12,DataStream Inc,2023-Q4,1,36,0,0,0,0,0,Strong
+57,12,DataStream Inc,2024-Q1,1,36,0,0,0,0,0,Strong
+58,12,DataStream Inc,2024-Q2,1,36,0,0,1,0,0,Strong
+59,12,DataStream Inc,2024-Q3,1,36,0,0,0,0,0,Strong
+60,12,DataStream Inc,2024-Q4,0,0,0,0,0,0,0,Strong
+61,13,SteelWorks Co,2023-Q4,0,0,0,0,0,0,0,Strong
+62,13,SteelWorks Co,2024-Q1,1,6,0,0,0,0,0,Strong
+63,13,SteelWorks Co,2024-Q2,0,0,0,0,0,0,0,Strong
+64,13,SteelWorks Co,2024-Q3,1,36,0,0,0,0,0,Strong
+65,13,SteelWorks Co,2024-Q4,0,0,0,0,1,0,0,Strong
+66,14,RapidFreight Ltd,2023-Q4,1,12,0,0,0,0,0,Strong
+67,14,RapidFreight Ltd,2024-Q1,1,6,0,0,0,0,0,Strong
+68,14,RapidFreight Ltd,2024-Q2,0,0,0,0,1,0,0,Strong
+69,14,RapidFreight Ltd,2024-Q3,1,12,0,0,0,0,0,Strong
+70,14,RapidFreight Ltd,2024-Q4,1,24,0,0,0,0,0,Strong
+71,15,GreenSource Corp,2023-Q4,1,6,0,0,0,0,0,Strong
+72,15,GreenSource Corp,2024-Q1,1,12,0,0,1,0,0,Strong
+73,15,GreenSource Corp,2024-Q2,1,24,0,0,1,0,0,Strong
+74,15,GreenSource Corp,2024-Q3,1,6,0,0,1,0,0,Strong
+75,15,GreenSource Corp,2024-Q4,1,24,0,0,0,0,0,Strong
+76,16,CloudNine Systems,2023-Q4,1,24,0,0,0,0,0,Strong
+77,16,CloudNine Systems,2024-Q1,1,6,0,0,0,0,0,Strong
+78,16,CloudNine Systems,2024-Q2,1,6,0,0,1,0,0,Strong
+79,16,CloudNine Systems,2024-Q3,0,0,0,0,1,0,0,Strong
+80,16,CloudNine Systems,2024-Q4,1,36,0,0,0,0,0,Strong
+81,17,FastLane Logistics,2023-Q4,1,12,0,0,0,0,0,Strong
+82,17,FastLane Logistics,2024-Q1,1,12,0,0,0,0,0,Strong
+83,17,FastLane Logistics,2024-Q2,0,0,0,0,0,0,0,Strong
+84,17,FastLane Logistics,2024-Q3,1,36,0,0,0,0,0,Strong
+85,17,FastLane Logistics,2024-Q4,1,12,0,0,0,0,0,Strong
+86,18,PrecisionForge Ltd,2023-Q4,0,0,0,1,2,0,1,Weak
+87,18,PrecisionForge Ltd,2024-Q1,0,0,0,1,2,1,1,Weak
+88,18,PrecisionForge Ltd,2024-Q2,0,0,0,0,0,1,0,Weak
+89,18,PrecisionForge Ltd,2024-Q3,0,0,0,0,2,1,1,Weak
+90,18,PrecisionForge Ltd,2024-Q4,0,0,1,0,5,0,0,Weak
+91,19,StratEdge Consulting,2023-Q4,1,36,0,0,1,0,0,Strong
+92,19,StratEdge Consulting,2024-Q1,1,6,0,0,0,0,0,Strong
+93,19,StratEdge Consulting,2024-Q2,1,6,0,0,0,0,0,Strong
+94,19,StratEdge Consulting,2024-Q3,1,12,0,0,0,0,0,Strong
+95,19,StratEdge Consulting,2024-Q4,1,12,0,0,0,0,0,Strong
+96,20,EcoRaw Materials,2023-Q4,1,36,0,0,1,0,0,Strong
+97,20,EcoRaw Materials,2024-Q1,1,6,0,0,0,0,0,Strong
+98,20,EcoRaw Materials,2024-Q2,0,0,0,0,0,0,0,Strong
+99,20,EcoRaw Materials,2024-Q3,0,0,0,0,0,0,0,Strong
+100,20,EcoRaw Materials,2024-Q4,1,24,0,0,1,0,0,Strong
+101,21,NexGen IT Solutions,2023-Q4,1,36,0,0,1,0,0,Strong
+102,21,NexGen IT Solutions,2024-Q1,1,12,0,0,1,0,0,Strong
+103,21,NexGen IT Solutions,2024-Q2,1,24,0,0,1,0,0,Strong
+104,21,NexGen IT Solutions,2024-Q3,1,24,0,0,0,0,0,Strong
+105,21,NexGen IT Solutions,2024-Q4,1,24,0,0,0,0,0,Strong
+106,22,CargoWise Corp,2023-Q4,0,0,0,0,1,0,0,Strong
+107,22,CargoWise Corp,2024-Q1,1,24,0,0,0,0,0,Strong
+108,22,CargoWise Corp,2024-Q2,0,0,0,0,0,0,0,Strong
+109,22,CargoWise Corp,2024-Q3,1,6,0,0,0,0,0,Strong
+110,22,CargoWise Corp,2024-Q4,0,0,0,0,0,0,0,Strong
+111,23,MetalPlus Manufacturing,2023-Q4,1,24,0,0,0,0,0,Strong
+112,23,MetalPlus Manufacturing,2024-Q1,1,6,0,0,0,0,0,Strong
+113,23,MetalPlus Manufacturing,2024-Q2,0,0,0,0,1,0,0,Strong
+114,23,MetalPlus Manufacturing,2024-Q3,1,12,0,0,0,0,0,Strong
+115,23,MetalPlus Manufacturing,2024-Q4,1,6,0,0,1,0,0,Strong
+116,24,Alpha Advisors,2023-Q4,0,0,0,1,3,0,0,Weak
+117,24,Alpha Advisors,2024-Q1,0,0,0,0,1,1,0,Weak
+118,24,Alpha Advisors,2024-Q2,0,0,0,0,2,0,1,Weak
+119,24,Alpha Advisors,2024-Q3,0,0,0,0,4,0,0,Weak
+120,24,Alpha Advisors,2024-Q4,0,0,0,0,3,1,1,Weak
+121,25,TerraMat Co,2023-Q4,0,0,0,1,5,0,1,Weak
+122,25,TerraMat Co,2024-Q1,0,0,0,1,1,1,1,Weak
+123,25,TerraMat Co,2024-Q2,0,0,0,1,5,1,0,Weak
+124,25,TerraMat Co,2024-Q3,0,0,0,0,2,1,1,Weak
+125,25,TerraMat Co,2024-Q4,0,0,0,0,5,0,1,Weak
+126,26,CyberEdge Technologies,2023-Q4,1,6,0,0,0,0,0,Strong
+127,26,CyberEdge Technologies,2024-Q1,1,36,0,0,1,0,0,Strong
+128,26,CyberEdge Technologies,2024-Q2,1,6,0,0,1,0,0,Strong
+129,26,CyberEdge Technologies,2024-Q3,1,24,0,0,1,0,0,Strong
+130,26,CyberEdge Technologies,2024-Q4,0,0,0,0,1,0,0,Strong
+131,27,SpeedFreight Inc,2023-Q4,0,0,0,1,5,0,0,Weak
+132,27,SpeedFreight Inc,2024-Q1,0,0,0,1,3,1,0,Weak
+133,27,SpeedFreight Inc,2024-Q2,0,0,0,0,3,0,1,Weak
+134,27,SpeedFreight Inc,2024-Q3,0,0,0,0,4,1,1,Weak
+135,27,SpeedFreight Inc,2024-Q4,0,0,0,0,4,0,1,Weak
+136,28,Ironclad Manufacturing,2023-Q4,1,36,0,0,1,0,0,Strong
+137,28,Ironclad Manufacturing,2024-Q1,1,36,0,0,1,0,0,Strong
+138,28,Ironclad Manufacturing,2024-Q2,1,36,0,0,0,0,0,Strong
+139,28,Ironclad Manufacturing,2024-Q3,1,6,0,0,1,0,0,Strong
+140,28,Ironclad Manufacturing,2024-Q4,0,0,0,0,1,0,0,Strong
+141,29,ProConsult Partners,2023-Q4,0,0,0,1,4,0,1,Weak
+142,29,ProConsult Partners,2024-Q1,0,0,0,0,1,1,0,Weak
+143,29,ProConsult Partners,2024-Q2,0,0,0,0,3,1,0,Weak
+144,29,ProConsult Partners,2024-Q3,0,0,0,1,1,1,0,Weak
+145,29,ProConsult Partners,2024-Q4,0,0,0,1,0,0,1,Weak
+146,30,NaturalRes Corp,2023-Q4,1,36,0,0,1,0,0,Strong
+147,30,NaturalRes Corp,2024-Q1,1,36,0,0,1,0,0,Strong
+148,30,NaturalRes Corp,2024-Q2,1,6,0,0,0,0,0,Strong
+149,30,NaturalRes Corp,2024-Q3,1,6,0,0,1,0,0,Strong
+150,30,NaturalRes Corp,2024-Q4,1,12,0,0,0,0,0,Strong
+151,31,Quantum IT Group,2023-Q4,1,24,0,0,1,0,0,Strong
+152,31,Quantum IT Group,2024-Q1,1,24,0,0,1,0,0,Strong
+153,31,Quantum IT Group,2024-Q2,1,6,0,0,0,0,0,Strong
+154,31,Quantum IT Group,2024-Q3,1,12,0,0,0,0,0,Strong
+155,31,Quantum IT Group,2024-Q4,1,12,0,0,0,0,0,Strong
+156,32,GlobalLink Logistics,2023-Q4,0,0,0,0,1,0,0,Strong
+157,32,GlobalLink Logistics,2024-Q1,1,24,0,0,1,0,0,Strong
+158,32,GlobalLink Logistics,2024-Q2,1,24,0,0,0,0,0,Strong
+159,32,GlobalLink Logistics,2024-Q3,1,24,0,0,0,0,0,Strong
+160,32,GlobalLink Logistics,2024-Q4,1,36,0,0,1,0,0,Strong
+161,33,Summit Manufacturing,2023-Q4,0,0,0,0,1,0,0,Strong
+162,33,Summit Manufacturing,2024-Q1,1,12,0,0,0,0,0,Strong
+163,33,Summit Manufacturing,2024-Q2,0,0,0,0,0,0,0,Strong
+164,33,Summit Manufacturing,2024-Q3,1,6,0,0,0,0,0,Strong
+165,33,Summit Manufacturing,2024-Q4,0,0,0,0,0,0,0,Strong
+166,34,Insight Consulting,2023-Q4,1,24,0,0,0,0,0,Strong
+167,34,Insight Consulting,2024-Q1,1,36,0,0,1,0,0,Strong
+168,34,Insight Consulting,2024-Q2,1,24,0,0,1,0,0,Strong
+169,34,Insight Consulting,2024-Q3,1,6,0,0,0,0,0,Strong
+170,34,Insight Consulting,2024-Q4,1,12,0,0,0,0,0,Strong
+171,35,PureSource Materials,2023-Q4,0,0,0,0,2,0,0,Strong
+172,35,PureSource Materials,2024-Q1,0,0,0,0,0,0,0,Strong
+173,35,PureSource Materials,2024-Q2,0,0,0,0,1,0,0,Strong
+174,35,PureSource Materials,2024-Q3,0,0,0,0,0,0,0,Strong
+175,35,PureSource Materials,2024-Q4,0,0,0,0,0,0,0,Strong
+176,36,InnovateTech Ltd,2023-Q4,0,0,0,0,0,0,0,Strong
+177,36,InnovateTech Ltd,2024-Q1,1,6,0,0,1,0,0,Strong
+178,36,InnovateTech Ltd,2024-Q2,1,36,0,0,0,0,0,Strong
+179,36,InnovateTech Ltd,2024-Q3,1,6,0,0,1,0,0,Strong
+180,36,InnovateTech Ltd,2024-Q4,1,6,0,0,0,0,0,Strong
+181,37,AirCargo Express,2023-Q4,0,0,0,0,2,1,1,Weak
+182,37,AirCargo Express,2024-Q1,0,0,0,1,0,0,0,Weak
+183,37,AirCargo Express,2024-Q2,0,0,0,1,1,1,1,Weak
+184,37,AirCargo Express,2024-Q3,0,0,0,1,6,0,1,Weak
+185,37,AirCargo Express,2024-Q4,0,0,0,0,2,1,0,Weak
+186,38,PowerForge Mfg,2023-Q4,1,6,0,0,0,0,0,Strong
+187,38,PowerForge Mfg,2024-Q1,0,0,0,0,0,0,0,Strong
+188,38,PowerForge Mfg,2024-Q2,1,12,0,0,0,0,0,Strong
+189,38,PowerForge Mfg,2024-Q3,1,6,0,0,1,0,0,Strong
+190,38,PowerForge Mfg,2024-Q4,0,0,0,0,0,0,0,Strong
+191,39,Clarity Consulting,2023-Q4,0,0,0,0,6,0,1,Weak
+192,39,Clarity Consulting,2024-Q1,0,0,0,0,3,0,1,Weak
+193,39,Clarity Consulting,2024-Q2,0,0,0,0,3,1,0,Weak
+194,39,Clarity Consulting,2024-Q3,0,0,0,1,6,0,1,Weak
+195,39,Clarity Consulting,2024-Q4,0,0,1,1,1,1,1,Weak
+196,40,GoldMine Resources,2023-Q4,1,36,0,0,0,0,0,Strong
+197,40,GoldMine Resources,2024-Q1,1,36,0,0,0,0,0,Strong
+198,40,GoldMine Resources,2024-Q2,1,36,0,0,1,0,0,Strong
+199,40,GoldMine Resources,2024-Q3,1,24,0,0,0,0,0,Strong
+200,40,GoldMine Resources,2024-Q4,1,6,0,0,1,0,0,Strong
+201,41,SkyNet IT Services,2023-Q4,0,0,0,0,1,0,0,Strong
+202,41,SkyNet IT Services,2024-Q1,1,36,0,0,1,0,0,Strong
+203,41,SkyNet IT Services,2024-Q2,1,6,0,0,0,0,0,Strong
+204,41,SkyNet IT Services,2024-Q3,1,36,0,0,0,0,0,Strong
+205,41,SkyNet IT Services,2024-Q4,1,12,0,0,0,0,0,Strong
+206,42,TruckPro Logistics,2023-Q4,1,12,0,0,0,0,0,Strong
+207,42,TruckPro Logistics,2024-Q1,1,36,0,0,1,0,0,Strong
+208,42,TruckPro Logistics,2024-Q2,1,36,0,0,0,0,0,Strong
+209,42,TruckPro Logistics,2024-Q3,1,24,0,0,1,0,0,Strong
+210,42,TruckPro Logistics,2024-Q4,1,36,0,0,1,0,0,Strong
+211,43,Alliance Manufacturing,2023-Q4,1,12,0,0,1,0,0,Strong
+212,43,Alliance Manufacturing,2024-Q1,1,24,0,0,1,0,0,Strong
+213,43,Alliance Manufacturing,2024-Q2,1,12,0,0,1,0,0,Strong
+214,43,Alliance Manufacturing,2024-Q3,1,6,0,0,0,0,0,Strong
+215,43,Alliance Manufacturing,2024-Q4,1,6,0,0,0,0,0,Strong
+216,44,Vision Consulting,2023-Q4,1,24,0,0,0,0,0,Strong
+217,44,Vision Consulting,2024-Q1,1,6,0,0,0,0,0,Strong
+218,44,Vision Consulting,2024-Q2,1,36,0,0,0,0,0,Strong
+219,44,Vision Consulting,2024-Q3,1,36,0,0,1,0,0,Strong
+220,44,Vision Consulting,2024-Q4,1,24,0,0,1,0,0,Strong
+221,45,EarthCore Supplies,2023-Q4,0,0,0,0,0,0,0,Strong
+222,45,EarthCore Supplies,2024-Q1,0,0,0,0,0,0,0,Strong
+223,45,EarthCore Supplies,2024-Q2,1,24,0,0,0,0,0,Strong
+224,45,EarthCore Supplies,2024-Q3,1,6,0,0,1,0,0,Strong
+225,45,EarthCore Supplies,2024-Q4,1,24,0,0,0,0,0,Strong
+226,46,DataForce Inc,2023-Q4,1,12,0,0,0,0,0,Strong
+227,46,DataForce Inc,2024-Q1,1,36,0,0,1,0,0,Strong
+228,46,DataForce Inc,2024-Q2,1,36,0,0,0,0,0,Strong
+229,46,DataForce Inc,2024-Q3,1,12,0,0,1,0,0,Strong
+230,46,DataForce Inc,2024-Q4,1,36,0,0,0,0,0,Strong
+231,47,OceanFreight Ltd,2023-Q4,1,24,0,0,1,0,0,Strong
+232,47,OceanFreight Ltd,2024-Q1,1,6,0,0,1,0,0,Strong
+233,47,OceanFreight Ltd,2024-Q2,1,24,0,0,0,0,0,Strong
+234,47,OceanFreight Ltd,2024-Q3,0,0,0,0,1,0,0,Strong
+235,47,OceanFreight Ltd,2024-Q4,1,24,0,0,0,0,0,Strong
+236,48,CraftWorks Mfg,2023-Q4,1,24,0,0,1,0,0,Strong
+237,48,CraftWorks Mfg,2024-Q1,1,6,0,0,1,0,0,Strong
+238,48,CraftWorks Mfg,2024-Q2,1,24,0,0,0,0,0,Strong
+239,48,CraftWorks Mfg,2024-Q3,0,0,0,0,0,0,0,Strong
+240,48,CraftWorks Mfg,2024-Q4,0,0,0,0,0,0,0,Strong
+241,49,Summit Advisors,2023-Q4,1,6,0,0,0,0,0,Strong
+242,49,Summit Advisors,2024-Q1,1,36,0,0,1,0,0,Strong
+243,49,Summit Advisors,2024-Q2,1,36,0,0,1,0,0,Strong
+244,49,Summit Advisors,2024-Q3,0,0,0,0,0,0,0,Strong
+245,49,Summit Advisors,2024-Q4,1,24,0,0,1,0,0,Strong
+246,50,RockBase Materials,2023-Q4,0,0,0,0,0,0,0,Strong
+247,50,RockBase Materials,2024-Q1,1,12,0,0,0,0,0,Strong
+248,50,RockBase Materials,2024-Q2,1,24,0,0,1,0,0,Strong
+249,50,RockBase Materials,2024-Q3,1,24,0,0,0,0,0,Strong
+250,50,RockBase Materials,2024-Q4,1,6,0,0,1,0,0,Strong
+251,51,ByteWise Solutions,2023-Q4,0,0,0,0,4,1,1,Weak
+252,51,ByteWise Solutions,2024-Q1,0,0,0,1,4,1,1,Weak
+253,51,ByteWise Solutions,2024-Q2,0,0,0,0,0,0,0,Weak
+254,51,ByteWise Solutions,2024-Q3,0,0,0,0,2,1,0,Weak
+255,51,ByteWise Solutions,2024-Q4,0,0,0,0,1,1,1,Weak
+256,52,LogiTrack Systems,2023-Q4,1,24,0,0,1,0,0,Strong
+257,52,LogiTrack Systems,2024-Q1,1,24,0,0,0,0,0,Strong
+258,52,LogiTrack Systems,2024-Q2,1,12,0,0,1,0,0,Strong
+259,52,LogiTrack Systems,2024-Q3,1,12,0,0,0,0,0,Strong
+260,52,LogiTrack Systems,2024-Q4,1,36,0,0,1,0,0,Strong
+261,53,FusionParts Mfg,2023-Q4,0,0,0,0,1,0,0,Strong
+262,53,FusionParts Mfg,2024-Q1,0,0,0,0,1,0,0,Strong
+263,53,FusionParts Mfg,2024-Q2,1,24,0,0,0,0,0,Strong
+264,53,FusionParts Mfg,2024-Q3,1,12,0,0,1,0,0,Strong
+265,53,FusionParts Mfg,2024-Q4,0,0,0,0,1,0,0,Strong
+266,54,Elite Strategy Group,2023-Q4,1,6,0,0,1,0,0,Strong
+267,54,Elite Strategy Group,2024-Q1,0,0,0,0,0,0,0,Strong
+268,54,Elite Strategy Group,2024-Q2,0,0,0,0,1,0,0,Strong
+269,54,Elite Strategy Group,2024-Q3,1,12,0,0,0,0,0,Strong
+270,54,Elite Strategy Group,2024-Q4,1,12,0,0,1,0,0,Strong
+271,55,CoreMin Resources,2023-Q4,1,24,0,0,0,0,0,Strong
+272,55,CoreMin Resources,2024-Q1,1,36,0,0,1,0,0,Strong
+273,55,CoreMin Resources,2024-Q2,1,6,0,0,1,0,0,Strong
+274,55,CoreMin Resources,2024-Q3,1,12,0,0,0,0,0,Strong
+275,55,CoreMin Resources,2024-Q4,1,24,0,0,0,0,0,Strong
+276,56,NetSphere Technologies,2023-Q4,1,6,0,0,0,0,0,Strong
+277,56,NetSphere Technologies,2024-Q1,1,6,0,0,1,0,0,Strong
+278,56,NetSphere Technologies,2024-Q2,1,24,0,0,0,0,0,Strong
+279,56,NetSphere Technologies,2024-Q3,0,0,0,0,0,0,0,Strong
+280,56,NetSphere Technologies,2024-Q4,0,0,0,0,1,0,0,Strong
+281,57,SeaRoute Logistics,2023-Q4,1,12,0,0,0,0,0,Strong
+282,57,SeaRoute Logistics,2024-Q1,1,6,0,0,0,0,0,Strong
+283,57,SeaRoute Logistics,2024-Q2,1,6,0,0,1,0,0,Strong
+284,57,SeaRoute Logistics,2024-Q3,1,24,0,0,0,0,0,Strong
+285,57,SeaRoute Logistics,2024-Q4,0,0,0,0,1,0,0,Strong
+286,58,AutoPrecision Mfg,2023-Q4,0,0,0,0,1,0,0,Strong
+287,58,AutoPrecision Mfg,2024-Q1,0,0,0,0,0,0,0,Strong
+288,58,AutoPrecision Mfg,2024-Q2,1,12,0,0,0,0,0,Strong
+289,58,AutoPrecision Mfg,2024-Q3,0,0,0,0,0,0,0,Strong
+290,58,AutoPrecision Mfg,2024-Q4,1,6,0,0,1,0,0,Strong
+291,59,BrightMind Consulting,2023-Q4,1,6,0,0,1,0,0,Strong
+292,59,BrightMind Consulting,2024-Q1,1,36,0,0,1,0,0,Strong
+293,59,BrightMind Consulting,2024-Q2,0,0,0,0,0,0,0,Strong
+294,59,BrightMind Consulting,2024-Q3,1,24,0,0,0,0,0,Strong
+295,59,BrightMind Consulting,2024-Q4,1,6,0,0,1,0,0,Strong
+296,60,TerraFlex Supplies,2023-Q4,1,12,0,0,0,0,0,Strong
+297,60,TerraFlex Supplies,2024-Q1,1,24,0,0,1,0,0,Strong
+298,60,TerraFlex Supplies,2024-Q2,0,0,0,0,1,0,0,Strong
+299,60,TerraFlex Supplies,2024-Q3,1,12,0,0,0,0,0,Strong
+300,60,TerraFlex Supplies,2024-Q4,1,36,0,0,1,0,0,Strong
+301,61,PixelCloud IT,2023-Q4,1,12,0,0,1,0,0,Strong
+302,61,PixelCloud IT,2024-Q1,1,12,0,0,1,0,0,Strong
+303,61,PixelCloud IT,2024-Q2,1,36,0,0,1,0,0,Strong
+304,61,PixelCloud IT,2024-Q3,1,6,0,0,0,0,0,Strong
+305,61,PixelCloud IT,2024-Q4,1,36,0,0,1,0,0,Strong
+306,62,SwiftCargo Networks,2023-Q4,1,6,0,0,1,0,0,Strong
+307,62,SwiftCargo Networks,2024-Q1,1,6,0,0,0,0,0,Strong
+308,62,SwiftCargo Networks,2024-Q2,1,24,0,0,1,0,0,Strong
+309,62,SwiftCargo Networks,2024-Q3,1,6,0,0,1,0,0,Strong
+310,62,SwiftCargo Networks,2024-Q4,1,12,0,0,0,0,0,Strong
+311,63,HeavyDuty Mfg,2023-Q4,1,24,0,0,0,0,0,Strong
+312,63,HeavyDuty Mfg,2024-Q1,1,6,0,0,1,0,0,Strong
+313,63,HeavyDuty Mfg,2024-Q2,1,12,0,0,0,0,0,Strong
+314,63,HeavyDuty Mfg,2024-Q3,1,24,0,0,1,0,0,Strong
+315,63,HeavyDuty Mfg,2024-Q4,1,12,0,0,1,0,0,Strong
+316,64,Nexus Strategy Firm,2023-Q4,1,24,0,0,1,0,0,Strong
+317,64,Nexus Strategy Firm,2024-Q1,1,36,0,0,1,0,0,Strong
+318,64,Nexus Strategy Firm,2024-Q2,1,36,0,0,1,0,0,Strong
+319,64,Nexus Strategy Firm,2024-Q3,1,6,0,0,0,0,0,Strong
+320,64,Nexus Strategy Firm,2024-Q4,0,0,0,0,0,0,0,Strong
+321,65,AgriMat Resources,2023-Q4,0,0,0,0,1,1,0,Weak
+322,65,AgriMat Resources,2024-Q1,0,0,0,1,4,1,1,Weak
+323,65,AgriMat Resources,2024-Q2,0,0,0,1,2,1,0,Weak
+324,65,AgriMat Resources,2024-Q3,0,0,0,1,4,1,0,Weak
+325,65,AgriMat Resources,2024-Q4,0,0,1,0,5,1,1,Weak
+326,66,CodeBridge Technologies,2023-Q4,1,36,0,0,1,0,0,Strong
+327,66,CodeBridge Technologies,2024-Q1,1,12,0,0,1,0,0,Strong
+328,66,CodeBridge Technologies,2024-Q2,0,0,0,0,0,0,0,Strong
+329,66,CodeBridge Technologies,2024-Q3,1,12,0,0,1,0,0,Strong
+330,66,CodeBridge Technologies,2024-Q4,1,12,0,0,1,0,0,Strong
+331,67,PrimePath Logistics,2023-Q4,1,24,0,0,0,0,0,Strong
+332,67,PrimePath Logistics,2024-Q1,1,12,0,0,0,0,0,Strong
+333,67,PrimePath Logistics,2024-Q2,1,36,0,0,1,0,0,Strong
+334,67,PrimePath Logistics,2024-Q3,1,12,0,0,0,0,0,Strong
+335,67,PrimePath Logistics,2024-Q4,0,0,0,0,1,0,0,Strong
+336,68,MegaForge Industries,2023-Q4,1,36,0,0,1,0,0,Strong
+337,68,MegaForge Industries,2024-Q1,1,24,0,0,1,0,0,Strong
+338,68,MegaForge Industries,2024-Q2,1,6,0,0,0,0,0,Strong
+339,68,MegaForge Industries,2024-Q3,1,12,0,0,0,0,0,Strong
+340,68,MegaForge Industries,2024-Q4,0,0,0,0,1,0,0,Strong
+341,69,TrueNorth Consulting,2023-Q4,0,0,0,0,5,0,0,Weak
+342,69,TrueNorth Consulting,2024-Q1,0,0,0,0,0,1,0,Weak
+343,69,TrueNorth Consulting,2024-Q2,0,0,0,1,3,0,1,Weak
+344,69,TrueNorth Consulting,2024-Q3,0,0,0,0,0,0,1,Weak
+345,69,TrueNorth Consulting,2024-Q4,0,0,1,0,2,0,1,Weak
+346,70,BaseMet Resources,2023-Q4,1,6,0,0,1,0,0,Strong
+347,70,BaseMet Resources,2024-Q1,1,12,0,0,1,0,0,Strong
+348,70,BaseMet Resources,2024-Q2,0,0,0,0,1,0,0,Strong
+349,70,BaseMet Resources,2024-Q3,1,36,0,0,1,0,0,Strong
+350,70,BaseMet Resources,2024-Q4,0,0,0,0,1,0,0,Strong
+351,71,ClearPath IT Group,2023-Q4,1,24,0,0,1,0,0,Strong
+352,71,ClearPath IT Group,2024-Q1,1,12,0,0,1,0,0,Strong
+353,71,ClearPath IT Group,2024-Q2,1,36,0,0,1,0,0,Strong
+354,71,ClearPath IT Group,2024-Q3,1,36,0,0,0,0,0,Strong
+355,71,ClearPath IT Group,2024-Q4,1,6,0,0,0,0,0,Strong
+356,72,BlueOcean Freight,2023-Q4,0,0,0,1,0,1,1,Weak
+357,72,BlueOcean Freight,2024-Q1,0,0,0,0,0,0,0,Weak
+358,72,BlueOcean Freight,2024-Q2,0,0,0,1,2,0,0,Weak
+359,72,BlueOcean Freight,2024-Q3,0,0,0,0,0,0,0,Weak
+360,72,BlueOcean Freight,2024-Q4,0,0,0,1,0,1,1,Weak
+361,73,PeakCraft Manufacturing,2023-Q4,1,12,0,0,1,0,0,Strong
+362,73,PeakCraft Manufacturing,2024-Q1,1,12,0,0,0,0,0,Strong
+363,73,PeakCraft Manufacturing,2024-Q2,0,0,0,0,1,0,0,Strong
+364,73,PeakCraft Manufacturing,2024-Q3,1,6,0,0,0,0,0,Strong
+365,73,PeakCraft Manufacturing,2024-Q4,1,6,0,0,1,0,0,Strong
+366,74,Axis Strategy Partners,2023-Q4,0,0,0,1,4,0,1,Weak
+367,74,Axis Strategy Partners,2024-Q1,0,0,0,1,0,1,0,Weak
+368,74,Axis Strategy Partners,2024-Q2,0,0,0,0,3,0,1,Weak
+369,74,Axis Strategy Partners,2024-Q3,0,0,0,0,2,0,0,Weak
+370,74,Axis Strategy Partners,2024-Q4,0,0,0,0,2,0,0,Weak
+371,75,SunMat Corp,2023-Q4,1,6,0,0,0,0,0,Strong
+372,75,SunMat Corp,2024-Q1,1,6,0,0,1,0,0,Strong
+373,75,SunMat Corp,2024-Q2,1,36,0,0,0,0,0,Strong
+374,75,SunMat Corp,2024-Q3,1,12,0,0,0,0,0,Strong
+375,75,SunMat Corp,2024-Q4,0,0,0,0,0,0,0,Strong
+376,76,HorizonTech Inc,2023-Q4,0,0,0,0,0,1,1,Weak
+377,76,HorizonTech Inc,2024-Q1,0,0,0,1,3,1,0,Weak
+378,76,HorizonTech Inc,2024-Q2,0,0,0,0,0,1,0,Weak
+379,76,HorizonTech Inc,2024-Q3,0,0,0,0,2,0,0,Weak
+380,76,HorizonTech Inc,2024-Q4,0,0,0,1,0,0,0,Weak
+381,77,FlexFreight Solutions,2023-Q4,1,36,0,0,1,0,0,Strong
+382,77,FlexFreight Solutions,2024-Q1,1,24,0,0,0,0,0,Strong
+383,77,FlexFreight Solutions,2024-Q2,1,36,0,0,0,0,0,Strong
+384,77,FlexFreight Solutions,2024-Q3,1,24,0,0,0,0,0,Strong
+385,77,FlexFreight Solutions,2024-Q4,1,12,0,0,1,0,0,Strong
+386,78,ProMold Manufacturing,2023-Q4,1,6,0,0,1,0,0,Strong
+387,78,ProMold Manufacturing,2024-Q1,1,6,0,0,1,0,0,Strong
+388,78,ProMold Manufacturing,2024-Q2,1,12,0,0,1,0,0,Strong
+389,78,ProMold Manufacturing,2024-Q3,0,0,0,0,1,0,0,Strong
+390,78,ProMold Manufacturing,2024-Q4,1,6,0,0,1,0,0,Strong
+391,79,GrowthPoint Consulting,2023-Q4,0,0,0,0,0,0,0,Weak
+392,79,GrowthPoint Consulting,2024-Q1,0,0,0,1,3,0,0,Weak
+393,79,GrowthPoint Consulting,2024-Q2,0,0,0,1,2,0,0,Weak
+394,79,GrowthPoint Consulting,2024-Q3,0,0,0,1,5,0,1,Weak
+395,79,GrowthPoint Consulting,2024-Q4,0,0,0,1,3,1,1,Weak
+396,80,NordicRaw Materials,2023-Q4,1,36,0,0,1,0,0,Strong
+397,80,NordicRaw Materials,2024-Q1,1,24,0,0,1,0,0,Strong
+398,80,NordicRaw Materials,2024-Q2,0,0,0,0,1,0,0,Strong
+399,80,NordicRaw Materials,2024-Q3,1,6,0,0,0,0,0,Strong
+400,80,NordicRaw Materials,2024-Q4,0,0,0,0,1,0,0,Strong
+401,81,CatalystIT Systems,2023-Q4,1,6,0,0,0,0,0,Strong
+402,81,CatalystIT Systems,2024-Q1,1,6,0,0,0,0,0,Strong
+403,81,CatalystIT Systems,2024-Q2,1,36,0,0,0,0,0,Strong
+404,81,CatalystIT Systems,2024-Q3,0,0,0,0,1,0,0,Strong
+405,81,CatalystIT Systems,2024-Q4,1,24,0,0,1,0,0,Strong
+406,82,CargoNation Ltd,2023-Q4,0,0,0,0,1,0,0,Strong
+407,82,CargoNation Ltd,2024-Q1,1,6,0,0,0,0,0,Strong
+408,82,CargoNation Ltd,2024-Q2,1,6,0,0,0,0,0,Strong
+409,82,CargoNation Ltd,2024-Q3,0,0,0,0,0,0,0,Strong
+410,82,CargoNation Ltd,2024-Q4,1,12,0,0,0,0,0,Strong
+411,83,BoltWorks Mfg,2023-Q4,1,12,0,0,0,0,0,Strong
+412,83,BoltWorks Mfg,2024-Q1,1,36,0,0,0,0,0,Strong
+413,83,BoltWorks Mfg,2024-Q2,1,6,0,0,0,0,0,Strong
+414,83,BoltWorks Mfg,2024-Q3,1,12,0,0,0,0,0,Strong
+415,83,BoltWorks Mfg,2024-Q4,0,0,0,0,1,0,0,Strong
+416,84,PinnacleConsult Inc,2023-Q4,0,0,0,0,3,0,1,Weak
+417,84,PinnacleConsult Inc,2024-Q1,0,0,0,0,3,1,1,Weak
+418,84,PinnacleConsult Inc,2024-Q2,0,0,0,0,5,1,1,Weak
+419,84,PinnacleConsult Inc,2024-Q3,0,0,0,0,4,0,0,Weak
+420,84,PinnacleConsult Inc,2024-Q4,0,0,0,1,3,1,0,Weak
+421,85,EcoMine Supplies,2023-Q4,0,0,0,0,3,1,1,Weak
+422,85,EcoMine Supplies,2024-Q1,0,0,0,1,4,1,1,Weak
+423,85,EcoMine Supplies,2024-Q2,0,0,0,0,3,0,1,Weak
+424,85,EcoMine Supplies,2024-Q3,0,0,0,0,5,1,0,Weak
+425,85,EcoMine Supplies,2024-Q4,0,0,0,1,2,0,1,Weak
+426,86,InfoTech Dynamics,2023-Q4,1,24,0,0,0,0,0,Strong
+427,86,InfoTech Dynamics,2024-Q1,1,24,0,0,1,0,0,Strong
+428,86,InfoTech Dynamics,2024-Q2,0,0,0,0,1,0,0,Strong
+429,86,InfoTech Dynamics,2024-Q3,1,12,0,0,1,0,0,Strong
+430,86,InfoTech Dynamics,2024-Q4,1,6,0,0,0,0,0,Strong
+431,87,JetRoute Logistics,2023-Q4,1,12,0,0,1,0,0,Strong
+432,87,JetRoute Logistics,2024-Q1,1,6,0,0,0,0,0,Strong
+433,87,JetRoute Logistics,2024-Q2,0,0,0,0,1,0,0,Strong
+434,87,JetRoute Logistics,2024-Q3,1,12,0,0,1,0,0,Strong
+435,87,JetRoute Logistics,2024-Q4,0,0,0,0,0,0,0,Strong
+436,88,CoreCast Mfg,2023-Q4,0,0,0,0,1,0,0,Strong
+437,88,CoreCast Mfg,2024-Q1,1,12,0,0,1,0,0,Strong
+438,88,CoreCast Mfg,2024-Q2,0,0,0,0,0,0,0,Strong
+439,88,CoreCast Mfg,2024-Q3,1,12,0,0,1,0,0,Strong
+440,88,CoreCast Mfg,2024-Q4,1,36,0,0,0,0,0,Strong
+441,89,TrueConsult Global,2023-Q4,0,0,0,0,1,0,0,Strong
+442,89,TrueConsult Global,2024-Q1,1,24,0,0,1,0,0,Strong
+443,89,TrueConsult Global,2024-Q2,0,0,0,0,0,0,0,Strong
+444,89,TrueConsult Global,2024-Q3,1,36,0,0,0,0,0,Strong
+445,89,TrueConsult Global,2024-Q4,0,0,0,0,1,0,0,Strong
+446,90,MarbleMat Resources,2023-Q4,0,0,0,0,0,0,0,Strong
+447,90,MarbleMat Resources,2024-Q1,0,0,0,0,0,0,0,Strong
+448,90,MarbleMat Resources,2024-Q2,1,12,0,0,0,0,0,Strong
+449,90,MarbleMat Resources,2024-Q3,0,0,0,0,0,0,0,Strong
+450,90,MarbleMat Resources,2024-Q4,1,24,0,0,1,0,0,Strong
+451,91,TechSphere Solutions,2023-Q4,0,0,0,0,4,1,0,Weak
+452,91,TechSphere Solutions,2024-Q1,0,0,0,1,2,1,1,Weak
+453,91,TechSphere Solutions,2024-Q2,0,0,0,0,3,0,0,Weak
+454,91,TechSphere Solutions,2024-Q3,0,0,0,1,3,1,0,Weak
+455,91,TechSphere Solutions,2024-Q4,0,0,0,1,2,0,1,Weak
+456,92,AquaFreight Corp,2023-Q4,1,36,0,0,0,0,0,Strong
+457,92,AquaFreight Corp,2024-Q1,1,36,0,0,0,0,0,Strong
+458,92,AquaFreight Corp,2024-Q2,0,0,0,0,1,0,0,Strong
+459,92,AquaFreight Corp,2024-Q3,0,0,0,0,1,0,0,Strong
+460,92,AquaFreight Corp,2024-Q4,0,0,0,0,1,0,0,Strong
+461,93,StrongBuild Mfg,2023-Q4,1,6,0,0,1,0,0,Strong
+462,93,StrongBuild Mfg,2024-Q1,1,24,0,0,0,0,0,Strong
+463,93,StrongBuild Mfg,2024-Q2,0,0,0,0,1,0,0,Strong
+464,93,StrongBuild Mfg,2024-Q3,1,36,0,0,0,0,0,Strong
+465,93,StrongBuild Mfg,2024-Q4,1,12,0,0,0,0,0,Strong
+466,94,Vantage Consulting,2023-Q4,0,0,0,0,0,0,0,Strong
+467,94,Vantage Consulting,2024-Q1,1,24,0,0,1,0,0,Strong
+468,94,Vantage Consulting,2024-Q2,0,0,0,0,1,0,0,Strong
+469,94,Vantage Consulting,2024-Q3,0,0,0,0,0,0,0,Strong
+470,94,Vantage Consulting,2024-Q4,1,36,0,0,0,0,0,Strong
+471,95,ForestMat Supplies,2023-Q4,0,0,0,0,0,0,0,Strong
+472,95,ForestMat Supplies,2024-Q1,1,36,0,0,1,0,0,Strong
+473,95,ForestMat Supplies,2024-Q2,0,0,0,0,0,0,0,Strong
+474,95,ForestMat Supplies,2024-Q3,1,24,0,0,0,0,0,Strong
+475,95,ForestMat Supplies,2024-Q4,1,12,0,0,1,0,0,Strong
+476,96,ClearVision IT,2023-Q4,1,24,0,0,1,0,0,Strong
+477,96,ClearVision IT,2024-Q1,1,12,0,0,1,0,0,Strong
+478,96,ClearVision IT,2024-Q2,1,24,0,0,0,0,0,Strong
+479,96,ClearVision IT,2024-Q3,0,0,0,0,0,0,0,Strong
+480,96,ClearVision IT,2024-Q4,1,6,0,0,1,0,0,Strong
+481,97,NightOwl Logistics,2023-Q4,0,0,0,0,2,1,0,Weak
+482,97,NightOwl Logistics,2024-Q1,0,0,0,1,5,0,1,Weak
+483,97,NightOwl Logistics,2024-Q2,0,0,0,0,0,1,0,Weak
+484,97,NightOwl Logistics,2024-Q3,0,0,0,0,4,0,0,Weak
+485,97,NightOwl Logistics,2024-Q4,0,0,1,0,4,0,1,Weak
+486,98,TitanForge Mfg,2023-Q4,1,12,0,0,0,0,0,Strong
+487,98,TitanForge Mfg,2024-Q1,1,12,0,0,0,0,0,Strong
+488,98,TitanForge Mfg,2024-Q2,1,12,0,0,1,0,0,Strong
+489,98,TitanForge Mfg,2024-Q3,0,0,0,0,1,0,0,Strong
+490,98,TitanForge Mfg,2024-Q4,1,36,0,0,0,0,0,Strong

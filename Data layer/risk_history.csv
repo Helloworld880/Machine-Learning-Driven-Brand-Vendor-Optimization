@@ -1,0 +1,589 @@
+risk_id,vendor_id,vendor_name,assessment_date,financial_risk,operational_risk,compliance_risk,geopolitical_risk,cyber_risk,overall_risk,risk_level,mitigation_status,incident_flag
+1,1,TechCorp Inc,2024-01-15,25.4,27.5,26.6,35.8,41.7,31.4,Low,Completed,0
+2,1,TechCorp Inc,2024-03-15,27.8,31.5,25.5,17.7,35.2,27.5,Low,Completed,0
+3,1,TechCorp Inc,2024-05-15,24.7,30.7,28.3,17.7,38.4,27.9,Low,Completed,0
+4,1,TechCorp Inc,2024-07-15,29.2,40.0,37.2,21.9,21.9,30.0,Low,Completed,0
+5,1,TechCorp Inc,2024-09-15,36.5,32.0,32.2,39.7,38.9,35.9,Medium,Monitoring,0
+6,1,TechCorp Inc,2024-11-15,40.5,38.3,43.7,23.2,37.0,36.5,Medium,Monitoring,0
+7,2,Global Supplies Ltd,2024-01-15,30.2,36.1,28.7,34.7,13.7,28.7,Low,Completed,0
+8,2,Global Supplies Ltd,2024-03-15,25.5,22.9,23.2,13.5,22.6,21.5,Low,Completed,0
+9,2,Global Supplies Ltd,2024-05-15,28.6,29.7,25.0,19.3,47.6,30.0,Low,Completed,0
+10,2,Global Supplies Ltd,2024-07-15,32.4,27.3,33.1,15.7,26.4,27.0,Low,Completed,0
+11,2,Global Supplies Ltd,2024-09-15,38.3,39.1,38.0,39.5,41.5,39.3,Medium,Monitoring,0
+12,2,Global Supplies Ltd,2024-11-15,19.7,23.8,20.9,17.4,47.8,25.9,Low,Completed,0
+13,3,Quality Parts Co,2024-01-15,73.5,62.2,60.5,42.0,29.4,53.5,Medium,In Progress,0
+14,3,Quality Parts Co,2024-03-15,72.1,60.1,58.0,30.5,46.1,53.4,Medium,In Progress,0
+15,3,Quality Parts Co,2024-05-15,72.2,67.4,61.9,13.2,13.8,45.7,Medium,Monitoring,0
+16,3,Quality Parts Co,2024-07-15,73.9,61.0,57.5,12.2,26.5,46.2,Medium,Monitoring,0
+17,3,Quality Parts Co,2024-09-15,84.0,75.2,74.9,10.4,39.4,56.8,Medium,In Progress,0
+18,3,Quality Parts Co,2024-11-15,80.6,60.4,68.3,13.9,28.5,50.3,Medium,In Progress,0
+19,4,Innovative Solutions,2024-01-15,33.0,34.2,24.2,32.5,18.8,28.6,Low,Completed,0
+20,4,Innovative Solutions,2024-03-15,33.7,26.6,31.2,36.3,17.8,29.1,Low,Completed,0
+21,4,Innovative Solutions,2024-05-15,30.4,35.0,30.3,15.0,24.3,27.0,Low,Completed,0
+22,4,Innovative Solutions,2024-07-15,28.5,29.9,27.9,25.8,14.2,25.2,Low,Completed,0
+23,4,Innovative Solutions,2024-09-15,39.3,27.8,33.6,17.4,40.9,31.8,Low,Completed,0
+24,4,Innovative Solutions,2024-11-15,29.0,33.7,34.1,24.3,45.2,33.3,Low,Completed,0
+25,5,Reliable Services LLC,2024-01-15,47.3,45.2,48.3,17.0,23.8,36.3,Medium,Monitoring,0
+26,5,Reliable Services LLC,2024-03-15,54.6,45.6,47.3,14.2,20.5,36.4,Medium,Monitoring,0
+27,5,Reliable Services LLC,2024-05-15,51.2,39.6,40.5,12.5,36.0,36.0,Medium,Monitoring,0
+28,5,Reliable Services LLC,2024-07-15,53.6,48.3,36.9,18.3,37.4,38.9,Medium,Monitoring,0
+29,5,Reliable Services LLC,2024-09-15,43.4,48.6,43.0,26.5,41.8,40.7,Medium,Monitoring,0
+30,5,Reliable Services LLC,2024-11-15,53.7,44.8,50.7,24.8,29.7,40.8,Medium,Monitoring,0
+31,6,Apex Delivery Co,2024-01-15,51.9,51.7,41.5,24.1,24.9,38.8,Medium,Monitoring,0
+32,6,Apex Delivery Co,2024-03-15,48.4,40.5,47.9,24.8,22.6,36.8,Medium,Monitoring,0
+33,6,Apex Delivery Co,2024-05-15,53.7,41.8,50.9,29.3,13.9,37.9,Medium,Monitoring,0
+34,6,Apex Delivery Co,2024-07-15,59.9,57.5,59.1,39.7,18.3,46.9,Medium,Monitoring,0
+35,6,Apex Delivery Co,2024-09-15,47.2,43.2,41.7,23.3,49.4,41.0,Medium,Monitoring,0
+36,6,Apex Delivery Co,2024-11-15,50.4,40.4,43.2,43.5,49.8,45.5,Medium,Monitoring,0
+37,7,BlueStar Tech,2024-01-15,29.3,24.3,26.1,43.9,38.0,32.3,Low,Completed,0
+38,7,BlueStar Tech,2024-03-15,30.1,23.1,30.5,27.6,48.4,31.9,Low,Completed,0
+39,7,BlueStar Tech,2024-05-15,30.3,21.2,22.6,30.8,41.7,29.3,Low,Completed,0
+40,7,BlueStar Tech,2024-07-15,20.1,34.0,23.3,30.8,39.5,29.6,Low,Completed,0
+41,7,BlueStar Tech,2024-09-15,27.6,30.0,34.9,17.1,43.2,30.6,Low,Completed,0
+42,7,BlueStar Tech,2024-11-15,22.1,29.2,22.8,21.1,44.6,28.0,Low,Completed,0
+43,8,PrimeCast Mfg,2024-01-15,50.1,52.4,52.9,12.6,20.1,37.6,Medium,Monitoring,0
+44,8,PrimeCast Mfg,2024-03-15,55.2,50.0,50.7,22.9,18.0,39.4,Medium,Monitoring,0
+45,8,PrimeCast Mfg,2024-05-15,55.8,49.1,55.6,32.9,12.3,41.1,Medium,Monitoring,0
+46,8,PrimeCast Mfg,2024-07-15,52.2,51.2,56.2,14.7,16.4,38.1,Medium,Monitoring,0
+47,8,PrimeCast Mfg,2024-09-15,46.7,36.3,42.9,35.1,19.7,36.2,Medium,Monitoring,0
+48,8,PrimeCast Mfg,2024-11-15,51.3,47.9,55.2,39.6,15.5,41.9,Medium,Monitoring,0
+49,9,SwiftRoute Express,2024-01-15,28.7,21.9,34.1,32.3,22.0,27.8,Low,Completed,0
+50,9,SwiftRoute Express,2024-03-15,33.1,29.8,24.6,12.6,45.6,29.1,Low,Completed,0
+51,9,SwiftRoute Express,2024-05-15,35.3,38.6,34.8,15.2,16.8,28.1,Low,Completed,0
+52,9,SwiftRoute Express,2024-07-15,34.9,33.4,34.1,41.5,20.0,32.8,Low,Completed,0
+53,9,SwiftRoute Express,2024-09-15,24.1,31.9,33.2,24.2,35.6,29.8,Low,Completed,0
+54,9,SwiftRoute Express,2024-11-15,31.8,30.9,32.2,38.4,45.5,35.8,Medium,Monitoring,0
+55,10,Omega Consult Group,2024-01-15,51.8,41.4,50.2,43.1,44.8,46.3,Medium,Monitoring,0
+56,10,Omega Consult Group,2024-03-15,47.5,50.0,40.1,45.5,44.6,45.6,Medium,Monitoring,0
+57,10,Omega Consult Group,2024-05-15,51.3,42.0,40.0,42.8,20.6,39.4,Medium,Monitoring,0
+58,10,Omega Consult Group,2024-07-15,41.0,37.1,45.0,48.8,22.6,38.9,Medium,Monitoring,0
+59,10,Omega Consult Group,2024-09-15,50.7,54.8,47.7,47.9,16.4,43.5,Medium,Monitoring,0
+60,10,Omega Consult Group,2024-11-15,54.6,61.0,50.4,18.8,28.5,42.7,Medium,Monitoring,0
+61,11,NovaMat Supplies,2024-01-15,45.5,46.0,44.1,23.5,33.9,38.6,Medium,Monitoring,0
+62,11,NovaMat Supplies,2024-03-15,49.7,35.7,49.2,28.8,39.3,40.6,Medium,Monitoring,0
+63,11,NovaMat Supplies,2024-05-15,52.0,44.3,40.1,33.2,24.5,38.8,Medium,Monitoring,0
+64,11,NovaMat Supplies,2024-07-15,50.7,46.6,39.9,20.8,27.5,37.1,Medium,Monitoring,0
+65,11,NovaMat Supplies,2024-09-15,44.9,38.0,42.4,42.9,37.7,41.2,Medium,Monitoring,0
+66,11,NovaMat Supplies,2024-11-15,57.5,49.4,52.9,10.0,22.9,38.5,Medium,Monitoring,0
+67,12,DataStream Inc,2024-01-15,32.9,32.8,29.6,25.5,24.1,29.0,Low,Completed,0
+68,12,DataStream Inc,2024-03-15,36.9,35.2,25.6,13.0,35.6,29.3,Low,Completed,0
+69,12,DataStream Inc,2024-05-15,31.4,36.8,35.0,33.5,24.5,32.3,Low,Completed,0
+70,12,DataStream Inc,2024-07-15,23.8,23.8,27.3,39.7,18.8,26.7,Low,Completed,0
+71,12,DataStream Inc,2024-09-15,33.3,25.2,32.6,27.3,25.3,28.7,Low,Completed,0
+72,12,DataStream Inc,2024-11-15,30.0,38.3,37.8,13.7,32.2,30.4,Low,Completed,0
+73,13,SteelWorks Co,2024-01-15,54.8,44.6,37.5,18.7,44.2,39.9,Medium,Monitoring,0
+74,13,SteelWorks Co,2024-03-15,53.0,47.0,50.7,30.8,48.1,45.9,Medium,Monitoring,0
+75,13,SteelWorks Co,2024-05-15,53.9,51.0,47.1,39.1,32.8,44.8,Medium,Monitoring,0
+76,13,SteelWorks Co,2024-07-15,57.1,48.8,45.3,18.7,36.2,41.2,Medium,Monitoring,0
+77,13,SteelWorks Co,2024-09-15,54.3,51.0,45.3,12.7,22.9,37.2,Medium,Monitoring,0
+78,13,SteelWorks Co,2024-11-15,44.4,42.2,35.9,18.1,38.4,35.8,Medium,Monitoring,0
+79,14,RapidFreight Ltd,2024-01-15,40.2,42.7,46.2,24.6,19.9,34.7,Low,Completed,0
+80,14,RapidFreight Ltd,2024-03-15,50.2,45.5,48.3,40.0,41.1,45.0,Medium,Monitoring,0
+81,14,RapidFreight Ltd,2024-05-15,39.1,41.5,48.8,39.9,48.2,43.5,Medium,Monitoring,0
+82,14,RapidFreight Ltd,2024-07-15,48.3,44.8,47.0,17.7,20.3,35.6,Medium,Monitoring,0
+83,14,RapidFreight Ltd,2024-09-15,39.9,41.7,48.2,24.2,18.3,34.4,Low,Completed,0
+84,14,RapidFreight Ltd,2024-11-15,41.6,46.8,39.7,23.8,33.4,37.1,Medium,Monitoring,0
+85,15,GreenSource Corp,2024-01-15,49.7,37.8,42.5,11.8,26.4,33.6,Low,Completed,0
+86,15,GreenSource Corp,2024-03-15,45.1,47.0,40.6,36.3,43.6,42.5,Medium,Monitoring,0
+87,15,GreenSource Corp,2024-05-15,41.7,34.7,42.4,45.0,25.3,37.8,Medium,Monitoring,0
+88,15,GreenSource Corp,2024-07-15,53.7,48.3,48.9,43.2,19.6,42.8,Medium,Monitoring,0
+89,15,GreenSource Corp,2024-09-15,38.1,31.9,39.7,29.7,20.3,31.9,Low,Completed,0
+90,15,GreenSource Corp,2024-11-15,55.9,43.0,49.3,36.2,16.4,40.2,Medium,Monitoring,0
+91,16,CloudNine Systems,2024-01-15,55.6,38.8,35.9,20.9,41.7,38.6,Medium,Monitoring,0
+92,16,CloudNine Systems,2024-03-15,50.6,50.3,38.4,34.2,39.8,42.7,Medium,Monitoring,0
+93,16,CloudNine Systems,2024-05-15,51.0,48.4,41.6,14.2,53.4,41.7,Medium,Monitoring,0
+94,16,CloudNine Systems,2024-07-15,51.9,47.6,44.4,27.7,29.0,40.1,Medium,Monitoring,0
+95,16,CloudNine Systems,2024-09-15,59.8,44.6,54.9,32.2,47.5,47.8,Medium,Monitoring,0
+96,16,CloudNine Systems,2024-11-15,54.1,53.7,53.9,19.5,46.7,45.6,Medium,Monitoring,0
+97,17,FastLane Logistics,2024-01-15,47.1,44.4,46.2,24.4,44.4,41.3,Medium,Monitoring,0
+98,17,FastLane Logistics,2024-03-15,43.8,52.9,40.8,31.3,35.2,40.8,Medium,Monitoring,0
+99,17,FastLane Logistics,2024-05-15,41.3,50.7,38.2,22.4,42.3,39.0,Medium,Monitoring,0
+100,17,FastLane Logistics,2024-07-15,51.0,47.7,38.9,15.4,48.0,40.2,Medium,Monitoring,0
+101,17,FastLane Logistics,2024-09-15,45.2,40.4,41.8,39.2,36.5,40.6,Medium,Monitoring,0
+102,17,FastLane Logistics,2024-11-15,51.9,40.0,40.2,39.2,23.6,39.0,Medium,Monitoring,0
+103,18,PrecisionForge Ltd,2024-01-15,77.2,59.7,56.6,36.1,24.6,50.8,Medium,In Progress,0
+104,18,PrecisionForge Ltd,2024-03-15,75.7,56.2,53.3,16.7,16.5,43.7,Medium,Monitoring,0
+105,18,PrecisionForge Ltd,2024-05-15,81.4,55.0,54.4,26.9,39.5,51.5,Medium,In Progress,0
+106,18,PrecisionForge Ltd,2024-07-15,83.6,61.5,57.8,16.8,20.6,48.1,Medium,Monitoring,0
+107,18,PrecisionForge Ltd,2024-09-15,68.2,56.3,51.0,44.1,33.0,50.5,Medium,In Progress,0
+108,18,PrecisionForge Ltd,2024-11-15,77.8,69.8,62.2,40.5,33.8,56.8,Medium,In Progress,0
+109,19,StratEdge Consulting,2024-01-15,50.5,40.0,37.6,42.9,30.2,40.2,Medium,Monitoring,0
+110,19,StratEdge Consulting,2024-03-15,51.4,39.6,47.0,11.9,17.7,33.5,Low,Completed,0
+111,19,StratEdge Consulting,2024-05-15,49.8,53.9,39.4,36.8,35.0,43.0,Medium,Monitoring,0
+112,19,StratEdge Consulting,2024-07-15,51.7,49.2,47.0,25.5,44.7,43.6,Medium,Monitoring,0
+113,19,StratEdge Consulting,2024-09-15,56.7,54.9,53.2,35.9,48.0,49.7,Medium,Monitoring,0
+114,19,StratEdge Consulting,2024-11-15,43.8,43.8,35.2,16.1,14.9,30.7,Low,Completed,0
+115,20,EcoRaw Materials,2024-01-15,32.3,33.1,25.6,18.1,38.9,29.6,Low,Completed,0
+116,20,EcoRaw Materials,2024-03-15,33.3,35.6,35.4,37.6,35.8,35.5,Medium,Monitoring,0
+117,20,EcoRaw Materials,2024-05-15,39.7,32.1,30.8,32.7,46.5,36.4,Medium,Monitoring,0
+118,20,EcoRaw Materials,2024-07-15,31.9,30.5,30.0,36.2,33.6,32.5,Low,Completed,0
+119,20,EcoRaw Materials,2024-09-15,26.4,32.7,29.4,43.0,31.0,32.5,Low,Completed,0
+120,20,EcoRaw Materials,2024-11-15,29.0,25.4,28.7,21.3,21.5,25.2,Low,Completed,0
+121,21,NexGen IT Solutions,2024-01-15,34.8,35.4,29.3,43.3,54.0,39.4,Medium,Monitoring,0
+122,21,NexGen IT Solutions,2024-03-15,27.3,23.6,32.7,26.5,40.8,30.2,Low,Completed,0
+123,21,NexGen IT Solutions,2024-05-15,28.8,34.8,33.6,27.2,19.5,28.8,Low,Completed,0
+124,21,NexGen IT Solutions,2024-07-15,26.4,31.9,32.4,21.5,42.4,30.9,Low,Completed,0
+125,21,NexGen IT Solutions,2024-09-15,32.6,33.1,27.0,25.9,28.0,29.3,Low,Completed,0
+126,21,NexGen IT Solutions,2024-11-15,33.0,26.7,26.6,44.6,41.0,34.4,Low,Completed,0
+127,22,CargoWise Corp,2024-01-15,28.7,24.6,27.7,41.5,35.8,31.6,Low,Completed,0
+128,22,CargoWise Corp,2024-03-15,27.4,31.5,36.8,30.3,38.5,32.9,Low,Completed,0
+129,22,CargoWise Corp,2024-05-15,33.3,29.2,23.9,20.5,32.9,28.0,Low,Completed,0
+130,22,CargoWise Corp,2024-07-15,26.2,38.7,36.7,31.2,16.5,29.8,Low,Completed,0
+131,22,CargoWise Corp,2024-09-15,35.4,38.7,35.4,24.6,43.7,35.6,Medium,Monitoring,0
+132,22,CargoWise Corp,2024-11-15,36.3,40.0,37.7,47.3,31.3,38.5,Medium,Monitoring,0
+133,23,MetalPlus Manufacturing,2024-01-15,35.8,26.6,32.0,29.5,47.5,34.3,Low,Completed,0
+134,23,MetalPlus Manufacturing,2024-03-15,35.6,27.0,25.4,35.5,50.0,34.7,Low,Completed,0
+135,23,MetalPlus Manufacturing,2024-05-15,27.7,31.2,26.2,34.3,32.7,30.4,Low,Completed,0
+136,23,MetalPlus Manufacturing,2024-07-15,29.6,25.5,31.0,35.0,20.9,28.4,Low,Completed,0
+137,23,MetalPlus Manufacturing,2024-09-15,30.8,38.9,35.7,43.4,26.7,35.1,Medium,Monitoring,0
+138,23,MetalPlus Manufacturing,2024-11-15,39.4,42.0,32.0,16.3,31.1,32.2,Low,Completed,0
+139,24,Alpha Advisors,2024-01-15,78.6,65.6,60.7,28.4,29.4,52.5,Medium,In Progress,0
+140,24,Alpha Advisors,2024-03-15,74.1,63.1,57.7,26.4,48.8,54.0,Medium,In Progress,0
+141,24,Alpha Advisors,2024-05-15,75.9,61.4,65.8,39.8,44.7,57.5,Medium,In Progress,0
+142,24,Alpha Advisors,2024-07-15,71.5,62.6,64.6,40.5,13.4,50.5,Medium,In Progress,0
+143,24,Alpha Advisors,2024-09-15,70.7,61.3,63.4,36.1,28.5,52.0,Medium,In Progress,0
+144,24,Alpha Advisors,2024-11-15,70.0,59.8,54.9,34.3,46.3,53.1,Medium,In Progress,0
+145,25,TerraMat Co,2024-01-15,75.5,56.3,55.6,20.1,32.2,47.9,Medium,Monitoring,0
+146,25,TerraMat Co,2024-03-15,76.0,54.8,51.9,45.5,35.5,52.8,Medium,In Progress,0
+147,25,TerraMat Co,2024-05-15,75.6,52.6,55.5,23.9,21.7,45.9,Medium,Monitoring,0
+148,25,TerraMat Co,2024-07-15,71.2,61.7,55.4,20.5,28.8,47.5,Medium,Monitoring,0
+149,25,TerraMat Co,2024-09-15,71.9,60.7,55.1,23.8,44.1,51.1,Medium,In Progress,0
+150,25,TerraMat Co,2024-11-15,66.6,55.4,49.7,35.0,33.8,48.1,Medium,Monitoring,0
+151,26,CyberEdge Technologies,2024-01-15,47.8,51.4,45.6,19.6,37.5,40.4,Medium,Monitoring,0
+152,26,CyberEdge Technologies,2024-03-15,54.1,37.4,45.8,27.4,50.4,43.0,Medium,Monitoring,0
+153,26,CyberEdge Technologies,2024-05-15,52.8,44.4,40.3,32.3,39.6,41.9,Medium,Monitoring,0
+154,26,CyberEdge Technologies,2024-07-15,55.5,48.9,50.8,32.0,50.3,47.5,Medium,Monitoring,0
+155,26,CyberEdge Technologies,2024-09-15,51.0,45.8,47.6,35.6,19.4,39.9,Medium,Monitoring,0
+156,26,CyberEdge Technologies,2024-11-15,50.9,36.2,35.9,28.9,52.9,41.0,Medium,Monitoring,0
+157,27,SpeedFreight Inc,2024-01-15,80.0,64.0,56.2,38.9,30.3,53.9,Medium,In Progress,0
+158,27,SpeedFreight Inc,2024-03-15,79.3,57.5,55.5,43.7,17.3,50.7,Medium,In Progress,0
+159,27,SpeedFreight Inc,2024-05-15,83.1,66.1,70.1,43.9,42.6,61.1,Medium,In Progress,0
+160,27,SpeedFreight Inc,2024-07-15,77.9,50.3,59.5,25.9,37.6,50.2,Medium,In Progress,0
+161,27,SpeedFreight Inc,2024-09-15,79.5,67.3,69.2,13.8,20.9,50.1,Medium,In Progress,0
+162,27,SpeedFreight Inc,2024-11-15,72.6,52.7,58.4,17.7,14.4,43.1,Medium,Monitoring,0
+163,28,Ironclad Manufacturing,2024-01-15,37.6,27.8,28.9,14.9,48.0,31.4,Low,Completed,0
+164,28,Ironclad Manufacturing,2024-03-15,32.2,24.0,35.2,14.7,29.2,27.1,Low,Completed,0
+165,28,Ironclad Manufacturing,2024-05-15,37.3,39.8,30.8,36.0,17.9,32.3,Low,Completed,0
+166,28,Ironclad Manufacturing,2024-07-15,27.8,30.6,28.8,43.3,13.2,28.7,Low,Completed,0
+167,28,Ironclad Manufacturing,2024-09-15,31.2,37.3,34.4,13.5,38.1,30.9,Low,Completed,0
+168,28,Ironclad Manufacturing,2024-11-15,40.5,30.7,30.8,16.6,16.6,27.1,Low,Completed,0
+169,29,ProConsult Partners,2024-01-15,73.7,61.1,61.5,35.9,12.8,49.0,Medium,Monitoring,0
+170,29,ProConsult Partners,2024-03-15,72.4,53.7,61.7,17.4,41.1,49.3,Medium,Monitoring,0
+171,29,ProConsult Partners,2024-05-15,69.3,62.8,55.6,20.2,46.2,50.8,Medium,In Progress,0
+172,29,ProConsult Partners,2024-07-15,74.1,48.3,49.9,23.8,18.6,42.9,Medium,Monitoring,0
+173,29,ProConsult Partners,2024-09-15,71.8,54.0,66.9,23.3,24.3,48.1,Medium,Monitoring,0
+174,29,ProConsult Partners,2024-11-15,64.4,57.9,55.5,41.1,30.1,49.8,Medium,Monitoring,0
+175,30,NaturalRes Corp,2024-01-15,32.2,23.7,29.2,43.1,13.6,28.4,Low,Completed,0
+176,30,NaturalRes Corp,2024-03-15,37.6,31.5,29.8,43.7,14.3,31.4,Low,Completed,0
+177,30,NaturalRes Corp,2024-05-15,31.2,33.3,29.3,41.8,14.8,30.1,Low,Completed,0
+178,30,NaturalRes Corp,2024-07-15,29.6,19.4,22.3,32.2,32.8,27.3,Low,Completed,0
+179,30,NaturalRes Corp,2024-09-15,36.5,29.0,27.0,31.2,15.8,27.9,Low,Completed,0
+180,30,NaturalRes Corp,2024-11-15,41.0,37.2,37.6,35.2,20.2,34.2,Low,Completed,0
+181,31,Quantum IT Group,2024-01-15,29.4,28.7,29.5,24.6,19.6,26.4,Low,Completed,0
+182,31,Quantum IT Group,2024-03-15,34.6,29.3,25.3,42.3,18.6,30.0,Low,Completed,0
+183,31,Quantum IT Group,2024-05-15,30.6,27.7,36.3,38.4,37.1,34.0,Low,Completed,0
+184,31,Quantum IT Group,2024-07-15,35.0,30.2,26.5,22.4,41.3,31.1,Low,Completed,0
+185,31,Quantum IT Group,2024-09-15,41.6,39.3,41.2,31.0,29.4,36.5,Medium,Monitoring,0
+186,31,Quantum IT Group,2024-11-15,31.8,36.4,28.9,13.8,48.1,31.8,Low,Completed,0
+187,32,GlobalLink Logistics,2024-01-15,53.9,46.8,49.2,44.6,49.0,48.7,Medium,Monitoring,0
+188,32,GlobalLink Logistics,2024-03-15,53.4,49.3,39.6,47.5,43.5,46.7,Medium,Monitoring,0
+189,32,GlobalLink Logistics,2024-05-15,45.7,47.7,41.1,26.9,12.2,34.7,Low,Completed,0
+190,32,GlobalLink Logistics,2024-07-15,56.1,48.7,44.5,37.2,13.2,39.9,Medium,Monitoring,0
+191,32,GlobalLink Logistics,2024-09-15,51.7,48.8,47.1,28.0,39.4,43.0,Medium,Monitoring,0
+192,32,GlobalLink Logistics,2024-11-15,57.6,45.1,44.7,20.5,35.5,40.7,Medium,Monitoring,0
+193,33,Summit Manufacturing,2024-01-15,45.8,47.7,45.1,25.5,22.4,37.3,Medium,Monitoring,0
+194,33,Summit Manufacturing,2024-03-15,45.0,45.1,43.4,33.7,30.5,39.6,Medium,Monitoring,0
+195,33,Summit Manufacturing,2024-05-15,44.7,45.1,48.4,10.3,23.5,34.4,Low,Completed,0
+196,33,Summit Manufacturing,2024-07-15,41.9,38.9,40.6,10.3,40.4,34.4,Low,Completed,0
+197,33,Summit Manufacturing,2024-09-15,43.5,44.8,41.8,39.2,42.6,42.4,Medium,Monitoring,0
+198,33,Summit Manufacturing,2024-11-15,46.6,31.5,32.3,42.2,44.8,39.5,Medium,Monitoring,0
+199,34,Insight Consulting,2024-01-15,50.8,49.3,43.5,19.0,12.8,35.1,Medium,Monitoring,0
+200,34,Insight Consulting,2024-03-15,53.2,47.5,49.0,47.2,15.3,42.4,Medium,Monitoring,0
+201,34,Insight Consulting,2024-05-15,49.8,50.3,47.9,28.9,23.8,40.1,Medium,Monitoring,0
+202,34,Insight Consulting,2024-07-15,47.0,39.7,43.9,19.0,31.4,36.2,Medium,Monitoring,0
+203,34,Insight Consulting,2024-09-15,54.8,56.3,55.8,43.5,21.0,46.3,Medium,Monitoring,0
+204,34,Insight Consulting,2024-11-15,41.4,42.7,43.4,37.9,18.7,36.8,Medium,Monitoring,0
+205,35,PureSource Materials,2024-01-15,49.1,49.3,50.7,30.7,47.1,45.4,Medium,Monitoring,0
+206,35,PureSource Materials,2024-03-15,51.2,47.7,52.6,37.0,17.7,41.2,Medium,Monitoring,0
+207,35,PureSource Materials,2024-05-15,45.9,39.5,41.4,17.0,31.3,35.0,Medium,Monitoring,0
+208,35,PureSource Materials,2024-07-15,47.3,36.9,50.5,17.7,44.8,39.4,Medium,Monitoring,0
+209,35,PureSource Materials,2024-09-15,56.5,51.3,52.5,34.4,42.1,47.4,Medium,Monitoring,0
+210,35,PureSource Materials,2024-11-15,56.7,58.3,57.4,26.3,30.1,45.7,Medium,Monitoring,0
+211,36,InnovateTech Ltd,2024-01-15,21.0,23.9,34.2,22.0,43.1,28.9,Low,Completed,0
+212,36,InnovateTech Ltd,2024-03-15,22.6,26.5,28.0,25.4,35.9,27.7,Low,Completed,0
+213,36,InnovateTech Ltd,2024-05-15,22.9,24.9,25.4,21.8,38.7,26.7,Low,Completed,0
+214,36,InnovateTech Ltd,2024-07-15,31.8,27.1,26.7,33.7,26.8,29.2,Low,Completed,0
+215,36,InnovateTech Ltd,2024-09-15,32.3,40.9,37.9,21.7,38.1,34.2,Low,Completed,0
+216,36,InnovateTech Ltd,2024-11-15,19.5,32.7,26.3,23.7,38.6,28.2,Low,Completed,0
+217,37,AirCargo Express,2024-01-15,73.6,57.2,62.9,43.5,37.5,54.9,Medium,In Progress,0
+218,37,AirCargo Express,2024-03-15,80.2,63.5,60.6,37.6,28.1,54.0,Medium,In Progress,0
+219,37,AirCargo Express,2024-05-15,73.8,53.5,54.4,48.2,30.5,52.1,Medium,In Progress,0
+220,37,AirCargo Express,2024-07-15,69.4,50.2,61.5,18.5,41.3,48.2,Medium,Monitoring,0
+221,37,AirCargo Express,2024-09-15,86.2,57.4,62.2,41.8,17.0,52.9,Medium,In Progress,0
+222,37,AirCargo Express,2024-11-15,71.0,63.5,61.7,43.3,18.3,51.6,Medium,In Progress,0
+223,38,PowerForge Mfg,2024-01-15,48.5,47.7,40.6,25.5,22.8,37.0,Medium,Monitoring,0
+224,38,PowerForge Mfg,2024-03-15,50.1,46.6,42.7,38.3,29.8,41.5,Medium,Monitoring,0
+225,38,PowerForge Mfg,2024-05-15,50.8,54.9,53.9,26.2,22.7,41.7,Medium,Monitoring,0
+226,38,PowerForge Mfg,2024-07-15,49.4,51.9,48.2,38.0,17.3,41.0,Medium,Monitoring,0
+227,38,PowerForge Mfg,2024-09-15,48.8,48.4,42.5,13.6,44.1,39.5,Medium,Monitoring,0
+228,38,PowerForge Mfg,2024-11-15,54.4,56.5,48.5,41.7,17.6,43.7,Medium,Monitoring,0
+229,39,Clarity Consulting,2024-01-15,79.1,54.5,58.9,22.2,13.0,45.6,Medium,Monitoring,0
+230,39,Clarity Consulting,2024-03-15,72.4,53.4,65.2,23.1,13.1,45.5,Medium,Monitoring,0
+231,39,Clarity Consulting,2024-05-15,81.3,64.8,67.2,14.8,22.9,50.2,Medium,In Progress,0
+232,39,Clarity Consulting,2024-07-15,80.3,57.4,66.7,25.7,12.2,48.5,Medium,Monitoring,0
+233,39,Clarity Consulting,2024-09-15,65.9,59.4,55.4,35.5,32.1,49.6,Medium,Monitoring,0
+234,39,Clarity Consulting,2024-11-15,65.6,50.2,47.7,24.7,42.2,46.1,Medium,Monitoring,0
+235,40,GoldMine Resources,2024-01-15,28.9,37.3,31.1,15.6,31.6,28.9,Low,Completed,0
+236,40,GoldMine Resources,2024-03-15,28.6,29.0,30.7,23.4,27.8,27.9,Low,Completed,0
+237,40,GoldMine Resources,2024-05-15,30.2,40.0,25.4,33.4,31.3,32.1,Low,Completed,0
+238,40,GoldMine Resources,2024-07-15,40.1,34.9,35.2,37.2,49.3,39.3,Medium,Monitoring,0
+239,40,GoldMine Resources,2024-09-15,25.3,33.0,25.2,40.7,35.9,32.0,Low,Completed,0
+240,40,GoldMine Resources,2024-11-15,42.4,34.1,29.4,34.1,42.9,36.6,Medium,Monitoring,0
+241,41,SkyNet IT Services,2024-01-15,35.3,30.5,33.0,32.1,46.8,35.5,Medium,Monitoring,0
+242,41,SkyNet IT Services,2024-03-15,33.9,29.1,26.1,11.5,23.6,24.9,Low,Completed,0
+243,41,SkyNet IT Services,2024-05-15,34.4,28.6,34.4,29.0,25.6,30.4,Low,Completed,0
+244,41,SkyNet IT Services,2024-07-15,31.6,32.2,37.6,40.3,28.6,34.1,Low,Completed,0
+245,41,SkyNet IT Services,2024-09-15,26.1,33.1,29.4,41.3,30.7,32.1,Low,Completed,0
+246,41,SkyNet IT Services,2024-11-15,41.4,40.6,45.8,28.2,46.4,40.5,Medium,Monitoring,0
+247,42,TruckPro Logistics,2024-01-15,27.1,32.4,34.4,29.1,24.2,29.4,Low,Completed,0
+248,42,TruckPro Logistics,2024-03-15,32.8,26.4,30.1,24.9,38.2,30.5,Low,Completed,0
+249,42,TruckPro Logistics,2024-05-15,26.1,36.1,27.3,44.9,22.4,31.4,Low,Completed,0
+250,42,TruckPro Logistics,2024-07-15,43.3,29.7,37.6,22.7,42.4,35.2,Medium,Monitoring,0
+251,42,TruckPro Logistics,2024-09-15,41.1,28.5,34.9,37.3,13.3,31.0,Low,Completed,0
+252,42,TruckPro Logistics,2024-11-15,29.1,22.3,22.0,29.9,35.0,27.6,Low,Completed,0
+253,43,Alliance Manufacturing,2024-01-15,35.8,28.0,32.9,35.1,32.1,32.8,Low,Completed,0
+254,43,Alliance Manufacturing,2024-03-15,32.1,26.0,23.7,40.7,31.0,30.7,Low,Completed,0
+255,43,Alliance Manufacturing,2024-05-15,30.9,26.0,25.6,30.6,49.9,32.6,Low,Completed,0
+256,43,Alliance Manufacturing,2024-07-15,33.9,28.4,22.4,44.8,29.2,31.8,Low,Completed,0
+257,43,Alliance Manufacturing,2024-09-15,36.4,30.1,38.4,44.6,24.1,34.7,Low,Completed,0
+258,43,Alliance Manufacturing,2024-11-15,23.8,29.3,33.3,44.8,39.0,34.1,Low,Completed,0
+259,44,Vision Consulting,2024-01-15,33.1,34.9,28.2,14.2,19.6,26.0,Low,Completed,0
+260,44,Vision Consulting,2024-03-15,33.9,21.6,27.8,22.9,42.5,29.8,Low,Completed,0
+261,44,Vision Consulting,2024-05-15,33.6,24.5,26.2,45.0,39.3,33.7,Low,Completed,0
+262,44,Vision Consulting,2024-07-15,35.7,36.4,23.1,44.0,36.4,35.1,Medium,Monitoring,0
+263,44,Vision Consulting,2024-09-15,33.9,28.0,33.6,37.3,36.3,33.8,Low,Completed,0
+264,44,Vision Consulting,2024-11-15,32.7,24.8,29.5,11.9,16.7,23.1,Low,Completed,0
+265,45,EarthCore Supplies,2024-01-15,21.8,27.8,32.6,22.1,47.8,30.4,Low,Completed,0
+266,45,EarthCore Supplies,2024-03-15,31.6,28.3,33.2,29.3,16.8,27.8,Low,Completed,0
+267,45,EarthCore Supplies,2024-05-15,25.4,29.8,24.1,43.0,17.9,28.0,Low,Completed,0
+268,45,EarthCore Supplies,2024-07-15,30.9,34.8,36.9,29.7,43.4,35.1,Medium,Monitoring,0
+269,45,EarthCore Supplies,2024-09-15,14.8,27.3,25.1,32.8,41.1,28.2,Low,Completed,0
+270,45,EarthCore Supplies,2024-11-15,27.3,30.4,31.2,20.1,48.4,31.5,Low,Completed,0
+271,46,DataForce Inc,2024-01-15,52.4,47.7,39.9,12.6,18.3,34.2,Low,Completed,0
+272,46,DataForce Inc,2024-03-15,48.6,40.1,44.3,20.9,43.3,39.4,Medium,Monitoring,0
+273,46,DataForce Inc,2024-05-15,55.2,54.5,39.7,23.0,37.3,41.9,Medium,Monitoring,0
+274,46,DataForce Inc,2024-07-15,47.2,39.9,38.1,13.4,27.0,33.1,Low,Completed,0
+275,46,DataForce Inc,2024-09-15,49.5,40.1,47.3,15.6,28.4,36.2,Medium,Monitoring,0
+276,46,DataForce Inc,2024-11-15,49.1,51.6,45.4,28.0,35.0,41.8,Medium,Monitoring,0
+277,47,OceanFreight Ltd,2024-01-15,45.3,50.9,44.8,48.8,20.2,42.0,Medium,Monitoring,0
+278,47,OceanFreight Ltd,2024-03-15,45.4,43.5,49.8,37.9,29.9,41.3,Medium,Monitoring,0
+279,47,OceanFreight Ltd,2024-05-15,56.0,43.5,50.9,40.5,41.0,46.4,Medium,Monitoring,0
+280,47,OceanFreight Ltd,2024-07-15,49.2,44.3,39.8,34.4,14.8,36.5,Medium,Monitoring,0
+281,47,OceanFreight Ltd,2024-09-15,55.3,41.3,52.7,38.8,16.5,40.9,Medium,Monitoring,0
+282,47,OceanFreight Ltd,2024-11-15,59.4,58.1,52.1,47.9,40.7,51.6,Medium,In Progress,0
+283,48,CraftWorks Mfg,2024-01-15,49.0,44.8,37.4,14.8,24.7,34.1,Low,Completed,0
+284,48,CraftWorks Mfg,2024-03-15,48.5,46.7,44.2,21.5,35.3,39.2,Medium,Monitoring,0
+285,48,CraftWorks Mfg,2024-05-15,52.9,46.8,39.1,21.8,43.5,40.8,Medium,Monitoring,0
+286,48,CraftWorks Mfg,2024-07-15,52.4,42.7,49.3,22.9,37.6,41.0,Medium,Monitoring,0
+287,48,CraftWorks Mfg,2024-09-15,57.6,57.3,54.6,34.1,13.0,43.3,Medium,Monitoring,0
+288,48,CraftWorks Mfg,2024-11-15,55.3,50.2,48.4,30.2,39.4,44.7,Medium,Monitoring,0
+289,49,Summit Advisors,2024-01-15,25.0,32.1,29.5,39.4,17.6,28.7,Low,Completed,0
+290,49,Summit Advisors,2024-03-15,24.3,38.1,23.2,10.7,23.9,24.0,Low,Completed,0
+291,49,Summit Advisors,2024-05-15,29.3,26.7,29.7,42.2,45.2,34.6,Low,Completed,0
+292,49,Summit Advisors,2024-07-15,27.0,27.5,26.9,21.4,37.2,28.0,Low,Completed,0
+293,49,Summit Advisors,2024-09-15,28.1,26.2,34.9,22.0,25.5,27.3,Low,Completed,0
+294,49,Summit Advisors,2024-11-15,37.7,38.3,36.5,31.4,19.3,32.6,Low,Completed,0
+295,50,RockBase Materials,2024-01-15,32.7,25.6,35.9,25.4,23.0,28.5,Low,Completed,0
+296,50,RockBase Materials,2024-03-15,33.7,26.3,26.4,47.7,42.2,35.3,Medium,Monitoring,0
+297,50,RockBase Materials,2024-05-15,26.4,31.7,26.5,49.3,43.1,35.4,Medium,Monitoring,0
+298,50,RockBase Materials,2024-07-15,41.2,32.2,31.8,40.0,25.2,34.1,Low,Completed,0
+299,50,RockBase Materials,2024-09-15,29.3,29.8,25.3,33.9,47.5,33.2,Low,Completed,0
+300,50,RockBase Materials,2024-11-15,32.4,36.5,35.2,23.5,37.5,33.0,Low,Completed,0
+301,51,ByteWise Solutions,2024-01-15,78.9,53.4,60.5,35.1,19.8,49.5,Medium,Monitoring,0
+302,51,ByteWise Solutions,2024-03-15,72.5,62.6,69.0,24.2,51.5,56.0,Medium,In Progress,0
+303,51,ByteWise Solutions,2024-05-15,80.1,58.9,71.4,21.2,40.5,54.4,Medium,In Progress,0
+304,51,ByteWise Solutions,2024-07-15,77.3,66.8,67.3,35.3,51.6,59.7,Medium,In Progress,0
+305,51,ByteWise Solutions,2024-09-15,80.1,73.5,64.0,42.2,53.9,62.7,Medium,In Progress,0
+306,51,ByteWise Solutions,2024-11-15,76.6,67.0,67.7,42.4,49.3,60.6,Medium,In Progress,0
+307,52,LogiTrack Systems,2024-01-15,51.4,39.3,52.3,20.0,49.6,42.5,Medium,Monitoring,0
+308,52,LogiTrack Systems,2024-03-15,50.9,53.0,50.9,26.4,19.3,40.1,Medium,Monitoring,0
+309,52,LogiTrack Systems,2024-05-15,44.3,42.7,40.0,16.5,40.0,36.7,Medium,Monitoring,0
+310,52,LogiTrack Systems,2024-07-15,55.2,53.5,44.8,40.0,46.1,47.9,Medium,Monitoring,0
+311,52,LogiTrack Systems,2024-09-15,56.4,44.5,53.5,16.5,17.3,37.6,Medium,Monitoring,0
+312,52,LogiTrack Systems,2024-11-15,45.7,39.9,40.0,36.4,48.3,42.1,Medium,Monitoring,0
+313,53,FusionParts Mfg,2024-01-15,36.4,23.1,30.3,34.2,14.4,27.7,Low,Completed,0
+314,53,FusionParts Mfg,2024-03-15,30.4,28.3,27.1,41.3,38.7,33.2,Low,Completed,0
+315,53,FusionParts Mfg,2024-05-15,28.3,36.8,24.5,31.5,20.3,28.3,Low,Completed,0
+316,53,FusionParts Mfg,2024-07-15,26.5,31.8,26.6,24.6,32.9,28.5,Low,Completed,0
+317,53,FusionParts Mfg,2024-09-15,34.8,34.2,24.8,18.7,40.7,30.6,Low,Completed,0
+318,53,FusionParts Mfg,2024-11-15,36.5,37.9,38.8,12.7,33.4,31.9,Low,Completed,0
+319,54,Elite Strategy Group,2024-01-15,48.5,45.1,46.0,15.2,24.5,35.9,Medium,Monitoring,0
+320,54,Elite Strategy Group,2024-03-15,43.7,40.6,46.5,13.2,31.4,35.1,Medium,Monitoring,0
+321,54,Elite Strategy Group,2024-05-15,50.1,47.8,47.1,12.0,29.6,37.3,Medium,Monitoring,0
+322,54,Elite Strategy Group,2024-07-15,54.6,47.3,53.4,36.1,34.0,45.1,Medium,Monitoring,0
+323,54,Elite Strategy Group,2024-09-15,40.7,32.6,46.6,42.7,14.6,35.4,Medium,Monitoring,0
+324,54,Elite Strategy Group,2024-11-15,51.2,52.4,57.6,36.8,49.2,49.4,Medium,Monitoring,0
+325,55,CoreMin Resources,2024-01-15,29.0,37.1,28.0,45.4,46.5,37.2,Medium,Monitoring,0
+326,55,CoreMin Resources,2024-03-15,31.9,31.6,30.0,37.9,25.2,31.3,Low,Completed,0
+327,55,CoreMin Resources,2024-05-15,28.6,27.9,31.1,22.8,12.1,24.5,Low,Completed,0
+328,55,CoreMin Resources,2024-07-15,23.2,27.7,26.0,33.6,43.3,30.8,Low,Completed,0
+329,55,CoreMin Resources,2024-09-15,25.5,23.1,33.2,40.4,16.3,27.7,Low,Completed,0
+330,55,CoreMin Resources,2024-11-15,35.6,40.2,41.7,15.5,19.8,30.6,Low,Completed,0
+331,56,NetSphere Technologies,2024-01-15,23.1,31.8,32.4,16.7,44.1,29.6,Low,Completed,0
+332,56,NetSphere Technologies,2024-03-15,25.4,25.6,34.5,17.0,35.1,27.5,Low,Completed,0
+333,56,NetSphere Technologies,2024-05-15,31.5,33.0,26.0,35.9,41.6,33.6,Low,Completed,0
+334,56,NetSphere Technologies,2024-07-15,25.2,23.4,30.6,22.7,27.4,25.9,Low,Completed,0
+335,56,NetSphere Technologies,2024-09-15,29.0,31.2,30.1,36.9,32.2,31.9,Low,Completed,0
+336,56,NetSphere Technologies,2024-11-15,35.6,38.5,33.1,42.5,28.1,35.6,Medium,Monitoring,0
+337,57,SeaRoute Logistics,2024-01-15,43.7,42.0,47.2,31.6,44.3,41.7,Medium,Monitoring,0
+338,57,SeaRoute Logistics,2024-03-15,50.0,48.4,49.0,34.7,48.8,46.2,Medium,Monitoring,0
+339,57,SeaRoute Logistics,2024-05-15,44.4,40.7,40.4,37.6,47.0,42.0,Medium,Monitoring,0
+340,57,SeaRoute Logistics,2024-07-15,47.4,51.9,43.7,24.4,37.6,41.0,Medium,Monitoring,0
+341,57,SeaRoute Logistics,2024-09-15,54.8,41.4,49.8,40.4,33.2,43.9,Medium,Monitoring,0
+342,57,SeaRoute Logistics,2024-11-15,53.2,42.2,50.9,15.5,47.6,41.9,Medium,Monitoring,0
+343,58,AutoPrecision Mfg,2024-01-15,44.8,52.5,44.6,23.5,35.0,40.1,Medium,Monitoring,0
+344,58,AutoPrecision Mfg,2024-03-15,53.6,44.6,47.9,28.3,32.3,41.3,Medium,Monitoring,0
+345,58,AutoPrecision Mfg,2024-05-15,46.0,44.3,44.4,18.5,49.3,40.5,Medium,Monitoring,0
+346,58,AutoPrecision Mfg,2024-07-15,53.9,51.6,43.5,29.5,33.4,42.4,Medium,Monitoring,0
+347,58,AutoPrecision Mfg,2024-09-15,42.2,37.8,48.1,35.3,27.9,38.2,Medium,Monitoring,0
+348,58,AutoPrecision Mfg,2024-11-15,42.5,37.8,44.7,32.5,36.9,38.9,Medium,Monitoring,0
+349,59,BrightMind Consulting,2024-01-15,26.3,34.4,36.1,32.5,30.6,32.0,Low,Completed,0
+350,59,BrightMind Consulting,2024-03-15,31.9,23.1,31.8,27.1,46.8,32.1,Low,Completed,0
+351,59,BrightMind Consulting,2024-05-15,31.7,23.0,23.9,39.6,47.9,33.2,Low,Completed,0
+352,59,BrightMind Consulting,2024-07-15,34.9,30.4,36.9,18.1,38.9,31.8,Low,Completed,0
+353,59,BrightMind Consulting,2024-09-15,23.4,21.4,25.4,33.3,35.4,27.8,Low,Completed,0
+354,59,BrightMind Consulting,2024-11-15,30.0,22.3,31.3,10.4,32.1,25.2,Low,Completed,0
+355,60,TerraFlex Supplies,2024-01-15,55.0,36.6,48.4,33.6,42.6,43.2,Medium,Monitoring,0
+356,60,TerraFlex Supplies,2024-03-15,46.2,39.6,40.8,16.7,32.0,35.1,Medium,Monitoring,0
+357,60,TerraFlex Supplies,2024-05-15,49.2,45.4,44.9,24.2,33.5,39.4,Medium,Monitoring,0
+358,60,TerraFlex Supplies,2024-07-15,51.9,53.2,54.8,32.9,44.6,47.5,Medium,Monitoring,0
+359,60,TerraFlex Supplies,2024-09-15,49.0,47.0,49.4,12.0,12.4,34.0,Low,Completed,0
+360,60,TerraFlex Supplies,2024-11-15,44.8,38.8,43.5,29.8,44.6,40.3,Medium,Monitoring,0
+361,61,PixelCloud IT,2024-01-15,32.8,22.6,23.9,40.4,49.7,33.9,Low,Completed,0
+362,61,PixelCloud IT,2024-03-15,27.2,23.2,34.1,41.5,37.4,32.7,Low,Completed,0
+363,61,PixelCloud IT,2024-05-15,34.8,24.1,31.6,30.5,44.6,33.2,Low,Completed,0
+364,61,PixelCloud IT,2024-07-15,34.2,26.1,26.2,18.4,47.7,30.5,Low,Completed,0
+365,61,PixelCloud IT,2024-09-15,36.7,26.6,31.0,14.9,53.6,32.5,Low,Completed,0
+366,61,PixelCloud IT,2024-11-15,37.7,42.6,26.9,25.3,47.9,36.1,Medium,Monitoring,0
+367,62,SwiftCargo Networks,2024-01-15,32.9,37.8,28.0,42.1,13.1,30.8,Low,Completed,0
+368,62,SwiftCargo Networks,2024-03-15,35.1,29.8,26.9,47.9,28.4,33.6,Low,Completed,0
+369,62,SwiftCargo Networks,2024-05-15,33.4,25.7,32.9,42.9,39.1,34.8,Low,Completed,0
+370,62,SwiftCargo Networks,2024-07-15,21.9,30.3,27.7,40.9,24.0,29.0,Low,Completed,0
+371,62,SwiftCargo Networks,2024-09-15,19.3,23.0,23.0,24.4,17.0,21.3,Low,Completed,0
+372,62,SwiftCargo Networks,2024-11-15,24.9,27.2,23.9,15.9,25.4,23.5,Low,Completed,0
+373,63,HeavyDuty Mfg,2024-01-15,31.6,27.5,28.7,20.2,26.7,27.0,Low,Completed,0
+374,63,HeavyDuty Mfg,2024-03-15,34.0,35.6,35.8,30.0,18.4,30.8,Low,Completed,0
+375,63,HeavyDuty Mfg,2024-05-15,25.8,26.8,29.9,12.2,28.5,24.6,Low,Completed,0
+376,63,HeavyDuty Mfg,2024-07-15,30.2,23.5,26.7,18.6,35.8,27.0,Low,Completed,0
+377,63,HeavyDuty Mfg,2024-09-15,29.1,26.4,29.9,43.2,24.6,30.6,Low,Completed,0
+378,63,HeavyDuty Mfg,2024-11-15,37.4,31.0,31.3,38.5,44.7,36.6,Medium,Monitoring,0
+379,64,Nexus Strategy Firm,2024-01-15,46.4,42.0,49.6,22.0,23.9,36.8,Medium,Monitoring,0
+380,64,Nexus Strategy Firm,2024-03-15,58.3,43.4,47.9,32.2,33.9,43.1,Medium,Monitoring,0
+381,64,Nexus Strategy Firm,2024-05-15,48.0,48.6,40.5,19.0,33.4,37.9,Medium,Monitoring,0
+382,64,Nexus Strategy Firm,2024-07-15,53.0,49.5,45.7,48.4,29.5,45.2,Medium,Monitoring,0
+383,64,Nexus Strategy Firm,2024-09-15,53.9,45.4,49.9,43.7,42.2,47.0,Medium,Monitoring,0
+384,64,Nexus Strategy Firm,2024-11-15,50.4,46.7,39.4,38.1,39.2,42.7,Medium,Monitoring,0
+385,65,AgriMat Resources,2024-01-15,71.4,67.5,61.8,29.0,31.3,52.2,Medium,In Progress,0
+386,65,AgriMat Resources,2024-03-15,80.5,62.1,67.8,27.6,46.0,56.8,Medium,In Progress,0
+387,65,AgriMat Resources,2024-05-15,78.9,53.8,66.6,38.0,25.5,52.5,Medium,In Progress,0
+388,65,AgriMat Resources,2024-07-15,73.3,69.7,66.8,29.0,40.6,55.9,Medium,In Progress,0
+389,65,AgriMat Resources,2024-09-15,83.2,59.3,66.2,32.9,31.7,54.7,Medium,In Progress,0
+390,65,AgriMat Resources,2024-11-15,80.0,61.4,63.2,42.0,34.4,56.2,Medium,In Progress,0
+391,66,CodeBridge Technologies,2024-01-15,29.5,23.6,22.7,24.6,52.5,30.6,Low,Completed,0
+392,66,CodeBridge Technologies,2024-03-15,35.6,24.4,24.5,25.9,23.9,26.9,Low,Completed,0
+393,66,CodeBridge Technologies,2024-05-15,31.5,30.6,31.4,21.2,27.4,28.4,Low,Completed,0
+394,66,CodeBridge Technologies,2024-07-15,30.8,40.8,34.4,33.7,22.2,32.4,Low,Completed,0
+395,66,CodeBridge Technologies,2024-09-15,36.1,33.8,31.3,29.6,52.4,36.6,Medium,Monitoring,0
+396,66,CodeBridge Technologies,2024-11-15,26.8,22.7,26.8,25.1,17.1,23.7,Low,Completed,0
+397,67,PrimePath Logistics,2024-01-15,46.7,47.2,43.5,39.7,19.8,39.4,Medium,Monitoring,0
+398,67,PrimePath Logistics,2024-03-15,55.2,39.9,40.6,45.5,19.1,40.1,Medium,Monitoring,0
+399,67,PrimePath Logistics,2024-05-15,49.1,41.2,49.4,33.5,36.3,41.9,Medium,Monitoring,0
+400,67,PrimePath Logistics,2024-07-15,53.5,48.9,44.7,44.6,35.5,45.4,Medium,Monitoring,0
+401,67,PrimePath Logistics,2024-09-15,58.2,47.9,52.1,18.0,17.1,38.7,Medium,Monitoring,0
+402,67,PrimePath Logistics,2024-11-15,42.6,35.3,42.3,32.9,27.9,36.2,Medium,Monitoring,0
+403,68,MegaForge Industries,2024-01-15,28.0,24.4,29.5,34.3,36.5,30.5,Low,Completed,0
+404,68,MegaForge Industries,2024-03-15,32.0,31.3,24.6,21.0,29.1,27.6,Low,Completed,0
+405,68,MegaForge Industries,2024-05-15,25.1,19.0,19.9,38.5,48.6,30.2,Low,Completed,0
+406,68,MegaForge Industries,2024-07-15,30.1,33.2,27.3,39.4,30.6,32.1,Low,Completed,0
+407,68,MegaForge Industries,2024-09-15,18.9,28.8,19.9,19.6,32.4,23.9,Low,Completed,0
+408,68,MegaForge Industries,2024-11-15,24.3,28.8,26.8,29.2,16.3,25.1,Low,Completed,0
+409,69,TrueNorth Consulting,2024-01-15,80.5,62.8,56.7,38.8,13.6,50.5,Medium,In Progress,0
+410,69,TrueNorth Consulting,2024-03-15,78.8,66.5,54.0,39.1,40.6,55.8,Medium,In Progress,0
+411,69,TrueNorth Consulting,2024-05-15,82.3,55.9,55.5,38.6,28.7,52.2,Medium,In Progress,0
+412,69,TrueNorth Consulting,2024-07-15,86.5,59.4,68.9,30.6,25.3,54.1,Medium,In Progress,0
+413,69,TrueNorth Consulting,2024-09-15,82.8,56.2,57.5,17.2,19.9,46.7,Medium,Monitoring,0
+414,69,TrueNorth Consulting,2024-11-15,69.0,47.7,52.7,21.3,38.8,45.9,Medium,Monitoring,0
+415,70,BaseMet Resources,2024-01-15,27.7,35.8,35.9,38.8,15.6,30.7,Low,Completed,0
+416,70,BaseMet Resources,2024-03-15,35.7,38.6,37.9,45.3,16.8,34.9,Low,Completed,0
+417,70,BaseMet Resources,2024-05-15,30.5,36.5,36.8,41.7,37.7,36.6,Medium,Monitoring,0
+418,70,BaseMet Resources,2024-07-15,32.0,27.0,28.6,30.8,36.1,30.9,Low,Completed,0
+419,70,BaseMet Resources,2024-09-15,31.9,36.6,32.3,47.8,26.0,34.9,Low,Completed,0
+420,70,BaseMet Resources,2024-11-15,37.5,31.2,42.1,40.6,39.8,38.2,Medium,Monitoring,0
+421,71,ClearPath IT Group,2024-01-15,34.3,26.7,22.8,28.7,24.3,27.4,Low,Completed,0
+422,71,ClearPath IT Group,2024-03-15,28.9,25.3,33.6,21.8,38.0,29.5,Low,Completed,0
+423,71,ClearPath IT Group,2024-05-15,33.1,27.5,32.5,11.7,19.8,24.9,Low,Completed,0
+424,71,ClearPath IT Group,2024-07-15,35.6,26.7,37.7,25.4,16.0,28.3,Low,Completed,0
+425,71,ClearPath IT Group,2024-09-15,36.2,39.4,31.2,32.7,22.0,32.3,Low,Completed,0
+426,71,ClearPath IT Group,2024-11-15,38.4,40.3,34.3,23.0,50.3,37.3,Medium,Monitoring,0
+427,72,BlueOcean Freight,2024-01-15,79.1,55.2,61.2,23.2,36.9,51.1,Medium,In Progress,0
+428,72,BlueOcean Freight,2024-03-15,75.3,58.9,54.2,22.9,37.8,49.8,Medium,Monitoring,0
+429,72,BlueOcean Freight,2024-05-15,79.8,60.4,62.3,29.8,17.0,49.9,Medium,Monitoring,0
+430,72,BlueOcean Freight,2024-07-15,75.2,58.2,49.1,26.0,45.5,50.8,Medium,In Progress,0
+431,72,BlueOcean Freight,2024-09-15,79.6,58.3,49.2,49.8,17.4,50.8,Medium,In Progress,0
+432,72,BlueOcean Freight,2024-11-15,76.2,62.5,59.4,40.3,35.9,54.8,Medium,In Progress,0
+433,73,PeakCraft Manufacturing,2024-01-15,47.4,47.0,48.8,18.0,15.8,35.4,Medium,Monitoring,0
+434,73,PeakCraft Manufacturing,2024-03-15,50.7,43.3,51.4,26.0,17.3,37.7,Medium,Monitoring,0
+435,73,PeakCraft Manufacturing,2024-05-15,42.4,43.8,44.1,36.3,41.6,41.6,Medium,Monitoring,0
+436,73,PeakCraft Manufacturing,2024-07-15,55.4,49.3,43.8,33.1,31.4,42.6,Medium,Monitoring,0
+437,73,PeakCraft Manufacturing,2024-09-15,50.5,41.4,53.8,48.4,30.8,45.0,Medium,Monitoring,0
+438,73,PeakCraft Manufacturing,2024-11-15,42.9,40.0,38.7,49.2,49.5,44.1,Medium,Monitoring,0
+439,74,Axis Strategy Partners,2024-01-15,73.8,64.2,59.3,22.8,38.0,51.6,Medium,In Progress,0
+440,74,Axis Strategy Partners,2024-03-15,84.8,63.9,52.8,12.4,22.0,47.2,Medium,Monitoring,0
+441,74,Axis Strategy Partners,2024-05-15,70.2,60.3,55.7,32.0,31.0,49.8,Medium,Monitoring,0
+442,74,Axis Strategy Partners,2024-07-15,80.5,51.6,58.7,31.6,22.5,49.0,Medium,Monitoring,0
+443,74,Axis Strategy Partners,2024-09-15,76.6,52.0,61.0,28.8,26.8,49.1,Medium,Monitoring,0
+444,74,Axis Strategy Partners,2024-11-15,85.8,64.9,55.9,34.5,39.7,56.2,Medium,In Progress,0
+445,75,SunMat Corp,2024-01-15,46.4,39.2,44.5,30.9,35.1,39.2,Medium,Monitoring,0
+446,75,SunMat Corp,2024-03-15,54.2,49.3,39.7,39.8,38.7,44.3,Medium,Monitoring,0
+447,75,SunMat Corp,2024-05-15,55.3,44.4,47.6,40.2,18.3,41.2,Medium,Monitoring,0
+448,75,SunMat Corp,2024-07-15,51.9,39.0,47.7,42.0,13.1,38.7,Medium,Monitoring,0
+449,75,SunMat Corp,2024-09-15,54.3,44.2,53.7,35.2,14.9,40.5,Medium,Monitoring,0
+450,75,SunMat Corp,2024-11-15,50.5,46.3,46.9,27.9,21.7,38.6,Medium,Monitoring,0
+451,76,HorizonTech Inc,2024-01-15,76.8,62.8,52.6,27.8,17.7,47.5,Medium,Monitoring,0
+452,76,HorizonTech Inc,2024-03-15,74.4,60.3,56.3,15.3,51.4,51.5,Medium,In Progress,0
+453,76,HorizonTech Inc,2024-05-15,79.6,68.8,62.8,24.7,28.2,52.8,Medium,In Progress,0
+454,76,HorizonTech Inc,2024-07-15,78.4,55.4,50.4,23.0,35.1,48.5,Medium,Monitoring,0
+455,76,HorizonTech Inc,2024-09-15,78.7,70.7,69.8,43.4,18.6,56.3,Medium,In Progress,0
+456,76,HorizonTech Inc,2024-11-15,74.0,65.4,54.7,29.4,16.3,47.9,Medium,Monitoring,0
+457,77,FlexFreight Solutions,2024-01-15,30.6,26.7,31.6,26.2,34.5,29.9,Low,Completed,0
+458,77,FlexFreight Solutions,2024-03-15,33.4,25.2,35.8,36.6,21.3,30.4,Low,Completed,0
+459,77,FlexFreight Solutions,2024-05-15,25.8,22.6,24.8,39.4,45.3,31.6,Low,Completed,0
+460,77,FlexFreight Solutions,2024-07-15,29.4,37.8,40.3,35.5,16.0,31.8,Low,Completed,0
+461,77,FlexFreight Solutions,2024-09-15,28.2,31.1,25.2,44.9,39.0,33.7,Low,Completed,0
+462,77,FlexFreight Solutions,2024-11-15,29.1,30.3,24.3,34.5,26.2,28.9,Low,Completed,0
+463,78,ProMold Manufacturing,2024-01-15,43.3,37.9,41.1,38.7,14.8,35.2,Medium,Monitoring,0
+464,78,ProMold Manufacturing,2024-03-15,48.0,52.3,43.0,19.1,24.0,37.3,Medium,Monitoring,0
+465,78,ProMold Manufacturing,2024-05-15,53.3,50.7,46.3,19.5,14.8,36.9,Medium,Monitoring,0
+466,78,ProMold Manufacturing,2024-07-15,49.3,43.3,39.0,15.8,29.7,35.4,Medium,Monitoring,0
+467,78,ProMold Manufacturing,2024-09-15,48.4,51.5,41.8,20.8,22.1,36.9,Medium,Monitoring,0
+468,78,ProMold Manufacturing,2024-11-15,38.8,41.9,45.4,34.4,13.5,34.8,Low,Completed,0
+469,79,GrowthPoint Consulting,2024-01-15,71.4,53.8,54.9,27.5,31.5,47.8,Medium,Monitoring,0
+470,79,GrowthPoint Consulting,2024-03-15,71.4,69.1,52.7,29.2,29.2,50.3,Medium,In Progress,0
+471,79,GrowthPoint Consulting,2024-05-15,72.7,62.0,64.9,19.9,12.5,46.4,Medium,Monitoring,0
+472,79,GrowthPoint Consulting,2024-07-15,83.4,58.7,67.2,28.0,36.0,54.7,Medium,In Progress,0
+473,79,GrowthPoint Consulting,2024-09-15,77.4,59.5,65.8,15.8,14.4,46.6,Medium,Monitoring,0
+474,79,GrowthPoint Consulting,2024-11-15,81.0,62.7,72.4,44.0,24.6,57.0,Medium,In Progress,0
+475,80,NordicRaw Materials,2024-01-15,48.1,40.1,47.2,43.8,27.0,41.2,Medium,Monitoring,0
+476,80,NordicRaw Materials,2024-03-15,49.3,38.7,40.8,21.6,22.6,34.6,Low,Completed,0
+477,80,NordicRaw Materials,2024-05-15,46.1,50.5,45.8,25.3,27.7,39.1,Medium,Monitoring,0
+478,80,NordicRaw Materials,2024-07-15,44.5,43.1,42.4,22.0,45.6,39.5,Medium,Monitoring,0
+479,80,NordicRaw Materials,2024-09-15,51.5,51.6,51.7,49.6,41.7,49.2,Medium,Monitoring,0
+480,80,NordicRaw Materials,2024-11-15,47.8,43.9,50.8,32.6,26.8,40.4,Medium,Monitoring,0
+481,81,CatalystIT Systems,2024-01-15,44.3,39.8,52.0,37.2,18.2,38.3,Medium,Monitoring,0
+482,81,CatalystIT Systems,2024-03-15,48.8,50.6,55.4,44.1,19.8,43.7,Medium,Monitoring,0
+483,81,CatalystIT Systems,2024-05-15,45.2,51.0,53.9,12.0,53.9,43.2,Medium,Monitoring,0
+484,81,CatalystIT Systems,2024-07-15,48.4,46.9,42.2,39.4,48.1,45.0,Medium,Monitoring,0
+485,81,CatalystIT Systems,2024-09-15,44.0,45.7,45.7,42.0,17.1,38.9,Medium,Monitoring,0
+486,81,CatalystIT Systems,2024-11-15,56.6,50.1,52.1,16.6,53.5,45.8,Medium,Monitoring,0
+487,82,CargoNation Ltd,2024-01-15,29.5,26.1,27.6,13.2,20.8,23.4,Low,Completed,0
+488,82,CargoNation Ltd,2024-03-15,29.2,20.4,32.9,17.1,17.0,23.3,Low,Completed,0
+489,82,CargoNation Ltd,2024-05-15,36.6,36.7,27.3,10.8,34.3,29.1,Low,Completed,0
+490,82,CargoNation Ltd,2024-07-15,38.0,39.8,37.9,43.6,26.2,37.1,Medium,Monitoring,0
+491,82,CargoNation Ltd,2024-09-15,35.5,30.0,32.2,14.8,18.0,26.1,Low,Completed,0
+492,82,CargoNation Ltd,2024-11-15,42.2,45.6,38.9,16.1,48.8,38.3,Medium,Monitoring,0
+493,83,BoltWorks Mfg,2024-01-15,37.3,34.7,25.8,30.6,18.7,29.4,Low,Completed,0
+494,83,BoltWorks Mfg,2024-03-15,34.0,23.7,32.4,43.2,48.1,36.3,Medium,Monitoring,0
+495,83,BoltWorks Mfg,2024-05-15,37.9,37.3,22.8,31.1,47.0,35.2,Medium,Monitoring,0
+496,83,BoltWorks Mfg,2024-07-15,34.5,36.8,41.4,14.9,40.3,33.6,Low,Completed,0
+497,83,BoltWorks Mfg,2024-09-15,35.3,22.2,32.4,13.1,38.9,28.4,Low,Completed,0
+498,83,BoltWorks Mfg,2024-11-15,40.5,33.0,30.0,18.7,14.6,27.4,Low,Completed,0
+499,84,PinnacleConsult Inc,2024-01-15,71.9,50.9,59.5,40.6,48.8,54.3,Medium,In Progress,0
+500,84,PinnacleConsult Inc,2024-03-15,78.1,58.5,63.3,18.5,30.2,49.7,Medium,Monitoring,0
+501,84,PinnacleConsult Inc,2024-05-15,81.4,64.9,59.4,17.6,44.1,53.5,Medium,In Progress,0
+502,84,PinnacleConsult Inc,2024-07-15,73.0,64.7,53.7,21.0,26.3,47.7,Medium,Monitoring,0
+503,84,PinnacleConsult Inc,2024-09-15,81.4,69.5,59.6,35.8,35.3,56.3,Medium,In Progress,0
+504,84,PinnacleConsult Inc,2024-11-15,71.9,66.9,57.3,46.1,18.0,52.0,Medium,In Progress,0
+505,85,EcoMine Supplies,2024-01-15,69.8,53.7,64.8,35.3,39.7,52.7,Medium,In Progress,0
+506,85,EcoMine Supplies,2024-03-15,70.1,53.9,55.2,30.0,43.9,50.6,Medium,In Progress,0
+507,85,EcoMine Supplies,2024-05-15,69.7,55.5,57.2,33.2,34.8,50.1,Medium,In Progress,0
+508,85,EcoMine Supplies,2024-07-15,65.2,51.0,56.7,12.9,44.1,46.0,Medium,Monitoring,0
+509,85,EcoMine Supplies,2024-09-15,70.4,56.8,62.6,13.2,32.7,47.1,Medium,Monitoring,0
+510,85,EcoMine Supplies,2024-11-15,73.7,52.3,57.0,19.2,29.7,46.4,Medium,Monitoring,0
+511,86,InfoTech Dynamics,2024-01-15,30.4,24.0,32.2,33.4,19.3,27.8,Low,Completed,0
+512,86,InfoTech Dynamics,2024-03-15,33.4,38.2,29.6,29.4,48.0,35.7,Medium,Monitoring,0
+513,86,InfoTech Dynamics,2024-05-15,35.0,34.3,36.5,26.6,49.5,36.4,Medium,Monitoring,0
+514,86,InfoTech Dynamics,2024-07-15,28.7,37.9,32.1,27.6,50.2,35.3,Medium,Monitoring,0
+515,86,InfoTech Dynamics,2024-09-15,40.6,38.1,28.5,36.5,22.6,33.3,Low,Completed,0
+516,86,InfoTech Dynamics,2024-11-15,48.6,45.6,33.1,24.8,53.6,41.1,Medium,Monitoring,0
+517,87,JetRoute Logistics,2024-01-15,55.8,48.1,48.6,24.0,46.6,44.6,Medium,Monitoring,0
+518,87,JetRoute Logistics,2024-03-15,46.3,45.9,44.1,26.4,22.5,37.1,Medium,Monitoring,0
+519,87,JetRoute Logistics,2024-05-15,54.5,50.8,45.8,33.3,27.9,42.5,Medium,Monitoring,0
+520,87,JetRoute Logistics,2024-07-15,45.5,47.3,47.3,47.9,47.1,47.0,Medium,Monitoring,0
+521,87,JetRoute Logistics,2024-09-15,46.9,44.5,46.3,27.0,27.6,38.5,Medium,Monitoring,0
+522,87,JetRoute Logistics,2024-11-15,48.9,47.0,36.6,24.6,17.5,34.9,Low,Completed,0
+523,88,CoreCast Mfg,2024-01-15,50.5,37.0,49.1,21.6,21.0,35.8,Medium,Monitoring,0
+524,88,CoreCast Mfg,2024-03-15,54.3,51.8,38.0,38.6,23.5,41.2,Medium,Monitoring,0
+525,88,CoreCast Mfg,2024-05-15,47.0,46.4,37.0,40.4,17.1,37.6,Medium,Monitoring,0
+526,88,CoreCast Mfg,2024-07-15,53.2,55.3,46.1,24.6,36.5,43.1,Medium,Monitoring,0
+527,88,CoreCast Mfg,2024-09-15,41.3,46.1,43.6,36.6,45.0,42.5,Medium,Monitoring,0
+528,88,CoreCast Mfg,2024-11-15,55.2,45.7,47.8,27.7,17.2,38.7,Medium,Monitoring,0
+529,89,TrueConsult Global,2024-01-15,33.3,21.6,25.3,39.2,43.8,32.6,Low,Completed,0
+530,89,TrueConsult Global,2024-03-15,27.6,35.2,31.8,19.6,43.3,31.5,Low,Completed,0
+531,89,TrueConsult Global,2024-05-15,30.9,23.7,23.5,23.0,34.6,27.1,Low,Completed,0
+532,89,TrueConsult Global,2024-07-15,30.6,27.9,24.8,15.7,46.0,29.0,Low,Completed,0
+533,89,TrueConsult Global,2024-09-15,35.5,30.2,32.5,15.7,33.7,29.5,Low,Completed,0
+534,89,TrueConsult Global,2024-11-15,42.4,40.9,41.4,19.4,27.6,34.4,Low,Completed,0
+535,90,MarbleMat Resources,2024-01-15,52.2,48.8,38.9,46.9,36.6,44.7,Medium,Monitoring,0
+536,90,MarbleMat Resources,2024-03-15,43.6,41.1,50.7,25.7,48.7,42.0,Medium,Monitoring,0
+537,90,MarbleMat Resources,2024-05-15,49.4,44.0,45.2,23.8,29.7,38.4,Medium,Monitoring,0
+538,90,MarbleMat Resources,2024-07-15,55.4,45.5,42.8,32.9,37.2,42.7,Medium,Monitoring,0
+539,90,MarbleMat Resources,2024-09-15,53.2,52.7,53.1,25.4,16.1,40.1,Medium,Monitoring,0
+540,90,MarbleMat Resources,2024-11-15,48.3,40.4,44.5,24.1,39.0,39.3,Medium,Monitoring,0
+541,91,TechSphere Solutions,2024-01-15,74.7,53.8,66.1,46.5,46.6,57.5,Medium,In Progress,0
+542,91,TechSphere Solutions,2024-03-15,79.7,63.2,66.2,40.2,40.9,58.1,Medium,In Progress,0
+543,91,TechSphere Solutions,2024-05-15,78.2,62.1,64.8,16.2,42.9,52.9,Medium,In Progress,0
+544,91,TechSphere Solutions,2024-07-15,74.9,64.5,60.0,33.7,45.8,55.8,Medium,In Progress,0
+545,91,TechSphere Solutions,2024-09-15,85.9,66.2,73.9,44.4,49.3,63.9,Medium,In Progress,0
+546,91,TechSphere Solutions,2024-11-15,68.0,49.1,54.7,43.3,45.0,52.0,Medium,In Progress,0
+547,92,AquaFreight Corp,2024-01-15,34.8,27.8,23.1,27.4,40.3,30.7,Low,Completed,0
+548,92,AquaFreight Corp,2024-03-15,35.7,27.3,25.0,25.3,44.3,31.5,Low,Completed,0
+549,92,AquaFreight Corp,2024-05-15,37.3,32.1,35.3,17.5,45.8,33.6,Low,Completed,0
+550,92,AquaFreight Corp,2024-07-15,37.8,29.3,26.8,16.9,44.5,31.0,Low,Completed,0
+551,92,AquaFreight Corp,2024-09-15,25.0,24.9,25.7,46.7,29.4,30.3,Low,Completed,0
+552,92,AquaFreight Corp,2024-11-15,33.3,32.9,26.7,37.1,18.7,29.7,Low,Completed,0
+553,93,StrongBuild Mfg,2024-01-15,24.7,26.3,31.9,15.9,41.1,28.0,Low,Completed,0
+554,93,StrongBuild Mfg,2024-03-15,34.1,23.6,30.0,32.2,27.3,29.4,Low,Completed,0
+555,93,StrongBuild Mfg,2024-05-15,33.0,26.3,27.8,23.1,12.5,24.5,Low,Completed,0
+556,93,StrongBuild Mfg,2024-07-15,33.6,23.9,29.6,31.9,21.5,28.1,Low,Completed,0
+557,93,StrongBuild Mfg,2024-09-15,32.5,27.7,30.3,30.6,18.3,27.9,Low,Completed,0
+558,93,StrongBuild Mfg,2024-11-15,35.2,33.5,38.3,30.9,24.8,32.6,Low,Completed,0
+559,94,Vantage Consulting,2024-01-15,38.1,27.7,36.0,22.6,19.2,28.7,Low,Completed,0
+560,94,Vantage Consulting,2024-03-15,38.9,30.5,28.4,35.5,17.0,30.1,Low,Completed,0
+561,94,Vantage Consulting,2024-05-15,35.3,27.1,30.7,32.8,13.4,27.9,Low,Completed,0
+562,94,Vantage Consulting,2024-07-15,33.9,35.5,28.8,44.8,37.2,36.0,Medium,Monitoring,0
+563,94,Vantage Consulting,2024-09-15,29.5,36.5,32.4,23.3,32.8,30.9,Low,Completed,0
+564,94,Vantage Consulting,2024-11-15,28.7,34.2,33.1,20.5,37.1,30.7,Low,Completed,0
+565,95,ForestMat Supplies,2024-01-15,28.7,32.9,24.5,44.1,16.0,29.2,Low,Completed,0
+566,95,ForestMat Supplies,2024-03-15,27.9,26.1,25.1,22.0,19.6,24.1,Low,Completed,0
+567,95,ForestMat Supplies,2024-05-15,30.6,25.3,31.2,25.3,13.5,25.2,Low,Completed,0
+568,95,ForestMat Supplies,2024-07-15,28.7,38.9,27.9,15.1,37.5,29.6,Low,Completed,0
+569,95,ForestMat Supplies,2024-09-15,42.2,40.6,31.3,18.2,31.4,32.7,Low,Completed,0
+570,95,ForestMat Supplies,2024-11-15,31.8,32.5,30.9,49.6,23.2,33.6,Low,Completed,0
+571,96,ClearVision IT,2024-01-15,27.4,24.3,21.8,20.2,46.5,28.0,Low,Completed,0
+572,96,ClearVision IT,2024-03-15,34.7,22.6,31.4,11.6,48.4,29.7,Low,Completed,0
+573,96,ClearVision IT,2024-05-15,29.9,28.9,29.0,31.8,49.4,33.8,Low,Completed,0
+574,96,ClearVision IT,2024-07-15,32.5,20.9,23.3,43.7,26.3,29.3,Low,Completed,0
+575,96,ClearVision IT,2024-09-15,35.8,33.7,29.7,37.9,20.3,31.5,Low,Completed,0
+576,96,ClearVision IT,2024-11-15,31.6,41.3,28.1,24.6,38.4,32.8,Low,Completed,0
+577,97,NightOwl Logistics,2024-01-15,73.6,53.0,58.6,22.6,13.1,44.2,Medium,Monitoring,0
+578,97,NightOwl Logistics,2024-03-15,76.4,66.6,56.0,42.2,16.3,51.5,Medium,In Progress,0
+579,97,NightOwl Logistics,2024-05-15,65.9,54.2,57.6,34.7,37.8,50.0,Medium,In Progress,0
+580,97,NightOwl Logistics,2024-07-15,75.9,62.7,70.6,33.4,24.9,53.5,Medium,In Progress,0
+581,97,NightOwl Logistics,2024-09-15,75.2,53.0,63.9,18.7,25.1,47.2,Medium,Monitoring,0
+582,97,NightOwl Logistics,2024-11-15,74.4,67.9,65.5,44.6,14.1,53.3,Medium,In Progress,0
+583,98,TitanForge Mfg,2024-01-15,27.0,35.8,35.4,40.4,14.8,30.7,Low,Completed,0
+584,98,TitanForge Mfg,2024-03-15,28.3,38.0,24.4,17.8,36.4,29.0,Low,Completed,0
+585,98,TitanForge Mfg,2024-05-15,27.8,29.4,34.5,25.7,44.6,32.4,Low,Completed,0
+586,98,TitanForge Mfg,2024-07-15,26.8,30.4,32.8,13.6,27.7,26.2,Low,Completed,0
+587,98,TitanForge Mfg,2024-09-15,27.0,25.5,33.7,31.7,23.6,28.3,Low,Completed,0
+588,98,TitanForge Mfg,2024-11-15,29.0,34.4,38.1,22.7,14.1,27.7,Low,Completed,0

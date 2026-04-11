@@ -1,0 +1,36 @@
+{
+    "app": {
+        "name": "Vendor Performance Dashboard",
+        "version": "1.0.0",
+        "debug": true,
+        "port": 8501
+    },
+    "database": {
+        "path": "Data layer/vendors.db",
+        "backup_path": "Data layer/backup",
+        "backup_interval_days": 7
+    },
+    "email": {
+        "enabled": false,
+        "smtp_server": "smtp.gmail.com",
+        "smtp_port": 587,
+        "sender_email": "",
+        "sender_password": ""
+    },
+    "security": {
+        "session_timeout_minutes": 60,
+        "password_min_length": 8,
+        "max_login_attempts": 5
+    },
+    "analytics": {
+        "performance_threshold": 70,
+        "risk_threshold_high": 70,
+        "risk_threshold_medium": 40,
+        "auto_refresh_minutes": 5
+    },
+    "reports": {
+        "auto_generate": true,
+        "default_format": "PDF",
+        "save_path": "reports/generated"
+    }
+}
