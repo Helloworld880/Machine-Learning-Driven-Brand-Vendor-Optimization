@@ -4,19 +4,18 @@ This project already has a solid demo dataset, but the next quality jump will co
 
 ## Current strengths
 
-- `vendors.csv`, `performance.csv`, `financial_metrics.csv`, and `brand.csv` are aligned on `vendor_id`
+- `vendors.csv`, `performance.csv`, and `financial_metrics.csv` are aligned on `vendor_id`
 - Vendor names and categories are consistent across files
 - The main analytics fields are complete and usable
 - The current data is good enough for the Streamlit dashboard and AI summaries
 
 ## Main gaps
 
-1. `brand.csv` only contains one snapshot per vendor, so trend analysis is weak.
-2. `performance.csv` stops in 2024 while financial data spans a broader period.
-3. There is no dedicated risk history CSV.
-4. There is no dedicated compliance history CSV.
-5. There are no clear ML target labels like churn, renewal, incident, or escalation.
-6. Benchmark data is too small for deeper comparison features.
+1. `performance.csv` stops in 2024 while financial data spans a broader period.
+2. There is no dedicated risk history CSV.
+3. There is no dedicated compliance history CSV.
+4. There are no clear ML target labels like churn, renewal, incident, or escalation.
+5. Benchmark data is too small for deeper comparison features.
 
 ## Recommended new files
 
@@ -104,26 +103,18 @@ Add:
 - `currency`
 - `spend_under_management`
 
-### `brand.csv`
-Add:
-- multiple `assessment_date` values per vendor
-- `pr_incident_flag`
-- `sentiment_score`
-- `brand_alignment_score`
-
 ### `industry_benchmarks.csv`
 Add:
 - more categories
-- more KPIs like `avg_compliance_benchmark`, `avg_esg_benchmark`, `payment_days_target`
+- more KPIs like `avg_compliance_benchmark`, `payment_days_target`
 
 ## Best order to improve
 
 1. Extend `performance.csv` and `financial_metrics.csv` into 2025
-2. Convert `brand.csv` into a time-series file
-3. Add `risk_history.csv`
-4. Add `compliance_history.csv`
-5. Add `vendor_outcomes.csv`
-6. Expand `industry_benchmarks.csv`
+2. Add `risk_history.csv`
+3. Add `compliance_history.csv`
+4. Add `vendor_outcomes.csv`
+5. Expand `industry_benchmarks.csv`
 
 ## Expected impact
 

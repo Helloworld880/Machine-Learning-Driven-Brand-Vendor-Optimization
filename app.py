@@ -22,6 +22,7 @@ from plotly.subplots import make_subplots
 import os
 import warnings
 from datetime import datetime, timedelta
+from dataclasses import dataclass
 
 warnings.filterwarnings("ignore")
 
@@ -31,10 +32,10 @@ from core_modules.auth import Authentication
 from core_modules.database import DatabaseManager
 from core_modules.analytics import AnalyticsEngine
 from core_modules.config import Config
-from pages.ai_page import render_ai_workspace as render_ai_workspace_page
-from pages.reports_page import render_reports as render_reports_page
-from pages.risk_page import render_risk_management as render_risk_management_page
-from pages.settings_page import render_settings as render_settings_page
+from ui_pages.ai_page import render_ai_workspace as render_ai_workspace_page
+from ui_pages.reports_page import render_reports as render_reports_page
+from ui_pages.risk_page import render_risk_management as render_risk_management_page
+from ui_pages.settings_page import render_settings as render_settings_page
 
 # ML Engine (lazy-loaded)
 _ML_AVAILABLE = False
@@ -272,6 +273,58 @@ class VendorDashboard:
                 }
             )
         return pd.DataFrame(rows)
+
+    @dataclass
+    class DataHealth:
+        label: str
+        rows: int
+        updated: str
+        source: str
+
+    def _file_updated_str(self, rel_path: str) -> str:
+        try:
+            if os.path.exists(rel_path):
+                return datetime.fromtimestamp(os.path.getmtime(rel_path)).strftime("%Y-%m-%d %H:%M")
+        except Exception:
+            pass
+        return "—"
+
+    def _data_health(self) -> list["VendorDashboard.DataHealth"]:
+        perf_df, fin_df, perf_history, compliance, risk = self._get_ai_dataframes()
+        vendors = to_df(self.db.get_vendors())
+
+        db_path = getattr(self.db, "db_path", "Data layer/vendors.db")
+        inventory = self._dataset_inventory()
+        csv_set = set(inventory["dataset"].tolist()) if not inventory.empty and "dataset" in inventory.columns else set()
+
+        def _source_for(primary_csv: str) -> str:
+            return "csv" if primary_csv in csv_set else "db"
+
+        return [
+            self.DataHealth("Vendors", len(vendors), self._file_updated_str(db_path), _source_for("vendors.csv")),
+            self.DataHealth("Performance (latest)", len(perf_df), self._file_updated_str("Data layer/performance.csv"), _source_for("performance.csv")),
+            self.DataHealth("Performance history", len(perf_history), self._file_updated_str("Data layer/performance.csv"), _source_for("performance.csv")),
+            self.DataHealth("Financial", len(fin_df), self._file_updated_str("Data layer/financial_metrics.csv"), _source_for("financial_metrics.csv")),
+            self.DataHealth("Compliance", len(compliance), self._file_updated_str("Data layer/compliance_history.csv"), _source_for("compliance_history.csv")),
+            self.DataHealth("Risk", len(risk), self._file_updated_str("Data layer/risk_history.csv"), _source_for("risk_history.csv")),
+        ]
+
+    def _render_data_health_panel(self):
+        with st.expander("🩺 Data Health", expanded=False):
+            rows = self._data_health()
+            c1, c2, c3 = st.columns([1.2, 0.7, 1.1])
+            c1.markdown("**Dataset**")
+            c2.markdown("**Rows**")
+            c3.markdown("**Updated / Source**")
+
+            for item in rows:
+                a, b, c = st.columns([1.2, 0.7, 1.1])
+                a.write(item.label)
+                b.write(item.rows)
+                c.write(f"{item.updated}  ·  {item.source.upper()}")
+
+            if any(i.rows == 0 for i in rows if i.label in {"Performance (latest)", "Risk", "Compliance"}):
+                st.caption("Tip: if pages look blank, it usually means these datasets have 0 rows.")
 
     def _save_uploaded_dataset(self, uploaded_file, target_name: str):
         data_dir = os.path.join(os.getcwd(), "Data layer")
@@ -546,12 +599,13 @@ class VendorDashboard:
                 st.rerun()
 
             st.divider()
+            self._render_data_health_panel()
+            st.divider()
             st.subheader("📌 Navigation")
             nav_options = [
                 "🏠 Overview",
                 "📊 Vendor Performance",
                 "💰 Financial Analytics",
-                "🌱 Brand & ESG",
                 "⚠️ Risk Management",
                 "📋 Compliance",
                 "🧠 AI Insights",
@@ -831,83 +885,7 @@ class VendorDashboard:
                             "financial_data.csv", "text/csv")
 
         # ─────────────────────────────────────────────────────────────────────────
-        # 4. BRAND & ESG
-        # ─────────────────────────────────────────────────────────────────────────
-    def render_brand_esg(self):
-            st.markdown('<div class="main-header">🌱 Brand & ESG Analytics</div>',
-                        unsafe_allow_html=True)
-
-            brand = to_df(self.db.get_brand_metrics())
-            if brand.empty:
-                st.warning("No brand/ESG data found.")
-                return
-
-            # Compute overall ESG
-            score_cols = ["sustainability_score", "social_impact_score", "governance_score", "environmental_score"]
-            for c in score_cols:
-                if c not in brand.columns:
-                    brand[c] = 0
-            brand["overall_esg"] = brand[score_cols].mean(axis=1).round(1)
-
-            k1, k2, k3, k4 = st.columns(4)
-            k1.metric("Avg Sustainability",  f"{brand['sustainability_score'].mean():.1f}")
-            k2.metric("Avg Social Impact",    f"{brand['social_impact_score'].mean():.1f}")
-            k3.metric("Avg Governance",       f"{brand['governance_score'].mean():.1f}")
-            k4.metric("Avg Overall ESG",      f"{brand['overall_esg'].mean():.1f}")
-
-            st.divider()
-
-            col1, col2 = st.columns(2)
-            with col1:
-                fig = px.bar(brand.sort_values("overall_esg", ascending=False),
-                            x="brand_name", y="overall_esg",
-                            color="overall_esg", color_continuous_scale="Greens",
-                            title="Overall ESG Score by Brand", text_auto=True)
-                fig.update_layout(xaxis_tickangle=-35)
-                st.plotly_chart(fig, use_container_width=True)
-
-            with col2:
-                # Radar chart for top brand
-                top = brand.nlargest(1, "overall_esg").iloc[0]
-                radar_vals = [top[c] for c in score_cols] + [top[score_cols[0]]]
-                radar_labels = [c.replace("_score", "").replace("_", " ").title() for c in score_cols]
-                radar_labels += [radar_labels[0]]
-                fig = go.Figure(go.Scatterpolar(
-                    r=radar_vals, theta=radar_labels, fill="toself",
-                    line_color="#22c55e", fillcolor="rgba(34,197,94,0.15)"
-                ))
-                fig.update_layout(
-                    polar=dict(radialaxis=dict(range=[0, 100])),
-                    title=f"ESG Radar — {top['brand_name']} (Top Performer)"
-                )
-                st.plotly_chart(fig, use_container_width=True)
-
-            # ESG components grouped bar
-            st.subheader("📊 ESG Component Breakdown")
-            melted = brand.melt(id_vars=["brand_name"], value_vars=score_cols,
-                                var_name="Component", value_name="Score")
-            melted["Component"] = melted["Component"].str.replace("_score", "").str.replace("_", " ").str.title()
-            fig = px.bar(melted, x="brand_name", y="Score", color="Component",
-                        barmode="group", title="ESG Components per Brand")
-            fig.update_layout(xaxis_tickangle=-35)
-            st.plotly_chart(fig, use_container_width=True)
-
-            # Carbon footprint
-            if "carbon_footprint" in brand.columns:
-                st.subheader("🌍 Carbon Footprint vs Renewable Energy")
-                fig = px.scatter(brand, x="carbon_footprint", y="renewable_energy_pct",
-                                size="overall_esg", color="overall_esg",
-                                hover_name="brand_name", color_continuous_scale="RdYlGn",
-                                title="Carbon Footprint vs Renewable Energy %",
-                                labels={"carbon_footprint": "Carbon Footprint (tons CO₂)",
-                                        "renewable_energy_pct": "Renewable Energy (%)"})
-                st.plotly_chart(fig, use_container_width=True)
-
-            st.subheader("📋 Brand & ESG Data")
-            st.dataframe(brand.round(2), use_container_width=True)
-
-        # ─────────────────────────────────────────────────────────────────────────
-        # 5. RISK MANAGEMENT
+        # 4. RISK MANAGEMENT
         # ─────────────────────────────────────────────────────────────────────────
     def render_risk_management(self):
             render_risk_management_page(self)
@@ -1280,7 +1258,6 @@ An intelligent vendor analytics platform delivering real-time visibility, risk i
                 "🏠 Overview":          self.render_overview,
                 "📊 Vendor Performance": self.render_vendor_performance,
                 "💰 Financial Analytics": self.render_financial_analytics,
-                "🌱 Brand & ESG":        self.render_brand_esg,
                 "⚠️ Risk Management":    self.render_risk_management,
                 "📋 Compliance":         self.render_compliance,
                 "🧠 AI Insights":        self.render_ai_workspace,

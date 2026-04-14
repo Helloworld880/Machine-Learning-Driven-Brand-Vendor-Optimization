@@ -130,7 +130,15 @@ class ReportScheduler:
                     self.generate_scheduled_report, schedule_name, schedule_config
                 ).tag(schedule_name)
                 
-            elif schedule_time.startswith('monday') or schedule_time.startswith('tuesday') etc.:
+            elif schedule_time.split(" ", 1)[0].lower() in {
+                "monday",
+                "tuesday",
+                "wednesday",
+                "thursday",
+                "friday",
+                "saturday",
+                "sunday",
+            }:
                 # Weekly schedule (e.g., "monday 09:00")
                 day, time_str = schedule_time.split(' ')
                 getattr(schedule.every(), day.lower()).at(time_str).do(

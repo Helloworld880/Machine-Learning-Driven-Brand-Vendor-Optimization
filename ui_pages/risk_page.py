@@ -32,7 +32,7 @@ def render_risk_management(dashboard):
     risk_history = pd.DataFrame(dashboard.db.get_risk_history())
     outcomes = pd.DataFrame(dashboard.db.get_vendor_outcomes())
     if risk.empty:
-        st.warning("No risk data found.")
+        st.warning("No risk data found. Check sidebar → **Data Health** to see whether `risk_history.csv` is missing/empty.")
         return
 
     risk = risk.copy()
@@ -364,3 +364,4 @@ def render_risk_management(dashboard):
         fig.update_yaxes(title_text="Risk (%)", secondary_y=False)
         fig.update_yaxes(title_text="Vendor count", secondary_y=True)
         st.plotly_chart(fig, use_container_width=True)
+

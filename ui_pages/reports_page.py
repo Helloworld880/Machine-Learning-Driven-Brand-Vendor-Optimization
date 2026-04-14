@@ -25,7 +25,10 @@ def render_reports(dashboard):
     if not review.empty:
         selected_vendor = st.selectbox("Leadership brief vendor", review["vendor_name"].tolist(), key="report_vendor")
         selected_row = review[review["vendor_name"] == selected_vendor].iloc[0]
-        note = dashboard._risk_leadership_note(selected_row, selected_row.get("overall_risk", 0) - selected_row.get("priority_score", 0))
+        note = dashboard._risk_leadership_note(
+            selected_row,
+            selected_row.get("overall_risk", 0) - selected_row.get("priority_score", 0),
+        )
         action_lines = dashboard._risk_action_recommendations(selected_row)
         pack_text = "\n".join(
             [
@@ -48,6 +51,8 @@ def render_reports(dashboard):
             mime="text/plain",
             use_container_width=True,
         )
+    else:
+        st.info("Risk review pack needs vendor performance/risk data. Check sidebar → **Data Health**.")
 
     if not dashboard.report_gen:
         st.error("Report generator not available. Install: `pip install reportlab xlsxwriter`")
@@ -97,3 +102,4 @@ def render_reports(dashboard):
         st.dataframe(df_rep[["name", "size", "created"]], use_container_width=True)
     else:
         st.info("No reports generated yet.")
+

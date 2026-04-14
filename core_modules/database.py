@@ -79,18 +79,6 @@ class DatabaseManager:
             FOREIGN KEY(vendor_id) REFERENCES vendors(id)
         );
 
-        CREATE TABLE IF NOT EXISTS brand_metrics (
-            id                      INTEGER PRIMARY KEY AUTOINCREMENT,
-            brand_name              TEXT NOT NULL,
-            sustainability_score    REAL DEFAULT 0,
-            social_impact_score     REAL DEFAULT 0,
-            governance_score        REAL DEFAULT 0,
-            environmental_score     REAL DEFAULT 0,
-            carbon_footprint        REAL DEFAULT 0,
-            renewable_energy_pct    REAL DEFAULT 0,
-            updated_at              TEXT
-        );
-
         CREATE TABLE IF NOT EXISTS risk_assessments (
             id              INTEGER PRIMARY KEY AUTOINCREMENT,
             vendor_id       INTEGER NOT NULL,
@@ -224,24 +212,6 @@ class DatabaseManager:
                              VALUES (?,?,?,?,?,?,?)""",
                           (vid, period, categories[vid % len(categories)],
                            spend, savings, random.randint(5, 40), round(random.uniform(15, 60), 1)))
-
-        # Brand metrics
-        brand_data = [
-            ("EcoTech Solutions", 88, 85, 90, 92, 120, 85),
-            ("Green Logistics", 92, 78, 85, 89, 180, 65),
-            ("Sustainable Mfg Co", 85, 82, 88, 83, 320, 45),
-            ("Ethical Consulting", 79, 91, 92, 75, 95, 90),
-            ("Clean Energy Partners", 95, 87, 84, 96, 65, 95),
-            ("Social Impact Corp", 82, 94, 89, 80, 110, 75),
-            ("Digital Dynamics", 76, 79, 81, 78, 280, 35),
-            ("Smart Systems Ltd", 89, 83, 86, 91, 150, 70),
-        ]
-        for bd in brand_data:
-            c.execute("""INSERT INTO brand_metrics
-                         (brand_name,sustainability_score,social_impact_score,governance_score,
-                          environmental_score,carbon_footprint,renewable_energy_pct,updated_at)
-                         VALUES (?,?,?,?,?,?,?,?)""",
-                      (*bd, datetime.now().strftime("%Y-%m-%d")))
 
         # Risk assessments
         for vid in vendor_ids:
@@ -500,47 +470,6 @@ class DatabaseManager:
             .rename(columns={"vendor_category": "category"})
         )
 
-    # ─────────────────────────────────────────────
-    # BRAND / ESG QUERIES
-    # ─────────────────────────────────────────────
-    def get_brand_metrics(self):
-        with sqlite3.connect(self.db_path) as conn:
-            db_df = pd.read_sql_query("SELECT * FROM brand_metrics", conn)
-
-        csv_df = self._load_csv("brand.csv")
-        if csv_df.empty:
-            return db_df
-
-        csv_df = csv_df.rename(columns={"vendor_name": "brand_name", "assessment_date": "updated_at"})
-        desired = [
-            "brand_id",
-            "vendor_id",
-            "brand_name",
-            "sustainability_score",
-            "social_impact_score",
-            "governance_score",
-            "environmental_score",
-            "carbon_footprint",
-            "renewable_energy_pct",
-            "updated_at",
-        ]
-        for col in desired:
-            if col not in csv_df.columns:
-                csv_df[col] = np.nan
-        return csv_df[desired].reset_index(drop=True)
-
-    def add_brand_metric(self, brand_name, sustainability, social, governance,
-                         environmental=0, carbon=0, renewable=0):
-        with sqlite3.connect(self.db_path) as conn:
-            conn.execute("""INSERT INTO brand_metrics
-                (brand_name,sustainability_score,social_impact_score,governance_score,
-                 environmental_score,carbon_footprint,renewable_energy_pct,updated_at)
-                VALUES (?,?,?,?,?,?,?,?)""",
-                         (brand_name, sustainability, social, governance,
-                          environmental, carbon, renewable, datetime.now().strftime("%Y-%m-%d")))
-            conn.commit()
-
-    # ─────────────────────────────────────────────
     # RISK QUERIES
     # ─────────────────────────────────────────────
     def get_risk_history(self):

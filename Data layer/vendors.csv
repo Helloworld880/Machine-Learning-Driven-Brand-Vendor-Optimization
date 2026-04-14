@@ -1,99 +1,121 @@
 vendor_id,name,category,contact_email,contact_phone,contract_value,start_date,end_date,status,risk_level,country,rating
-1,TechCorp Inc,IT Services,contact@techcorpinc.com,+1-555-1001,371231,2022-01-01,2026-12-31,Active,Low,USA,4.45
-2,Global Supplies Ltd,Logistics,contact@globalsuppliesltd.com,+1-555-1002,744731,2022-01-01,2026-12-31,Active,Low,UK,4.5
-3,Quality Parts Co,Manufacturing,contact@qualitypartsco.com,+1-555-1003,105738,2022-01-01,2026-12-31,Under Review,High,Germany,2.06
-4,Innovative Solutions,Consulting,contact@innovativesolutions.com,+1-555-1004,837277,2022-01-01,2026-12-31,Active,Low,India,3.83
-5,Reliable Services LLC,Raw Materials,contact@reliableservicesllc.com,+1-555-1005,341740,2022-01-01,2026-12-31,Active,Medium,Canada,3.04
-6,Apex Delivery Co,Logistics,contact@apexdeliveryco.com,+1-555-1006,287425,2022-01-01,2026-12-31,Active,Medium,USA,3.74
-7,BlueStar Tech,IT Services,contact@bluestartech.com,+1-555-1007,824079,2022-01-01,2026-12-31,Active,Low,UK,4.7
-8,PrimeCast Mfg,Manufacturing,contact@primecastmfg.com,+1-555-1008,320570,2022-01-01,2026-12-31,Active,Medium,Germany,3.06
-9,SwiftRoute Express,Logistics,contact@swiftrouteexpress.com,+1-555-1009,299811,2022-01-01,2026-12-31,Active,Low,USA,4.03
-10,Omega Consult Group,Consulting,contact@omegaconsultgroup.com,+1-555-1010,218873,2022-01-01,2026-12-31,Active,Medium,India,3.56
-11,NovaMat Supplies,Raw Materials,contact@novamatsupplies.com,+1-555-1011,153206,2022-01-01,2026-12-31,Active,Medium,Canada,3.08
-12,DataStream Inc,IT Services,contact@datastreaminc.com,+1-555-1012,408607,2022-01-01,2026-12-31,Active,Low,USA,3.86
-13,SteelWorks Co,Manufacturing,contact@steelworksco.com,+1-555-1013,374318,2022-01-01,2026-12-31,Active,Medium,Germany,3.17
-14,RapidFreight Ltd,Logistics,contact@rapidfreightltd.com,+1-555-1014,362579,2022-01-01,2026-12-31,Active,Medium,UK,3.34
-15,GreenSource Corp,Raw Materials,contact@greensourcecorp.com,+1-555-1015,217752,2022-01-01,2026-12-31,Active,Medium,Canada,3.61
-16,CloudNine Systems,IT Services,contact@cloudninesystems.com,+1-555-1016,386491,2022-01-01,2026-12-31,Active,Medium,USA,3.74
-17,FastLane Logistics,Logistics,contact@fastlanelogistics.com,+1-555-1017,304622,2022-01-01,2026-12-31,Active,Medium,Australia,3.18
-18,PrecisionForge Ltd,Manufacturing,contact@precisionforgeltd.com,+1-555-1018,144895,2022-01-01,2026-12-31,Under Review,High,Germany,2.29
-19,StratEdge Consulting,Consulting,contact@stratedgeconsulting.com,+1-555-1019,194987,2022-01-01,2026-12-31,Active,Medium,UK,3.61
-20,EcoRaw Materials,Raw Materials,contact@ecorawmaterials.com,+1-555-1020,295051,2022-01-01,2026-12-31,Active,Low,Canada,4.36
-21,NexGen IT Solutions,IT Services,contact@nexgenitsolutions.com,+1-555-1021,684277,2022-01-01,2026-12-31,Active,Low,USA,4.3
-22,CargoWise Corp,Logistics,contact@cargowisecorp.com,+1-555-1022,667488,2022-01-01,2026-12-31,Active,Low,Singapore,4.18
-23,MetalPlus Manufacturing,Manufacturing,contact@metalplusmanufacturing.com,+1-555-1023,245325,2022-01-01,2026-12-31,Active,Low,India,3.95
-24,Alpha Advisors,Consulting,contact@alphaadvisors.com,+1-555-1024,78743,2022-01-01,2026-12-31,Active,High,USA,2.02
-25,TerraMat Co,Raw Materials,contact@terramatco.com,+1-555-1025,91938,2022-01-01,2026-12-31,Active,High,Brazil,2.8
-26,CyberEdge Technologies,IT Services,contact@cyberedgetechnologies.com,+1-555-1026,301333,2022-01-01,2026-12-31,Active,Medium,USA,3.26
-27,SpeedFreight Inc,Logistics,contact@speedfreightinc.com,+1-555-1027,150864,2022-01-01,2026-12-31,Active,High,UK,3.07
-28,Ironclad Manufacturing,Manufacturing,contact@ironcladmanufacturing.com,+1-555-1028,550156,2022-01-01,2026-12-31,Active,Low,Germany,4.07
-29,ProConsult Partners,Consulting,contact@proconsultpartners.com,+1-555-1029,188704,2022-01-01,2026-12-31,Under Review,High,Australia,2.69
-30,NaturalRes Corp,Raw Materials,contact@naturalrescorp.com,+1-555-1030,413626,2022-01-01,2026-12-31,Active,Low,Canada,4.53
-31,Quantum IT Group,IT Services,contact@quantumitgroup.com,+1-555-1031,730099,2022-01-01,2026-12-31,Active,Low,USA,4.9
-32,GlobalLink Logistics,Logistics,contact@globallinklogistics.com,+1-555-1032,86019,2022-01-01,2026-12-31,Active,Medium,Netherlands,3.39
-33,Summit Manufacturing,Manufacturing,contact@summitmanufacturing.com,+1-555-1033,140058,2022-01-01,2026-12-31,Active,Medium,USA,3.2
-34,Insight Consulting,Consulting,contact@insightconsulting.com,+1-555-1034,361527,2022-01-01,2026-12-31,Active,Medium,India,3.51
-35,PureSource Materials,Raw Materials,contact@puresourcematerials.com,+1-555-1035,219893,2022-01-01,2026-12-31,Active,Medium,Australia,3.31
-36,InnovateTech Ltd,IT Services,contact@innovatetechltd.com,+1-555-1036,822097,2022-01-01,2026-12-31,Active,Low,UK,4.44
-37,AirCargo Express,Logistics,contact@aircargoexpress.com,+1-555-1037,79242,2022-01-01,2026-12-31,Under Review,High,UAE,2.11
-38,PowerForge Mfg,Manufacturing,contact@powerforgemfg.com,+1-555-1038,233878,2022-01-01,2026-12-31,Active,Medium,Germany,3.54
-39,Clarity Consulting,Consulting,contact@clarityconsulting.com,+1-555-1039,91460,2022-01-01,2026-12-31,Under Review,High,USA,2.62
-40,GoldMine Resources,Raw Materials,contact@goldmineresources.com,+1-555-1040,625763,2022-01-01,2026-12-31,Active,Low,South Africa,4.81
-41,SkyNet IT Services,IT Services,contact@skynetitservices.com,+1-555-1041,153402,2022-01-01,2026-12-31,Active,Low,USA,4.02
-42,TruckPro Logistics,Logistics,contact@truckprologistics.com,+1-555-1042,426183,2022-01-01,2026-12-31,Active,Low,USA,4.11
-43,Alliance Manufacturing,Manufacturing,contact@alliancemanufacturing.com,+1-555-1043,674902,2022-01-01,2026-12-31,Active,Low,India,4.95
-44,Vision Consulting,Consulting,contact@visionconsulting.com,+1-555-1044,337330,2022-01-01,2026-12-31,Active,Low,UK,4.32
-45,EarthCore Supplies,Raw Materials,contact@earthcoresupplies.com,+1-555-1045,682342,2022-01-01,2026-12-31,Active,Low,Canada,4.41
-46,DataForce Inc,IT Services,contact@dataforceinc.com,+1-555-1046,135789,2022-01-01,2026-12-31,Active,Medium,USA,3.7
-47,OceanFreight Ltd,Logistics,contact@oceanfreightltd.com,+1-555-1047,236471,2022-01-01,2026-12-31,Active,Medium,Singapore,3.23
-48,CraftWorks Mfg,Manufacturing,contact@craftworksmfg.com,+1-555-1048,346161,2022-01-01,2026-12-31,Active,Medium,Germany,3.29
-49,Summit Advisors,Consulting,contact@summitadvisors.com,+1-555-1049,788551,2022-01-01,2026-12-31,Active,Low,USA,3.9
-50,RockBase Materials,Raw Materials,contact@rockbasematerials.com,+1-555-1050,358573,2022-01-01,2026-12-31,Active,Low,Australia,4.51
-51,ByteWise Solutions,IT Services,contact@bytewisesolutions.com,+1-555-1051,148019,2022-01-01,2026-12-31,Active,High,USA,2.77
-52,LogiTrack Systems,Logistics,contact@logitracksystems.com,+1-555-1052,164698,2022-01-01,2026-12-31,Active,Medium,UK,3.43
-53,FusionParts Mfg,Manufacturing,contact@fusionpartsmfg.com,+1-555-1053,715579,2022-01-01,2026-12-31,Active,Low,Germany,4.53
-54,Elite Strategy Group,Consulting,contact@elitestrategygroup.com,+1-555-1054,358058,2022-01-01,2026-12-31,Active,Medium,USA,3.14
-55,CoreMin Resources,Raw Materials,contact@coreminresources.com,+1-555-1055,150599,2022-01-01,2026-12-31,Active,Low,Chile,4.12
-56,NetSphere Technologies,IT Services,contact@netspheretechnologies.com,+1-555-1056,778038,2022-01-01,2026-12-31,Active,Low,India,4.0
-57,SeaRoute Logistics,Logistics,contact@searoutelogistics.com,+1-555-1057,249951,2022-01-01,2026-12-31,Active,Medium,Singapore,3.36
-58,AutoPrecision Mfg,Manufacturing,contact@autoprecisionmfg.com,+1-555-1058,336170,2022-01-01,2026-12-31,Active,Medium,Japan,3.29
-59,BrightMind Consulting,Consulting,contact@brightmindconsulting.com,+1-555-1059,170422,2022-01-01,2026-12-31,Active,Low,UK,4.44
-60,TerraFlex Supplies,Raw Materials,contact@terraflexsupplies.com,+1-555-1060,138650,2022-01-01,2026-12-31,Active,Medium,Canada,3.56
-61,PixelCloud IT,IT Services,contact@pixelcloudit.com,+1-555-1061,530612,2022-01-01,2026-12-31,Active,Low,USA,4.39
-62,SwiftCargo Networks,Logistics,contact@swiftcargonetworks.com,+1-555-1062,472451,2022-01-01,2026-12-31,Active,Low,UAE,4.96
-63,HeavyDuty Mfg,Manufacturing,contact@heavydutymfg.com,+1-555-1063,401083,2022-01-01,2026-12-31,Active,Low,USA,4.8
-64,Nexus Strategy Firm,Consulting,contact@nexusstrategyfirm.com,+1-555-1064,110369,2022-01-01,2026-12-31,Active,Medium,Australia,3.31
-65,AgriMat Resources,Raw Materials,contact@agrimatresources.com,+1-555-1065,198729,2022-01-01,2026-12-31,Active,High,Brazil,2.79
-66,CodeBridge Technologies,IT Services,contact@codebridgetechnologies.com,+1-555-1066,232582,2022-01-01,2026-12-31,Active,Low,UK,4.12
-67,PrimePath Logistics,Logistics,contact@primepathlogistics.com,+1-555-1067,124907,2022-01-01,2026-12-31,Active,Medium,Netherlands,3.89
-68,MegaForge Industries,Manufacturing,contact@megaforgeindustries.com,+1-555-1068,659597,2022-01-01,2026-12-31,Active,Low,Germany,4.35
-69,TrueNorth Consulting,Consulting,contact@truenorthconsulting.com,+1-555-1069,189645,2022-01-01,2026-12-31,Active,High,Canada,3.05
-70,BaseMet Resources,Raw Materials,contact@basemetresources.com,+1-555-1070,281869,2022-01-01,2026-12-31,Active,Low,South Africa,4.36
-71,ClearPath IT Group,IT Services,contact@clearpathitgroup.com,+1-555-1071,284628,2022-01-01,2026-12-31,Active,Low,USA,4.24
-72,BlueOcean Freight,Logistics,contact@blueoceanfreight.com,+1-555-1072,194127,2022-01-01,2026-12-31,Under Review,High,Singapore,2.88
-73,PeakCraft Manufacturing,Manufacturing,contact@peakcraftmanufacturing.com,+1-555-1073,166574,2022-01-01,2026-12-31,Active,Medium,India,3.33
-74,Axis Strategy Partners,Consulting,contact@axisstrategypartners.com,+1-555-1074,188326,2022-01-01,2026-12-31,Under Review,High,USA,2.77
-75,SunMat Corp,Raw Materials,contact@sunmatcorp.com,+1-555-1075,398029,2022-01-01,2026-12-31,Active,Medium,Australia,3.15
-76,HorizonTech Inc,IT Services,contact@horizontechinc.com,+1-555-1076,105521,2022-01-01,2026-12-31,Under Review,High,Germany,2.51
-77,FlexFreight Solutions,Logistics,contact@flexfreightsolutions.com,+1-555-1077,715492,2022-01-01,2026-12-31,Active,Low,UK,4.95
-78,ProMold Manufacturing,Manufacturing,contact@promoldmanufacturing.com,+1-555-1078,185461,2022-01-01,2026-12-31,Active,Medium,USA,3.8
-79,GrowthPoint Consulting,Consulting,contact@growthpointconsulting.com,+1-555-1079,154593,2022-01-01,2026-12-31,Under Review,High,India,2.19
-80,NordicRaw Materials,Raw Materials,contact@nordicrawmaterials.com,+1-555-1080,275779,2022-01-01,2026-12-31,Active,Medium,Sweden,3.64
-81,CatalystIT Systems,IT Services,contact@catalystitsystems.com,+1-555-1081,309690,2022-01-01,2026-12-31,Active,Medium,USA,3.26
-82,CargoNation Ltd,Logistics,contact@cargonationltd.com,+1-555-1082,692717,2022-01-01,2026-12-31,Active,Low,UK,4.02
-83,BoltWorks Mfg,Manufacturing,contact@boltworksmfg.com,+1-555-1083,623417,2022-01-01,2026-12-31,Active,Low,Germany,4.54
-84,PinnacleConsult Inc,Consulting,contact@pinnacleconsultinc.com,+1-555-1084,114986,2022-01-01,2026-12-31,Active,High,Australia,2.91
-85,EcoMine Supplies,Raw Materials,contact@ecominesupplies.com,+1-555-1085,66784,2022-01-01,2026-12-31,Active,High,Canada,2.18
-86,InfoTech Dynamics,IT Services,contact@infotechdynamics.com,+1-555-1086,504508,2022-01-01,2026-12-31,Active,Low,USA,4.54
-87,JetRoute Logistics,Logistics,contact@jetroutelogistics.com,+1-555-1087,91028,2022-01-01,2026-12-31,Active,Medium,UAE,3.29
-88,CoreCast Mfg,Manufacturing,contact@corecastmfg.com,+1-555-1088,388443,2022-01-01,2026-12-31,Active,Medium,Germany,3.29
-89,TrueConsult Global,Consulting,contact@trueconsultglobal.com,+1-555-1089,730828,2022-01-01,2026-12-31,Active,Low,UK,4.62
-90,MarbleMat Resources,Raw Materials,contact@marblematresources.com,+1-555-1090,200646,2022-01-01,2026-12-31,Active,Medium,Italy,3.03
-91,TechSphere Solutions,IT Services,contact@techspheresolutions.com,+1-555-1091,51885,2022-01-01,2026-12-31,Active,High,India,2.28
-92,AquaFreight Corp,Logistics,contact@aquafreightcorp.com,+1-555-1092,224441,2022-01-01,2026-12-31,Active,Low,Singapore,3.95
-93,StrongBuild Mfg,Manufacturing,contact@strongbuildmfg.com,+1-555-1093,892225,2022-01-01,2026-12-31,Active,Low,USA,4.63
-94,Vantage Consulting,Consulting,contact@vantageconsulting.com,+1-555-1094,811759,2022-01-01,2026-12-31,Active,Low,Canada,5.0
-95,ForestMat Supplies,Raw Materials,contact@forestmatsupplies.com,+1-555-1095,211733,2022-01-01,2026-12-31,Active,Low,Finland,3.85
-96,ClearVision IT,IT Services,contact@clearvisionit.com,+1-555-1096,390062,2022-01-01,2026-12-31,Active,Low,USA,3.8
-97,NightOwl Logistics,Logistics,contact@nightowllogistics.com,+1-555-1097,58234,2022-01-01,2026-12-31,Active,High,UK,2.7
-98,TitanForge Mfg,Manufacturing,contact@titanforgemfg.com,+1-555-1098,496479,2022-01-01,2026-12-31,Active,Low,Germany,4.04
+1,TechCorp Inc,IT Services,contact@techcorpinc.com,+1-555-1000,674175,2022-01-01,2026-12-31,Active,Low,Canada,3.28
+2,Global Supplies Ltd,Consulting,contact@globalsuppliesltd.com,+1-555-1001,185805,2022-01-01,2026-12-31,Active,Medium,UAE,3.18
+3,Quality Parts Co,Consulting,contact@qualitypartsco.com,+1-555-1002,107318,2022-01-01,2026-12-31,Active,Low,UAE,3.4
+4,Innovative Solutions,Manufacturing,contact@innovativesolutions.com,+1-555-1003,249071,2022-01-01,2026-12-31,Active,Low,Australia,3.49
+5,Reliable Services LLC,Manufacturing,contact@reliableservicesllc.com,+1-555-1004,256273,2022-01-01,2026-12-31,Active,Low,Singapore,3.72
+6,Apex Delivery Co,Raw Materials,contact@apexdeliveryco.com,+1-555-1005,568884,2022-01-01,2026-12-31,Active,Low,Japan,4.06
+7,BlueStar Tech,IT Services,contact@bluestartech.com,+1-555-1006,394186,2022-01-01,2026-12-31,Active,Medium,USA,2.81
+8,PrimeCast Mfg,Consulting,contact@primecastmfg.com,+1-555-1007,282042,2022-01-01,2026-12-31,Active,Medium,Brazil,3.04
+9,SwiftRoute Express,Logistics,contact@swiftrouteexpress.com,+1-555-1008,611893,2022-01-01,2026-12-31,Active,Low,Japan,3.52
+10,Omega Consult Group,IT Services,contact@omegaconsultgroup.com,+1-555-1009,95594,2022-01-01,2026-12-31,Active,Low,Japan,4.7
+11,NovaMat Supplies,Manufacturing,contact@novamatsupplies.com,+1-555-1010,140389,2022-01-01,2026-12-31,Active,Low,Japan,3.6
+12,DataStream Inc,Raw Materials,contact@datastreaminc.com,+1-555-1011,114852,2022-01-01,2026-12-31,Active,Low,Japan,3.67
+13,SteelWorks Co,Consulting,contact@steelworksco.com,+1-555-1012,167231,2022-01-01,2026-12-31,Active,Low,USA,3.59
+14,RapidFreight Ltd,Consulting,contact@rapidfreightltd.com,+1-555-1013,83811,2022-01-01,2026-12-31,Active,Low,Japan,3.82
+15,GreenSource Corp,Consulting,contact@greensourcecorp.com,+1-555-1014,342698,2022-01-01,2026-12-31,Under Review,High,Brazil,2.61
+16,CloudNine Systems,Consulting,contact@cloudninesystems.com,+1-555-1015,188046,2022-01-01,2026-12-31,Active,Low,India,4.29
+17,FastLane Logistics,Manufacturing,contact@fastlanelogistics.com,+1-555-1016,78467,2022-01-01,2026-12-31,Active,Low,Japan,4.25
+18,PrecisionForge Ltd,IT Services,contact@precisionforgeltd.com,+1-555-1017,107915,2022-01-01,2026-12-31,Active,Low,USA,4.06
+19,StratEdge Consulting,Raw Materials,contact@stratedgeconsulting.com,+1-555-1018,273610,2022-01-01,2026-12-31,Active,Low,India,4.07
+20,EcoRaw Materials,Manufacturing,contact@ecorawmaterials.com,+1-555-1019,395019,2022-01-01,2026-12-31,Active,Low,Canada,4.68
+21,NexGen IT Solutions,Manufacturing,contact@nexgenitsolutions.com,+1-555-1020,888875,2022-01-01,2026-12-31,Active,Low,Netherlands,3.92
+22,CargoWise Corp,Logistics,contact@cargowisecorp.com,+1-555-1021,1689095,2022-01-01,2026-12-31,Active,Medium,Germany,3.28
+23,MetalPlus Manufacturing,IT Services,contact@metalplusmanufacturing.com,+1-555-1022,293633,2022-01-01,2026-12-31,Active,Low,India,3.97
+24,Alpha Advisors,Raw Materials,contact@alphaadvisors.com,+1-555-1023,109900,2022-01-01,2026-12-31,Active,Low,Canada,3.07
+25,TerraMat Co,Consulting,contact@terramatco.com,+1-555-1024,50000,2022-01-01,2026-12-31,Active,Low,Netherlands,4.01
+26,CyberEdge Technologies,Consulting,contact@cyberedgetechnologies.com,+1-555-1025,264977,2022-01-01,2026-12-31,Active,Low,Singapore,4.57
+27,SpeedFreight Inc,Manufacturing,contact@speedfreightinc.com,+1-555-1026,124361,2022-01-01,2026-12-31,Active,Medium,USA,2.97
+28,Ironclad Manufacturing,Raw Materials,contact@ironcladmanufacturing.com,+1-555-1027,164267,2022-01-01,2026-12-31,Active,Medium,Germany,2.88
+29,ProConsult Partners,Manufacturing,contact@proconsultpartners.com,+1-555-1028,143133,2022-01-01,2026-12-31,Under Review,High,Singapore,2.49
+30,NaturalRes Corp,Manufacturing,contact@naturalrescorp.com,+1-555-1029,199077,2022-01-01,2026-12-31,Active,Medium,USA,3.42
+31,Quantum IT Group,Manufacturing,contact@quantumitgroup.com,+1-555-1030,463326,2022-01-01,2026-12-31,Active,Low,Singapore,4.41
+32,GlobalLink Logistics,Logistics,contact@globallinklogistics.com,+1-555-1031,245226,2022-01-01,2026-12-31,Active,Low,India,4.12
+33,Summit Manufacturing,IT Services,contact@summitmanufacturing.com,+1-555-1032,196606,2022-01-01,2026-12-31,Active,Low,Netherlands,3.81
+34,Insight Consulting,Manufacturing,contact@insightconsulting.com,+1-555-1033,106409,2022-01-01,2026-12-31,Active,Medium,India,3.07
+35,PureSource Materials,Raw Materials,contact@puresourcematerials.com,+1-555-1034,68031,2022-01-01,2026-12-31,Active,Medium,Canada,2.97
+36,InnovateTech Ltd,IT Services,contact@innovatetechltd.com,+1-555-1035,156308,2022-01-01,2026-12-31,Active,Low,UAE,3.74
+37,AirCargo Express,Raw Materials,contact@aircargoexpress.com,+1-555-1036,211579,2022-01-01,2026-12-31,Active,Low,UK,3.38
+38,PowerForge Mfg,Raw Materials,contact@powerforgemfg.com,+1-555-1037,757327,2022-01-01,2026-12-31,Active,Low,Japan,4.48
+39,Clarity Consulting,Logistics,contact@clarityconsulting.com,+1-555-1038,240672,2022-01-01,2026-12-31,Active,Low,Australia,4.5
+40,NightOwl Logistics,Consulting,contact@nightowllogistics.com,+1-555-1039,437100,2022-01-01,2026-12-31,Active,Low,Brazil,4.13
+41,Vendor 041,IT Services,contact@vendor041.com,+1-555-1040,154894,2022-01-01,2026-12-31,Active,Low,Netherlands,3.32
+42,Vendor 042,Consulting,contact@vendor042.com,+1-555-1041,95850,2022-01-01,2026-12-31,Active,Low,UAE,4.1
+43,Vendor 043,Consulting,contact@vendor043.com,+1-555-1042,111795,2022-01-01,2026-12-31,Active,High,Canada,3.05
+44,Vendor 044,Logistics,contact@vendor044.com,+1-555-1043,132236,2022-01-01,2026-12-31,Active,Low,Canada,3.66
+45,Vendor 045,IT Services,contact@vendor045.com,+1-555-1044,974743,2022-01-01,2026-12-31,Active,Medium,Canada,3.37
+46,Vendor 046,Raw Materials,contact@vendor046.com,+1-555-1045,123628,2022-01-01,2026-12-31,Active,Medium,Brazil,3.24
+47,Vendor 047,Manufacturing,contact@vendor047.com,+1-555-1046,395119,2022-01-01,2026-12-31,Active,Medium,India,3.43
+48,Vendor 048,Raw Materials,contact@vendor048.com,+1-555-1047,116769,2022-01-01,2026-12-31,Active,Medium,UK,3.45
+49,Vendor 049,Consulting,contact@vendor049.com,+1-555-1048,421722,2022-01-01,2026-12-31,Active,Low,India,3.86
+50,Vendor 050,Consulting,contact@vendor050.com,+1-555-1049,287640,2022-01-01,2026-12-31,Active,Low,USA,3.26
+51,Vendor 051,Consulting,contact@vendor051.com,+1-555-1050,196881,2022-01-01,2026-12-31,Active,Low,UK,3.81
+52,Vendor 052,IT Services,contact@vendor052.com,+1-555-1051,213516,2022-01-01,2026-12-31,Active,Low,USA,3.96
+53,Vendor 053,Logistics,contact@vendor053.com,+1-555-1052,138919,2022-01-01,2026-12-31,Active,Medium,Brazil,2.76
+54,Vendor 054,Manufacturing,contact@vendor054.com,+1-555-1053,300214,2022-01-01,2026-12-31,Active,Medium,UAE,3.75
+55,Vendor 055,Manufacturing,contact@vendor055.com,+1-555-1054,159773,2022-01-01,2026-12-31,Active,Medium,UAE,3.67
+56,Vendor 056,IT Services,contact@vendor056.com,+1-555-1055,93160,2022-01-01,2026-12-31,Active,Medium,Australia,3.3
+57,Vendor 057,Manufacturing,contact@vendor057.com,+1-555-1056,89809,2022-01-01,2026-12-31,Active,Low,UAE,3.62
+58,Vendor 058,IT Services,contact@vendor058.com,+1-555-1057,247908,2022-01-01,2026-12-31,Active,Low,UK,4.41
+59,Vendor 059,Consulting,contact@vendor059.com,+1-555-1058,663553,2022-01-01,2026-12-31,Active,Low,Singapore,3.7
+60,Vendor 060,Consulting,contact@vendor060.com,+1-555-1059,245731,2022-01-01,2026-12-31,Active,Low,Australia,3.92
+61,Vendor 061,Raw Materials,contact@vendor061.com,+1-555-1060,202188,2022-01-01,2026-12-31,Active,Low,Netherlands,3.92
+62,Vendor 062,Consulting,contact@vendor062.com,+1-555-1061,268358,2022-01-01,2026-12-31,Active,Low,UK,4.38
+63,Vendor 063,Logistics,contact@vendor063.com,+1-555-1062,548094,2022-01-01,2026-12-31,Active,Low,Australia,3.79
+64,Vendor 064,Raw Materials,contact@vendor064.com,+1-555-1063,256163,2022-01-01,2026-12-31,Active,Low,UAE,3.96
+65,Vendor 065,Manufacturing,contact@vendor065.com,+1-555-1064,164777,2022-01-01,2026-12-31,Active,Low,Australia,3.82
+66,Vendor 066,Logistics,contact@vendor066.com,+1-555-1065,476585,2022-01-01,2026-12-31,Active,Low,Canada,3.48
+67,Vendor 067,Raw Materials,contact@vendor067.com,+1-555-1066,296597,2022-01-01,2026-12-31,Active,Low,UK,4.04
+68,Vendor 068,Logistics,contact@vendor068.com,+1-555-1067,643726,2022-01-01,2026-12-31,Active,Medium,Canada,3.52
+69,Vendor 069,IT Services,contact@vendor069.com,+1-555-1068,249762,2022-01-01,2026-12-31,Active,Low,Germany,3.48
+70,Vendor 070,Manufacturing,contact@vendor070.com,+1-555-1069,93234,2022-01-01,2026-12-31,Under Review,High,India,2.4
+71,Vendor 071,Consulting,contact@vendor071.com,+1-555-1070,84313,2022-01-01,2026-12-31,Active,Medium,UAE,3.42
+72,Vendor 072,IT Services,contact@vendor072.com,+1-555-1071,697773,2022-01-01,2026-12-31,Active,Low,Japan,4.37
+73,Vendor 073,Manufacturing,contact@vendor073.com,+1-555-1072,3500000,2022-01-01,2026-12-31,Active,Medium,Japan,3.03
+74,Vendor 074,IT Services,contact@vendor074.com,+1-555-1073,193752,2022-01-01,2026-12-31,Active,Low,India,3.9
+75,Vendor 075,Consulting,contact@vendor075.com,+1-555-1074,168008,2022-01-01,2026-12-31,Active,Low,Netherlands,3.28
+76,Vendor 076,Manufacturing,contact@vendor076.com,+1-555-1075,611097,2022-01-01,2026-12-31,Active,Low,USA,3.2
+77,Vendor 077,Logistics,contact@vendor077.com,+1-555-1076,101222,2022-01-01,2026-12-31,Active,Medium,India,3.57
+78,Vendor 078,Logistics,contact@vendor078.com,+1-555-1077,117441,2022-01-01,2026-12-31,Active,Medium,UK,3.24
+79,Vendor 079,Manufacturing,contact@vendor079.com,+1-555-1078,344665,2022-01-01,2026-12-31,Active,Low,India,3.69
+80,Vendor 080,Consulting,contact@vendor080.com,+1-555-1079,166671,2022-01-01,2026-12-31,Active,Low,Netherlands,3.55
+81,Vendor 081,Raw Materials,contact@vendor081.com,+1-555-1080,218910,2022-01-01,2026-12-31,Active,Medium,Canada,3.37
+82,Vendor 082,Manufacturing,contact@vendor082.com,+1-555-1081,195945,2022-01-01,2026-12-31,Active,Medium,Singapore,3.68
+83,Vendor 083,IT Services,contact@vendor083.com,+1-555-1082,278257,2022-01-01,2026-12-31,Active,Medium,Australia,3.23
+84,Vendor 084,Raw Materials,contact@vendor084.com,+1-555-1083,588444,2022-01-01,2026-12-31,Active,Medium,UAE,3.09
+85,Vendor 085,Consulting,contact@vendor085.com,+1-555-1084,234078,2022-01-01,2026-12-31,Active,Low,Australia,3.52
+86,Vendor 086,Consulting,contact@vendor086.com,+1-555-1085,344813,2022-01-01,2026-12-31,Active,Low,Germany,3.65
+87,Vendor 087,IT Services,contact@vendor087.com,+1-555-1086,52307,2022-01-01,2026-12-31,Active,Low,Brazil,4.02
+88,Vendor 088,Logistics,contact@vendor088.com,+1-555-1087,212330,2022-01-01,2026-12-31,Active,Medium,Netherlands,3.22
+89,Vendor 089,Consulting,contact@vendor089.com,+1-555-1088,121752,2022-01-01,2026-12-31,Active,Low,Germany,4.0
+90,Vendor 090,Raw Materials,contact@vendor090.com,+1-555-1089,93604,2022-01-01,2026-12-31,Under Review,High,Brazil,2.91
+91,Vendor 091,Manufacturing,contact@vendor091.com,+1-555-1090,601523,2022-01-01,2026-12-31,Active,Low,Germany,4.15
+92,Vendor 092,Raw Materials,contact@vendor092.com,+1-555-1091,173879,2022-01-01,2026-12-31,Active,Medium,UAE,2.8
+93,Vendor 093,Raw Materials,contact@vendor093.com,+1-555-1092,417121,2022-01-01,2026-12-31,Active,Low,Brazil,3.43
+94,Vendor 094,Logistics,contact@vendor094.com,+1-555-1093,86814,2022-01-01,2026-12-31,Active,Low,Canada,3.99
+95,Vendor 095,Raw Materials,contact@vendor095.com,+1-555-1094,224458,2022-01-01,2026-12-31,Active,Medium,Brazil,2.87
+96,Vendor 096,Logistics,contact@vendor096.com,+1-555-1095,156542,2022-01-01,2026-12-31,Active,Medium,Germany,3.19
+97,Vendor 097,Logistics,contact@vendor097.com,+1-555-1096,174666,2022-01-01,2026-12-31,Active,Medium,USA,3.04
+98,Vendor 098,Consulting,contact@vendor098.com,+1-555-1097,443268,2022-01-01,2026-12-31,Active,Low,UK,4.42
+99,Vendor 099,Consulting,contact@vendor099.com,+1-555-1098,320194,2022-01-01,2026-12-31,Active,Low,Canada,3.67
+100,Vendor 100,IT Services,contact@vendor100.com,+1-555-1099,560273,2022-01-01,2026-12-31,Active,Low,Singapore,3.94
+101,Vendor 101,Raw Materials,contact@vendor101.com,+1-555-1100,197175,2022-01-01,2026-12-31,Active,Low,UK,4.09
+102,Vendor 102,IT Services,contact@vendor102.com,+1-555-1101,134974,2022-01-01,2026-12-31,Active,Low,Australia,3.56
+103,Vendor 103,Raw Materials,contact@vendor103.com,+1-555-1102,187831,2022-01-01,2026-12-31,Active,Low,UAE,3.99
+104,Vendor 104,IT Services,contact@vendor104.com,+1-555-1103,260341,2022-01-01,2026-12-31,Active,Low,Germany,3.51
+105,Vendor 105,Consulting,contact@vendor105.com,+1-555-1104,248600,2022-01-01,2026-12-31,Active,Low,UAE,3.79
+106,Vendor 106,Consulting,contact@vendor106.com,+1-555-1105,102840,2022-01-01,2026-12-31,Active,Low,India,3.86
+107,Vendor 107,Consulting,contact@vendor107.com,+1-555-1106,234062,2022-01-01,2026-12-31,Active,Medium,Brazil,2.97
+108,Vendor 108,Consulting,contact@vendor108.com,+1-555-1107,257754,2022-01-01,2026-12-31,Active,Medium,Japan,2.5
+109,Vendor 109,Manufacturing,contact@vendor109.com,+1-555-1108,1279822,2022-01-01,2026-12-31,Active,Medium,Japan,2.93
+110,Vendor 110,Consulting,contact@vendor110.com,+1-555-1109,817324,2022-01-01,2026-12-31,Active,Low,UK,3.64
+111,Vendor 111,Logistics,contact@vendor111.com,+1-555-1110,120901,2022-01-01,2026-12-31,Under Review,High,Australia,2.54
+112,Vendor 112,Consulting,contact@vendor112.com,+1-555-1111,921560,2022-01-01,2026-12-31,Active,Low,Singapore,4.47
+113,Vendor 113,Manufacturing,contact@vendor113.com,+1-555-1112,78873,2022-01-01,2026-12-31,Active,Low,USA,4.5
+114,Vendor 114,Manufacturing,contact@vendor114.com,+1-555-1113,145293,2022-01-01,2026-12-31,Active,Low,Brazil,2.79
+115,Vendor 115,Manufacturing,contact@vendor115.com,+1-555-1114,274011,2022-01-01,2026-12-31,Active,Medium,Australia,3.08
+116,Vendor 116,Manufacturing,contact@vendor116.com,+1-555-1115,510986,2022-01-01,2026-12-31,Active,Low,UAE,4.04
+117,Vendor 117,IT Services,contact@vendor117.com,+1-555-1116,131879,2022-01-01,2026-12-31,Active,Low,UAE,3.61
+118,Vendor 118,IT Services,contact@vendor118.com,+1-555-1117,138982,2022-01-01,2026-12-31,Active,High,Canada,2.76
+119,Vendor 119,Logistics,contact@vendor119.com,+1-555-1118,50000,2022-01-01,2026-12-31,Active,Low,India,3.83
+120,Vendor 120,IT Services,contact@vendor120.com,+1-555-1119,196052,2022-01-01,2026-12-31,Active,Medium,Japan,3.0

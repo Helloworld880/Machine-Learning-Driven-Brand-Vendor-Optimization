@@ -1,589 +1,1441 @@
 risk_id,vendor_id,vendor_name,assessment_date,financial_risk,operational_risk,compliance_risk,geopolitical_risk,cyber_risk,overall_risk,risk_level,mitigation_status,incident_flag
-1,1,TechCorp Inc,2024-01-15,25.4,27.5,26.6,35.8,41.7,31.4,Low,Completed,0
-2,1,TechCorp Inc,2024-03-15,27.8,31.5,25.5,17.7,35.2,27.5,Low,Completed,0
-3,1,TechCorp Inc,2024-05-15,24.7,30.7,28.3,17.7,38.4,27.9,Low,Completed,0
-4,1,TechCorp Inc,2024-07-15,29.2,40.0,37.2,21.9,21.9,30.0,Low,Completed,0
-5,1,TechCorp Inc,2024-09-15,36.5,32.0,32.2,39.7,38.9,35.9,Medium,Monitoring,0
-6,1,TechCorp Inc,2024-11-15,40.5,38.3,43.7,23.2,37.0,36.5,Medium,Monitoring,0
-7,2,Global Supplies Ltd,2024-01-15,30.2,36.1,28.7,34.7,13.7,28.7,Low,Completed,0
-8,2,Global Supplies Ltd,2024-03-15,25.5,22.9,23.2,13.5,22.6,21.5,Low,Completed,0
-9,2,Global Supplies Ltd,2024-05-15,28.6,29.7,25.0,19.3,47.6,30.0,Low,Completed,0
-10,2,Global Supplies Ltd,2024-07-15,32.4,27.3,33.1,15.7,26.4,27.0,Low,Completed,0
-11,2,Global Supplies Ltd,2024-09-15,38.3,39.1,38.0,39.5,41.5,39.3,Medium,Monitoring,0
-12,2,Global Supplies Ltd,2024-11-15,19.7,23.8,20.9,17.4,47.8,25.9,Low,Completed,0
-13,3,Quality Parts Co,2024-01-15,73.5,62.2,60.5,42.0,29.4,53.5,Medium,In Progress,0
-14,3,Quality Parts Co,2024-03-15,72.1,60.1,58.0,30.5,46.1,53.4,Medium,In Progress,0
-15,3,Quality Parts Co,2024-05-15,72.2,67.4,61.9,13.2,13.8,45.7,Medium,Monitoring,0
-16,3,Quality Parts Co,2024-07-15,73.9,61.0,57.5,12.2,26.5,46.2,Medium,Monitoring,0
-17,3,Quality Parts Co,2024-09-15,84.0,75.2,74.9,10.4,39.4,56.8,Medium,In Progress,0
-18,3,Quality Parts Co,2024-11-15,80.6,60.4,68.3,13.9,28.5,50.3,Medium,In Progress,0
-19,4,Innovative Solutions,2024-01-15,33.0,34.2,24.2,32.5,18.8,28.6,Low,Completed,0
-20,4,Innovative Solutions,2024-03-15,33.7,26.6,31.2,36.3,17.8,29.1,Low,Completed,0
-21,4,Innovative Solutions,2024-05-15,30.4,35.0,30.3,15.0,24.3,27.0,Low,Completed,0
-22,4,Innovative Solutions,2024-07-15,28.5,29.9,27.9,25.8,14.2,25.2,Low,Completed,0
-23,4,Innovative Solutions,2024-09-15,39.3,27.8,33.6,17.4,40.9,31.8,Low,Completed,0
-24,4,Innovative Solutions,2024-11-15,29.0,33.7,34.1,24.3,45.2,33.3,Low,Completed,0
-25,5,Reliable Services LLC,2024-01-15,47.3,45.2,48.3,17.0,23.8,36.3,Medium,Monitoring,0
-26,5,Reliable Services LLC,2024-03-15,54.6,45.6,47.3,14.2,20.5,36.4,Medium,Monitoring,0
-27,5,Reliable Services LLC,2024-05-15,51.2,39.6,40.5,12.5,36.0,36.0,Medium,Monitoring,0
-28,5,Reliable Services LLC,2024-07-15,53.6,48.3,36.9,18.3,37.4,38.9,Medium,Monitoring,0
-29,5,Reliable Services LLC,2024-09-15,43.4,48.6,43.0,26.5,41.8,40.7,Medium,Monitoring,0
-30,5,Reliable Services LLC,2024-11-15,53.7,44.8,50.7,24.8,29.7,40.8,Medium,Monitoring,0
-31,6,Apex Delivery Co,2024-01-15,51.9,51.7,41.5,24.1,24.9,38.8,Medium,Monitoring,0
-32,6,Apex Delivery Co,2024-03-15,48.4,40.5,47.9,24.8,22.6,36.8,Medium,Monitoring,0
-33,6,Apex Delivery Co,2024-05-15,53.7,41.8,50.9,29.3,13.9,37.9,Medium,Monitoring,0
-34,6,Apex Delivery Co,2024-07-15,59.9,57.5,59.1,39.7,18.3,46.9,Medium,Monitoring,0
-35,6,Apex Delivery Co,2024-09-15,47.2,43.2,41.7,23.3,49.4,41.0,Medium,Monitoring,0
-36,6,Apex Delivery Co,2024-11-15,50.4,40.4,43.2,43.5,49.8,45.5,Medium,Monitoring,0
-37,7,BlueStar Tech,2024-01-15,29.3,24.3,26.1,43.9,38.0,32.3,Low,Completed,0
-38,7,BlueStar Tech,2024-03-15,30.1,23.1,30.5,27.6,48.4,31.9,Low,Completed,0
-39,7,BlueStar Tech,2024-05-15,30.3,21.2,22.6,30.8,41.7,29.3,Low,Completed,0
-40,7,BlueStar Tech,2024-07-15,20.1,34.0,23.3,30.8,39.5,29.6,Low,Completed,0
-41,7,BlueStar Tech,2024-09-15,27.6,30.0,34.9,17.1,43.2,30.6,Low,Completed,0
-42,7,BlueStar Tech,2024-11-15,22.1,29.2,22.8,21.1,44.6,28.0,Low,Completed,0
-43,8,PrimeCast Mfg,2024-01-15,50.1,52.4,52.9,12.6,20.1,37.6,Medium,Monitoring,0
-44,8,PrimeCast Mfg,2024-03-15,55.2,50.0,50.7,22.9,18.0,39.4,Medium,Monitoring,0
-45,8,PrimeCast Mfg,2024-05-15,55.8,49.1,55.6,32.9,12.3,41.1,Medium,Monitoring,0
-46,8,PrimeCast Mfg,2024-07-15,52.2,51.2,56.2,14.7,16.4,38.1,Medium,Monitoring,0
-47,8,PrimeCast Mfg,2024-09-15,46.7,36.3,42.9,35.1,19.7,36.2,Medium,Monitoring,0
-48,8,PrimeCast Mfg,2024-11-15,51.3,47.9,55.2,39.6,15.5,41.9,Medium,Monitoring,0
-49,9,SwiftRoute Express,2024-01-15,28.7,21.9,34.1,32.3,22.0,27.8,Low,Completed,0
-50,9,SwiftRoute Express,2024-03-15,33.1,29.8,24.6,12.6,45.6,29.1,Low,Completed,0
-51,9,SwiftRoute Express,2024-05-15,35.3,38.6,34.8,15.2,16.8,28.1,Low,Completed,0
-52,9,SwiftRoute Express,2024-07-15,34.9,33.4,34.1,41.5,20.0,32.8,Low,Completed,0
-53,9,SwiftRoute Express,2024-09-15,24.1,31.9,33.2,24.2,35.6,29.8,Low,Completed,0
-54,9,SwiftRoute Express,2024-11-15,31.8,30.9,32.2,38.4,45.5,35.8,Medium,Monitoring,0
-55,10,Omega Consult Group,2024-01-15,51.8,41.4,50.2,43.1,44.8,46.3,Medium,Monitoring,0
-56,10,Omega Consult Group,2024-03-15,47.5,50.0,40.1,45.5,44.6,45.6,Medium,Monitoring,0
-57,10,Omega Consult Group,2024-05-15,51.3,42.0,40.0,42.8,20.6,39.4,Medium,Monitoring,0
-58,10,Omega Consult Group,2024-07-15,41.0,37.1,45.0,48.8,22.6,38.9,Medium,Monitoring,0
-59,10,Omega Consult Group,2024-09-15,50.7,54.8,47.7,47.9,16.4,43.5,Medium,Monitoring,0
-60,10,Omega Consult Group,2024-11-15,54.6,61.0,50.4,18.8,28.5,42.7,Medium,Monitoring,0
-61,11,NovaMat Supplies,2024-01-15,45.5,46.0,44.1,23.5,33.9,38.6,Medium,Monitoring,0
-62,11,NovaMat Supplies,2024-03-15,49.7,35.7,49.2,28.8,39.3,40.6,Medium,Monitoring,0
-63,11,NovaMat Supplies,2024-05-15,52.0,44.3,40.1,33.2,24.5,38.8,Medium,Monitoring,0
-64,11,NovaMat Supplies,2024-07-15,50.7,46.6,39.9,20.8,27.5,37.1,Medium,Monitoring,0
-65,11,NovaMat Supplies,2024-09-15,44.9,38.0,42.4,42.9,37.7,41.2,Medium,Monitoring,0
-66,11,NovaMat Supplies,2024-11-15,57.5,49.4,52.9,10.0,22.9,38.5,Medium,Monitoring,0
-67,12,DataStream Inc,2024-01-15,32.9,32.8,29.6,25.5,24.1,29.0,Low,Completed,0
-68,12,DataStream Inc,2024-03-15,36.9,35.2,25.6,13.0,35.6,29.3,Low,Completed,0
-69,12,DataStream Inc,2024-05-15,31.4,36.8,35.0,33.5,24.5,32.3,Low,Completed,0
-70,12,DataStream Inc,2024-07-15,23.8,23.8,27.3,39.7,18.8,26.7,Low,Completed,0
-71,12,DataStream Inc,2024-09-15,33.3,25.2,32.6,27.3,25.3,28.7,Low,Completed,0
-72,12,DataStream Inc,2024-11-15,30.0,38.3,37.8,13.7,32.2,30.4,Low,Completed,0
-73,13,SteelWorks Co,2024-01-15,54.8,44.6,37.5,18.7,44.2,39.9,Medium,Monitoring,0
-74,13,SteelWorks Co,2024-03-15,53.0,47.0,50.7,30.8,48.1,45.9,Medium,Monitoring,0
-75,13,SteelWorks Co,2024-05-15,53.9,51.0,47.1,39.1,32.8,44.8,Medium,Monitoring,0
-76,13,SteelWorks Co,2024-07-15,57.1,48.8,45.3,18.7,36.2,41.2,Medium,Monitoring,0
-77,13,SteelWorks Co,2024-09-15,54.3,51.0,45.3,12.7,22.9,37.2,Medium,Monitoring,0
-78,13,SteelWorks Co,2024-11-15,44.4,42.2,35.9,18.1,38.4,35.8,Medium,Monitoring,0
-79,14,RapidFreight Ltd,2024-01-15,40.2,42.7,46.2,24.6,19.9,34.7,Low,Completed,0
-80,14,RapidFreight Ltd,2024-03-15,50.2,45.5,48.3,40.0,41.1,45.0,Medium,Monitoring,0
-81,14,RapidFreight Ltd,2024-05-15,39.1,41.5,48.8,39.9,48.2,43.5,Medium,Monitoring,0
-82,14,RapidFreight Ltd,2024-07-15,48.3,44.8,47.0,17.7,20.3,35.6,Medium,Monitoring,0
-83,14,RapidFreight Ltd,2024-09-15,39.9,41.7,48.2,24.2,18.3,34.4,Low,Completed,0
-84,14,RapidFreight Ltd,2024-11-15,41.6,46.8,39.7,23.8,33.4,37.1,Medium,Monitoring,0
-85,15,GreenSource Corp,2024-01-15,49.7,37.8,42.5,11.8,26.4,33.6,Low,Completed,0
-86,15,GreenSource Corp,2024-03-15,45.1,47.0,40.6,36.3,43.6,42.5,Medium,Monitoring,0
-87,15,GreenSource Corp,2024-05-15,41.7,34.7,42.4,45.0,25.3,37.8,Medium,Monitoring,0
-88,15,GreenSource Corp,2024-07-15,53.7,48.3,48.9,43.2,19.6,42.8,Medium,Monitoring,0
-89,15,GreenSource Corp,2024-09-15,38.1,31.9,39.7,29.7,20.3,31.9,Low,Completed,0
-90,15,GreenSource Corp,2024-11-15,55.9,43.0,49.3,36.2,16.4,40.2,Medium,Monitoring,0
-91,16,CloudNine Systems,2024-01-15,55.6,38.8,35.9,20.9,41.7,38.6,Medium,Monitoring,0
-92,16,CloudNine Systems,2024-03-15,50.6,50.3,38.4,34.2,39.8,42.7,Medium,Monitoring,0
-93,16,CloudNine Systems,2024-05-15,51.0,48.4,41.6,14.2,53.4,41.7,Medium,Monitoring,0
-94,16,CloudNine Systems,2024-07-15,51.9,47.6,44.4,27.7,29.0,40.1,Medium,Monitoring,0
-95,16,CloudNine Systems,2024-09-15,59.8,44.6,54.9,32.2,47.5,47.8,Medium,Monitoring,0
-96,16,CloudNine Systems,2024-11-15,54.1,53.7,53.9,19.5,46.7,45.6,Medium,Monitoring,0
-97,17,FastLane Logistics,2024-01-15,47.1,44.4,46.2,24.4,44.4,41.3,Medium,Monitoring,0
-98,17,FastLane Logistics,2024-03-15,43.8,52.9,40.8,31.3,35.2,40.8,Medium,Monitoring,0
-99,17,FastLane Logistics,2024-05-15,41.3,50.7,38.2,22.4,42.3,39.0,Medium,Monitoring,0
-100,17,FastLane Logistics,2024-07-15,51.0,47.7,38.9,15.4,48.0,40.2,Medium,Monitoring,0
-101,17,FastLane Logistics,2024-09-15,45.2,40.4,41.8,39.2,36.5,40.6,Medium,Monitoring,0
-102,17,FastLane Logistics,2024-11-15,51.9,40.0,40.2,39.2,23.6,39.0,Medium,Monitoring,0
-103,18,PrecisionForge Ltd,2024-01-15,77.2,59.7,56.6,36.1,24.6,50.8,Medium,In Progress,0
-104,18,PrecisionForge Ltd,2024-03-15,75.7,56.2,53.3,16.7,16.5,43.7,Medium,Monitoring,0
-105,18,PrecisionForge Ltd,2024-05-15,81.4,55.0,54.4,26.9,39.5,51.5,Medium,In Progress,0
-106,18,PrecisionForge Ltd,2024-07-15,83.6,61.5,57.8,16.8,20.6,48.1,Medium,Monitoring,0
-107,18,PrecisionForge Ltd,2024-09-15,68.2,56.3,51.0,44.1,33.0,50.5,Medium,In Progress,0
-108,18,PrecisionForge Ltd,2024-11-15,77.8,69.8,62.2,40.5,33.8,56.8,Medium,In Progress,0
-109,19,StratEdge Consulting,2024-01-15,50.5,40.0,37.6,42.9,30.2,40.2,Medium,Monitoring,0
-110,19,StratEdge Consulting,2024-03-15,51.4,39.6,47.0,11.9,17.7,33.5,Low,Completed,0
-111,19,StratEdge Consulting,2024-05-15,49.8,53.9,39.4,36.8,35.0,43.0,Medium,Monitoring,0
-112,19,StratEdge Consulting,2024-07-15,51.7,49.2,47.0,25.5,44.7,43.6,Medium,Monitoring,0
-113,19,StratEdge Consulting,2024-09-15,56.7,54.9,53.2,35.9,48.0,49.7,Medium,Monitoring,0
-114,19,StratEdge Consulting,2024-11-15,43.8,43.8,35.2,16.1,14.9,30.7,Low,Completed,0
-115,20,EcoRaw Materials,2024-01-15,32.3,33.1,25.6,18.1,38.9,29.6,Low,Completed,0
-116,20,EcoRaw Materials,2024-03-15,33.3,35.6,35.4,37.6,35.8,35.5,Medium,Monitoring,0
-117,20,EcoRaw Materials,2024-05-15,39.7,32.1,30.8,32.7,46.5,36.4,Medium,Monitoring,0
-118,20,EcoRaw Materials,2024-07-15,31.9,30.5,30.0,36.2,33.6,32.5,Low,Completed,0
-119,20,EcoRaw Materials,2024-09-15,26.4,32.7,29.4,43.0,31.0,32.5,Low,Completed,0
-120,20,EcoRaw Materials,2024-11-15,29.0,25.4,28.7,21.3,21.5,25.2,Low,Completed,0
-121,21,NexGen IT Solutions,2024-01-15,34.8,35.4,29.3,43.3,54.0,39.4,Medium,Monitoring,0
-122,21,NexGen IT Solutions,2024-03-15,27.3,23.6,32.7,26.5,40.8,30.2,Low,Completed,0
-123,21,NexGen IT Solutions,2024-05-15,28.8,34.8,33.6,27.2,19.5,28.8,Low,Completed,0
-124,21,NexGen IT Solutions,2024-07-15,26.4,31.9,32.4,21.5,42.4,30.9,Low,Completed,0
-125,21,NexGen IT Solutions,2024-09-15,32.6,33.1,27.0,25.9,28.0,29.3,Low,Completed,0
-126,21,NexGen IT Solutions,2024-11-15,33.0,26.7,26.6,44.6,41.0,34.4,Low,Completed,0
-127,22,CargoWise Corp,2024-01-15,28.7,24.6,27.7,41.5,35.8,31.6,Low,Completed,0
-128,22,CargoWise Corp,2024-03-15,27.4,31.5,36.8,30.3,38.5,32.9,Low,Completed,0
-129,22,CargoWise Corp,2024-05-15,33.3,29.2,23.9,20.5,32.9,28.0,Low,Completed,0
-130,22,CargoWise Corp,2024-07-15,26.2,38.7,36.7,31.2,16.5,29.8,Low,Completed,0
-131,22,CargoWise Corp,2024-09-15,35.4,38.7,35.4,24.6,43.7,35.6,Medium,Monitoring,0
-132,22,CargoWise Corp,2024-11-15,36.3,40.0,37.7,47.3,31.3,38.5,Medium,Monitoring,0
-133,23,MetalPlus Manufacturing,2024-01-15,35.8,26.6,32.0,29.5,47.5,34.3,Low,Completed,0
-134,23,MetalPlus Manufacturing,2024-03-15,35.6,27.0,25.4,35.5,50.0,34.7,Low,Completed,0
-135,23,MetalPlus Manufacturing,2024-05-15,27.7,31.2,26.2,34.3,32.7,30.4,Low,Completed,0
-136,23,MetalPlus Manufacturing,2024-07-15,29.6,25.5,31.0,35.0,20.9,28.4,Low,Completed,0
-137,23,MetalPlus Manufacturing,2024-09-15,30.8,38.9,35.7,43.4,26.7,35.1,Medium,Monitoring,0
-138,23,MetalPlus Manufacturing,2024-11-15,39.4,42.0,32.0,16.3,31.1,32.2,Low,Completed,0
-139,24,Alpha Advisors,2024-01-15,78.6,65.6,60.7,28.4,29.4,52.5,Medium,In Progress,0
-140,24,Alpha Advisors,2024-03-15,74.1,63.1,57.7,26.4,48.8,54.0,Medium,In Progress,0
-141,24,Alpha Advisors,2024-05-15,75.9,61.4,65.8,39.8,44.7,57.5,Medium,In Progress,0
-142,24,Alpha Advisors,2024-07-15,71.5,62.6,64.6,40.5,13.4,50.5,Medium,In Progress,0
-143,24,Alpha Advisors,2024-09-15,70.7,61.3,63.4,36.1,28.5,52.0,Medium,In Progress,0
-144,24,Alpha Advisors,2024-11-15,70.0,59.8,54.9,34.3,46.3,53.1,Medium,In Progress,0
-145,25,TerraMat Co,2024-01-15,75.5,56.3,55.6,20.1,32.2,47.9,Medium,Monitoring,0
-146,25,TerraMat Co,2024-03-15,76.0,54.8,51.9,45.5,35.5,52.8,Medium,In Progress,0
-147,25,TerraMat Co,2024-05-15,75.6,52.6,55.5,23.9,21.7,45.9,Medium,Monitoring,0
-148,25,TerraMat Co,2024-07-15,71.2,61.7,55.4,20.5,28.8,47.5,Medium,Monitoring,0
-149,25,TerraMat Co,2024-09-15,71.9,60.7,55.1,23.8,44.1,51.1,Medium,In Progress,0
-150,25,TerraMat Co,2024-11-15,66.6,55.4,49.7,35.0,33.8,48.1,Medium,Monitoring,0
-151,26,CyberEdge Technologies,2024-01-15,47.8,51.4,45.6,19.6,37.5,40.4,Medium,Monitoring,0
-152,26,CyberEdge Technologies,2024-03-15,54.1,37.4,45.8,27.4,50.4,43.0,Medium,Monitoring,0
-153,26,CyberEdge Technologies,2024-05-15,52.8,44.4,40.3,32.3,39.6,41.9,Medium,Monitoring,0
-154,26,CyberEdge Technologies,2024-07-15,55.5,48.9,50.8,32.0,50.3,47.5,Medium,Monitoring,0
-155,26,CyberEdge Technologies,2024-09-15,51.0,45.8,47.6,35.6,19.4,39.9,Medium,Monitoring,0
-156,26,CyberEdge Technologies,2024-11-15,50.9,36.2,35.9,28.9,52.9,41.0,Medium,Monitoring,0
-157,27,SpeedFreight Inc,2024-01-15,80.0,64.0,56.2,38.9,30.3,53.9,Medium,In Progress,0
-158,27,SpeedFreight Inc,2024-03-15,79.3,57.5,55.5,43.7,17.3,50.7,Medium,In Progress,0
-159,27,SpeedFreight Inc,2024-05-15,83.1,66.1,70.1,43.9,42.6,61.1,Medium,In Progress,0
-160,27,SpeedFreight Inc,2024-07-15,77.9,50.3,59.5,25.9,37.6,50.2,Medium,In Progress,0
-161,27,SpeedFreight Inc,2024-09-15,79.5,67.3,69.2,13.8,20.9,50.1,Medium,In Progress,0
-162,27,SpeedFreight Inc,2024-11-15,72.6,52.7,58.4,17.7,14.4,43.1,Medium,Monitoring,0
-163,28,Ironclad Manufacturing,2024-01-15,37.6,27.8,28.9,14.9,48.0,31.4,Low,Completed,0
-164,28,Ironclad Manufacturing,2024-03-15,32.2,24.0,35.2,14.7,29.2,27.1,Low,Completed,0
-165,28,Ironclad Manufacturing,2024-05-15,37.3,39.8,30.8,36.0,17.9,32.3,Low,Completed,0
-166,28,Ironclad Manufacturing,2024-07-15,27.8,30.6,28.8,43.3,13.2,28.7,Low,Completed,0
-167,28,Ironclad Manufacturing,2024-09-15,31.2,37.3,34.4,13.5,38.1,30.9,Low,Completed,0
-168,28,Ironclad Manufacturing,2024-11-15,40.5,30.7,30.8,16.6,16.6,27.1,Low,Completed,0
-169,29,ProConsult Partners,2024-01-15,73.7,61.1,61.5,35.9,12.8,49.0,Medium,Monitoring,0
-170,29,ProConsult Partners,2024-03-15,72.4,53.7,61.7,17.4,41.1,49.3,Medium,Monitoring,0
-171,29,ProConsult Partners,2024-05-15,69.3,62.8,55.6,20.2,46.2,50.8,Medium,In Progress,0
-172,29,ProConsult Partners,2024-07-15,74.1,48.3,49.9,23.8,18.6,42.9,Medium,Monitoring,0
-173,29,ProConsult Partners,2024-09-15,71.8,54.0,66.9,23.3,24.3,48.1,Medium,Monitoring,0
-174,29,ProConsult Partners,2024-11-15,64.4,57.9,55.5,41.1,30.1,49.8,Medium,Monitoring,0
-175,30,NaturalRes Corp,2024-01-15,32.2,23.7,29.2,43.1,13.6,28.4,Low,Completed,0
-176,30,NaturalRes Corp,2024-03-15,37.6,31.5,29.8,43.7,14.3,31.4,Low,Completed,0
-177,30,NaturalRes Corp,2024-05-15,31.2,33.3,29.3,41.8,14.8,30.1,Low,Completed,0
-178,30,NaturalRes Corp,2024-07-15,29.6,19.4,22.3,32.2,32.8,27.3,Low,Completed,0
-179,30,NaturalRes Corp,2024-09-15,36.5,29.0,27.0,31.2,15.8,27.9,Low,Completed,0
-180,30,NaturalRes Corp,2024-11-15,41.0,37.2,37.6,35.2,20.2,34.2,Low,Completed,0
-181,31,Quantum IT Group,2024-01-15,29.4,28.7,29.5,24.6,19.6,26.4,Low,Completed,0
-182,31,Quantum IT Group,2024-03-15,34.6,29.3,25.3,42.3,18.6,30.0,Low,Completed,0
-183,31,Quantum IT Group,2024-05-15,30.6,27.7,36.3,38.4,37.1,34.0,Low,Completed,0
-184,31,Quantum IT Group,2024-07-15,35.0,30.2,26.5,22.4,41.3,31.1,Low,Completed,0
-185,31,Quantum IT Group,2024-09-15,41.6,39.3,41.2,31.0,29.4,36.5,Medium,Monitoring,0
-186,31,Quantum IT Group,2024-11-15,31.8,36.4,28.9,13.8,48.1,31.8,Low,Completed,0
-187,32,GlobalLink Logistics,2024-01-15,53.9,46.8,49.2,44.6,49.0,48.7,Medium,Monitoring,0
-188,32,GlobalLink Logistics,2024-03-15,53.4,49.3,39.6,47.5,43.5,46.7,Medium,Monitoring,0
-189,32,GlobalLink Logistics,2024-05-15,45.7,47.7,41.1,26.9,12.2,34.7,Low,Completed,0
-190,32,GlobalLink Logistics,2024-07-15,56.1,48.7,44.5,37.2,13.2,39.9,Medium,Monitoring,0
-191,32,GlobalLink Logistics,2024-09-15,51.7,48.8,47.1,28.0,39.4,43.0,Medium,Monitoring,0
-192,32,GlobalLink Logistics,2024-11-15,57.6,45.1,44.7,20.5,35.5,40.7,Medium,Monitoring,0
-193,33,Summit Manufacturing,2024-01-15,45.8,47.7,45.1,25.5,22.4,37.3,Medium,Monitoring,0
-194,33,Summit Manufacturing,2024-03-15,45.0,45.1,43.4,33.7,30.5,39.6,Medium,Monitoring,0
-195,33,Summit Manufacturing,2024-05-15,44.7,45.1,48.4,10.3,23.5,34.4,Low,Completed,0
-196,33,Summit Manufacturing,2024-07-15,41.9,38.9,40.6,10.3,40.4,34.4,Low,Completed,0
-197,33,Summit Manufacturing,2024-09-15,43.5,44.8,41.8,39.2,42.6,42.4,Medium,Monitoring,0
-198,33,Summit Manufacturing,2024-11-15,46.6,31.5,32.3,42.2,44.8,39.5,Medium,Monitoring,0
-199,34,Insight Consulting,2024-01-15,50.8,49.3,43.5,19.0,12.8,35.1,Medium,Monitoring,0
-200,34,Insight Consulting,2024-03-15,53.2,47.5,49.0,47.2,15.3,42.4,Medium,Monitoring,0
-201,34,Insight Consulting,2024-05-15,49.8,50.3,47.9,28.9,23.8,40.1,Medium,Monitoring,0
-202,34,Insight Consulting,2024-07-15,47.0,39.7,43.9,19.0,31.4,36.2,Medium,Monitoring,0
-203,34,Insight Consulting,2024-09-15,54.8,56.3,55.8,43.5,21.0,46.3,Medium,Monitoring,0
-204,34,Insight Consulting,2024-11-15,41.4,42.7,43.4,37.9,18.7,36.8,Medium,Monitoring,0
-205,35,PureSource Materials,2024-01-15,49.1,49.3,50.7,30.7,47.1,45.4,Medium,Monitoring,0
-206,35,PureSource Materials,2024-03-15,51.2,47.7,52.6,37.0,17.7,41.2,Medium,Monitoring,0
-207,35,PureSource Materials,2024-05-15,45.9,39.5,41.4,17.0,31.3,35.0,Medium,Monitoring,0
-208,35,PureSource Materials,2024-07-15,47.3,36.9,50.5,17.7,44.8,39.4,Medium,Monitoring,0
-209,35,PureSource Materials,2024-09-15,56.5,51.3,52.5,34.4,42.1,47.4,Medium,Monitoring,0
-210,35,PureSource Materials,2024-11-15,56.7,58.3,57.4,26.3,30.1,45.7,Medium,Monitoring,0
-211,36,InnovateTech Ltd,2024-01-15,21.0,23.9,34.2,22.0,43.1,28.9,Low,Completed,0
-212,36,InnovateTech Ltd,2024-03-15,22.6,26.5,28.0,25.4,35.9,27.7,Low,Completed,0
-213,36,InnovateTech Ltd,2024-05-15,22.9,24.9,25.4,21.8,38.7,26.7,Low,Completed,0
-214,36,InnovateTech Ltd,2024-07-15,31.8,27.1,26.7,33.7,26.8,29.2,Low,Completed,0
-215,36,InnovateTech Ltd,2024-09-15,32.3,40.9,37.9,21.7,38.1,34.2,Low,Completed,0
-216,36,InnovateTech Ltd,2024-11-15,19.5,32.7,26.3,23.7,38.6,28.2,Low,Completed,0
-217,37,AirCargo Express,2024-01-15,73.6,57.2,62.9,43.5,37.5,54.9,Medium,In Progress,0
-218,37,AirCargo Express,2024-03-15,80.2,63.5,60.6,37.6,28.1,54.0,Medium,In Progress,0
-219,37,AirCargo Express,2024-05-15,73.8,53.5,54.4,48.2,30.5,52.1,Medium,In Progress,0
-220,37,AirCargo Express,2024-07-15,69.4,50.2,61.5,18.5,41.3,48.2,Medium,Monitoring,0
-221,37,AirCargo Express,2024-09-15,86.2,57.4,62.2,41.8,17.0,52.9,Medium,In Progress,0
-222,37,AirCargo Express,2024-11-15,71.0,63.5,61.7,43.3,18.3,51.6,Medium,In Progress,0
-223,38,PowerForge Mfg,2024-01-15,48.5,47.7,40.6,25.5,22.8,37.0,Medium,Monitoring,0
-224,38,PowerForge Mfg,2024-03-15,50.1,46.6,42.7,38.3,29.8,41.5,Medium,Monitoring,0
-225,38,PowerForge Mfg,2024-05-15,50.8,54.9,53.9,26.2,22.7,41.7,Medium,Monitoring,0
-226,38,PowerForge Mfg,2024-07-15,49.4,51.9,48.2,38.0,17.3,41.0,Medium,Monitoring,0
-227,38,PowerForge Mfg,2024-09-15,48.8,48.4,42.5,13.6,44.1,39.5,Medium,Monitoring,0
-228,38,PowerForge Mfg,2024-11-15,54.4,56.5,48.5,41.7,17.6,43.7,Medium,Monitoring,0
-229,39,Clarity Consulting,2024-01-15,79.1,54.5,58.9,22.2,13.0,45.6,Medium,Monitoring,0
-230,39,Clarity Consulting,2024-03-15,72.4,53.4,65.2,23.1,13.1,45.5,Medium,Monitoring,0
-231,39,Clarity Consulting,2024-05-15,81.3,64.8,67.2,14.8,22.9,50.2,Medium,In Progress,0
-232,39,Clarity Consulting,2024-07-15,80.3,57.4,66.7,25.7,12.2,48.5,Medium,Monitoring,0
-233,39,Clarity Consulting,2024-09-15,65.9,59.4,55.4,35.5,32.1,49.6,Medium,Monitoring,0
-234,39,Clarity Consulting,2024-11-15,65.6,50.2,47.7,24.7,42.2,46.1,Medium,Monitoring,0
-235,40,GoldMine Resources,2024-01-15,28.9,37.3,31.1,15.6,31.6,28.9,Low,Completed,0
-236,40,GoldMine Resources,2024-03-15,28.6,29.0,30.7,23.4,27.8,27.9,Low,Completed,0
-237,40,GoldMine Resources,2024-05-15,30.2,40.0,25.4,33.4,31.3,32.1,Low,Completed,0
-238,40,GoldMine Resources,2024-07-15,40.1,34.9,35.2,37.2,49.3,39.3,Medium,Monitoring,0
-239,40,GoldMine Resources,2024-09-15,25.3,33.0,25.2,40.7,35.9,32.0,Low,Completed,0
-240,40,GoldMine Resources,2024-11-15,42.4,34.1,29.4,34.1,42.9,36.6,Medium,Monitoring,0
-241,41,SkyNet IT Services,2024-01-15,35.3,30.5,33.0,32.1,46.8,35.5,Medium,Monitoring,0
-242,41,SkyNet IT Services,2024-03-15,33.9,29.1,26.1,11.5,23.6,24.9,Low,Completed,0
-243,41,SkyNet IT Services,2024-05-15,34.4,28.6,34.4,29.0,25.6,30.4,Low,Completed,0
-244,41,SkyNet IT Services,2024-07-15,31.6,32.2,37.6,40.3,28.6,34.1,Low,Completed,0
-245,41,SkyNet IT Services,2024-09-15,26.1,33.1,29.4,41.3,30.7,32.1,Low,Completed,0
-246,41,SkyNet IT Services,2024-11-15,41.4,40.6,45.8,28.2,46.4,40.5,Medium,Monitoring,0
-247,42,TruckPro Logistics,2024-01-15,27.1,32.4,34.4,29.1,24.2,29.4,Low,Completed,0
-248,42,TruckPro Logistics,2024-03-15,32.8,26.4,30.1,24.9,38.2,30.5,Low,Completed,0
-249,42,TruckPro Logistics,2024-05-15,26.1,36.1,27.3,44.9,22.4,31.4,Low,Completed,0
-250,42,TruckPro Logistics,2024-07-15,43.3,29.7,37.6,22.7,42.4,35.2,Medium,Monitoring,0
-251,42,TruckPro Logistics,2024-09-15,41.1,28.5,34.9,37.3,13.3,31.0,Low,Completed,0
-252,42,TruckPro Logistics,2024-11-15,29.1,22.3,22.0,29.9,35.0,27.6,Low,Completed,0
-253,43,Alliance Manufacturing,2024-01-15,35.8,28.0,32.9,35.1,32.1,32.8,Low,Completed,0
-254,43,Alliance Manufacturing,2024-03-15,32.1,26.0,23.7,40.7,31.0,30.7,Low,Completed,0
-255,43,Alliance Manufacturing,2024-05-15,30.9,26.0,25.6,30.6,49.9,32.6,Low,Completed,0
-256,43,Alliance Manufacturing,2024-07-15,33.9,28.4,22.4,44.8,29.2,31.8,Low,Completed,0
-257,43,Alliance Manufacturing,2024-09-15,36.4,30.1,38.4,44.6,24.1,34.7,Low,Completed,0
-258,43,Alliance Manufacturing,2024-11-15,23.8,29.3,33.3,44.8,39.0,34.1,Low,Completed,0
-259,44,Vision Consulting,2024-01-15,33.1,34.9,28.2,14.2,19.6,26.0,Low,Completed,0
-260,44,Vision Consulting,2024-03-15,33.9,21.6,27.8,22.9,42.5,29.8,Low,Completed,0
-261,44,Vision Consulting,2024-05-15,33.6,24.5,26.2,45.0,39.3,33.7,Low,Completed,0
-262,44,Vision Consulting,2024-07-15,35.7,36.4,23.1,44.0,36.4,35.1,Medium,Monitoring,0
-263,44,Vision Consulting,2024-09-15,33.9,28.0,33.6,37.3,36.3,33.8,Low,Completed,0
-264,44,Vision Consulting,2024-11-15,32.7,24.8,29.5,11.9,16.7,23.1,Low,Completed,0
-265,45,EarthCore Supplies,2024-01-15,21.8,27.8,32.6,22.1,47.8,30.4,Low,Completed,0
-266,45,EarthCore Supplies,2024-03-15,31.6,28.3,33.2,29.3,16.8,27.8,Low,Completed,0
-267,45,EarthCore Supplies,2024-05-15,25.4,29.8,24.1,43.0,17.9,28.0,Low,Completed,0
-268,45,EarthCore Supplies,2024-07-15,30.9,34.8,36.9,29.7,43.4,35.1,Medium,Monitoring,0
-269,45,EarthCore Supplies,2024-09-15,14.8,27.3,25.1,32.8,41.1,28.2,Low,Completed,0
-270,45,EarthCore Supplies,2024-11-15,27.3,30.4,31.2,20.1,48.4,31.5,Low,Completed,0
-271,46,DataForce Inc,2024-01-15,52.4,47.7,39.9,12.6,18.3,34.2,Low,Completed,0
-272,46,DataForce Inc,2024-03-15,48.6,40.1,44.3,20.9,43.3,39.4,Medium,Monitoring,0
-273,46,DataForce Inc,2024-05-15,55.2,54.5,39.7,23.0,37.3,41.9,Medium,Monitoring,0
-274,46,DataForce Inc,2024-07-15,47.2,39.9,38.1,13.4,27.0,33.1,Low,Completed,0
-275,46,DataForce Inc,2024-09-15,49.5,40.1,47.3,15.6,28.4,36.2,Medium,Monitoring,0
-276,46,DataForce Inc,2024-11-15,49.1,51.6,45.4,28.0,35.0,41.8,Medium,Monitoring,0
-277,47,OceanFreight Ltd,2024-01-15,45.3,50.9,44.8,48.8,20.2,42.0,Medium,Monitoring,0
-278,47,OceanFreight Ltd,2024-03-15,45.4,43.5,49.8,37.9,29.9,41.3,Medium,Monitoring,0
-279,47,OceanFreight Ltd,2024-05-15,56.0,43.5,50.9,40.5,41.0,46.4,Medium,Monitoring,0
-280,47,OceanFreight Ltd,2024-07-15,49.2,44.3,39.8,34.4,14.8,36.5,Medium,Monitoring,0
-281,47,OceanFreight Ltd,2024-09-15,55.3,41.3,52.7,38.8,16.5,40.9,Medium,Monitoring,0
-282,47,OceanFreight Ltd,2024-11-15,59.4,58.1,52.1,47.9,40.7,51.6,Medium,In Progress,0
-283,48,CraftWorks Mfg,2024-01-15,49.0,44.8,37.4,14.8,24.7,34.1,Low,Completed,0
-284,48,CraftWorks Mfg,2024-03-15,48.5,46.7,44.2,21.5,35.3,39.2,Medium,Monitoring,0
-285,48,CraftWorks Mfg,2024-05-15,52.9,46.8,39.1,21.8,43.5,40.8,Medium,Monitoring,0
-286,48,CraftWorks Mfg,2024-07-15,52.4,42.7,49.3,22.9,37.6,41.0,Medium,Monitoring,0
-287,48,CraftWorks Mfg,2024-09-15,57.6,57.3,54.6,34.1,13.0,43.3,Medium,Monitoring,0
-288,48,CraftWorks Mfg,2024-11-15,55.3,50.2,48.4,30.2,39.4,44.7,Medium,Monitoring,0
-289,49,Summit Advisors,2024-01-15,25.0,32.1,29.5,39.4,17.6,28.7,Low,Completed,0
-290,49,Summit Advisors,2024-03-15,24.3,38.1,23.2,10.7,23.9,24.0,Low,Completed,0
-291,49,Summit Advisors,2024-05-15,29.3,26.7,29.7,42.2,45.2,34.6,Low,Completed,0
-292,49,Summit Advisors,2024-07-15,27.0,27.5,26.9,21.4,37.2,28.0,Low,Completed,0
-293,49,Summit Advisors,2024-09-15,28.1,26.2,34.9,22.0,25.5,27.3,Low,Completed,0
-294,49,Summit Advisors,2024-11-15,37.7,38.3,36.5,31.4,19.3,32.6,Low,Completed,0
-295,50,RockBase Materials,2024-01-15,32.7,25.6,35.9,25.4,23.0,28.5,Low,Completed,0
-296,50,RockBase Materials,2024-03-15,33.7,26.3,26.4,47.7,42.2,35.3,Medium,Monitoring,0
-297,50,RockBase Materials,2024-05-15,26.4,31.7,26.5,49.3,43.1,35.4,Medium,Monitoring,0
-298,50,RockBase Materials,2024-07-15,41.2,32.2,31.8,40.0,25.2,34.1,Low,Completed,0
-299,50,RockBase Materials,2024-09-15,29.3,29.8,25.3,33.9,47.5,33.2,Low,Completed,0
-300,50,RockBase Materials,2024-11-15,32.4,36.5,35.2,23.5,37.5,33.0,Low,Completed,0
-301,51,ByteWise Solutions,2024-01-15,78.9,53.4,60.5,35.1,19.8,49.5,Medium,Monitoring,0
-302,51,ByteWise Solutions,2024-03-15,72.5,62.6,69.0,24.2,51.5,56.0,Medium,In Progress,0
-303,51,ByteWise Solutions,2024-05-15,80.1,58.9,71.4,21.2,40.5,54.4,Medium,In Progress,0
-304,51,ByteWise Solutions,2024-07-15,77.3,66.8,67.3,35.3,51.6,59.7,Medium,In Progress,0
-305,51,ByteWise Solutions,2024-09-15,80.1,73.5,64.0,42.2,53.9,62.7,Medium,In Progress,0
-306,51,ByteWise Solutions,2024-11-15,76.6,67.0,67.7,42.4,49.3,60.6,Medium,In Progress,0
-307,52,LogiTrack Systems,2024-01-15,51.4,39.3,52.3,20.0,49.6,42.5,Medium,Monitoring,0
-308,52,LogiTrack Systems,2024-03-15,50.9,53.0,50.9,26.4,19.3,40.1,Medium,Monitoring,0
-309,52,LogiTrack Systems,2024-05-15,44.3,42.7,40.0,16.5,40.0,36.7,Medium,Monitoring,0
-310,52,LogiTrack Systems,2024-07-15,55.2,53.5,44.8,40.0,46.1,47.9,Medium,Monitoring,0
-311,52,LogiTrack Systems,2024-09-15,56.4,44.5,53.5,16.5,17.3,37.6,Medium,Monitoring,0
-312,52,LogiTrack Systems,2024-11-15,45.7,39.9,40.0,36.4,48.3,42.1,Medium,Monitoring,0
-313,53,FusionParts Mfg,2024-01-15,36.4,23.1,30.3,34.2,14.4,27.7,Low,Completed,0
-314,53,FusionParts Mfg,2024-03-15,30.4,28.3,27.1,41.3,38.7,33.2,Low,Completed,0
-315,53,FusionParts Mfg,2024-05-15,28.3,36.8,24.5,31.5,20.3,28.3,Low,Completed,0
-316,53,FusionParts Mfg,2024-07-15,26.5,31.8,26.6,24.6,32.9,28.5,Low,Completed,0
-317,53,FusionParts Mfg,2024-09-15,34.8,34.2,24.8,18.7,40.7,30.6,Low,Completed,0
-318,53,FusionParts Mfg,2024-11-15,36.5,37.9,38.8,12.7,33.4,31.9,Low,Completed,0
-319,54,Elite Strategy Group,2024-01-15,48.5,45.1,46.0,15.2,24.5,35.9,Medium,Monitoring,0
-320,54,Elite Strategy Group,2024-03-15,43.7,40.6,46.5,13.2,31.4,35.1,Medium,Monitoring,0
-321,54,Elite Strategy Group,2024-05-15,50.1,47.8,47.1,12.0,29.6,37.3,Medium,Monitoring,0
-322,54,Elite Strategy Group,2024-07-15,54.6,47.3,53.4,36.1,34.0,45.1,Medium,Monitoring,0
-323,54,Elite Strategy Group,2024-09-15,40.7,32.6,46.6,42.7,14.6,35.4,Medium,Monitoring,0
-324,54,Elite Strategy Group,2024-11-15,51.2,52.4,57.6,36.8,49.2,49.4,Medium,Monitoring,0
-325,55,CoreMin Resources,2024-01-15,29.0,37.1,28.0,45.4,46.5,37.2,Medium,Monitoring,0
-326,55,CoreMin Resources,2024-03-15,31.9,31.6,30.0,37.9,25.2,31.3,Low,Completed,0
-327,55,CoreMin Resources,2024-05-15,28.6,27.9,31.1,22.8,12.1,24.5,Low,Completed,0
-328,55,CoreMin Resources,2024-07-15,23.2,27.7,26.0,33.6,43.3,30.8,Low,Completed,0
-329,55,CoreMin Resources,2024-09-15,25.5,23.1,33.2,40.4,16.3,27.7,Low,Completed,0
-330,55,CoreMin Resources,2024-11-15,35.6,40.2,41.7,15.5,19.8,30.6,Low,Completed,0
-331,56,NetSphere Technologies,2024-01-15,23.1,31.8,32.4,16.7,44.1,29.6,Low,Completed,0
-332,56,NetSphere Technologies,2024-03-15,25.4,25.6,34.5,17.0,35.1,27.5,Low,Completed,0
-333,56,NetSphere Technologies,2024-05-15,31.5,33.0,26.0,35.9,41.6,33.6,Low,Completed,0
-334,56,NetSphere Technologies,2024-07-15,25.2,23.4,30.6,22.7,27.4,25.9,Low,Completed,0
-335,56,NetSphere Technologies,2024-09-15,29.0,31.2,30.1,36.9,32.2,31.9,Low,Completed,0
-336,56,NetSphere Technologies,2024-11-15,35.6,38.5,33.1,42.5,28.1,35.6,Medium,Monitoring,0
-337,57,SeaRoute Logistics,2024-01-15,43.7,42.0,47.2,31.6,44.3,41.7,Medium,Monitoring,0
-338,57,SeaRoute Logistics,2024-03-15,50.0,48.4,49.0,34.7,48.8,46.2,Medium,Monitoring,0
-339,57,SeaRoute Logistics,2024-05-15,44.4,40.7,40.4,37.6,47.0,42.0,Medium,Monitoring,0
-340,57,SeaRoute Logistics,2024-07-15,47.4,51.9,43.7,24.4,37.6,41.0,Medium,Monitoring,0
-341,57,SeaRoute Logistics,2024-09-15,54.8,41.4,49.8,40.4,33.2,43.9,Medium,Monitoring,0
-342,57,SeaRoute Logistics,2024-11-15,53.2,42.2,50.9,15.5,47.6,41.9,Medium,Monitoring,0
-343,58,AutoPrecision Mfg,2024-01-15,44.8,52.5,44.6,23.5,35.0,40.1,Medium,Monitoring,0
-344,58,AutoPrecision Mfg,2024-03-15,53.6,44.6,47.9,28.3,32.3,41.3,Medium,Monitoring,0
-345,58,AutoPrecision Mfg,2024-05-15,46.0,44.3,44.4,18.5,49.3,40.5,Medium,Monitoring,0
-346,58,AutoPrecision Mfg,2024-07-15,53.9,51.6,43.5,29.5,33.4,42.4,Medium,Monitoring,0
-347,58,AutoPrecision Mfg,2024-09-15,42.2,37.8,48.1,35.3,27.9,38.2,Medium,Monitoring,0
-348,58,AutoPrecision Mfg,2024-11-15,42.5,37.8,44.7,32.5,36.9,38.9,Medium,Monitoring,0
-349,59,BrightMind Consulting,2024-01-15,26.3,34.4,36.1,32.5,30.6,32.0,Low,Completed,0
-350,59,BrightMind Consulting,2024-03-15,31.9,23.1,31.8,27.1,46.8,32.1,Low,Completed,0
-351,59,BrightMind Consulting,2024-05-15,31.7,23.0,23.9,39.6,47.9,33.2,Low,Completed,0
-352,59,BrightMind Consulting,2024-07-15,34.9,30.4,36.9,18.1,38.9,31.8,Low,Completed,0
-353,59,BrightMind Consulting,2024-09-15,23.4,21.4,25.4,33.3,35.4,27.8,Low,Completed,0
-354,59,BrightMind Consulting,2024-11-15,30.0,22.3,31.3,10.4,32.1,25.2,Low,Completed,0
-355,60,TerraFlex Supplies,2024-01-15,55.0,36.6,48.4,33.6,42.6,43.2,Medium,Monitoring,0
-356,60,TerraFlex Supplies,2024-03-15,46.2,39.6,40.8,16.7,32.0,35.1,Medium,Monitoring,0
-357,60,TerraFlex Supplies,2024-05-15,49.2,45.4,44.9,24.2,33.5,39.4,Medium,Monitoring,0
-358,60,TerraFlex Supplies,2024-07-15,51.9,53.2,54.8,32.9,44.6,47.5,Medium,Monitoring,0
-359,60,TerraFlex Supplies,2024-09-15,49.0,47.0,49.4,12.0,12.4,34.0,Low,Completed,0
-360,60,TerraFlex Supplies,2024-11-15,44.8,38.8,43.5,29.8,44.6,40.3,Medium,Monitoring,0
-361,61,PixelCloud IT,2024-01-15,32.8,22.6,23.9,40.4,49.7,33.9,Low,Completed,0
-362,61,PixelCloud IT,2024-03-15,27.2,23.2,34.1,41.5,37.4,32.7,Low,Completed,0
-363,61,PixelCloud IT,2024-05-15,34.8,24.1,31.6,30.5,44.6,33.2,Low,Completed,0
-364,61,PixelCloud IT,2024-07-15,34.2,26.1,26.2,18.4,47.7,30.5,Low,Completed,0
-365,61,PixelCloud IT,2024-09-15,36.7,26.6,31.0,14.9,53.6,32.5,Low,Completed,0
-366,61,PixelCloud IT,2024-11-15,37.7,42.6,26.9,25.3,47.9,36.1,Medium,Monitoring,0
-367,62,SwiftCargo Networks,2024-01-15,32.9,37.8,28.0,42.1,13.1,30.8,Low,Completed,0
-368,62,SwiftCargo Networks,2024-03-15,35.1,29.8,26.9,47.9,28.4,33.6,Low,Completed,0
-369,62,SwiftCargo Networks,2024-05-15,33.4,25.7,32.9,42.9,39.1,34.8,Low,Completed,0
-370,62,SwiftCargo Networks,2024-07-15,21.9,30.3,27.7,40.9,24.0,29.0,Low,Completed,0
-371,62,SwiftCargo Networks,2024-09-15,19.3,23.0,23.0,24.4,17.0,21.3,Low,Completed,0
-372,62,SwiftCargo Networks,2024-11-15,24.9,27.2,23.9,15.9,25.4,23.5,Low,Completed,0
-373,63,HeavyDuty Mfg,2024-01-15,31.6,27.5,28.7,20.2,26.7,27.0,Low,Completed,0
-374,63,HeavyDuty Mfg,2024-03-15,34.0,35.6,35.8,30.0,18.4,30.8,Low,Completed,0
-375,63,HeavyDuty Mfg,2024-05-15,25.8,26.8,29.9,12.2,28.5,24.6,Low,Completed,0
-376,63,HeavyDuty Mfg,2024-07-15,30.2,23.5,26.7,18.6,35.8,27.0,Low,Completed,0
-377,63,HeavyDuty Mfg,2024-09-15,29.1,26.4,29.9,43.2,24.6,30.6,Low,Completed,0
-378,63,HeavyDuty Mfg,2024-11-15,37.4,31.0,31.3,38.5,44.7,36.6,Medium,Monitoring,0
-379,64,Nexus Strategy Firm,2024-01-15,46.4,42.0,49.6,22.0,23.9,36.8,Medium,Monitoring,0
-380,64,Nexus Strategy Firm,2024-03-15,58.3,43.4,47.9,32.2,33.9,43.1,Medium,Monitoring,0
-381,64,Nexus Strategy Firm,2024-05-15,48.0,48.6,40.5,19.0,33.4,37.9,Medium,Monitoring,0
-382,64,Nexus Strategy Firm,2024-07-15,53.0,49.5,45.7,48.4,29.5,45.2,Medium,Monitoring,0
-383,64,Nexus Strategy Firm,2024-09-15,53.9,45.4,49.9,43.7,42.2,47.0,Medium,Monitoring,0
-384,64,Nexus Strategy Firm,2024-11-15,50.4,46.7,39.4,38.1,39.2,42.7,Medium,Monitoring,0
-385,65,AgriMat Resources,2024-01-15,71.4,67.5,61.8,29.0,31.3,52.2,Medium,In Progress,0
-386,65,AgriMat Resources,2024-03-15,80.5,62.1,67.8,27.6,46.0,56.8,Medium,In Progress,0
-387,65,AgriMat Resources,2024-05-15,78.9,53.8,66.6,38.0,25.5,52.5,Medium,In Progress,0
-388,65,AgriMat Resources,2024-07-15,73.3,69.7,66.8,29.0,40.6,55.9,Medium,In Progress,0
-389,65,AgriMat Resources,2024-09-15,83.2,59.3,66.2,32.9,31.7,54.7,Medium,In Progress,0
-390,65,AgriMat Resources,2024-11-15,80.0,61.4,63.2,42.0,34.4,56.2,Medium,In Progress,0
-391,66,CodeBridge Technologies,2024-01-15,29.5,23.6,22.7,24.6,52.5,30.6,Low,Completed,0
-392,66,CodeBridge Technologies,2024-03-15,35.6,24.4,24.5,25.9,23.9,26.9,Low,Completed,0
-393,66,CodeBridge Technologies,2024-05-15,31.5,30.6,31.4,21.2,27.4,28.4,Low,Completed,0
-394,66,CodeBridge Technologies,2024-07-15,30.8,40.8,34.4,33.7,22.2,32.4,Low,Completed,0
-395,66,CodeBridge Technologies,2024-09-15,36.1,33.8,31.3,29.6,52.4,36.6,Medium,Monitoring,0
-396,66,CodeBridge Technologies,2024-11-15,26.8,22.7,26.8,25.1,17.1,23.7,Low,Completed,0
-397,67,PrimePath Logistics,2024-01-15,46.7,47.2,43.5,39.7,19.8,39.4,Medium,Monitoring,0
-398,67,PrimePath Logistics,2024-03-15,55.2,39.9,40.6,45.5,19.1,40.1,Medium,Monitoring,0
-399,67,PrimePath Logistics,2024-05-15,49.1,41.2,49.4,33.5,36.3,41.9,Medium,Monitoring,0
-400,67,PrimePath Logistics,2024-07-15,53.5,48.9,44.7,44.6,35.5,45.4,Medium,Monitoring,0
-401,67,PrimePath Logistics,2024-09-15,58.2,47.9,52.1,18.0,17.1,38.7,Medium,Monitoring,0
-402,67,PrimePath Logistics,2024-11-15,42.6,35.3,42.3,32.9,27.9,36.2,Medium,Monitoring,0
-403,68,MegaForge Industries,2024-01-15,28.0,24.4,29.5,34.3,36.5,30.5,Low,Completed,0
-404,68,MegaForge Industries,2024-03-15,32.0,31.3,24.6,21.0,29.1,27.6,Low,Completed,0
-405,68,MegaForge Industries,2024-05-15,25.1,19.0,19.9,38.5,48.6,30.2,Low,Completed,0
-406,68,MegaForge Industries,2024-07-15,30.1,33.2,27.3,39.4,30.6,32.1,Low,Completed,0
-407,68,MegaForge Industries,2024-09-15,18.9,28.8,19.9,19.6,32.4,23.9,Low,Completed,0
-408,68,MegaForge Industries,2024-11-15,24.3,28.8,26.8,29.2,16.3,25.1,Low,Completed,0
-409,69,TrueNorth Consulting,2024-01-15,80.5,62.8,56.7,38.8,13.6,50.5,Medium,In Progress,0
-410,69,TrueNorth Consulting,2024-03-15,78.8,66.5,54.0,39.1,40.6,55.8,Medium,In Progress,0
-411,69,TrueNorth Consulting,2024-05-15,82.3,55.9,55.5,38.6,28.7,52.2,Medium,In Progress,0
-412,69,TrueNorth Consulting,2024-07-15,86.5,59.4,68.9,30.6,25.3,54.1,Medium,In Progress,0
-413,69,TrueNorth Consulting,2024-09-15,82.8,56.2,57.5,17.2,19.9,46.7,Medium,Monitoring,0
-414,69,TrueNorth Consulting,2024-11-15,69.0,47.7,52.7,21.3,38.8,45.9,Medium,Monitoring,0
-415,70,BaseMet Resources,2024-01-15,27.7,35.8,35.9,38.8,15.6,30.7,Low,Completed,0
-416,70,BaseMet Resources,2024-03-15,35.7,38.6,37.9,45.3,16.8,34.9,Low,Completed,0
-417,70,BaseMet Resources,2024-05-15,30.5,36.5,36.8,41.7,37.7,36.6,Medium,Monitoring,0
-418,70,BaseMet Resources,2024-07-15,32.0,27.0,28.6,30.8,36.1,30.9,Low,Completed,0
-419,70,BaseMet Resources,2024-09-15,31.9,36.6,32.3,47.8,26.0,34.9,Low,Completed,0
-420,70,BaseMet Resources,2024-11-15,37.5,31.2,42.1,40.6,39.8,38.2,Medium,Monitoring,0
-421,71,ClearPath IT Group,2024-01-15,34.3,26.7,22.8,28.7,24.3,27.4,Low,Completed,0
-422,71,ClearPath IT Group,2024-03-15,28.9,25.3,33.6,21.8,38.0,29.5,Low,Completed,0
-423,71,ClearPath IT Group,2024-05-15,33.1,27.5,32.5,11.7,19.8,24.9,Low,Completed,0
-424,71,ClearPath IT Group,2024-07-15,35.6,26.7,37.7,25.4,16.0,28.3,Low,Completed,0
-425,71,ClearPath IT Group,2024-09-15,36.2,39.4,31.2,32.7,22.0,32.3,Low,Completed,0
-426,71,ClearPath IT Group,2024-11-15,38.4,40.3,34.3,23.0,50.3,37.3,Medium,Monitoring,0
-427,72,BlueOcean Freight,2024-01-15,79.1,55.2,61.2,23.2,36.9,51.1,Medium,In Progress,0
-428,72,BlueOcean Freight,2024-03-15,75.3,58.9,54.2,22.9,37.8,49.8,Medium,Monitoring,0
-429,72,BlueOcean Freight,2024-05-15,79.8,60.4,62.3,29.8,17.0,49.9,Medium,Monitoring,0
-430,72,BlueOcean Freight,2024-07-15,75.2,58.2,49.1,26.0,45.5,50.8,Medium,In Progress,0
-431,72,BlueOcean Freight,2024-09-15,79.6,58.3,49.2,49.8,17.4,50.8,Medium,In Progress,0
-432,72,BlueOcean Freight,2024-11-15,76.2,62.5,59.4,40.3,35.9,54.8,Medium,In Progress,0
-433,73,PeakCraft Manufacturing,2024-01-15,47.4,47.0,48.8,18.0,15.8,35.4,Medium,Monitoring,0
-434,73,PeakCraft Manufacturing,2024-03-15,50.7,43.3,51.4,26.0,17.3,37.7,Medium,Monitoring,0
-435,73,PeakCraft Manufacturing,2024-05-15,42.4,43.8,44.1,36.3,41.6,41.6,Medium,Monitoring,0
-436,73,PeakCraft Manufacturing,2024-07-15,55.4,49.3,43.8,33.1,31.4,42.6,Medium,Monitoring,0
-437,73,PeakCraft Manufacturing,2024-09-15,50.5,41.4,53.8,48.4,30.8,45.0,Medium,Monitoring,0
-438,73,PeakCraft Manufacturing,2024-11-15,42.9,40.0,38.7,49.2,49.5,44.1,Medium,Monitoring,0
-439,74,Axis Strategy Partners,2024-01-15,73.8,64.2,59.3,22.8,38.0,51.6,Medium,In Progress,0
-440,74,Axis Strategy Partners,2024-03-15,84.8,63.9,52.8,12.4,22.0,47.2,Medium,Monitoring,0
-441,74,Axis Strategy Partners,2024-05-15,70.2,60.3,55.7,32.0,31.0,49.8,Medium,Monitoring,0
-442,74,Axis Strategy Partners,2024-07-15,80.5,51.6,58.7,31.6,22.5,49.0,Medium,Monitoring,0
-443,74,Axis Strategy Partners,2024-09-15,76.6,52.0,61.0,28.8,26.8,49.1,Medium,Monitoring,0
-444,74,Axis Strategy Partners,2024-11-15,85.8,64.9,55.9,34.5,39.7,56.2,Medium,In Progress,0
-445,75,SunMat Corp,2024-01-15,46.4,39.2,44.5,30.9,35.1,39.2,Medium,Monitoring,0
-446,75,SunMat Corp,2024-03-15,54.2,49.3,39.7,39.8,38.7,44.3,Medium,Monitoring,0
-447,75,SunMat Corp,2024-05-15,55.3,44.4,47.6,40.2,18.3,41.2,Medium,Monitoring,0
-448,75,SunMat Corp,2024-07-15,51.9,39.0,47.7,42.0,13.1,38.7,Medium,Monitoring,0
-449,75,SunMat Corp,2024-09-15,54.3,44.2,53.7,35.2,14.9,40.5,Medium,Monitoring,0
-450,75,SunMat Corp,2024-11-15,50.5,46.3,46.9,27.9,21.7,38.6,Medium,Monitoring,0
-451,76,HorizonTech Inc,2024-01-15,76.8,62.8,52.6,27.8,17.7,47.5,Medium,Monitoring,0
-452,76,HorizonTech Inc,2024-03-15,74.4,60.3,56.3,15.3,51.4,51.5,Medium,In Progress,0
-453,76,HorizonTech Inc,2024-05-15,79.6,68.8,62.8,24.7,28.2,52.8,Medium,In Progress,0
-454,76,HorizonTech Inc,2024-07-15,78.4,55.4,50.4,23.0,35.1,48.5,Medium,Monitoring,0
-455,76,HorizonTech Inc,2024-09-15,78.7,70.7,69.8,43.4,18.6,56.3,Medium,In Progress,0
-456,76,HorizonTech Inc,2024-11-15,74.0,65.4,54.7,29.4,16.3,47.9,Medium,Monitoring,0
-457,77,FlexFreight Solutions,2024-01-15,30.6,26.7,31.6,26.2,34.5,29.9,Low,Completed,0
-458,77,FlexFreight Solutions,2024-03-15,33.4,25.2,35.8,36.6,21.3,30.4,Low,Completed,0
-459,77,FlexFreight Solutions,2024-05-15,25.8,22.6,24.8,39.4,45.3,31.6,Low,Completed,0
-460,77,FlexFreight Solutions,2024-07-15,29.4,37.8,40.3,35.5,16.0,31.8,Low,Completed,0
-461,77,FlexFreight Solutions,2024-09-15,28.2,31.1,25.2,44.9,39.0,33.7,Low,Completed,0
-462,77,FlexFreight Solutions,2024-11-15,29.1,30.3,24.3,34.5,26.2,28.9,Low,Completed,0
-463,78,ProMold Manufacturing,2024-01-15,43.3,37.9,41.1,38.7,14.8,35.2,Medium,Monitoring,0
-464,78,ProMold Manufacturing,2024-03-15,48.0,52.3,43.0,19.1,24.0,37.3,Medium,Monitoring,0
-465,78,ProMold Manufacturing,2024-05-15,53.3,50.7,46.3,19.5,14.8,36.9,Medium,Monitoring,0
-466,78,ProMold Manufacturing,2024-07-15,49.3,43.3,39.0,15.8,29.7,35.4,Medium,Monitoring,0
-467,78,ProMold Manufacturing,2024-09-15,48.4,51.5,41.8,20.8,22.1,36.9,Medium,Monitoring,0
-468,78,ProMold Manufacturing,2024-11-15,38.8,41.9,45.4,34.4,13.5,34.8,Low,Completed,0
-469,79,GrowthPoint Consulting,2024-01-15,71.4,53.8,54.9,27.5,31.5,47.8,Medium,Monitoring,0
-470,79,GrowthPoint Consulting,2024-03-15,71.4,69.1,52.7,29.2,29.2,50.3,Medium,In Progress,0
-471,79,GrowthPoint Consulting,2024-05-15,72.7,62.0,64.9,19.9,12.5,46.4,Medium,Monitoring,0
-472,79,GrowthPoint Consulting,2024-07-15,83.4,58.7,67.2,28.0,36.0,54.7,Medium,In Progress,0
-473,79,GrowthPoint Consulting,2024-09-15,77.4,59.5,65.8,15.8,14.4,46.6,Medium,Monitoring,0
-474,79,GrowthPoint Consulting,2024-11-15,81.0,62.7,72.4,44.0,24.6,57.0,Medium,In Progress,0
-475,80,NordicRaw Materials,2024-01-15,48.1,40.1,47.2,43.8,27.0,41.2,Medium,Monitoring,0
-476,80,NordicRaw Materials,2024-03-15,49.3,38.7,40.8,21.6,22.6,34.6,Low,Completed,0
-477,80,NordicRaw Materials,2024-05-15,46.1,50.5,45.8,25.3,27.7,39.1,Medium,Monitoring,0
-478,80,NordicRaw Materials,2024-07-15,44.5,43.1,42.4,22.0,45.6,39.5,Medium,Monitoring,0
-479,80,NordicRaw Materials,2024-09-15,51.5,51.6,51.7,49.6,41.7,49.2,Medium,Monitoring,0
-480,80,NordicRaw Materials,2024-11-15,47.8,43.9,50.8,32.6,26.8,40.4,Medium,Monitoring,0
-481,81,CatalystIT Systems,2024-01-15,44.3,39.8,52.0,37.2,18.2,38.3,Medium,Monitoring,0
-482,81,CatalystIT Systems,2024-03-15,48.8,50.6,55.4,44.1,19.8,43.7,Medium,Monitoring,0
-483,81,CatalystIT Systems,2024-05-15,45.2,51.0,53.9,12.0,53.9,43.2,Medium,Monitoring,0
-484,81,CatalystIT Systems,2024-07-15,48.4,46.9,42.2,39.4,48.1,45.0,Medium,Monitoring,0
-485,81,CatalystIT Systems,2024-09-15,44.0,45.7,45.7,42.0,17.1,38.9,Medium,Monitoring,0
-486,81,CatalystIT Systems,2024-11-15,56.6,50.1,52.1,16.6,53.5,45.8,Medium,Monitoring,0
-487,82,CargoNation Ltd,2024-01-15,29.5,26.1,27.6,13.2,20.8,23.4,Low,Completed,0
-488,82,CargoNation Ltd,2024-03-15,29.2,20.4,32.9,17.1,17.0,23.3,Low,Completed,0
-489,82,CargoNation Ltd,2024-05-15,36.6,36.7,27.3,10.8,34.3,29.1,Low,Completed,0
-490,82,CargoNation Ltd,2024-07-15,38.0,39.8,37.9,43.6,26.2,37.1,Medium,Monitoring,0
-491,82,CargoNation Ltd,2024-09-15,35.5,30.0,32.2,14.8,18.0,26.1,Low,Completed,0
-492,82,CargoNation Ltd,2024-11-15,42.2,45.6,38.9,16.1,48.8,38.3,Medium,Monitoring,0
-493,83,BoltWorks Mfg,2024-01-15,37.3,34.7,25.8,30.6,18.7,29.4,Low,Completed,0
-494,83,BoltWorks Mfg,2024-03-15,34.0,23.7,32.4,43.2,48.1,36.3,Medium,Monitoring,0
-495,83,BoltWorks Mfg,2024-05-15,37.9,37.3,22.8,31.1,47.0,35.2,Medium,Monitoring,0
-496,83,BoltWorks Mfg,2024-07-15,34.5,36.8,41.4,14.9,40.3,33.6,Low,Completed,0
-497,83,BoltWorks Mfg,2024-09-15,35.3,22.2,32.4,13.1,38.9,28.4,Low,Completed,0
-498,83,BoltWorks Mfg,2024-11-15,40.5,33.0,30.0,18.7,14.6,27.4,Low,Completed,0
-499,84,PinnacleConsult Inc,2024-01-15,71.9,50.9,59.5,40.6,48.8,54.3,Medium,In Progress,0
-500,84,PinnacleConsult Inc,2024-03-15,78.1,58.5,63.3,18.5,30.2,49.7,Medium,Monitoring,0
-501,84,PinnacleConsult Inc,2024-05-15,81.4,64.9,59.4,17.6,44.1,53.5,Medium,In Progress,0
-502,84,PinnacleConsult Inc,2024-07-15,73.0,64.7,53.7,21.0,26.3,47.7,Medium,Monitoring,0
-503,84,PinnacleConsult Inc,2024-09-15,81.4,69.5,59.6,35.8,35.3,56.3,Medium,In Progress,0
-504,84,PinnacleConsult Inc,2024-11-15,71.9,66.9,57.3,46.1,18.0,52.0,Medium,In Progress,0
-505,85,EcoMine Supplies,2024-01-15,69.8,53.7,64.8,35.3,39.7,52.7,Medium,In Progress,0
-506,85,EcoMine Supplies,2024-03-15,70.1,53.9,55.2,30.0,43.9,50.6,Medium,In Progress,0
-507,85,EcoMine Supplies,2024-05-15,69.7,55.5,57.2,33.2,34.8,50.1,Medium,In Progress,0
-508,85,EcoMine Supplies,2024-07-15,65.2,51.0,56.7,12.9,44.1,46.0,Medium,Monitoring,0
-509,85,EcoMine Supplies,2024-09-15,70.4,56.8,62.6,13.2,32.7,47.1,Medium,Monitoring,0
-510,85,EcoMine Supplies,2024-11-15,73.7,52.3,57.0,19.2,29.7,46.4,Medium,Monitoring,0
-511,86,InfoTech Dynamics,2024-01-15,30.4,24.0,32.2,33.4,19.3,27.8,Low,Completed,0
-512,86,InfoTech Dynamics,2024-03-15,33.4,38.2,29.6,29.4,48.0,35.7,Medium,Monitoring,0
-513,86,InfoTech Dynamics,2024-05-15,35.0,34.3,36.5,26.6,49.5,36.4,Medium,Monitoring,0
-514,86,InfoTech Dynamics,2024-07-15,28.7,37.9,32.1,27.6,50.2,35.3,Medium,Monitoring,0
-515,86,InfoTech Dynamics,2024-09-15,40.6,38.1,28.5,36.5,22.6,33.3,Low,Completed,0
-516,86,InfoTech Dynamics,2024-11-15,48.6,45.6,33.1,24.8,53.6,41.1,Medium,Monitoring,0
-517,87,JetRoute Logistics,2024-01-15,55.8,48.1,48.6,24.0,46.6,44.6,Medium,Monitoring,0
-518,87,JetRoute Logistics,2024-03-15,46.3,45.9,44.1,26.4,22.5,37.1,Medium,Monitoring,0
-519,87,JetRoute Logistics,2024-05-15,54.5,50.8,45.8,33.3,27.9,42.5,Medium,Monitoring,0
-520,87,JetRoute Logistics,2024-07-15,45.5,47.3,47.3,47.9,47.1,47.0,Medium,Monitoring,0
-521,87,JetRoute Logistics,2024-09-15,46.9,44.5,46.3,27.0,27.6,38.5,Medium,Monitoring,0
-522,87,JetRoute Logistics,2024-11-15,48.9,47.0,36.6,24.6,17.5,34.9,Low,Completed,0
-523,88,CoreCast Mfg,2024-01-15,50.5,37.0,49.1,21.6,21.0,35.8,Medium,Monitoring,0
-524,88,CoreCast Mfg,2024-03-15,54.3,51.8,38.0,38.6,23.5,41.2,Medium,Monitoring,0
-525,88,CoreCast Mfg,2024-05-15,47.0,46.4,37.0,40.4,17.1,37.6,Medium,Monitoring,0
-526,88,CoreCast Mfg,2024-07-15,53.2,55.3,46.1,24.6,36.5,43.1,Medium,Monitoring,0
-527,88,CoreCast Mfg,2024-09-15,41.3,46.1,43.6,36.6,45.0,42.5,Medium,Monitoring,0
-528,88,CoreCast Mfg,2024-11-15,55.2,45.7,47.8,27.7,17.2,38.7,Medium,Monitoring,0
-529,89,TrueConsult Global,2024-01-15,33.3,21.6,25.3,39.2,43.8,32.6,Low,Completed,0
-530,89,TrueConsult Global,2024-03-15,27.6,35.2,31.8,19.6,43.3,31.5,Low,Completed,0
-531,89,TrueConsult Global,2024-05-15,30.9,23.7,23.5,23.0,34.6,27.1,Low,Completed,0
-532,89,TrueConsult Global,2024-07-15,30.6,27.9,24.8,15.7,46.0,29.0,Low,Completed,0
-533,89,TrueConsult Global,2024-09-15,35.5,30.2,32.5,15.7,33.7,29.5,Low,Completed,0
-534,89,TrueConsult Global,2024-11-15,42.4,40.9,41.4,19.4,27.6,34.4,Low,Completed,0
-535,90,MarbleMat Resources,2024-01-15,52.2,48.8,38.9,46.9,36.6,44.7,Medium,Monitoring,0
-536,90,MarbleMat Resources,2024-03-15,43.6,41.1,50.7,25.7,48.7,42.0,Medium,Monitoring,0
-537,90,MarbleMat Resources,2024-05-15,49.4,44.0,45.2,23.8,29.7,38.4,Medium,Monitoring,0
-538,90,MarbleMat Resources,2024-07-15,55.4,45.5,42.8,32.9,37.2,42.7,Medium,Monitoring,0
-539,90,MarbleMat Resources,2024-09-15,53.2,52.7,53.1,25.4,16.1,40.1,Medium,Monitoring,0
-540,90,MarbleMat Resources,2024-11-15,48.3,40.4,44.5,24.1,39.0,39.3,Medium,Monitoring,0
-541,91,TechSphere Solutions,2024-01-15,74.7,53.8,66.1,46.5,46.6,57.5,Medium,In Progress,0
-542,91,TechSphere Solutions,2024-03-15,79.7,63.2,66.2,40.2,40.9,58.1,Medium,In Progress,0
-543,91,TechSphere Solutions,2024-05-15,78.2,62.1,64.8,16.2,42.9,52.9,Medium,In Progress,0
-544,91,TechSphere Solutions,2024-07-15,74.9,64.5,60.0,33.7,45.8,55.8,Medium,In Progress,0
-545,91,TechSphere Solutions,2024-09-15,85.9,66.2,73.9,44.4,49.3,63.9,Medium,In Progress,0
-546,91,TechSphere Solutions,2024-11-15,68.0,49.1,54.7,43.3,45.0,52.0,Medium,In Progress,0
-547,92,AquaFreight Corp,2024-01-15,34.8,27.8,23.1,27.4,40.3,30.7,Low,Completed,0
-548,92,AquaFreight Corp,2024-03-15,35.7,27.3,25.0,25.3,44.3,31.5,Low,Completed,0
-549,92,AquaFreight Corp,2024-05-15,37.3,32.1,35.3,17.5,45.8,33.6,Low,Completed,0
-550,92,AquaFreight Corp,2024-07-15,37.8,29.3,26.8,16.9,44.5,31.0,Low,Completed,0
-551,92,AquaFreight Corp,2024-09-15,25.0,24.9,25.7,46.7,29.4,30.3,Low,Completed,0
-552,92,AquaFreight Corp,2024-11-15,33.3,32.9,26.7,37.1,18.7,29.7,Low,Completed,0
-553,93,StrongBuild Mfg,2024-01-15,24.7,26.3,31.9,15.9,41.1,28.0,Low,Completed,0
-554,93,StrongBuild Mfg,2024-03-15,34.1,23.6,30.0,32.2,27.3,29.4,Low,Completed,0
-555,93,StrongBuild Mfg,2024-05-15,33.0,26.3,27.8,23.1,12.5,24.5,Low,Completed,0
-556,93,StrongBuild Mfg,2024-07-15,33.6,23.9,29.6,31.9,21.5,28.1,Low,Completed,0
-557,93,StrongBuild Mfg,2024-09-15,32.5,27.7,30.3,30.6,18.3,27.9,Low,Completed,0
-558,93,StrongBuild Mfg,2024-11-15,35.2,33.5,38.3,30.9,24.8,32.6,Low,Completed,0
-559,94,Vantage Consulting,2024-01-15,38.1,27.7,36.0,22.6,19.2,28.7,Low,Completed,0
-560,94,Vantage Consulting,2024-03-15,38.9,30.5,28.4,35.5,17.0,30.1,Low,Completed,0
-561,94,Vantage Consulting,2024-05-15,35.3,27.1,30.7,32.8,13.4,27.9,Low,Completed,0
-562,94,Vantage Consulting,2024-07-15,33.9,35.5,28.8,44.8,37.2,36.0,Medium,Monitoring,0
-563,94,Vantage Consulting,2024-09-15,29.5,36.5,32.4,23.3,32.8,30.9,Low,Completed,0
-564,94,Vantage Consulting,2024-11-15,28.7,34.2,33.1,20.5,37.1,30.7,Low,Completed,0
-565,95,ForestMat Supplies,2024-01-15,28.7,32.9,24.5,44.1,16.0,29.2,Low,Completed,0
-566,95,ForestMat Supplies,2024-03-15,27.9,26.1,25.1,22.0,19.6,24.1,Low,Completed,0
-567,95,ForestMat Supplies,2024-05-15,30.6,25.3,31.2,25.3,13.5,25.2,Low,Completed,0
-568,95,ForestMat Supplies,2024-07-15,28.7,38.9,27.9,15.1,37.5,29.6,Low,Completed,0
-569,95,ForestMat Supplies,2024-09-15,42.2,40.6,31.3,18.2,31.4,32.7,Low,Completed,0
-570,95,ForestMat Supplies,2024-11-15,31.8,32.5,30.9,49.6,23.2,33.6,Low,Completed,0
-571,96,ClearVision IT,2024-01-15,27.4,24.3,21.8,20.2,46.5,28.0,Low,Completed,0
-572,96,ClearVision IT,2024-03-15,34.7,22.6,31.4,11.6,48.4,29.7,Low,Completed,0
-573,96,ClearVision IT,2024-05-15,29.9,28.9,29.0,31.8,49.4,33.8,Low,Completed,0
-574,96,ClearVision IT,2024-07-15,32.5,20.9,23.3,43.7,26.3,29.3,Low,Completed,0
-575,96,ClearVision IT,2024-09-15,35.8,33.7,29.7,37.9,20.3,31.5,Low,Completed,0
-576,96,ClearVision IT,2024-11-15,31.6,41.3,28.1,24.6,38.4,32.8,Low,Completed,0
-577,97,NightOwl Logistics,2024-01-15,73.6,53.0,58.6,22.6,13.1,44.2,Medium,Monitoring,0
-578,97,NightOwl Logistics,2024-03-15,76.4,66.6,56.0,42.2,16.3,51.5,Medium,In Progress,0
-579,97,NightOwl Logistics,2024-05-15,65.9,54.2,57.6,34.7,37.8,50.0,Medium,In Progress,0
-580,97,NightOwl Logistics,2024-07-15,75.9,62.7,70.6,33.4,24.9,53.5,Medium,In Progress,0
-581,97,NightOwl Logistics,2024-09-15,75.2,53.0,63.9,18.7,25.1,47.2,Medium,Monitoring,0
-582,97,NightOwl Logistics,2024-11-15,74.4,67.9,65.5,44.6,14.1,53.3,Medium,In Progress,0
-583,98,TitanForge Mfg,2024-01-15,27.0,35.8,35.4,40.4,14.8,30.7,Low,Completed,0
-584,98,TitanForge Mfg,2024-03-15,28.3,38.0,24.4,17.8,36.4,29.0,Low,Completed,0
-585,98,TitanForge Mfg,2024-05-15,27.8,29.4,34.5,25.7,44.6,32.4,Low,Completed,0
-586,98,TitanForge Mfg,2024-07-15,26.8,30.4,32.8,13.6,27.7,26.2,Low,Completed,0
-587,98,TitanForge Mfg,2024-09-15,27.0,25.5,33.7,31.7,23.6,28.3,Low,Completed,0
-588,98,TitanForge Mfg,2024-11-15,29.0,34.4,38.1,22.7,14.1,27.7,Low,Completed,0
+1,1,TechCorp Inc,2024-01-15,49.1,50.6,38.7,0.0,43.5,44.8,Medium,Monitoring,0
+2,1,TechCorp Inc,2024-03-15,45.3,48.8,37.3,19.2,28.4,42.8,Medium,Monitoring,0
+3,1,TechCorp Inc,2024-05-15,47.9,51.1,41.4,24.1,40.8,46.1,Medium,Monitoring,0
+4,1,TechCorp Inc,2024-07-15,49.7,43.4,38.4,15.8,38.2,43.0,Medium,Monitoring,0
+5,1,TechCorp Inc,2024-09-15,44.8,35.6,38.2,19.8,36.1,38.6,Medium,Monitoring,0
+6,1,TechCorp Inc,2024-11-15,34.5,41.8,31.0,15.1,42.0,35.7,Medium,Monitoring,0
+7,1,TechCorp Inc,2025-01-15,46.3,41.4,34.4,15.7,35.2,40.1,Medium,Monitoring,0
+8,1,TechCorp Inc,2025-03-15,36.5,47.3,34.1,29.4,20.2,38.6,Medium,Monitoring,0
+9,1,TechCorp Inc,2025-05-15,38.8,39.7,37.9,14.0,35.1,37.5,Medium,Monitoring,0
+10,1,TechCorp Inc,2025-07-15,55.4,47.8,44.8,7.8,12.4,46.1,Medium,Monitoring,0
+11,1,TechCorp Inc,2025-09-15,52.4,56.5,33.0,19.7,37.4,47.6,Medium,Monitoring,0
+12,1,TechCorp Inc,2025-11-15,44.3,46.9,52.6,38.6,50.7,46.9,Medium,Monitoring,0
+13,2,Global Supplies Ltd,2024-01-15,67.7,59.7,68.5,46.8,47.9,63.0,Medium,Monitoring,0
+14,2,Global Supplies Ltd,2024-03-15,59.3,59.5,62.3,37.3,56.1,58.7,Medium,Monitoring,0
+15,2,Global Supplies Ltd,2024-05-15,57.9,63.8,66.7,32.3,51.3,60.1,Medium,Monitoring,0
+16,2,Global Supplies Ltd,2024-07-15,59.8,62.0,55.6,26.0,41.0,57.1,Medium,Monitoring,0
+17,2,Global Supplies Ltd,2024-09-15,64.1,69.8,61.4,42.7,43.4,63.4,Medium,Monitoring,0
+18,2,Global Supplies Ltd,2024-11-15,69.9,50.2,60.4,25.6,57.7,58.3,Medium,Monitoring,0
+19,2,Global Supplies Ltd,2025-01-15,71.2,61.3,58.5,16.1,53.0,61.6,Medium,Monitoring,0
+20,2,Global Supplies Ltd,2025-03-15,59.8,68.0,66.7,27.2,37.3,61.3,Medium,Monitoring,0
+21,2,Global Supplies Ltd,2025-05-15,52.9,74.1,66.7,36.8,44.7,61.9,Medium,Monitoring,1
+22,2,Global Supplies Ltd,2025-07-15,60.6,64.1,58.6,33.2,36.7,58.9,Medium,Monitoring,0
+23,2,Global Supplies Ltd,2025-09-15,57.3,62.0,61.1,29.9,41.9,57.5,Medium,Monitoring,0
+24,2,Global Supplies Ltd,2025-11-15,54.4,53.4,60.8,27.2,36.4,53.1,Medium,Monitoring,0
+25,3,Quality Parts Co,2024-01-15,53.2,44.0,33.0,44.2,46.8,45.1,Medium,Monitoring,0
+26,3,Quality Parts Co,2024-03-15,44.7,47.9,39.4,27.0,31.2,43.2,Medium,Monitoring,0
+27,3,Quality Parts Co,2024-05-15,51.0,46.8,51.1,28.5,9.2,46.3,Medium,Monitoring,0
+28,3,Quality Parts Co,2024-07-15,58.0,47.1,46.9,27.7,48.8,50.0,Medium,Monitoring,0
+29,3,Quality Parts Co,2024-09-15,56.3,57.1,48.7,31.8,31.0,52.6,Medium,Monitoring,0
+30,3,Quality Parts Co,2024-11-15,51.9,50.0,46.6,32.4,28.6,48.0,Medium,Monitoring,0
+31,3,Quality Parts Co,2025-01-15,49.1,64.9,45.5,38.1,44.5,53.1,Medium,Monitoring,1
+32,3,Quality Parts Co,2025-03-15,47.6,44.5,45.9,30.8,34.5,44.7,Medium,Monitoring,0
+33,3,Quality Parts Co,2025-05-15,49.2,50.0,44.8,38.7,40.8,47.6,Medium,Monitoring,0
+34,3,Quality Parts Co,2025-07-15,39.7,47.1,46.0,24.8,37.7,42.7,Medium,Monitoring,0
+35,3,Quality Parts Co,2025-09-15,50.5,55.8,49.5,14.7,18.1,48.7,Medium,Monitoring,0
+36,3,Quality Parts Co,2025-11-15,53.5,39.5,45.7,51.4,32.0,45.9,Medium,Monitoring,0
+37,4,Innovative Solutions,2024-01-15,39.9,38.7,31.2,11.8,13.9,35.0,Medium,Monitoring,0
+38,4,Innovative Solutions,2024-03-15,43.5,37.9,33.8,39.1,40.5,39.2,Medium,Monitoring,0
+39,4,Innovative Solutions,2024-05-15,44.3,32.8,35.4,24.0,27.1,36.6,Medium,Monitoring,0
+40,4,Innovative Solutions,2024-07-15,41.8,34.1,44.6,34.1,26.9,38.5,Medium,Monitoring,0
+41,4,Innovative Solutions,2024-09-15,33.9,52.6,34.0,32.2,21.3,39.8,Medium,Monitoring,0
+42,4,Innovative Solutions,2024-11-15,42.7,43.8,38.3,15.4,21.5,39.8,Medium,Monitoring,0
+43,4,Innovative Solutions,2025-01-15,35.9,37.4,38.1,28.6,45.8,37.0,Medium,Monitoring,0
+44,4,Innovative Solutions,2025-03-15,42.2,47.1,39.1,15.5,37.6,41.7,Medium,Monitoring,1
+45,4,Innovative Solutions,2025-05-15,45.2,40.1,42.9,39.2,46.9,42.7,Medium,Monitoring,0
+46,4,Innovative Solutions,2025-07-15,45.0,34.3,43.2,39.1,40.6,40.4,Medium,Monitoring,0
+47,4,Innovative Solutions,2025-09-15,44.8,38.3,35.6,23.7,10.8,37.9,Medium,Monitoring,0
+48,4,Innovative Solutions,2025-11-15,52.9,42.3,41.0,24.5,26.7,44.1,Medium,Monitoring,0
+49,5,Reliable Services LLC,2024-01-15,41.2,29.9,44.0,40.8,19.2,36.7,Medium,Monitoring,0
+50,5,Reliable Services LLC,2024-03-15,47.9,36.2,38.7,67.9,37.1,42.4,Medium,Monitoring,0
+51,5,Reliable Services LLC,2024-05-15,46.2,45.0,33.6,7.3,36.8,40.8,Medium,Monitoring,0
+52,5,Reliable Services LLC,2024-07-15,42.2,50.4,43.1,32.4,28.0,44.1,Medium,Monitoring,0
+53,5,Reliable Services LLC,2024-09-15,43.2,33.6,24.8,31.1,42.5,35.5,Medium,Monitoring,0
+54,5,Reliable Services LLC,2024-11-15,42.8,42.6,31.4,10.9,44.1,38.9,Medium,Monitoring,0
+55,5,Reliable Services LLC,2025-01-15,35.7,35.3,37.3,22.0,23.1,34.6,Low,Completed,0
+56,5,Reliable Services LLC,2025-03-15,43.3,28.6,37.1,36.5,29.6,35.9,Medium,Monitoring,0
+57,5,Reliable Services LLC,2025-05-15,50.7,46.3,32.4,28.0,37.0,43.7,Medium,Monitoring,1
+58,5,Reliable Services LLC,2025-07-15,45.8,40.6,32.0,17.3,40.3,39.5,Medium,Monitoring,0
+59,5,Reliable Services LLC,2025-09-15,53.4,42.5,27.7,26.5,22.8,41.6,Medium,Monitoring,0
+60,5,Reliable Services LLC,2025-11-15,37.0,40.5,24.9,18.6,22.6,34.2,Low,Completed,0
+61,6,Apex Delivery Co,2024-01-15,39.6,41.6,41.7,27.8,43.3,40.3,Medium,Monitoring,0
+62,6,Apex Delivery Co,2024-03-15,43.0,41.8,43.2,16.9,38.2,41.1,Medium,Monitoring,0
+63,6,Apex Delivery Co,2024-05-15,40.5,39.8,38.2,13.4,20.8,37.5,Medium,Monitoring,0
+64,6,Apex Delivery Co,2024-07-15,41.4,51.3,34.5,20.7,47.5,42.7,Medium,Monitoring,1
+65,6,Apex Delivery Co,2024-09-15,36.2,38.1,35.6,15.1,45.5,36.1,Medium,Monitoring,0
+66,6,Apex Delivery Co,2024-11-15,39.3,41.2,30.3,33.9,38.0,37.8,Medium,Monitoring,0
+67,6,Apex Delivery Co,2025-01-15,42.9,35.9,27.8,21.0,25.3,35.5,Medium,Monitoring,0
+68,6,Apex Delivery Co,2025-03-15,36.4,32.4,29.6,37.6,35.4,33.6,Low,Completed,0
+69,6,Apex Delivery Co,2025-05-15,44.0,45.7,37.2,39.4,18.0,41.7,Medium,Monitoring,0
+70,6,Apex Delivery Co,2025-07-15,38.7,47.8,35.2,36.1,16.3,40.0,Medium,Monitoring,0
+71,6,Apex Delivery Co,2025-09-15,35.1,42.6,32.3,31.8,30.6,36.8,Medium,Monitoring,0
+72,6,Apex Delivery Co,2025-11-15,35.0,40.4,37.1,2.1,29.5,35.4,Medium,Monitoring,0
+73,7,BlueStar Tech,2024-01-15,48.0,48.7,51.9,21.9,16.5,46.1,Medium,Monitoring,0
+74,7,BlueStar Tech,2024-03-15,50.1,46.0,46.9,25.5,36.8,46.1,Medium,Monitoring,0
+75,7,BlueStar Tech,2024-05-15,52.5,50.9,53.0,44.8,36.2,50.8,Medium,Monitoring,0
+76,7,BlueStar Tech,2024-07-15,47.2,55.9,44.1,52.4,64.1,50.7,Medium,Monitoring,0
+77,7,BlueStar Tech,2024-09-15,46.0,55.5,55.3,15.8,55.3,50.1,Medium,Monitoring,0
+78,7,BlueStar Tech,2024-11-15,46.3,53.0,50.8,28.3,40.8,48.4,Medium,Monitoring,0
+79,7,BlueStar Tech,2025-01-15,57.9,49.7,45.3,39.5,40.9,50.8,Medium,Monitoring,0
+80,7,BlueStar Tech,2025-03-15,49.0,54.1,43.4,31.4,37.5,48.2,Medium,Monitoring,0
+81,7,BlueStar Tech,2025-05-15,54.6,45.5,52.9,29.1,28.4,48.5,Medium,Monitoring,0
+82,7,BlueStar Tech,2025-07-15,61.2,53.3,45.4,17.5,47.2,52.4,Medium,Monitoring,0
+83,7,BlueStar Tech,2025-09-15,54.9,50.5,52.2,20.7,38.5,50.3,Medium,Monitoring,0
+84,7,BlueStar Tech,2025-11-15,54.8,44.7,58.0,45.1,24.8,49.9,Medium,Monitoring,0
+85,8,PrimeCast Mfg,2024-01-15,45.4,51.2,33.9,25.5,30.8,43.4,Medium,Monitoring,0
+86,8,PrimeCast Mfg,2024-03-15,57.9,59.1,50.5,29.3,39.6,54.5,Medium,Monitoring,0
+87,8,PrimeCast Mfg,2024-05-15,46.2,55.9,52.4,35.8,12.9,48.7,Medium,Monitoring,0
+88,8,PrimeCast Mfg,2024-07-15,55.8,64.5,41.4,14.8,32.6,52.8,Medium,Monitoring,1
+89,8,PrimeCast Mfg,2024-09-15,57.2,44.1,44.2,45.4,32.6,48.2,Medium,Monitoring,0
+90,8,PrimeCast Mfg,2024-11-15,50.4,53.9,37.8,26.4,36.3,47.2,Medium,Monitoring,0
+91,8,PrimeCast Mfg,2025-01-15,53.5,55.8,51.7,46.2,31.4,52.5,Medium,Monitoring,0
+92,8,PrimeCast Mfg,2025-03-15,53.0,49.3,54.9,31.3,23.7,49.5,Medium,Monitoring,0
+93,8,PrimeCast Mfg,2025-05-15,48.6,48.1,45.1,35.8,46.5,47.0,Medium,Monitoring,0
+94,8,PrimeCast Mfg,2025-07-15,51.5,42.0,43.9,19.0,38.8,44.4,Medium,Monitoring,0
+95,8,PrimeCast Mfg,2025-09-15,47.5,51.2,47.6,3.0,46.8,46.5,Medium,Monitoring,0
+96,8,PrimeCast Mfg,2025-11-15,50.4,52.5,48.1,12.4,57.4,49.1,Medium,Monitoring,0
+97,9,SwiftRoute Express,2024-01-15,46.3,39.6,41.6,10.8,28.2,40.3,Medium,Monitoring,0
+98,9,SwiftRoute Express,2024-03-15,39.7,45.1,40.6,26.6,23.5,40.3,Medium,Monitoring,0
+99,9,SwiftRoute Express,2024-05-15,49.9,41.3,42.6,31.6,19.2,43.0,Medium,Monitoring,0
+100,9,SwiftRoute Express,2024-07-15,41.1,29.4,35.3,15.2,37.5,34.4,Low,Completed,0
+101,9,SwiftRoute Express,2024-09-15,51.3,40.5,48.9,22.8,30.1,44.6,Medium,Monitoring,0
+102,9,SwiftRoute Express,2024-11-15,38.7,41.0,43.0,28.6,31.1,39.5,Medium,Monitoring,0
+103,9,SwiftRoute Express,2025-01-15,45.6,41.5,40.2,28.4,37.2,41.8,Medium,Monitoring,0
+104,9,SwiftRoute Express,2025-03-15,41.2,46.4,38.5,10.5,27.4,40.2,Medium,Monitoring,0
+105,9,SwiftRoute Express,2025-05-15,43.8,39.2,35.4,34.7,45.5,40.1,Medium,Monitoring,0
+106,9,SwiftRoute Express,2025-07-15,46.6,39.7,27.5,12.7,28.7,37.8,Medium,Monitoring,0
+107,9,SwiftRoute Express,2025-09-15,42.1,47.4,48.6,15.6,51.9,44.4,Medium,Monitoring,0
+108,9,SwiftRoute Express,2025-11-15,49.9,40.8,36.5,24.4,22.7,41.4,Medium,Monitoring,0
+109,10,Omega Consult Group,2024-01-15,24.5,21.3,13.2,10.5,15.0,20.0,Low,Completed,0
+110,10,Omega Consult Group,2024-03-15,26.1,17.8,28.4,16.2,25.7,23.2,Low,Completed,0
+111,10,Omega Consult Group,2024-05-15,34.8,27.9,16.4,7.1,25.4,26.8,Low,Completed,0
+112,10,Omega Consult Group,2024-07-15,27.3,23.6,20.4,0.0,23.5,23.1,Low,Completed,0
+113,10,Omega Consult Group,2024-09-15,27.6,30.4,23.8,12.7,26.4,27.0,Low,Completed,0
+114,10,Omega Consult Group,2024-11-15,19.4,23.5,10.4,19.1,28.8,19.5,Low,Completed,0
+115,10,Omega Consult Group,2025-01-15,23.5,25.0,28.7,0.0,24.3,24.0,Low,Completed,0
+116,10,Omega Consult Group,2025-03-15,24.2,21.6,19.3,23.8,19.6,22.0,Low,Completed,0
+117,10,Omega Consult Group,2025-05-15,33.0,30.5,14.7,18.3,34.2,27.8,Low,Completed,0
+118,10,Omega Consult Group,2025-07-15,33.7,27.4,26.6,31.9,18.6,29.2,Low,Completed,0
+119,10,Omega Consult Group,2025-09-15,19.9,17.8,20.6,24.3,18.1,19.4,Low,Completed,0
+120,10,Omega Consult Group,2025-11-15,26.2,25.5,5.0,22.4,22.3,21.3,Low,Completed,0
+121,11,NovaMat Supplies,2024-01-15,48.5,41.4,40.7,42.4,27.6,43.1,Medium,Monitoring,0
+122,11,NovaMat Supplies,2024-03-15,43.1,46.1,39.3,24.2,30.6,41.8,Medium,Monitoring,0
+123,11,NovaMat Supplies,2024-05-15,55.5,47.8,43.7,13.8,20.0,46.6,Medium,Monitoring,0
+124,11,NovaMat Supplies,2024-07-15,42.8,45.7,44.5,1.1,21.5,41.0,Medium,Monitoring,0
+125,11,NovaMat Supplies,2024-09-15,45.5,48.5,50.7,20.5,29.4,45.5,Medium,Monitoring,0
+126,11,NovaMat Supplies,2024-11-15,44.4,48.5,44.6,0.0,40.4,43.4,Medium,Monitoring,0
+127,11,NovaMat Supplies,2025-01-15,49.4,53.4,32.6,14.6,33.3,44.9,Medium,Monitoring,0
+128,11,NovaMat Supplies,2025-03-15,47.2,51.2,44.7,27.9,31.7,46.4,Medium,Monitoring,0
+129,11,NovaMat Supplies,2025-05-15,46.1,48.2,39.4,41.8,26.6,44.3,Medium,Monitoring,0
+130,11,NovaMat Supplies,2025-07-15,48.6,41.6,47.3,37.9,18.3,43.9,Medium,Monitoring,0
+131,11,NovaMat Supplies,2025-09-15,48.7,36.3,30.6,18.8,20.9,37.9,Medium,Monitoring,0
+132,11,NovaMat Supplies,2025-11-15,43.8,65.6,42.0,38.3,41.2,50.7,Medium,Monitoring,1
+133,12,DataStream Inc,2024-01-15,50.2,63.9,40.3,22.7,34.1,50.8,Medium,Monitoring,1
+134,12,DataStream Inc,2024-03-15,49.0,41.4,38.2,25.6,46.1,42.9,Medium,Monitoring,0
+135,12,DataStream Inc,2024-05-15,47.6,43.1,35.3,32.1,32.3,42.0,Medium,Monitoring,0
+136,12,DataStream Inc,2024-07-15,50.0,43.7,45.5,14.8,37.0,44.5,Medium,Monitoring,0
+137,12,DataStream Inc,2024-09-15,56.1,44.9,38.9,23.6,40.9,46.3,Medium,Monitoring,0
+138,12,DataStream Inc,2024-11-15,53.4,48.1,37.9,24.1,27.4,45.7,Medium,Monitoring,0
+139,12,DataStream Inc,2025-01-15,41.8,52.3,44.7,23.8,43.3,45.2,Medium,Monitoring,0
+140,12,DataStream Inc,2025-03-15,42.9,51.5,50.6,32.8,26.2,46.1,Medium,Monitoring,0
+141,12,DataStream Inc,2025-05-15,46.0,49.3,48.9,20.2,28.3,45.6,Medium,Monitoring,0
+142,12,DataStream Inc,2025-07-15,47.8,57.2,42.8,39.4,38.6,49.2,Medium,Monitoring,0
+143,12,DataStream Inc,2025-09-15,49.5,49.0,50.4,35.7,40.1,48.4,Medium,Monitoring,0
+144,12,DataStream Inc,2025-11-15,51.3,46.5,41.1,32.3,51.8,46.7,Medium,Monitoring,0
+145,13,SteelWorks Co,2024-01-15,46.5,31.0,37.6,27.5,31.0,37.6,Medium,Monitoring,0
+146,13,SteelWorks Co,2024-03-15,36.2,43.0,33.8,16.7,15.6,36.1,Medium,Monitoring,0
+147,13,SteelWorks Co,2024-05-15,43.6,34.6,35.6,24.4,25.4,37.0,Medium,Monitoring,0
+148,13,SteelWorks Co,2024-07-15,37.4,27.3,33.1,23.8,23.0,31.6,Low,Completed,0
+149,13,SteelWorks Co,2024-09-15,33.3,35.9,26.5,32.8,34.1,32.9,Low,Completed,0
+150,13,SteelWorks Co,2024-11-15,43.1,39.3,31.0,22.6,46.6,38.5,Medium,Monitoring,0
+151,13,SteelWorks Co,2025-01-15,38.8,42.8,35.5,25.7,25.6,38.2,Medium,Monitoring,0
+152,13,SteelWorks Co,2025-03-15,34.4,37.4,31.3,18.8,35.1,34.1,Low,Completed,0
+153,13,SteelWorks Co,2025-05-15,40.7,36.7,32.7,34.5,32.8,37.0,Medium,Monitoring,0
+154,13,SteelWorks Co,2025-07-15,40.9,31.0,32.4,14.4,32.9,34.0,Low,Completed,0
+155,13,SteelWorks Co,2025-09-15,41.8,36.9,27.5,20.2,51.0,36.6,Medium,Monitoring,0
+156,13,SteelWorks Co,2025-11-15,39.6,31.8,40.7,31.3,30.8,36.2,Medium,Monitoring,0
+157,14,RapidFreight Ltd,2024-01-15,33.8,30.2,21.2,16.8,20.8,28.5,Low,Completed,0
+158,14,RapidFreight Ltd,2024-03-15,25.0,34.8,32.2,16.1,37.2,30.0,Low,Completed,0
+159,14,RapidFreight Ltd,2024-05-15,29.9,27.5,25.0,13.2,31.5,27.3,Low,Completed,0
+160,14,RapidFreight Ltd,2024-07-15,29.0,30.7,24.7,17.2,24.9,27.9,Low,Completed,0
+161,14,RapidFreight Ltd,2024-09-15,39.9,35.9,21.1,20.3,31.8,33.4,Low,Completed,0
+162,14,RapidFreight Ltd,2024-11-15,41.5,30.5,30.3,7.1,13.6,32.3,Low,Completed,0
+163,14,RapidFreight Ltd,2025-01-15,31.3,24.5,27.2,33.1,17.8,27.5,Low,Completed,0
+164,14,RapidFreight Ltd,2025-03-15,25.3,27.6,33.2,12.6,12.7,26.5,Low,Completed,0
+165,14,RapidFreight Ltd,2025-05-15,31.0,34.7,24.6,26.2,25.7,30.5,Low,Completed,0
+166,14,RapidFreight Ltd,2025-07-15,30.1,32.8,33.9,11.0,15.3,30.1,Low,Completed,0
+167,14,RapidFreight Ltd,2025-09-15,37.1,31.2,31.8,15.4,31.6,32.6,Low,Completed,0
+168,14,RapidFreight Ltd,2025-11-15,27.8,36.4,24.8,17.4,28.3,29.7,Low,Completed,0
+169,15,GreenSource Corp,2024-01-15,77.1,85.0,72.9,50.5,57.4,76.7,High,In Progress,1
+170,15,GreenSource Corp,2024-03-15,74.7,71.7,66.8,43.9,62.5,69.9,High,In Progress,0
+171,15,GreenSource Corp,2024-05-15,79.0,81.1,68.8,31.9,67.5,74.8,High,In Progress,0
+172,15,GreenSource Corp,2024-07-15,81.7,72.3,83.4,28.9,50.9,74.6,High,In Progress,0
+173,15,GreenSource Corp,2024-09-15,73.8,78.3,80.2,30.1,71.9,74.4,High,In Progress,0
+174,15,GreenSource Corp,2024-11-15,74.5,87.1,72.6,34.4,60.9,75.8,High,Monitoring,0
+175,15,GreenSource Corp,2025-01-15,74.9,77.5,71.6,23.5,50.2,71.3,High,Monitoring,0
+176,15,GreenSource Corp,2025-03-15,69.6,82.2,78.5,35.5,58.7,73.6,High,Monitoring,0
+177,15,GreenSource Corp,2025-05-15,81.2,78.9,69.6,32.6,43.4,73.8,High,In Progress,0
+178,15,GreenSource Corp,2025-07-15,70.0,79.0,77.1,38.1,51.6,72.1,High,Monitoring,0
+179,15,GreenSource Corp,2025-09-15,73.7,75.5,76.5,41.7,46.2,71.9,High,In Progress,0
+180,15,GreenSource Corp,2025-11-15,83.1,68.8,77.3,39.5,46.8,73.0,High,Monitoring,0
+181,16,CloudNine Systems,2024-01-15,26.7,29.8,14.9,21.7,16.0,24.6,Low,Completed,0
+182,16,CloudNine Systems,2024-03-15,27.3,25.1,22.3,18.1,32.2,25.3,Low,Completed,0
+183,16,CloudNine Systems,2024-05-15,29.6,28.6,27.6,4.3,33.6,27.8,Low,Completed,0
+184,16,CloudNine Systems,2024-07-15,31.2,36.2,28.7,15.0,20.2,31.1,Low,Completed,0
+185,16,CloudNine Systems,2024-09-15,27.9,41.6,24.2,18.9,8.7,30.5,Low,Completed,0
+186,16,CloudNine Systems,2024-11-15,25.1,31.0,7.0,32.3,18.6,23.6,Low,Completed,0
+187,16,CloudNine Systems,2025-01-15,29.3,26.7,17.1,32.2,26.6,26.0,Low,Completed,0
+188,16,CloudNine Systems,2025-03-15,27.5,27.5,13.0,21.0,15.2,23.7,Low,Completed,0
+189,16,CloudNine Systems,2025-05-15,28.6,28.5,24.7,36.5,7.2,27.1,Low,Completed,0
+190,16,CloudNine Systems,2025-07-15,23.6,13.7,15.7,30.1,22.5,18.8,Low,Completed,0
+191,16,CloudNine Systems,2025-09-15,29.5,29.2,19.8,23.8,18.3,26.6,Low,Completed,0
+192,16,CloudNine Systems,2025-11-15,24.0,25.4,25.2,16.9,18.5,24.1,Low,Completed,0
+193,17,FastLane Logistics,2024-01-15,39.6,32.3,20.6,0.1,32.5,30.9,Low,Completed,0
+194,17,FastLane Logistics,2024-03-15,34.2,21.3,25.4,15.5,27.0,26.6,Low,Completed,0
+195,17,FastLane Logistics,2024-05-15,34.6,31.1,25.2,24.5,18.1,30.2,Low,Completed,0
+196,17,FastLane Logistics,2024-07-15,32.5,26.7,30.0,0.0,19.9,27.7,Low,Completed,0
+197,17,FastLane Logistics,2024-09-15,38.7,33.8,20.6,19.9,28.3,31.9,Low,Completed,0
+198,17,FastLane Logistics,2024-11-15,37.4,36.0,26.2,9.7,11.3,32.0,Low,Completed,0
+199,17,FastLane Logistics,2025-01-15,36.3,28.5,28.0,12.5,19.0,29.8,Low,Completed,0
+200,17,FastLane Logistics,2025-03-15,35.9,28.6,23.7,29.9,34.1,30.5,Low,Completed,0
+201,17,FastLane Logistics,2025-05-15,31.7,36.9,26.7,34.5,16.5,31.9,Low,Completed,1
+202,17,FastLane Logistics,2025-07-15,33.6,25.1,24.9,13.0,9.8,26.7,Low,Completed,0
+203,17,FastLane Logistics,2025-09-15,34.7,23.7,19.6,26.0,24.6,26.9,Low,Completed,0
+204,17,FastLane Logistics,2025-11-15,32.6,40.2,29.6,19.3,33.5,34.0,Low,Completed,0
+205,18,PrecisionForge Ltd,2024-01-15,35.6,23.0,12.7,11.4,9.7,24.1,Low,Completed,0
+206,18,PrecisionForge Ltd,2024-03-15,31.6,33.5,27.8,27.4,16.1,30.5,Low,Completed,0
+207,18,PrecisionForge Ltd,2024-05-15,29.5,34.3,29.2,27.7,23.7,30.7,Low,Completed,0
+208,18,PrecisionForge Ltd,2024-07-15,27.5,39.4,28.2,33.5,15.1,31.5,Low,Completed,1
+209,18,PrecisionForge Ltd,2024-09-15,32.7,34.9,28.2,21.6,15.6,31.1,Low,Completed,0
+210,18,PrecisionForge Ltd,2024-11-15,31.3,28.4,22.4,20.2,16.8,27.2,Low,Completed,0
+211,18,PrecisionForge Ltd,2025-01-15,32.4,26.9,14.9,29.9,32.9,26.9,Low,Completed,0
+212,18,PrecisionForge Ltd,2025-03-15,37.2,27.2,23.4,15.2,22.7,29.1,Low,Completed,0
+213,18,PrecisionForge Ltd,2025-05-15,30.2,26.9,29.8,21.1,19.5,28.0,Low,Completed,0
+214,18,PrecisionForge Ltd,2025-07-15,36.8,35.3,20.0,7.7,35.4,31.4,Low,Completed,0
+215,18,PrecisionForge Ltd,2025-09-15,24.8,27.5,26.3,17.3,33.1,26.1,Low,Completed,0
+216,18,PrecisionForge Ltd,2025-11-15,36.8,46.2,18.1,17.3,37.2,35.4,Medium,Monitoring,1
+217,19,StratEdge Consulting,2024-01-15,38.7,32.4,40.4,8.5,54.0,36.1,Medium,Monitoring,0
+218,19,StratEdge Consulting,2024-03-15,40.5,37.1,26.3,27.7,22.0,34.9,Low,Completed,0
+219,19,StratEdge Consulting,2024-05-15,37.2,32.8,26.0,25.1,18.0,31.8,Low,Completed,0
+220,19,StratEdge Consulting,2024-07-15,39.9,36.0,23.1,11.6,5.6,32.0,Low,Completed,0
+221,19,StratEdge Consulting,2024-09-15,40.3,30.5,33.4,41.5,11.6,34.1,Low,Completed,0
+222,19,StratEdge Consulting,2024-11-15,29.7,38.3,28.8,17.7,29.3,31.9,Low,Completed,0
+223,19,StratEdge Consulting,2025-01-15,34.7,35.5,23.3,17.0,25.4,31.3,Low,Completed,0
+224,19,StratEdge Consulting,2025-03-15,38.1,36.2,23.1,35.8,27.6,33.8,Low,Completed,0
+225,19,StratEdge Consulting,2025-05-15,33.0,44.5,37.1,40.3,28.2,37.9,Medium,Monitoring,0
+226,19,StratEdge Consulting,2025-07-15,41.9,32.4,33.0,23.9,46.2,36.1,Medium,Monitoring,0
+227,19,StratEdge Consulting,2025-09-15,37.5,44.3,26.8,16.2,24.2,36.0,Medium,Monitoring,0
+228,19,StratEdge Consulting,2025-11-15,32.8,31.0,23.1,13.4,29.4,29.1,Low,Completed,0
+229,20,EcoRaw Materials,2024-01-15,23.8,18.6,5.0,5.6,15.5,16.9,Low,Completed,0
+230,20,EcoRaw Materials,2024-03-15,17.1,9.2,15.1,6.9,6.2,12.9,Low,Completed,0
+231,20,EcoRaw Materials,2024-05-15,20.7,14.9,9.5,5.0,12.3,15.2,Low,Completed,0
+232,20,EcoRaw Materials,2024-07-15,11.9,21.0,5.0,4.8,27.4,14.1,Low,Completed,0
+233,20,EcoRaw Materials,2024-09-15,20.3,7.7,5.0,12.1,16.0,12.2,Low,Completed,0
+234,20,EcoRaw Materials,2024-11-15,28.6,20.1,6.3,26.4,11.5,20.2,Low,Completed,0
+235,20,EcoRaw Materials,2025-01-15,15.2,5.0,6.0,12.4,1.5,9.0,Low,Completed,0
+236,20,EcoRaw Materials,2025-03-15,13.8,14.9,9.0,24.3,19.1,14.0,Low,Completed,0
+237,20,EcoRaw Materials,2025-05-15,17.9,26.6,11.1,8.9,41.5,20.3,Low,Completed,0
+238,20,EcoRaw Materials,2025-07-15,17.9,8.1,5.0,0.0,23.6,11.3,Low,Completed,0
+239,20,EcoRaw Materials,2025-09-15,19.1,20.9,10.2,18.4,29.6,18.4,Low,Completed,0
+240,20,EcoRaw Materials,2025-11-15,14.8,18.3,6.5,12.8,2.3,13.6,Low,Completed,0
+241,21,NexGen IT Solutions,2024-01-15,41.8,49.3,33.5,1.0,31.0,40.2,Medium,Monitoring,0
+242,21,NexGen IT Solutions,2024-03-15,42.3,44.5,36.5,20.5,29.5,40.2,Medium,Monitoring,0
+243,21,NexGen IT Solutions,2024-05-15,37.4,43.6,33.9,30.9,15.7,37.5,Medium,Monitoring,0
+244,21,NexGen IT Solutions,2024-07-15,42.0,41.1,44.6,16.7,30.9,40.4,Medium,Monitoring,0
+245,21,NexGen IT Solutions,2024-09-15,42.5,46.0,40.3,19.1,43.7,42.2,Medium,Monitoring,0
+246,21,NexGen IT Solutions,2024-11-15,40.9,38.9,35.1,29.3,9.0,36.9,Medium,Monitoring,0
+247,21,NexGen IT Solutions,2025-01-15,41.8,35.8,34.6,26.2,26.2,36.7,Medium,Monitoring,0
+248,21,NexGen IT Solutions,2025-03-15,36.0,53.3,32.4,39.5,52.2,42.3,Medium,Monitoring,1
+249,21,NexGen IT Solutions,2025-05-15,45.6,51.2,48.0,4.6,42.7,45.8,Medium,Monitoring,0
+250,21,NexGen IT Solutions,2025-07-15,45.3,45.4,38.6,34.9,25.5,42.5,Medium,Monitoring,0
+251,21,NexGen IT Solutions,2025-09-15,47.8,37.2,44.2,17.2,27.3,40.8,Medium,Monitoring,0
+252,21,NexGen IT Solutions,2025-11-15,38.3,35.8,43.8,7.7,56.3,37.9,Medium,Monitoring,0
+253,22,CargoWise Corp,2024-01-15,56.0,62.6,47.7,29.1,38.8,54.4,Medium,Monitoring,0
+254,22,CargoWise Corp,2024-03-15,57.6,68.1,58.6,36.4,33.0,59.2,Medium,Monitoring,0
+255,22,CargoWise Corp,2024-05-15,59.7,49.0,52.5,19.9,20.4,50.6,Medium,Monitoring,0
+256,22,CargoWise Corp,2024-07-15,60.5,58.5,59.0,16.0,27.4,55.6,Medium,Monitoring,0
+257,22,CargoWise Corp,2024-09-15,69.7,64.5,63.1,26.6,35.2,62.7,Medium,Monitoring,0
+258,22,CargoWise Corp,2024-11-15,65.5,62.5,64.9,23.3,47.0,61.3,Medium,Monitoring,0
+259,22,CargoWise Corp,2025-01-15,60.7,63.5,55.6,22.2,44.4,57.9,Medium,Monitoring,0
+260,22,CargoWise Corp,2025-03-15,59.5,62.1,62.0,39.0,46.1,59.2,Medium,Monitoring,0
+261,22,CargoWise Corp,2025-05-15,57.9,61.6,55.7,36.9,32.7,56.5,Medium,Monitoring,0
+262,22,CargoWise Corp,2025-07-15,60.9,61.1,51.7,51.5,28.3,57.0,Medium,Monitoring,0
+263,22,CargoWise Corp,2025-09-15,63.0,60.9,55.6,26.9,37.9,57.7,Medium,Monitoring,0
+264,22,CargoWise Corp,2025-11-15,66.9,64.2,62.1,28.1,46.0,62.0,Medium,Monitoring,0
+265,23,MetalPlus Manufacturing,2024-01-15,26.5,22.9,27.6,32.8,18.8,25.4,Low,Completed,0
+266,23,MetalPlus Manufacturing,2024-03-15,21.9,19.8,24.7,21.4,26.5,21.9,Low,Completed,0
+267,23,MetalPlus Manufacturing,2024-05-15,21.2,17.9,18.8,9.5,6.1,18.2,Low,Completed,0
+268,23,MetalPlus Manufacturing,2024-07-15,31.5,22.5,18.5,6.9,25.1,24.2,Low,Completed,0
+269,23,MetalPlus Manufacturing,2024-09-15,29.2,22.2,18.8,12.0,20.5,23.4,Low,Completed,0
+270,23,MetalPlus Manufacturing,2024-11-15,27.2,25.5,13.0,16.1,23.2,23.0,Low,Completed,0
+271,23,MetalPlus Manufacturing,2025-01-15,25.8,18.4,15.6,24.0,8.0,20.2,Low,Completed,0
+272,23,MetalPlus Manufacturing,2025-03-15,22.9,21.1,8.5,23.0,19.5,19.2,Low,Completed,0
+273,23,MetalPlus Manufacturing,2025-05-15,20.4,19.5,9.8,27.0,23.2,18.4,Low,Completed,0
+274,23,MetalPlus Manufacturing,2025-07-15,22.5,25.5,14.6,15.3,24.9,21.7,Low,Completed,0
+275,23,MetalPlus Manufacturing,2025-09-15,29.9,24.3,12.1,25.7,31.9,24.3,Low,Completed,0
+276,23,MetalPlus Manufacturing,2025-11-15,32.1,22.5,15.9,17.3,20.0,24.1,Low,Completed,0
+277,24,Alpha Advisors,2024-01-15,42.7,39.4,39.0,37.9,40.6,40.5,Medium,Monitoring,0
+278,24,Alpha Advisors,2024-03-15,48.9,42.1,34.8,22.4,31.9,41.5,Medium,Monitoring,0
+279,24,Alpha Advisors,2024-05-15,47.1,62.2,30.4,24.5,10.8,46.1,Medium,Monitoring,1
+280,24,Alpha Advisors,2024-07-15,51.0,48.3,35.5,15.7,21.5,43.7,Medium,Monitoring,0
+281,24,Alpha Advisors,2024-09-15,41.4,41.7,37.1,13.3,35.8,39.0,Medium,Monitoring,0
+282,24,Alpha Advisors,2024-11-15,36.9,38.2,41.8,25.2,28.5,37.3,Medium,Monitoring,0
+283,24,Alpha Advisors,2025-01-15,39.6,41.1,42.0,19.4,35.6,39.4,Medium,Monitoring,0
+284,24,Alpha Advisors,2025-03-15,41.7,34.7,31.5,21.2,37.0,35.9,Medium,Monitoring,0
+285,24,Alpha Advisors,2025-05-15,49.8,41.8,29.9,29.4,21.7,40.6,Medium,Monitoring,0
+286,24,Alpha Advisors,2025-07-15,36.7,43.3,46.5,31.7,30.0,40.4,Medium,Monitoring,0
+287,24,Alpha Advisors,2025-09-15,43.7,43.0,45.1,18.4,26.0,41.6,Medium,Monitoring,0
+288,24,Alpha Advisors,2025-11-15,48.8,43.6,32.2,34.1,31.5,42.0,Medium,Monitoring,0
+289,25,TerraMat Co,2024-01-15,44.9,37.7,31.0,33.5,21.7,37.9,Medium,Monitoring,0
+290,25,TerraMat Co,2024-03-15,40.2,30.2,44.4,23.4,32.6,36.3,Medium,Monitoring,0
+291,25,TerraMat Co,2024-05-15,35.4,27.9,46.5,8.3,46.4,34.2,Low,Completed,0
+292,25,TerraMat Co,2024-07-15,42.8,38.1,45.9,17.0,23.4,39.5,Medium,Monitoring,0
+293,25,TerraMat Co,2024-09-15,40.5,36.6,28.4,23.4,37.0,35.7,Medium,Monitoring,0
+294,25,TerraMat Co,2024-11-15,51.5,33.0,41.2,14.1,20.7,39.6,Medium,Monitoring,0
+295,25,TerraMat Co,2025-01-15,38.7,33.7,25.2,38.4,39.1,34.2,Low,Completed,0
+296,25,TerraMat Co,2025-03-15,37.6,45.7,36.7,18.2,13.7,38.1,Medium,Monitoring,0
+297,25,TerraMat Co,2025-05-15,39.4,39.8,37.8,30.3,32.3,38.4,Medium,Monitoring,0
+298,25,TerraMat Co,2025-07-15,44.2,45.1,47.3,12.8,41.2,43.4,Medium,Monitoring,0
+299,25,TerraMat Co,2025-09-15,46.9,49.1,40.0,38.9,38.7,45.5,Medium,Monitoring,1
+300,25,TerraMat Co,2025-11-15,46.3,39.4,27.4,33.3,38.9,39.1,Medium,Monitoring,0
+301,26,CyberEdge Technologies,2024-01-15,26.5,21.1,16.7,20.5,4.5,21.3,Low,Completed,0
+302,26,CyberEdge Technologies,2024-03-15,28.0,30.7,29.1,11.3,6.0,27.2,Low,Completed,0
+303,26,CyberEdge Technologies,2024-05-15,34.7,27.8,23.4,12.2,27.8,28.6,Low,Completed,0
+304,26,CyberEdge Technologies,2024-07-15,32.4,19.7,10.0,41.1,24.3,23.5,Low,Completed,0
+305,26,CyberEdge Technologies,2024-09-15,21.9,29.6,23.3,16.5,31.8,25.1,Low,Completed,0
+306,26,CyberEdge Technologies,2024-11-15,31.4,15.6,14.8,35.4,23.8,22.4,Low,Completed,0
+307,26,CyberEdge Technologies,2025-01-15,25.1,22.0,27.7,33.5,30.9,25.2,Low,Completed,0
+308,26,CyberEdge Technologies,2025-03-15,31.7,25.9,16.5,4.3,36.1,25.5,Low,Completed,0
+309,26,CyberEdge Technologies,2025-05-15,30.6,26.6,22.5,21.9,29.9,27.1,Low,Completed,0
+310,26,CyberEdge Technologies,2025-07-15,33.7,22.3,20.7,6.7,21.3,25.1,Low,Completed,0
+311,26,CyberEdge Technologies,2025-09-15,29.8,30.7,19.4,38.1,30.9,28.5,Low,Completed,0
+312,26,CyberEdge Technologies,2025-11-15,28.7,27.9,26.9,6.2,29.3,27.0,Low,Completed,0
+313,27,SpeedFreight Inc,2024-01-15,59.2,62.8,54.6,7.5,20.8,55.0,Medium,Monitoring,0
+314,27,SpeedFreight Inc,2024-03-15,46.3,59.0,59.7,42.1,36.2,52.7,Medium,Monitoring,0
+315,27,SpeedFreight Inc,2024-05-15,56.4,47.9,54.0,44.6,45.5,51.8,Medium,Monitoring,0
+316,27,SpeedFreight Inc,2024-07-15,58.6,61.8,57.7,41.0,22.7,56.9,Medium,Monitoring,0
+317,27,SpeedFreight Inc,2024-09-15,58.7,61.1,53.9,46.2,20.4,56.0,Medium,Monitoring,0
+318,27,SpeedFreight Inc,2024-11-15,59.9,72.7,58.7,21.8,56.2,62.1,Medium,Monitoring,1
+319,27,SpeedFreight Inc,2025-01-15,58.1,59.0,54.8,24.5,44.7,55.4,Medium,Monitoring,0
+320,27,SpeedFreight Inc,2025-03-15,60.9,64.4,46.9,31.3,48.4,57.2,Medium,Monitoring,0
+321,27,SpeedFreight Inc,2025-05-15,50.1,74.0,51.8,32.7,31.1,57.0,Medium,Monitoring,1
+322,27,SpeedFreight Inc,2025-07-15,56.1,67.0,57.5,20.0,58.9,58.6,Medium,Monitoring,1
+323,27,SpeedFreight Inc,2025-09-15,57.3,76.5,48.1,27.0,42.6,59.9,Medium,Monitoring,1
+324,27,SpeedFreight Inc,2025-11-15,57.7,65.1,56.9,37.7,46.4,58.6,Medium,Monitoring,0
+325,28,Ironclad Manufacturing,2024-01-15,61.1,52.4,52.4,36.0,23.0,53.1,Medium,Monitoring,0
+326,28,Ironclad Manufacturing,2024-03-15,53.3,59.6,49.0,44.2,38.2,53.5,Medium,Monitoring,1
+327,28,Ironclad Manufacturing,2024-05-15,55.6,54.4,52.3,31.8,31.6,52.1,Medium,Monitoring,0
+328,28,Ironclad Manufacturing,2024-07-15,47.8,51.3,53.6,31.6,37.0,48.8,Medium,Monitoring,0
+329,28,Ironclad Manufacturing,2024-09-15,63.4,48.6,46.1,39.3,37.2,52.2,Medium,Monitoring,0
+330,28,Ironclad Manufacturing,2024-11-15,56.8,46.6,60.1,32.1,34.2,51.5,Medium,Monitoring,0
+331,28,Ironclad Manufacturing,2025-01-15,49.3,67.7,60.1,31.6,46.6,56.9,Medium,Monitoring,1
+332,28,Ironclad Manufacturing,2025-03-15,56.8,47.0,46.3,28.5,35.9,48.8,Medium,Monitoring,0
+333,28,Ironclad Manufacturing,2025-05-15,42.8,52.0,46.1,22.0,23.8,44.7,Medium,Monitoring,0
+334,28,Ironclad Manufacturing,2025-07-15,51.8,51.7,40.9,30.2,28.8,47.3,Medium,Monitoring,0
+335,28,Ironclad Manufacturing,2025-09-15,52.2,50.7,49.5,23.6,22.3,48.2,Medium,Monitoring,0
+336,28,Ironclad Manufacturing,2025-11-15,47.8,60.6,55.3,43.4,30.9,52.7,Medium,Monitoring,0
+337,29,ProConsult Partners,2024-01-15,77.8,74.1,71.5,37.9,51.1,71.9,High,In Progress,0
+338,29,ProConsult Partners,2024-03-15,74.0,83.9,74.6,37.9,47.9,74.5,High,In Progress,0
+339,29,ProConsult Partners,2024-05-15,70.8,73.3,90.8,23.1,52.8,72.4,High,In Progress,0
+340,29,ProConsult Partners,2024-07-15,78.1,88.3,78.7,53.1,60.5,79.7,High,Monitoring,0
+341,29,ProConsult Partners,2024-09-15,76.6,80.6,73.7,41.2,52.2,74.4,High,In Progress,0
+342,29,ProConsult Partners,2024-11-15,80.1,72.0,74.9,51.2,63.5,73.9,High,In Progress,0
+343,29,ProConsult Partners,2025-01-15,75.7,76.2,84.6,34.3,46.3,74.1,High,In Progress,0
+344,29,ProConsult Partners,2025-03-15,74.2,78.8,83.4,27.7,43.0,73.8,High,Monitoring,0
+345,29,ProConsult Partners,2025-05-15,79.6,79.9,76.1,40.9,35.0,74.8,High,Monitoring,0
+346,29,ProConsult Partners,2025-07-15,70.9,74.3,75.4,36.3,68.5,71.2,High,In Progress,0
+347,29,ProConsult Partners,2025-09-15,72.2,82.9,71.0,47.5,48.1,73.3,High,In Progress,0
+348,29,ProConsult Partners,2025-11-15,78.7,80.2,74.1,27.3,52.3,74.4,High,Monitoring,0
+349,30,NaturalRes Corp,2024-01-15,54.8,54.2,55.3,48.3,48.6,54.1,Medium,Monitoring,0
+350,30,NaturalRes Corp,2024-03-15,54.6,54.8,45.9,29.6,50.4,51.5,Medium,Monitoring,0
+351,30,NaturalRes Corp,2024-05-15,54.0,52.5,54.2,18.8,30.1,50.6,Medium,Monitoring,0
+352,30,NaturalRes Corp,2024-07-15,54.0,54.5,55.7,26.7,40.1,52.5,Medium,Monitoring,0
+353,30,NaturalRes Corp,2024-09-15,51.0,60.9,53.8,28.3,58.4,54.2,Medium,Monitoring,0
+354,30,NaturalRes Corp,2024-11-15,60.6,64.3,51.9,24.5,35.5,57.1,Medium,Monitoring,0
+355,30,NaturalRes Corp,2025-01-15,58.2,62.7,50.5,40.4,53.2,57.1,Medium,Monitoring,0
+356,30,NaturalRes Corp,2025-03-15,58.2,52.6,43.7,37.0,47.2,51.7,Medium,Monitoring,0
+357,30,NaturalRes Corp,2025-05-15,61.3,55.0,56.3,45.9,45.9,56.6,Medium,Monitoring,0
+358,30,NaturalRes Corp,2025-07-15,61.6,49.6,56.2,24.8,28.1,52.8,Medium,Monitoring,0
+359,30,NaturalRes Corp,2025-09-15,64.4,54.7,45.5,16.7,44.0,53.8,Medium,Monitoring,0
+360,30,NaturalRes Corp,2025-11-15,48.8,49.9,57.0,38.9,34.7,49.6,Medium,Monitoring,0
+361,31,Quantum IT Group,2024-01-15,41.0,31.4,31.7,16.1,33.0,34.2,Low,Completed,0
+362,31,Quantum IT Group,2024-03-15,31.4,34.1,35.3,27.3,37.7,33.2,Low,Completed,0
+363,31,Quantum IT Group,2024-05-15,37.0,31.6,25.9,6.3,39.5,31.5,Low,Completed,0
+364,31,Quantum IT Group,2024-07-15,29.4,39.8,31.2,31.8,25.0,33.3,Low,Completed,0
+365,31,Quantum IT Group,2024-09-15,39.7,38.8,30.5,35.3,37.1,37.2,Medium,Monitoring,0
+366,31,Quantum IT Group,2024-11-15,34.0,30.6,34.6,0.3,26.7,30.9,Low,Completed,0
+367,31,Quantum IT Group,2025-01-15,35.8,35.7,32.2,16.3,36.4,34.1,Low,Completed,0
+368,31,Quantum IT Group,2025-03-15,35.4,29.5,28.7,43.3,20.1,31.6,Low,Completed,0
+369,31,Quantum IT Group,2025-05-15,31.1,32.0,31.6,31.6,28.2,31.4,Low,Completed,0
+370,31,Quantum IT Group,2025-07-15,36.2,35.3,29.9,42.4,16.4,34.0,Low,Completed,0
+371,31,Quantum IT Group,2025-09-15,33.1,37.7,23.9,40.4,28.4,33.0,Low,Completed,0
+372,31,Quantum IT Group,2025-11-15,40.3,36.7,31.3,23.0,32.8,36.0,Medium,Monitoring,0
+373,32,GlobalLink Logistics,2024-01-15,32.4,38.2,28.5,1.7,22.4,31.6,Low,Completed,0
+374,32,GlobalLink Logistics,2024-03-15,35.2,30.8,23.6,16.1,15.5,29.4,Low,Completed,0
+375,32,GlobalLink Logistics,2024-05-15,35.8,31.3,28.1,37.1,20.1,31.9,Low,Completed,0
+376,32,GlobalLink Logistics,2024-07-15,34.7,32.7,29.6,31.1,35.7,32.8,Low,Completed,0
+377,32,GlobalLink Logistics,2024-09-15,28.4,33.6,24.8,41.9,28.9,30.2,Low,Completed,0
+378,32,GlobalLink Logistics,2024-11-15,39.1,36.9,33.7,14.6,30.4,35.6,Medium,Monitoring,0
+379,32,GlobalLink Logistics,2025-01-15,33.5,35.7,28.2,32.3,27.4,32.9,Low,Completed,0
+380,32,GlobalLink Logistics,2025-03-15,31.5,41.1,23.3,30.8,29.8,33.1,Low,Completed,0
+381,32,GlobalLink Logistics,2025-05-15,39.4,23.4,30.1,29.3,46.4,31.8,Low,Completed,0
+382,32,GlobalLink Logistics,2025-07-15,26.8,32.8,27.7,32.9,27.7,29.4,Low,Completed,0
+383,32,GlobalLink Logistics,2025-09-15,41.1,46.9,23.1,29.0,28.0,38.3,Medium,Monitoring,1
+384,32,GlobalLink Logistics,2025-11-15,41.3,27.1,36.1,23.6,23.3,33.5,Low,Completed,0
+385,33,Summit Manufacturing,2024-01-15,35.6,29.4,31.9,3.9,15.0,30.1,Low,Completed,0
+386,33,Summit Manufacturing,2024-03-15,43.8,30.6,31.4,34.0,37.0,35.9,Medium,Monitoring,0
+387,33,Summit Manufacturing,2024-05-15,36.3,35.9,43.5,27.0,35.2,37.1,Medium,Monitoring,0
+388,33,Summit Manufacturing,2024-07-15,40.3,43.2,31.2,27.5,18.9,37.8,Medium,Monitoring,0
+389,33,Summit Manufacturing,2024-09-15,36.9,41.4,35.3,36.2,28.4,37.7,Medium,Monitoring,0
+390,33,Summit Manufacturing,2024-11-15,42.9,39.1,27.5,8.0,27.0,36.0,Medium,Monitoring,0
+391,33,Summit Manufacturing,2025-01-15,42.0,41.1,31.5,43.5,30.4,39.1,Medium,Monitoring,0
+392,33,Summit Manufacturing,2025-03-15,37.2,29.5,29.8,37.6,25.9,32.5,Low,Completed,0
+393,33,Summit Manufacturing,2025-05-15,38.3,34.3,36.2,41.7,28.6,36.2,Medium,Monitoring,0
+394,33,Summit Manufacturing,2025-07-15,44.0,39.2,23.8,18.7,32.6,36.4,Medium,Monitoring,0
+395,33,Summit Manufacturing,2025-09-15,32.3,35.7,29.2,31.7,21.5,32.3,Low,Completed,0
+396,33,Summit Manufacturing,2025-11-15,37.6,41.9,38.4,27.8,39.6,38.9,Medium,Monitoring,0
+397,34,Insight Consulting,2024-01-15,46.8,56.6,51.5,17.4,34.4,49.1,Medium,Monitoring,0
+398,34,Insight Consulting,2024-03-15,59.8,46.8,53.3,49.6,55.9,53.2,Medium,Monitoring,0
+399,34,Insight Consulting,2024-05-15,62.5,64.9,56.4,6.9,30.0,57.7,Medium,Monitoring,0
+400,34,Insight Consulting,2024-07-15,56.4,63.5,47.2,35.4,36.0,55.0,Medium,Monitoring,1
+401,34,Insight Consulting,2024-09-15,49.8,52.1,47.1,23.9,20.4,47.3,Medium,Monitoring,0
+402,34,Insight Consulting,2024-11-15,51.3,59.6,43.7,23.4,35.8,50.5,Medium,Monitoring,0
+403,34,Insight Consulting,2025-01-15,57.7,48.7,47.5,22.3,47.7,50.2,Medium,Monitoring,0
+404,34,Insight Consulting,2025-03-15,62.8,56.4,56.5,26.7,28.2,55.8,Medium,Monitoring,0
+405,34,Insight Consulting,2025-05-15,51.0,43.1,58.0,30.3,30.6,47.6,Medium,Monitoring,0
+406,34,Insight Consulting,2025-07-15,54.9,74.8,54.5,28.4,55.8,60.5,Medium,Monitoring,1
+407,34,Insight Consulting,2025-09-15,50.7,51.1,51.7,27.2,49.2,49.8,Medium,Monitoring,0
+408,34,Insight Consulting,2025-11-15,54.8,52.1,60.0,38.8,40.0,53.4,Medium,Monitoring,0
+409,35,PureSource Materials,2024-01-15,57.4,73.3,55.6,46.3,48.0,61.6,Medium,Monitoring,0
+410,35,PureSource Materials,2024-03-15,67.1,67.6,60.6,29.5,43.7,62.9,Medium,Monitoring,0
+411,35,PureSource Materials,2024-05-15,63.0,66.7,62.6,35.6,35.9,61.5,Medium,Monitoring,0
+412,35,PureSource Materials,2024-07-15,54.9,57.9,63.7,42.6,42.3,56.5,Medium,Monitoring,0
+413,35,PureSource Materials,2024-09-15,64.2,66.7,60.3,23.9,46.3,61.4,Medium,Monitoring,0
+414,35,PureSource Materials,2024-11-15,60.2,64.2,56.4,57.8,32.9,59.4,Medium,Monitoring,0
+415,35,PureSource Materials,2025-01-15,61.7,57.5,53.5,39.4,49.6,56.9,Medium,Monitoring,0
+416,35,PureSource Materials,2025-03-15,69.1,53.0,53.8,25.5,42.4,56.9,Medium,Monitoring,0
+417,35,PureSource Materials,2025-05-15,61.4,64.9,67.9,41.7,43.0,62.0,Medium,Monitoring,0
+418,35,PureSource Materials,2025-07-15,66.4,71.6,62.0,28.8,45.1,64.4,Medium,Monitoring,0
+419,35,PureSource Materials,2025-09-15,61.8,69.3,65.6,45.3,32.7,62.9,Medium,Monitoring,0
+420,35,PureSource Materials,2025-11-15,61.1,63.3,55.1,27.6,55.3,58.7,Medium,Monitoring,0
+421,36,InnovateTech Ltd,2024-01-15,41.4,33.9,41.1,19.6,30.7,37.1,Medium,Monitoring,0
+422,36,InnovateTech Ltd,2024-03-15,41.4,46.4,35.0,27.2,28.8,40.5,Medium,Monitoring,0
+423,36,InnovateTech Ltd,2024-05-15,39.7,39.6,35.3,18.8,20.5,36.8,Medium,Monitoring,0
+424,36,InnovateTech Ltd,2024-07-15,39.9,48.9,38.9,22.4,25.5,41.3,Medium,Monitoring,0
+425,36,InnovateTech Ltd,2024-09-15,48.8,43.3,24.3,32.4,40.1,40.7,Medium,Monitoring,0
+426,36,InnovateTech Ltd,2024-11-15,40.9,53.0,34.7,16.1,26.6,42.0,Medium,Monitoring,1
+427,36,InnovateTech Ltd,2025-01-15,43.8,41.2,40.9,28.4,29.8,40.9,Medium,Monitoring,0
+428,36,InnovateTech Ltd,2025-03-15,39.0,37.2,33.4,28.3,29.0,36.2,Medium,Monitoring,0
+429,36,InnovateTech Ltd,2025-05-15,39.3,38.3,38.2,19.3,34.8,37.5,Medium,Monitoring,0
+430,36,InnovateTech Ltd,2025-07-15,42.6,66.0,31.1,24.3,28.6,46.9,Medium,Monitoring,1
+431,36,InnovateTech Ltd,2025-09-15,42.1,35.4,28.9,24.4,8.0,34.5,Low,Completed,0
+432,36,InnovateTech Ltd,2025-11-15,38.8,41.1,34.9,33.4,34.6,38.3,Medium,Monitoring,0
+433,37,AirCargo Express,2024-01-15,50.2,43.5,51.8,29.5,32.3,46.3,Medium,Monitoring,0
+434,37,AirCargo Express,2024-03-15,45.1,46.8,38.3,44.3,28.6,43.4,Medium,Monitoring,0
+435,37,AirCargo Express,2024-05-15,40.8,54.9,34.6,46.7,31.2,44.3,Medium,Monitoring,0
+436,37,AirCargo Express,2024-07-15,51.4,45.4,40.4,32.4,39.2,45.5,Medium,Monitoring,0
+437,37,AirCargo Express,2024-09-15,50.1,45.5,43.0,20.8,40.2,45.1,Medium,Monitoring,0
+438,37,AirCargo Express,2024-11-15,42.9,45.9,40.7,35.3,18.0,41.9,Medium,Monitoring,0
+439,37,AirCargo Express,2025-01-15,42.6,31.3,34.1,22.9,37.0,35.7,Medium,Monitoring,0
+440,37,AirCargo Express,2025-03-15,39.9,39.3,35.9,28.6,31.6,37.9,Medium,Monitoring,0
+441,37,AirCargo Express,2025-05-15,38.6,56.0,51.6,32.4,30.3,46.6,Medium,Monitoring,1
+442,37,AirCargo Express,2025-07-15,49.7,51.6,34.6,15.4,35.3,44.9,Medium,Monitoring,0
+443,37,AirCargo Express,2025-09-15,48.3,54.7,34.0,26.4,39.8,46.2,Medium,Monitoring,0
+444,37,AirCargo Express,2025-11-15,43.4,41.9,40.0,43.0,22.8,41.2,Medium,Monitoring,0
+445,38,PowerForge Mfg,2024-01-15,40.3,29.7,34.4,3.1,29.4,33.0,Low,Completed,0
+446,38,PowerForge Mfg,2024-03-15,36.8,29.4,34.9,21.7,40.5,33.3,Low,Completed,0
+447,38,PowerForge Mfg,2024-05-15,30.2,29.3,28.2,23.9,25.8,28.9,Low,Completed,0
+448,38,PowerForge Mfg,2024-07-15,48.0,31.9,36.8,20.6,5.7,36.6,Medium,Monitoring,0
+449,38,PowerForge Mfg,2024-09-15,42.4,39.4,34.2,22.3,22.6,37.7,Medium,Monitoring,0
+450,38,PowerForge Mfg,2024-11-15,35.7,32.2,32.5,19.1,40.3,33.2,Low,Completed,0
+451,38,PowerForge Mfg,2025-01-15,34.3,29.7,28.4,45.5,25.1,31.6,Low,Completed,0
+452,38,PowerForge Mfg,2025-03-15,31.0,28.4,26.1,39.1,14.6,28.7,Low,Completed,0
+453,38,PowerForge Mfg,2025-05-15,39.4,41.1,31.1,28.8,18.6,36.8,Medium,Monitoring,0
+454,38,PowerForge Mfg,2025-07-15,31.5,29.2,29.5,9.9,30.0,29.2,Low,Completed,0
+455,38,PowerForge Mfg,2025-09-15,35.6,40.5,24.1,36.4,35.8,35.1,Medium,Monitoring,0
+456,38,PowerForge Mfg,2025-11-15,42.8,30.7,34.0,25.4,11.7,34.4,Low,Completed,0
+457,39,Clarity Consulting,2024-01-15,32.5,35.9,22.7,19.1,26.6,30.8,Low,Completed,0
+458,39,Clarity Consulting,2024-03-15,38.3,39.4,33.8,16.8,17.4,35.7,Medium,Monitoring,0
+459,39,Clarity Consulting,2024-05-15,29.8,43.2,25.5,30.1,34.7,33.9,Low,Completed,0
+460,39,Clarity Consulting,2024-07-15,30.4,34.1,24.7,27.1,15.8,29.7,Low,Completed,0
+461,39,Clarity Consulting,2024-09-15,33.2,39.6,15.6,44.4,18.2,31.7,Low,Completed,0
+462,39,Clarity Consulting,2024-11-15,37.4,35.4,32.4,27.2,46.6,35.6,Medium,Monitoring,0
+463,39,Clarity Consulting,2025-01-15,35.4,31.2,28.1,34.0,43.8,32.8,Low,Completed,0
+464,39,Clarity Consulting,2025-03-15,21.9,20.9,24.6,19.4,26.4,22.2,Low,Completed,0
+465,39,Clarity Consulting,2025-05-15,39.9,33.8,18.5,8.8,26.9,31.3,Low,Completed,0
+466,39,Clarity Consulting,2025-07-15,29.4,35.0,18.4,0.0,17.5,27.1,Low,Completed,0
+467,39,Clarity Consulting,2025-09-15,42.4,26.7,18.1,28.7,21.8,30.3,Low,Completed,0
+468,39,Clarity Consulting,2025-11-15,37.7,36.9,22.9,25.5,46.4,34.3,Low,Completed,0
+469,40,NightOwl Logistics,2024-01-15,40.5,37.0,25.3,12.4,20.3,33.8,Low,Completed,0
+470,40,NightOwl Logistics,2024-03-15,33.0,24.8,31.1,30.2,26.1,29.3,Low,Completed,0
+471,40,NightOwl Logistics,2024-05-15,42.1,45.3,45.7,24.9,26.4,42.3,Medium,Monitoring,0
+472,40,NightOwl Logistics,2024-07-15,41.5,36.2,33.6,22.6,19.8,36.0,Medium,Monitoring,0
+473,40,NightOwl Logistics,2024-09-15,38.2,46.6,45.4,32.8,24.3,41.6,Medium,Monitoring,0
+474,40,NightOwl Logistics,2024-11-15,46.4,32.6,34.8,40.3,30.5,38.2,Medium,Monitoring,0
+475,40,NightOwl Logistics,2025-01-15,44.7,38.6,30.9,38.6,3.8,37.5,Medium,Monitoring,0
+476,40,NightOwl Logistics,2025-03-15,36.5,52.1,36.8,16.7,39.1,41.2,Medium,Monitoring,1
+477,40,NightOwl Logistics,2025-05-15,38.4,51.9,37.2,14.0,46.8,42.1,Medium,Monitoring,1
+478,40,NightOwl Logistics,2025-07-15,39.2,43.9,39.2,24.3,38.6,40.1,Medium,Monitoring,0
+479,40,NightOwl Logistics,2025-09-15,36.0,43.6,22.1,0.0,36.2,34.1,Low,Completed,0
+480,40,NightOwl Logistics,2025-11-15,40.8,44.1,35.2,19.6,37.2,39.6,Medium,Monitoring,0
+481,41,Vendor 041,2024-01-15,47.5,48.9,44.3,23.6,28.8,45.2,Medium,Monitoring,0
+482,41,Vendor 041,2024-03-15,45.4,56.9,41.9,28.8,18.8,46.6,Medium,Monitoring,0
+483,41,Vendor 041,2024-05-15,44.0,40.4,41.8,18.0,37.4,40.6,Medium,Monitoring,0
+484,41,Vendor 041,2024-07-15,53.2,52.7,42.3,10.4,25.6,47.3,Medium,Monitoring,0
+485,41,Vendor 041,2024-09-15,43.7,42.6,47.3,28.5,35.0,42.9,Medium,Monitoring,0
+486,41,Vendor 041,2024-11-15,47.8,47.4,42.4,35.0,38.7,45.5,Medium,Monitoring,0
+487,41,Vendor 041,2025-01-15,47.6,39.6,49.8,24.5,26.1,43.0,Medium,Monitoring,0
+488,41,Vendor 041,2025-03-15,48.9,39.8,47.1,45.7,37.0,44.6,Medium,Monitoring,0
+489,41,Vendor 041,2025-05-15,40.4,56.1,41.0,12.8,34.9,44.3,Medium,Monitoring,0
+490,41,Vendor 041,2025-07-15,52.9,56.3,42.5,26.9,46.5,50.4,Medium,Monitoring,1
+491,41,Vendor 041,2025-09-15,42.5,49.1,43.8,26.4,31.2,43.7,Medium,Monitoring,0
+492,41,Vendor 041,2025-11-15,46.1,61.3,52.0,37.8,28.4,51.3,Medium,Monitoring,0
+493,42,Vendor 042,2024-01-15,38.8,38.5,25.6,27.8,39.6,35.5,Medium,Monitoring,0
+494,42,Vendor 042,2024-03-15,34.7,42.2,31.4,14.4,36.1,35.7,Medium,Monitoring,0
+495,42,Vendor 042,2024-05-15,38.7,32.2,29.2,33.2,24.0,33.5,Low,Completed,0
+496,42,Vendor 042,2024-07-15,38.7,42.3,31.1,38.6,35.6,38.3,Medium,Monitoring,0
+497,42,Vendor 042,2024-09-15,39.7,34.1,27.6,25.7,16.8,33.5,Low,Completed,0
+498,42,Vendor 042,2024-11-15,34.4,38.7,32.0,35.7,25.4,35.0,Medium,Monitoring,0
+499,42,Vendor 042,2025-01-15,31.9,36.7,33.9,22.3,29.0,33.4,Low,Completed,0
+500,42,Vendor 042,2025-03-15,38.6,40.1,46.4,28.0,34.4,39.9,Medium,Monitoring,0
+501,42,Vendor 042,2025-05-15,38.6,36.5,32.7,24.3,35.0,35.8,Medium,Monitoring,0
+502,42,Vendor 042,2025-07-15,38.4,38.4,25.3,31.1,24.6,34.7,Low,Completed,0
+503,42,Vendor 042,2025-09-15,40.8,39.6,26.9,29.3,35.1,36.7,Medium,Monitoring,0
+504,42,Vendor 042,2025-11-15,38.0,36.7,29.7,28.0,28.7,34.9,Low,Completed,0
+505,43,Vendor 043,2024-01-15,62.4,66.9,61.0,16.2,49.9,60.7,Medium,Monitoring,0
+506,43,Vendor 043,2024-03-15,64.3,65.1,64.0,35.1,44.0,62.0,Medium,Monitoring,0
+507,43,Vendor 043,2024-05-15,63.4,77.3,62.8,22.4,29.6,64.4,Medium,Monitoring,0
+508,43,Vendor 043,2024-07-15,59.2,60.6,59.2,39.2,57.0,58.6,Medium,Monitoring,0
+509,43,Vendor 043,2024-09-15,66.1,63.5,59.8,40.7,50.3,61.9,Medium,Monitoring,1
+510,43,Vendor 043,2024-11-15,67.7,69.2,65.9,36.7,32.2,64.5,Medium,Monitoring,0
+511,43,Vendor 043,2025-01-15,74.2,59.4,53.6,41.4,33.1,61.2,Medium,Monitoring,0
+512,43,Vendor 043,2025-03-15,75.2,63.6,66.5,16.4,54.0,65.4,High,In Progress,0
+513,43,Vendor 043,2025-05-15,65.1,68.0,55.0,29.2,27.0,60.4,Medium,Monitoring,0
+514,43,Vendor 043,2025-07-15,61.0,73.9,67.8,37.4,50.8,65.2,High,In Progress,1
+515,43,Vendor 043,2025-09-15,63.7,69.6,63.9,31.3,54.3,63.7,Medium,Monitoring,0
+516,43,Vendor 043,2025-11-15,64.5,71.2,57.8,31.7,36.1,62.5,Medium,Monitoring,0
+517,44,Vendor 044,2024-01-15,51.3,50.3,47.3,28.3,32.2,48.0,Medium,Monitoring,0
+518,44,Vendor 044,2024-03-15,41.6,56.2,44.3,42.2,31.0,46.7,Medium,Monitoring,1
+519,44,Vendor 044,2024-05-15,49.3,52.7,44.3,19.0,34.5,47.2,Medium,Monitoring,0
+520,44,Vendor 044,2024-07-15,52.5,52.0,45.3,29.9,51.1,49.7,Medium,Monitoring,1
+521,44,Vendor 044,2024-09-15,52.7,57.9,40.2,8.6,18.3,48.1,Medium,Monitoring,0
+522,44,Vendor 044,2024-11-15,43.4,40.7,42.5,35.5,40.1,41.7,Medium,Monitoring,0
+523,44,Vendor 044,2025-01-15,45.7,56.9,45.6,28.7,35.0,48.2,Medium,Monitoring,0
+524,44,Vendor 044,2025-03-15,54.9,44.5,41.1,10.5,27.4,44.9,Medium,Monitoring,0
+525,44,Vendor 044,2025-05-15,49.0,41.9,41.0,20.9,22.8,42.2,Medium,Monitoring,0
+526,44,Vendor 044,2025-07-15,47.8,61.9,43.6,18.6,43.2,50.2,Medium,Monitoring,1
+527,44,Vendor 044,2025-09-15,54.9,45.8,33.5,41.6,46.4,46.4,Medium,Monitoring,0
+528,44,Vendor 044,2025-11-15,48.3,43.8,38.3,38.4,49.9,44.3,Medium,Monitoring,0
+529,45,Vendor 045,2024-01-15,49.9,60.0,53.8,25.6,38.7,52.4,Medium,Monitoring,0
+530,45,Vendor 045,2024-03-15,56.2,59.8,56.0,9.6,46.6,54.6,Medium,Monitoring,0
+531,45,Vendor 045,2024-05-15,55.1,73.5,55.9,33.1,59.3,60.8,Medium,Monitoring,1
+532,45,Vendor 045,2024-07-15,61.2,77.9,53.7,39.3,36.6,63.2,Medium,Monitoring,1
+533,45,Vendor 045,2024-09-15,57.4,71.9,55.1,40.6,36.2,60.1,Medium,Monitoring,0
+534,45,Vendor 045,2024-11-15,66.6,60.4,61.1,45.4,44.2,61.1,Medium,Monitoring,0
+535,45,Vendor 045,2025-01-15,60.3,56.5,55.8,24.8,44.8,55.5,Medium,Monitoring,0
+536,45,Vendor 045,2025-03-15,55.4,64.3,55.1,17.5,35.1,55.6,Medium,Monitoring,1
+537,45,Vendor 045,2025-05-15,57.7,66.6,56.0,36.7,46.8,58.9,Medium,Monitoring,0
+538,45,Vendor 045,2025-07-15,61.6,63.5,61.3,28.7,40.6,59.5,Medium,Monitoring,0
+539,45,Vendor 045,2025-09-15,62.8,53.5,55.6,39.5,44.0,56.0,Medium,Monitoring,0
+540,45,Vendor 045,2025-11-15,53.8,60.9,55.9,37.4,35.9,55.0,Medium,Monitoring,0
+541,46,Vendor 046,2024-01-15,55.0,58.9,53.2,20.7,33.2,53.2,Medium,Monitoring,0
+542,46,Vendor 046,2024-03-15,62.8,59.3,56.7,26.1,46.1,57.7,Medium,Monitoring,0
+543,46,Vendor 046,2024-05-15,64.8,66.8,60.5,27.4,36.5,61.4,Medium,Monitoring,0
+544,46,Vendor 046,2024-07-15,60.9,61.4,51.2,56.0,46.3,58.1,Medium,Monitoring,0
+545,46,Vendor 046,2024-09-15,68.0,57.5,62.4,33.2,36.1,59.8,Medium,Monitoring,0
+546,46,Vendor 046,2024-11-15,58.5,67.5,64.1,31.1,20.2,59.5,Medium,Monitoring,0
+547,46,Vendor 046,2025-01-15,55.1,63.1,54.7,26.3,34.4,55.3,Medium,Monitoring,0
+548,46,Vendor 046,2025-03-15,52.6,63.6,57.1,31.6,36.3,55.5,Medium,Monitoring,0
+549,46,Vendor 046,2025-05-15,58.1,57.9,58.4,49.6,25.6,56.0,Medium,Monitoring,0
+550,46,Vendor 046,2025-07-15,59.1,58.7,51.8,14.8,44.1,54.5,Medium,Monitoring,0
+551,46,Vendor 046,2025-09-15,64.5,55.8,59.8,26.6,34.5,57.1,Medium,Monitoring,0
+552,46,Vendor 046,2025-11-15,61.5,74.4,56.7,38.3,41.2,62.9,Medium,Monitoring,1
+553,47,Vendor 047,2024-01-15,45.2,53.5,46.8,18.2,35.9,46.6,Medium,Monitoring,0
+554,47,Vendor 047,2024-03-15,52.2,57.9,48.6,26.3,38.8,51.5,Medium,Monitoring,0
+555,47,Vendor 047,2024-05-15,46.7,61.4,49.2,22.7,34.3,50.5,Medium,Monitoring,0
+556,47,Vendor 047,2024-07-15,52.4,61.0,54.3,11.3,45.1,53.4,Medium,Monitoring,0
+557,47,Vendor 047,2024-09-15,50.2,71.7,57.2,14.5,47.8,57.2,Medium,Monitoring,1
+558,47,Vendor 047,2024-11-15,61.0,55.9,48.2,23.3,47.1,54.1,Medium,Monitoring,0
+559,47,Vendor 047,2025-01-15,60.1,73.5,49.2,30.8,45.5,60.4,Medium,Monitoring,1
+560,47,Vendor 047,2025-03-15,59.4,59.8,62.1,30.5,43.9,57.9,Medium,Monitoring,0
+561,47,Vendor 047,2025-05-15,63.8,65.0,61.2,47.6,41.6,61.8,Medium,Monitoring,1
+562,47,Vendor 047,2025-07-15,54.6,56.1,54.4,45.4,44.1,54.1,Medium,Monitoring,0
+563,47,Vendor 047,2025-09-15,59.5,47.9,48.0,27.6,44.9,50.8,Medium,Monitoring,0
+564,47,Vendor 047,2025-11-15,56.8,54.0,46.2,38.9,36.4,51.8,Medium,Monitoring,0
+565,48,Vendor 048,2024-01-15,58.3,60.1,48.5,15.0,36.6,53.7,Medium,Monitoring,0
+566,48,Vendor 048,2024-03-15,49.0,48.5,57.4,36.4,62.2,50.5,Medium,Monitoring,0
+567,48,Vendor 048,2024-05-15,59.9,56.8,49.6,28.5,32.0,53.8,Medium,Monitoring,0
+568,48,Vendor 048,2024-07-15,58.9,53.1,57.1,42.6,52.6,55.4,Medium,Monitoring,0
+569,48,Vendor 048,2024-09-15,55.5,59.4,42.9,16.8,37.3,51.5,Medium,Monitoring,0
+570,48,Vendor 048,2024-11-15,55.2,69.1,61.7,25.3,46.0,59.4,Medium,Monitoring,1
+571,48,Vendor 048,2025-01-15,55.6,53.0,56.1,29.4,46.4,53.0,Medium,Monitoring,0
+572,48,Vendor 048,2025-03-15,56.8,53.8,52.3,21.5,35.4,52.0,Medium,Monitoring,0
+573,48,Vendor 048,2025-05-15,49.0,54.7,60.3,15.7,42.5,51.3,Medium,Monitoring,0
+574,48,Vendor 048,2025-07-15,51.1,52.8,50.3,31.8,26.3,49.3,Medium,Monitoring,0
+575,48,Vendor 048,2025-09-15,56.2,59.2,58.4,10.7,43.9,54.8,Medium,Monitoring,0
+576,48,Vendor 048,2025-11-15,59.8,52.0,56.6,19.4,41.6,53.5,Medium,Monitoring,0
+577,49,Vendor 049,2024-01-15,41.2,34.9,35.1,33.6,45.3,37.6,Medium,Monitoring,0
+578,49,Vendor 049,2024-03-15,43.3,40.5,38.3,43.6,35.6,40.9,Medium,Monitoring,0
+579,49,Vendor 049,2024-05-15,40.9,39.6,34.7,16.8,24.2,37.2,Medium,Monitoring,0
+580,49,Vendor 049,2024-07-15,40.2,43.4,39.5,27.0,35.3,40.3,Medium,Monitoring,0
+581,49,Vendor 049,2024-09-15,27.8,37.3,34.9,15.9,39.0,32.5,Low,Completed,0
+582,49,Vendor 049,2024-11-15,42.1,39.0,34.9,23.9,36.7,38.4,Medium,Monitoring,0
+583,49,Vendor 049,2025-01-15,38.6,34.7,22.2,19.4,15.4,31.8,Low,Completed,0
+584,49,Vendor 049,2025-03-15,39.4,41.8,34.2,7.4,33.9,37.3,Medium,Monitoring,0
+585,49,Vendor 049,2025-05-15,44.8,41.7,35.5,19.4,24.8,39.6,Medium,Monitoring,0
+586,49,Vendor 049,2025-07-15,38.6,43.1,35.5,7.2,23.7,37.2,Medium,Monitoring,0
+587,49,Vendor 049,2025-09-15,42.9,23.1,31.4,33.4,27.4,32.4,Low,Completed,0
+588,49,Vendor 049,2025-11-15,39.9,40.6,34.8,17.9,36.1,37.9,Medium,Monitoring,0
+589,50,Vendor 050,2024-01-15,46.0,43.9,32.9,34.5,26.3,41.1,Medium,Monitoring,0
+590,50,Vendor 050,2024-03-15,46.0,46.1,42.1,34.8,18.9,43.3,Medium,Monitoring,0
+591,50,Vendor 050,2024-05-15,39.1,49.7,46.8,15.3,24.5,42.4,Medium,Monitoring,1
+592,50,Vendor 050,2024-07-15,42.4,55.7,35.8,8.5,27.0,43.3,Medium,Monitoring,1
+593,50,Vendor 050,2024-09-15,44.1,40.4,28.3,26.2,39.1,38.5,Medium,Monitoring,0
+594,50,Vendor 050,2024-11-15,34.9,39.9,34.2,18.6,45.3,36.2,Medium,Monitoring,0
+595,50,Vendor 050,2025-01-15,41.5,49.3,50.8,2.1,32.6,43.7,Medium,Monitoring,1
+596,50,Vendor 050,2025-03-15,35.6,38.7,35.4,17.6,14.1,34.7,Low,Completed,0
+597,50,Vendor 050,2025-05-15,40.8,46.5,43.1,44.6,32.5,43.0,Medium,Monitoring,0
+598,50,Vendor 050,2025-07-15,41.5,49.7,37.8,24.1,36.8,42.5,Medium,Monitoring,0
+599,50,Vendor 050,2025-09-15,42.3,45.8,39.6,31.1,30.6,41.9,Medium,Monitoring,0
+600,50,Vendor 050,2025-11-15,47.5,36.8,38.3,0.0,38.8,39.1,Medium,Monitoring,0
+601,51,Vendor 051,2024-01-15,37.9,38.4,37.9,48.1,14.7,37.4,Medium,Monitoring,0
+602,51,Vendor 051,2024-03-15,41.8,35.2,37.7,22.5,39.1,37.6,Medium,Monitoring,0
+603,51,Vendor 051,2024-05-15,43.8,35.2,43.2,7.2,23.1,37.8,Medium,Monitoring,0
+604,51,Vendor 051,2024-07-15,45.2,43.2,33.0,34.1,23.2,40.4,Medium,Monitoring,0
+605,51,Vendor 051,2024-09-15,44.7,39.5,39.1,22.7,33.6,40.1,Medium,Monitoring,0
+606,51,Vendor 051,2024-11-15,34.6,40.0,32.5,38.1,16.6,35.3,Medium,Monitoring,0
+607,51,Vendor 051,2025-01-15,42.0,43.6,27.0,21.1,23.6,37.6,Medium,Monitoring,0
+608,51,Vendor 051,2025-03-15,39.2,46.2,43.6,35.6,24.3,41.6,Medium,Monitoring,0
+609,51,Vendor 051,2025-05-15,49.3,41.3,32.5,15.6,34.9,40.7,Medium,Monitoring,0
+610,51,Vendor 051,2025-07-15,41.0,31.3,35.1,35.6,38.4,36.0,Medium,Monitoring,0
+611,51,Vendor 051,2025-09-15,41.0,32.4,31.7,20.8,36.5,34.9,Low,Completed,0
+612,51,Vendor 051,2025-11-15,38.8,45.6,31.7,15.8,38.3,38.6,Medium,Monitoring,0
+613,52,Vendor 052,2024-01-15,33.0,29.6,24.4,25.9,27.6,29.5,Low,Completed,0
+614,52,Vendor 052,2024-03-15,31.0,28.2,24.3,10.9,14.7,26.9,Low,Completed,0
+615,52,Vendor 052,2024-05-15,37.5,20.7,22.5,23.2,36.2,27.8,Low,Completed,0
+616,52,Vendor 052,2024-07-15,31.7,39.8,30.9,28.7,14.9,33.4,Low,Completed,0
+617,52,Vendor 052,2024-09-15,37.6,28.3,11.0,22.0,23.4,27.5,Low,Completed,0
+618,52,Vendor 052,2024-11-15,31.6,27.8,21.8,14.2,52.2,28.5,Low,Completed,0
+619,52,Vendor 052,2025-01-15,27.7,30.0,36.0,27.9,41.0,30.8,Low,Completed,0
+620,52,Vendor 052,2025-03-15,26.6,26.9,26.4,20.6,23.4,26.2,Low,Completed,0
+621,52,Vendor 052,2025-05-15,30.6,26.3,17.4,22.6,26.6,25.9,Low,Completed,0
+622,52,Vendor 052,2025-07-15,38.9,23.9,25.1,18.5,10.2,28.4,Low,Completed,0
+623,52,Vendor 052,2025-09-15,39.3,27.1,19.3,20.0,34.6,29.8,Low,Completed,0
+624,52,Vendor 052,2025-11-15,34.3,19.9,28.3,22.7,34.4,27.5,Low,Completed,0
+625,53,Vendor 053,2024-01-15,58.4,76.0,56.1,32.9,39.5,61.9,Medium,Monitoring,1
+626,53,Vendor 053,2024-03-15,59.0,60.4,61.6,31.2,50.5,58.2,Medium,Monitoring,0
+627,53,Vendor 053,2024-05-15,59.8,59.7,60.9,37.8,29.6,57.4,Medium,Monitoring,0
+628,53,Vendor 053,2024-07-15,61.3,66.3,51.1,37.8,37.3,58.6,Medium,Monitoring,0
+629,53,Vendor 053,2024-09-15,56.4,61.2,58.9,22.7,55.3,56.8,Medium,Monitoring,0
+630,53,Vendor 053,2024-11-15,63.1,49.5,55.3,37.2,47.9,54.8,Medium,Monitoring,0
+631,53,Vendor 053,2025-01-15,57.9,61.5,61.6,46.2,27.9,57.8,Medium,Monitoring,0
+632,53,Vendor 053,2025-03-15,50.7,52.8,53.9,41.0,36.0,50.9,Medium,Monitoring,0
+633,53,Vendor 053,2025-05-15,60.7,56.2,49.9,24.9,39.6,54.1,Medium,Monitoring,0
+634,53,Vendor 053,2025-07-15,58.8,62.1,62.1,43.6,42.5,59.1,Medium,Monitoring,0
+635,53,Vendor 053,2025-09-15,56.0,56.0,50.4,33.4,59.6,53.9,Medium,Monitoring,0
+636,53,Vendor 053,2025-11-15,60.5,66.3,55.5,42.8,50.4,60.2,Medium,Monitoring,0
+637,54,Vendor 054,2024-01-15,61.1,57.7,49.1,28.0,32.7,54.4,Medium,Monitoring,0
+638,54,Vendor 054,2024-03-15,52.7,50.9,51.0,17.5,31.3,48.9,Medium,Monitoring,0
+639,54,Vendor 054,2024-05-15,55.1,53.5,45.0,38.3,28.4,50.3,Medium,Monitoring,0
+640,54,Vendor 054,2024-07-15,47.6,58.3,52.1,42.7,52.8,52.3,Medium,Monitoring,0
+641,54,Vendor 054,2024-09-15,51.3,45.1,41.2,26.2,16.4,44.1,Medium,Monitoring,0
+642,54,Vendor 054,2024-11-15,53.5,58.0,45.8,30.7,55.6,52.5,Medium,Monitoring,0
+643,54,Vendor 054,2025-01-15,58.2,55.6,55.0,39.1,30.4,54.3,Medium,Monitoring,0
+644,54,Vendor 054,2025-03-15,46.3,48.6,50.3,32.5,44.9,47.2,Medium,Monitoring,0
+645,54,Vendor 054,2025-05-15,51.0,57.9,51.2,16.4,35.5,50.9,Medium,Monitoring,0
+646,54,Vendor 054,2025-07-15,49.9,47.5,44.5,24.0,28.4,45.6,Medium,Monitoring,0
+647,54,Vendor 054,2025-09-15,44.8,55.2,52.6,19.8,34.7,48.3,Medium,Monitoring,0
+648,54,Vendor 054,2025-11-15,53.0,56.1,54.9,23.4,22.0,51.4,Medium,Monitoring,0
+649,55,Vendor 055,2024-01-15,52.9,52.6,52.7,26.2,41.4,50.8,Medium,Monitoring,0
+650,55,Vendor 055,2024-03-15,58.6,62.4,54.9,31.3,43.6,57.1,Medium,Monitoring,0
+651,55,Vendor 055,2024-05-15,58.8,55.4,47.2,15.8,43.0,52.3,Medium,Monitoring,0
+652,55,Vendor 055,2024-07-15,58.7,73.1,50.2,42.6,44.6,60.5,Medium,Monitoring,1
+653,55,Vendor 055,2024-09-15,52.0,47.5,47.2,51.9,23.4,48.0,Medium,Monitoring,0
+654,55,Vendor 055,2024-11-15,53.1,52.6,51.1,24.4,36.4,50.3,Medium,Monitoring,0
+655,55,Vendor 055,2025-01-15,53.5,54.8,51.7,50.3,38.1,52.7,Medium,Monitoring,0
+656,55,Vendor 055,2025-03-15,44.6,55.2,39.8,36.0,39.8,46.7,Medium,Monitoring,0
+657,55,Vendor 055,2025-05-15,52.5,54.7,59.0,21.2,44.5,52.6,Medium,Monitoring,0
+658,55,Vendor 055,2025-07-15,54.6,62.6,56.9,13.8,48.3,55.5,Medium,Monitoring,0
+659,55,Vendor 055,2025-09-15,57.5,55.0,38.7,36.6,36.2,50.7,Medium,Monitoring,0
+660,55,Vendor 055,2025-11-15,55.5,61.6,47.4,41.6,23.2,53.7,Medium,Monitoring,0
+661,56,Vendor 056,2024-01-15,66.3,67.6,63.4,31.7,37.1,63.0,Medium,Monitoring,0
+662,56,Vendor 056,2024-03-15,60.2,58.6,55.7,51.8,25.4,56.6,Medium,Monitoring,0
+663,56,Vendor 056,2024-05-15,57.9,58.2,59.0,22.7,51.8,56.1,Medium,Monitoring,0
+664,56,Vendor 056,2024-07-15,61.4,76.1,60.0,34.4,35.7,63.6,Medium,Monitoring,0
+665,56,Vendor 056,2024-09-15,61.1,68.2,65.5,46.7,35.4,62.5,Medium,Monitoring,0
+666,56,Vendor 056,2024-11-15,65.8,67.9,55.4,23.4,48.0,61.5,Medium,Monitoring,0
+667,56,Vendor 056,2025-01-15,60.9,67.2,69.2,30.2,28.2,61.6,Medium,Monitoring,0
+668,56,Vendor 056,2025-03-15,60.6,61.8,61.5,33.6,39.9,58.8,Medium,Monitoring,0
+669,56,Vendor 056,2025-05-15,59.2,82.8,66.2,42.5,39.2,67.0,High,Monitoring,1
+670,56,Vendor 056,2025-07-15,67.7,60.6,58.4,22.2,71.3,61.3,Medium,Monitoring,0
+671,56,Vendor 056,2025-09-15,59.5,67.1,59.9,30.3,46.6,60.1,Medium,Monitoring,0
+672,56,Vendor 056,2025-11-15,62.9,69.5,53.2,27.7,47.5,60.7,Medium,Monitoring,0
+673,57,Vendor 057,2024-01-15,43.5,40.6,42.8,27.4,26.5,40.7,Medium,Monitoring,0
+674,57,Vendor 057,2024-03-15,45.1,57.0,40.4,38.6,41.7,47.8,Medium,Monitoring,1
+675,57,Vendor 057,2024-05-15,51.5,41.2,41.0,22.7,37.5,43.7,Medium,Monitoring,0
+676,57,Vendor 057,2024-07-15,44.3,41.8,45.2,11.5,43.7,41.9,Medium,Monitoring,0
+677,57,Vendor 057,2024-09-15,43.2,53.3,45.6,29.7,26.4,45.7,Medium,Monitoring,1
+678,57,Vendor 057,2024-11-15,53.5,57.3,43.2,31.2,37.6,50.9,Medium,Monitoring,0
+679,57,Vendor 057,2025-01-15,42.7,34.6,48.8,46.3,44.3,41.4,Medium,Monitoring,0
+680,57,Vendor 057,2025-03-15,46.9,44.3,49.3,29.0,34.3,44.9,Medium,Monitoring,0
+681,57,Vendor 057,2025-05-15,49.8,45.5,45.5,36.8,17.3,45.1,Medium,Monitoring,0
+682,57,Vendor 057,2025-07-15,45.7,43.7,33.1,19.6,22.7,40.0,Medium,Monitoring,0
+683,57,Vendor 057,2025-09-15,50.1,49.4,33.8,46.3,29.6,45.4,Medium,Monitoring,0
+684,57,Vendor 057,2025-11-15,50.6,45.4,54.3,32.5,31.4,47.6,Medium,Monitoring,0
+685,58,Vendor 058,2024-01-15,38.9,42.5,22.1,14.9,19.7,34.7,Low,Completed,1
+686,58,Vendor 058,2024-03-15,35.3,29.2,21.8,17.2,43.8,30.0,Low,Completed,0
+687,58,Vendor 058,2024-05-15,36.5,31.8,20.5,21.9,15.2,29.9,Low,Completed,0
+688,58,Vendor 058,2024-07-15,32.1,30.1,28.3,13.9,23.8,29.3,Low,Completed,0
+689,58,Vendor 058,2024-09-15,32.2,33.7,22.1,26.4,25.8,30.1,Low,Completed,0
+690,58,Vendor 058,2024-11-15,32.7,32.6,20.4,19.9,21.7,29.0,Low,Completed,0
+691,58,Vendor 058,2025-01-15,31.0,28.7,23.3,21.1,45.8,28.9,Low,Completed,0
+692,58,Vendor 058,2025-03-15,34.6,31.0,29.3,15.7,31.2,31.1,Low,Completed,0
+693,58,Vendor 058,2025-05-15,31.7,26.5,29.9,25.8,25.3,28.9,Low,Completed,0
+694,58,Vendor 058,2025-07-15,37.1,30.1,28.6,26.1,21.3,31.6,Low,Completed,0
+695,58,Vendor 058,2025-09-15,30.5,31.7,29.4,10.3,34.7,29.9,Low,Completed,0
+696,58,Vendor 058,2025-11-15,40.5,36.2,26.2,23.2,28.6,34.7,Low,Completed,0
+697,59,Vendor 059,2024-01-15,44.6,42.3,37.1,27.1,20.2,40.2,Medium,Monitoring,0
+698,59,Vendor 059,2024-03-15,40.1,38.5,43.5,25.5,24.1,38.7,Medium,Monitoring,0
+699,59,Vendor 059,2024-05-15,43.4,43.4,34.5,14.3,17.1,38.8,Medium,Monitoring,0
+700,59,Vendor 059,2024-07-15,41.1,37.4,43.6,43.6,39.8,40.4,Medium,Monitoring,0
+701,59,Vendor 059,2024-09-15,45.7,43.5,34.5,38.4,51.6,42.6,Medium,Monitoring,0
+702,59,Vendor 059,2024-11-15,49.7,39.5,38.2,28.0,47.0,42.6,Medium,Monitoring,0
+703,59,Vendor 059,2025-01-15,44.7,45.6,44.2,30.3,41.7,44.1,Medium,Monitoring,0
+704,59,Vendor 059,2025-03-15,36.4,50.7,31.3,19.9,28.2,39.1,Medium,Monitoring,0
+705,59,Vendor 059,2025-05-15,40.6,44.2,43.2,31.4,37.1,41.7,Medium,Monitoring,0
+706,59,Vendor 059,2025-07-15,42.9,49.1,36.4,19.8,40.8,42.5,Medium,Monitoring,0
+707,59,Vendor 059,2025-09-15,42.0,40.1,42.2,31.1,33.9,40.4,Medium,Monitoring,0
+708,59,Vendor 059,2025-11-15,45.4,42.1,33.0,19.2,38.5,40.1,Medium,Monitoring,0
+709,60,Vendor 060,2024-01-15,35.4,33.2,35.7,19.1,34.5,33.8,Low,Completed,0
+710,60,Vendor 060,2024-03-15,42.1,31.2,33.6,2.2,38.2,34.4,Low,Completed,0
+711,60,Vendor 060,2024-05-15,40.3,37.5,27.3,36.8,32.3,36.1,Medium,Monitoring,0
+712,60,Vendor 060,2024-07-15,35.3,37.5,25.9,24.7,19.5,32.9,Low,Completed,0
+713,60,Vendor 060,2024-09-15,38.1,34.2,37.2,36.5,26.4,35.9,Medium,Monitoring,0
+714,60,Vendor 060,2024-11-15,43.9,33.4,28.4,32.9,26.8,35.7,Medium,Monitoring,0
+715,60,Vendor 060,2025-01-15,36.7,31.1,22.0,6.2,29.4,29.9,Low,Completed,0
+716,60,Vendor 060,2025-03-15,49.2,36.9,26.8,22.9,36.0,38.4,Medium,Monitoring,0
+717,60,Vendor 060,2025-05-15,42.7,39.8,31.9,30.5,17.1,37.6,Medium,Monitoring,0
+718,60,Vendor 060,2025-07-15,47.4,36.7,34.7,0.0,44.4,38.6,Medium,Monitoring,0
+719,60,Vendor 060,2025-09-15,33.6,36.5,36.5,10.5,33.8,34.1,Low,Completed,0
+720,60,Vendor 060,2025-11-15,40.5,29.3,24.2,21.9,26.4,31.7,Low,Completed,0
+721,61,Vendor 061,2024-01-15,28.9,17.7,26.4,25.7,29.3,24.3,Low,Completed,0
+722,61,Vendor 061,2024-03-15,30.8,26.5,21.0,34.9,23.9,27.2,Low,Completed,0
+723,61,Vendor 061,2024-05-15,30.3,17.0,22.7,20.9,18.7,23.1,Low,Completed,0
+724,61,Vendor 061,2024-07-15,32.5,26.7,16.0,31.5,14.7,26.2,Low,Completed,0
+725,61,Vendor 061,2024-09-15,35.4,32.1,18.4,6.9,15.0,28.4,Low,Completed,0
+726,61,Vendor 061,2024-11-15,37.1,36.4,24.1,25.9,22.0,32.9,Low,Completed,0
+727,61,Vendor 061,2025-01-15,25.4,30.3,27.8,14.3,36.0,27.6,Low,Completed,0
+728,61,Vendor 061,2025-03-15,31.0,26.6,26.6,24.4,23.5,27.9,Low,Completed,0
+729,61,Vendor 061,2025-05-15,25.5,16.0,22.5,17.5,29.4,21.4,Low,Completed,0
+730,61,Vendor 061,2025-07-15,28.1,12.1,24.3,21.5,32.3,21.6,Low,Completed,0
+731,61,Vendor 061,2025-09-15,37.1,27.6,21.5,21.8,30.7,29.6,Low,Completed,0
+732,61,Vendor 061,2025-11-15,32.9,29.6,23.6,28.4,7.4,28.4,Low,Completed,0
+733,62,Vendor 062,2024-01-15,35.8,23.3,20.6,32.3,21.6,27.5,Low,Completed,0
+734,62,Vendor 062,2024-03-15,33.6,24.4,15.8,0.0,21.6,24.5,Low,Completed,0
+735,62,Vendor 062,2024-05-15,26.5,18.6,15.4,12.3,20.3,20.5,Low,Completed,0
+736,62,Vendor 062,2024-07-15,35.6,27.4,11.0,19.1,22.4,26.3,Low,Completed,0
+737,62,Vendor 062,2024-09-15,28.9,25.9,28.2,7.7,30.8,26.8,Low,Completed,0
+738,62,Vendor 062,2024-11-15,27.8,24.0,27.2,23.1,28.8,26.2,Low,Completed,0
+739,62,Vendor 062,2025-01-15,28.9,18.7,14.6,33.8,24.9,22.5,Low,Completed,0
+740,62,Vendor 062,2025-03-15,35.0,19.1,8.5,0.3,17.5,21.5,Low,Completed,0
+741,62,Vendor 062,2025-05-15,34.3,29.9,7.1,46.4,18.7,27.1,Low,Completed,0
+742,62,Vendor 062,2025-07-15,31.3,41.6,19.9,7.3,17.1,30.7,Low,Completed,1
+743,62,Vendor 062,2025-09-15,28.9,35.8,18.6,12.5,28.7,28.4,Low,Completed,0
+744,62,Vendor 062,2025-11-15,32.8,33.1,28.1,32.1,31.0,31.8,Low,Completed,0
+745,63,Vendor 063,2024-01-15,45.7,42.8,32.9,19.4,29.5,40.0,Medium,Monitoring,0
+746,63,Vendor 063,2024-03-15,42.1,39.9,33.6,20.8,18.7,37.4,Medium,Monitoring,0
+747,63,Vendor 063,2024-05-15,36.7,39.1,30.6,32.0,27.0,35.6,Medium,Monitoring,0
+748,63,Vendor 063,2024-07-15,44.4,34.2,33.1,37.0,23.1,37.1,Medium,Monitoring,0
+749,63,Vendor 063,2024-09-15,41.2,42.3,36.8,33.5,24.2,39.5,Medium,Monitoring,0
+750,63,Vendor 063,2024-11-15,48.6,41.9,30.1,23.9,29.1,40.4,Medium,Monitoring,0
+751,63,Vendor 063,2025-01-15,41.0,46.6,35.5,24.7,26.8,40.3,Medium,Monitoring,0
+752,63,Vendor 063,2025-03-15,45.3,36.4,40.3,38.7,24.5,39.9,Medium,Monitoring,0
+753,63,Vendor 063,2025-05-15,45.4,43.7,34.0,23.1,29.2,40.6,Medium,Monitoring,0
+754,63,Vendor 063,2025-07-15,42.7,40.5,28.0,14.6,23.5,36.6,Medium,Monitoring,0
+755,63,Vendor 063,2025-09-15,37.1,38.2,25.9,38.3,31.4,35.0,Medium,Monitoring,0
+756,63,Vendor 063,2025-11-15,36.7,44.9,45.5,25.0,25.6,40.2,Medium,Monitoring,0
+757,64,Vendor 064,2024-01-15,30.8,28.9,21.9,28.0,15.8,27.5,Low,Completed,0
+758,64,Vendor 064,2024-03-15,26.3,12.4,20.3,12.8,25.1,19.5,Low,Completed,0
+759,64,Vendor 064,2024-05-15,38.9,29.7,18.3,38.4,17.4,30.5,Low,Completed,0
+760,64,Vendor 064,2024-07-15,29.8,23.0,14.8,15.3,14.9,23.0,Low,Completed,0
+761,64,Vendor 064,2024-09-15,34.9,26.5,19.9,34.3,19.7,28.2,Low,Completed,0
+762,64,Vendor 064,2024-11-15,23.0,24.8,10.8,6.6,18.9,20.1,Low,Completed,0
+763,64,Vendor 064,2025-01-15,33.8,28.9,21.9,12.6,26.6,28.3,Low,Completed,0
+764,64,Vendor 064,2025-03-15,29.2,23.3,15.9,15.6,28.2,23.7,Low,Completed,0
+765,64,Vendor 064,2025-05-15,29.6,27.5,22.2,7.5,21.2,25.9,Low,Completed,0
+766,64,Vendor 064,2025-07-15,27.6,21.3,26.5,20.2,6.5,23.8,Low,Completed,0
+767,64,Vendor 064,2025-09-15,33.8,25.2,19.5,29.6,21.2,27.1,Low,Completed,0
+768,64,Vendor 064,2025-11-15,25.1,30.2,29.6,26.7,18.9,27.5,Low,Completed,0
+769,65,Vendor 065,2024-01-15,40.7,28.7,33.9,29.5,47.2,34.9,Low,Completed,0
+770,65,Vendor 065,2024-03-15,46.0,44.1,39.9,23.9,33.0,42.4,Medium,Monitoring,0
+771,65,Vendor 065,2024-05-15,40.0,40.2,30.7,8.2,45.3,36.9,Medium,Monitoring,0
+772,65,Vendor 065,2024-07-15,47.3,42.4,42.3,35.2,22.7,42.7,Medium,Monitoring,0
+773,65,Vendor 065,2024-09-15,40.2,35.9,46.0,24.0,34.1,38.7,Medium,Monitoring,0
+774,65,Vendor 065,2024-11-15,43.7,36.6,38.1,16.8,42.8,38.7,Medium,Monitoring,0
+775,65,Vendor 065,2025-01-15,38.3,45.3,37.9,28.5,19.6,39.2,Medium,Monitoring,0
+776,65,Vendor 065,2025-03-15,42.9,38.8,34.6,24.4,29.2,38.2,Medium,Monitoring,0
+777,65,Vendor 065,2025-05-15,33.3,28.5,36.3,0.0,36.8,30.7,Low,Completed,0
+778,65,Vendor 065,2025-07-15,38.0,42.1,35.6,27.8,9.9,37.0,Medium,Monitoring,0
+779,65,Vendor 065,2025-09-15,39.6,41.0,39.1,21.8,32.0,38.7,Medium,Monitoring,0
+780,65,Vendor 065,2025-11-15,40.2,42.0,30.3,7.0,24.2,36.4,Medium,Monitoring,0
+781,66,Vendor 066,2024-01-15,46.8,63.3,36.6,21.7,42.8,49.1,Medium,Monitoring,1
+782,66,Vendor 066,2024-03-15,52.2,47.3,39.4,45.8,26.6,46.4,Medium,Monitoring,0
+783,66,Vendor 066,2024-05-15,45.2,53.6,50.3,40.9,47.8,49.1,Medium,Monitoring,0
+784,66,Vendor 066,2024-07-15,55.5,46.8,37.0,23.3,37.8,46.3,Medium,Monitoring,0
+785,66,Vendor 066,2024-09-15,49.9,51.2,48.1,34.1,32.7,48.3,Medium,Monitoring,0
+786,66,Vendor 066,2024-11-15,42.9,47.3,39.7,26.3,13.8,41.5,Medium,Monitoring,0
+787,66,Vendor 066,2025-01-15,50.6,39.3,44.8,19.2,25.6,42.6,Medium,Monitoring,0
+788,66,Vendor 066,2025-03-15,47.6,48.7,37.6,18.7,45.8,44.5,Medium,Monitoring,0
+789,66,Vendor 066,2025-05-15,49.2,43.8,47.3,2.6,46.0,44.4,Medium,Monitoring,0
+790,66,Vendor 066,2025-07-15,44.2,43.1,39.4,26.4,35.9,41.6,Medium,Monitoring,0
+791,66,Vendor 066,2025-09-15,53.0,46.3,41.9,25.3,41.2,46.4,Medium,Monitoring,0
+792,66,Vendor 066,2025-11-15,47.0,46.7,49.6,38.1,38.2,46.5,Medium,Monitoring,0
+793,67,Vendor 067,2024-01-15,57.1,49.5,43.6,24.5,36.8,49.1,Medium,Monitoring,0
+794,67,Vendor 067,2024-03-15,51.2,39.7,38.7,12.5,25.8,41.5,Medium,Monitoring,0
+795,67,Vendor 067,2024-05-15,49.0,50.3,51.6,27.5,31.0,48.0,Medium,Monitoring,0
+796,67,Vendor 067,2024-07-15,42.6,39.8,38.8,26.2,12.5,38.5,Medium,Monitoring,0
+797,67,Vendor 067,2024-09-15,47.1,48.7,30.4,19.8,26.1,41.9,Medium,Monitoring,0
+798,67,Vendor 067,2024-11-15,47.9,51.7,43.6,19.1,55.1,47.3,Medium,Monitoring,0
+799,67,Vendor 067,2025-01-15,42.9,35.9,41.1,33.4,21.8,38.6,Medium,Monitoring,0
+800,67,Vendor 067,2025-03-15,46.0,35.3,42.4,23.8,21.9,39.2,Medium,Monitoring,0
+801,67,Vendor 067,2025-05-15,50.4,39.7,41.6,28.5,32.5,42.9,Medium,Monitoring,0
+802,67,Vendor 067,2025-07-15,47.1,51.7,43.1,7.2,11.8,44.1,Medium,Monitoring,0
+803,67,Vendor 067,2025-09-15,42.2,43.0,39.2,25.8,32.9,40.6,Medium,Monitoring,0
+804,67,Vendor 067,2025-11-15,52.3,38.7,46.5,29.8,20.6,43.7,Medium,Monitoring,0
+805,68,Vendor 068,2024-01-15,55.1,52.8,39.1,39.5,39.8,49.6,Medium,Monitoring,0
+806,68,Vendor 068,2024-03-15,40.5,51.0,44.5,42.8,26.5,44.4,Medium,Monitoring,0
+807,68,Vendor 068,2024-05-15,58.3,55.3,56.0,20.4,29.9,53.5,Medium,Monitoring,0
+808,68,Vendor 068,2024-07-15,49.4,45.8,48.9,21.1,56.2,47.0,Medium,Monitoring,0
+809,68,Vendor 068,2024-09-15,52.5,49.7,53.1,41.8,40.5,50.5,Medium,Monitoring,0
+810,68,Vendor 068,2024-11-15,49.3,70.1,49.2,25.2,57.1,55.7,Medium,Monitoring,1
+811,68,Vendor 068,2025-01-15,48.2,50.8,46.5,33.7,27.3,47.0,Medium,Monitoring,0
+812,68,Vendor 068,2025-03-15,52.2,54.9,42.6,34.4,26.9,49.1,Medium,Monitoring,0
+813,68,Vendor 068,2025-05-15,52.7,58.5,49.3,12.1,28.1,50.8,Medium,Monitoring,0
+814,68,Vendor 068,2025-07-15,61.2,55.1,46.8,28.5,53.3,54.1,Medium,Monitoring,0
+815,68,Vendor 068,2025-09-15,56.9,65.6,47.2,25.8,51.5,56.2,Medium,Monitoring,1
+816,68,Vendor 068,2025-11-15,57.0,53.2,43.7,27.6,30.9,50.2,Medium,Monitoring,0
+817,69,Vendor 069,2024-01-15,47.1,47.9,48.6,21.5,21.0,45.1,Medium,Monitoring,0
+818,69,Vendor 069,2024-03-15,55.0,49.7,40.1,40.6,32.4,48.3,Medium,Monitoring,0
+819,69,Vendor 069,2024-05-15,51.1,52.3,48.3,42.6,30.4,49.5,Medium,Monitoring,0
+820,69,Vendor 069,2024-07-15,46.9,46.7,43.1,36.9,31.5,44.8,Medium,Monitoring,0
+821,69,Vendor 069,2024-09-15,55.5,58.4,36.8,37.7,14.5,49.8,Medium,Monitoring,1
+822,69,Vendor 069,2024-11-15,43.9,59.2,50.7,33.7,35.7,49.7,Medium,Monitoring,1
+823,69,Vendor 069,2025-01-15,48.9,46.7,37.2,30.3,42.9,44.6,Medium,Monitoring,0
+824,69,Vendor 069,2025-03-15,45.8,57.6,31.0,36.5,37.0,46.1,Medium,Monitoring,0
+825,69,Vendor 069,2025-05-15,45.7,47.0,47.1,26.9,16.9,44.1,Medium,Monitoring,0
+826,69,Vendor 069,2025-07-15,51.4,47.8,44.9,44.6,27.4,47.3,Medium,Monitoring,0
+827,69,Vendor 069,2025-09-15,53.9,52.3,41.2,38.6,37.7,49.2,Medium,Monitoring,0
+828,69,Vendor 069,2025-11-15,51.9,67.8,45.4,31.6,43.3,54.7,Medium,Monitoring,1
+829,70,Vendor 070,2024-01-15,80.4,87.8,84.5,37.8,52.4,80.3,High,In Progress,0
+830,70,Vendor 070,2024-03-15,81.9,81.9,86.9,35.6,55.2,79.3,High,Monitoring,0
+831,70,Vendor 070,2024-05-15,85.8,81.2,79.3,52.6,33.6,78.6,High,Monitoring,0
+832,70,Vendor 070,2024-07-15,83.8,84.9,69.9,27.6,50.7,76.9,High,Monitoring,0
+833,70,Vendor 070,2024-09-15,79.5,85.5,80.8,39.7,57.3,78.8,High,In Progress,0
+834,70,Vendor 070,2024-11-15,82.4,78.2,84.7,45.7,48.9,77.9,High,Monitoring,0
+835,70,Vendor 070,2025-01-15,74.7,85.7,84.8,39.0,59.9,78.0,High,In Progress,0
+836,70,Vendor 070,2025-03-15,84.3,67.9,87.0,29.9,52.8,74.8,High,Monitoring,0
+837,70,Vendor 070,2025-05-15,76.7,76.5,83.5,48.3,48.6,75.2,High,Monitoring,0
+838,70,Vendor 070,2025-07-15,74.2,87.2,82.1,42.8,56.8,77.9,High,In Progress,0
+839,70,Vendor 070,2025-09-15,78.0,86.4,73.9,51.6,69.8,78.4,High,In Progress,0
+840,70,Vendor 070,2025-11-15,80.7,86.1,85.2,19.4,55.3,79.2,High,Monitoring,0
+841,71,Vendor 071,2024-01-15,59.2,49.0,49.2,27.3,38.2,51.0,Medium,Monitoring,0
+842,71,Vendor 071,2024-03-15,54.0,45.6,49.0,30.4,19.4,47.2,Medium,Monitoring,0
+843,71,Vendor 071,2024-05-15,55.1,48.6,62.5,38.2,40.4,52.7,Medium,Monitoring,0
+844,71,Vendor 071,2024-07-15,55.6,53.3,41.4,35.2,49.8,50.7,Medium,Monitoring,0
+845,71,Vendor 071,2024-09-15,43.8,58.6,54.2,29.3,54.8,50.9,Medium,Monitoring,1
+846,71,Vendor 071,2024-11-15,49.3,48.7,48.5,25.6,43.6,47.5,Medium,Monitoring,0
+847,71,Vendor 071,2025-01-15,53.3,47.7,38.2,20.2,28.4,45.4,Medium,Monitoring,0
+848,71,Vendor 071,2025-03-15,48.1,43.4,43.6,32.4,42.7,44.5,Medium,Monitoring,0
+849,71,Vendor 071,2025-05-15,50.1,54.3,46.9,40.4,34.3,49.7,Medium,Monitoring,0
+850,71,Vendor 071,2025-07-15,56.7,50.6,40.7,37.5,50.3,50.1,Medium,Monitoring,0
+851,71,Vendor 071,2025-09-15,48.7,60.3,51.9,30.7,31.8,51.7,Medium,Monitoring,0
+852,71,Vendor 071,2025-11-15,47.6,45.6,51.9,19.9,45.4,46.3,Medium,Monitoring,0
+853,72,Vendor 072,2024-01-15,25.5,16.7,21.4,30.7,24.1,21.8,Low,Completed,0
+854,72,Vendor 072,2024-03-15,26.0,14.4,10.7,14.2,21.3,18.1,Low,Completed,0
+855,72,Vendor 072,2024-05-15,25.0,22.7,16.2,0.0,21.8,21.0,Low,Completed,0
+856,72,Vendor 072,2024-07-15,26.8,21.6,13.1,22.5,22.8,21.8,Low,Completed,0
+857,72,Vendor 072,2024-09-15,20.9,22.5,11.9,20.5,1.3,18.7,Low,Completed,0
+858,72,Vendor 072,2024-11-15,27.9,26.1,19.8,0.0,27.1,24.2,Low,Completed,0
+859,72,Vendor 072,2025-01-15,21.9,19.8,18.6,25.1,31.7,21.2,Low,Completed,0
+860,72,Vendor 072,2025-03-15,18.9,19.2,16.5,15.9,24.4,18.6,Low,Completed,0
+861,72,Vendor 072,2025-05-15,22.3,19.0,10.5,9.5,20.0,18.0,Low,Completed,0
+862,72,Vendor 072,2025-07-15,27.6,20.6,24.2,29.1,15.7,24.0,Low,Completed,0
+863,72,Vendor 072,2025-09-15,31.2,20.2,10.7,29.8,27.6,23.0,Low,Completed,0
+864,72,Vendor 072,2025-11-15,27.2,21.6,8.7,18.1,33.0,21.4,Low,Completed,0
+865,73,Vendor 073,2024-01-15,58.3,57.5,57.5,14.3,39.8,54.7,Medium,Monitoring,0
+866,73,Vendor 073,2024-03-15,60.1,50.7,57.0,25.3,41.7,53.5,Medium,Monitoring,0
+867,73,Vendor 073,2024-05-15,54.4,55.9,58.1,28.7,46.4,54.0,Medium,Monitoring,0
+868,73,Vendor 073,2024-07-15,52.4,63.2,49.7,25.5,43.6,53.9,Medium,Monitoring,0
+869,73,Vendor 073,2024-09-15,56.6,55.0,33.3,20.1,44.2,49.0,Medium,Monitoring,0
+870,73,Vendor 073,2024-11-15,57.4,59.8,49.0,12.2,30.1,52.9,Medium,Monitoring,0
+871,73,Vendor 073,2025-01-15,58.2,54.7,49.6,15.1,43.3,52.3,Medium,Monitoring,1
+872,73,Vendor 073,2025-03-15,58.6,59.2,50.7,31.0,37.5,54.8,Medium,Monitoring,0
+873,73,Vendor 073,2025-05-15,51.2,52.3,46.1,24.8,35.5,48.5,Medium,Monitoring,0
+874,73,Vendor 073,2025-07-15,54.9,51.3,46.1,34.1,45.4,50.4,Medium,Monitoring,0
+875,73,Vendor 073,2025-09-15,51.0,52.6,49.0,41.3,44.4,50.3,Medium,Monitoring,0
+876,73,Vendor 073,2025-11-15,62.5,54.7,56.0,42.0,49.0,56.8,Medium,Monitoring,0
+877,74,Vendor 074,2024-01-15,38.2,35.7,35.4,14.5,25.2,34.9,Low,Completed,0
+878,74,Vendor 074,2024-03-15,40.7,41.1,25.7,18.0,31.2,36.2,Medium,Monitoring,0
+879,74,Vendor 074,2024-05-15,31.9,38.2,35.2,19.5,35.8,34.3,Low,Completed,0
+880,74,Vendor 074,2024-07-15,42.9,33.2,24.4,24.7,51.3,35.3,Medium,Monitoring,0
+881,74,Vendor 074,2024-09-15,38.4,44.5,32.5,3.4,38.5,37.6,Medium,Monitoring,0
+882,74,Vendor 074,2024-11-15,34.9,37.1,32.8,14.4,26.7,33.8,Low,Completed,0
+883,74,Vendor 074,2025-01-15,40.4,33.5,22.3,17.9,18.4,32.1,Low,Completed,0
+884,74,Vendor 074,2025-03-15,41.8,38.9,25.8,9.7,26.9,35.2,Medium,Monitoring,0
+885,74,Vendor 074,2025-05-15,36.2,35.2,30.2,25.8,20.1,33.3,Low,Completed,0
+886,74,Vendor 074,2025-07-15,42.2,24.3,32.6,10.6,41.9,32.4,Low,Completed,0
+887,74,Vendor 074,2025-09-15,41.6,32.4,34.6,26.1,4.2,34.3,Low,Completed,0
+888,74,Vendor 074,2025-11-15,40.9,29.7,31.4,23.3,41.7,34.2,Low,Completed,0
+889,75,Vendor 075,2024-01-15,49.4,49.2,35.2,24.4,35.9,44.6,Medium,Monitoring,0
+890,75,Vendor 075,2024-03-15,51.9,48.6,45.6,35.1,30.9,47.6,Medium,Monitoring,0
+891,75,Vendor 075,2024-05-15,53.9,50.1,39.7,28.4,35.7,47.5,Medium,Monitoring,0
+892,75,Vendor 075,2024-07-15,48.7,44.5,40.7,42.3,37.9,44.8,Medium,Monitoring,0
+893,75,Vendor 075,2024-09-15,56.8,46.5,41.9,26.6,41.2,47.9,Medium,Monitoring,0
+894,75,Vendor 075,2024-11-15,52.4,52.1,38.6,17.0,39.5,47.1,Medium,Monitoring,0
+895,75,Vendor 075,2025-01-15,48.7,50.7,43.5,30.3,28.8,46.5,Medium,Monitoring,0
+896,75,Vendor 075,2025-03-15,59.1,48.8,36.6,34.3,46.3,49.1,Medium,Monitoring,0
+897,75,Vendor 075,2025-05-15,48.3,43.2,43.7,26.0,31.3,43.6,Medium,Monitoring,0
+898,75,Vendor 075,2025-07-15,55.6,54.9,51.5,20.0,25.8,51.2,Medium,Monitoring,0
+899,75,Vendor 075,2025-09-15,52.6,50.9,47.2,43.8,32.8,49.5,Medium,Monitoring,0
+900,75,Vendor 075,2025-11-15,53.0,51.0,51.8,20.2,25.3,49.0,Medium,Monitoring,0
+901,76,Vendor 076,2024-01-15,41.7,49.7,39.4,42.5,30.3,43.5,Medium,Monitoring,0
+902,76,Vendor 076,2024-03-15,48.3,47.1,48.0,30.2,33.6,46.2,Medium,Monitoring,0
+903,76,Vendor 076,2024-05-15,46.3,58.4,32.2,15.3,46.0,46.1,Medium,Monitoring,0
+904,76,Vendor 076,2024-07-15,45.8,40.1,49.6,16.8,29.3,42.3,Medium,Monitoring,0
+905,76,Vendor 076,2024-09-15,44.9,53.1,42.0,18.5,26.3,44.9,Medium,Monitoring,0
+906,76,Vendor 076,2024-11-15,49.4,53.4,46.4,9.8,41.7,47.9,Medium,Monitoring,0
+907,76,Vendor 076,2025-01-15,57.0,39.6,27.4,33.7,28.3,42.4,Medium,Monitoring,0
+908,76,Vendor 076,2025-03-15,49.0,45.3,39.3,26.5,39.9,44.2,Medium,Monitoring,0
+909,76,Vendor 076,2025-05-15,48.4,48.5,36.4,26.8,36.6,44.4,Medium,Monitoring,0
+910,76,Vendor 076,2025-07-15,45.8,44.7,42.2,36.4,49.5,44.4,Medium,Monitoring,0
+911,76,Vendor 076,2025-09-15,43.2,44.1,45.4,40.3,24.6,42.9,Medium,Monitoring,0
+912,76,Vendor 076,2025-11-15,45.8,51.4,40.1,29.1,22.1,44.6,Medium,Monitoring,0
+913,77,Vendor 077,2024-01-15,62.9,50.1,53.2,43.3,19.1,53.3,Medium,Monitoring,0
+914,77,Vendor 077,2024-03-15,45.0,47.8,36.6,12.5,26.9,41.8,Medium,Monitoring,0
+915,77,Vendor 077,2024-05-15,50.5,52.5,47.5,39.6,49.8,50.0,Medium,Monitoring,1
+916,77,Vendor 077,2024-07-15,54.9,44.5,50.7,35.9,41.0,48.8,Medium,Monitoring,0
+917,77,Vendor 077,2024-09-15,52.3,48.4,39.6,45.7,36.4,47.3,Medium,Monitoring,0
+918,77,Vendor 077,2024-11-15,52.2,50.9,48.1,19.2,42.8,48.8,Medium,Monitoring,0
+919,77,Vendor 077,2025-01-15,51.0,49.0,41.5,33.0,29.1,46.4,Medium,Monitoring,0
+920,77,Vendor 077,2025-03-15,54.2,43.5,36.3,41.3,18.0,44.4,Medium,Monitoring,0
+921,77,Vendor 077,2025-05-15,46.0,45.9,58.8,27.2,39.0,47.3,Medium,Monitoring,0
+922,77,Vendor 077,2025-07-15,47.5,54.5,49.1,35.8,28.2,48.7,Medium,Monitoring,0
+923,77,Vendor 077,2025-09-15,51.0,56.2,44.0,48.5,38.8,50.7,Medium,Monitoring,0
+924,77,Vendor 077,2025-11-15,49.4,49.5,43.3,34.9,35.3,46.7,Medium,Monitoring,0
+925,78,Vendor 078,2024-01-15,56.2,57.2,53.5,50.4,25.4,54.2,Medium,Monitoring,0
+926,78,Vendor 078,2024-03-15,59.5,52.7,66.5,22.4,40.2,55.7,Medium,Monitoring,0
+927,78,Vendor 078,2024-05-15,56.6,58.8,57.2,31.2,50.7,55.9,Medium,Monitoring,0
+928,78,Vendor 078,2024-07-15,48.3,59.1,56.4,33.6,38.1,52.5,Medium,Monitoring,0
+929,78,Vendor 078,2024-09-15,57.9,68.0,52.2,38.2,29.5,57.9,Medium,Monitoring,0
+930,78,Vendor 078,2024-11-15,54.9,65.6,45.2,35.4,43.3,55.2,Medium,Monitoring,0
+931,78,Vendor 078,2025-01-15,49.4,48.9,55.2,22.5,33.5,48.2,Medium,Monitoring,0
+932,78,Vendor 078,2025-03-15,53.9,52.0,57.7,12.6,34.8,51.0,Medium,Monitoring,0
+933,78,Vendor 078,2025-05-15,57.8,69.7,52.7,35.8,42.1,59.1,Medium,Monitoring,0
+934,78,Vendor 078,2025-07-15,58.0,66.4,59.9,38.7,25.7,58.7,Medium,Monitoring,0
+935,78,Vendor 078,2025-09-15,56.6,54.6,55.8,31.1,44.5,53.9,Medium,Monitoring,0
+936,78,Vendor 078,2025-11-15,62.8,60.9,59.1,28.4,37.4,58.4,Medium,Monitoring,0
+937,79,Vendor 079,2024-01-15,35.2,25.9,21.8,23.6,40.4,28.9,Low,Completed,0
+938,79,Vendor 079,2024-03-15,28.7,34.0,18.4,30.5,10.7,27.7,Low,Completed,0
+939,79,Vendor 079,2024-05-15,30.9,31.9,36.4,11.7,15.0,30.6,Low,Completed,0
+940,79,Vendor 079,2024-07-15,38.6,30.7,26.9,21.8,14.9,31.5,Low,Completed,0
+941,79,Vendor 079,2024-09-15,31.4,37.2,29.0,6.9,22.2,31.3,Low,Completed,0
+942,79,Vendor 079,2024-11-15,29.2,25.4,24.9,23.5,35.4,27.0,Low,Completed,0
+943,79,Vendor 079,2025-01-15,42.5,26.6,27.4,9.0,41.1,32.2,Low,Completed,0
+944,79,Vendor 079,2025-03-15,34.7,20.3,28.3,11.9,29.5,27.0,Low,Completed,0
+945,79,Vendor 079,2025-05-15,33.8,28.4,20.6,26.0,24.5,28.4,Low,Completed,0
+946,79,Vendor 079,2025-07-15,36.1,56.5,26.1,2.0,12.5,38.4,Medium,Monitoring,1
+947,79,Vendor 079,2025-09-15,35.4,30.8,30.1,26.3,14.8,31.3,Low,Completed,0
+948,79,Vendor 079,2025-11-15,27.4,33.6,23.9,21.7,28.2,28.6,Low,Completed,0
+949,80,Vendor 080,2024-01-15,53.0,46.5,42.3,39.8,52.2,47.9,Medium,Monitoring,0
+950,80,Vendor 080,2024-03-15,44.2,42.6,41.8,24.5,15.8,40.8,Medium,Monitoring,0
+951,80,Vendor 080,2024-05-15,49.2,50.2,50.9,28.4,35.9,48.2,Medium,Monitoring,0
+952,80,Vendor 080,2024-07-15,41.5,43.2,44.0,35.8,27.9,41.6,Medium,Monitoring,0
+953,80,Vendor 080,2024-09-15,45.4,48.4,38.9,12.0,20.7,42.2,Medium,Monitoring,0
+954,80,Vendor 080,2024-11-15,48.4,47.1,38.9,34.4,37.0,44.8,Medium,Monitoring,0
+955,80,Vendor 080,2025-01-15,48.5,53.9,38.7,22.3,29.9,46.2,Medium,Monitoring,0
+956,80,Vendor 080,2025-03-15,44.6,40.8,38.6,27.6,45.2,41.3,Medium,Monitoring,0
+957,80,Vendor 080,2025-05-15,42.5,38.9,39.6,52.2,37.1,40.9,Medium,Monitoring,0
+958,80,Vendor 080,2025-07-15,45.5,44.6,49.1,32.2,36.8,44.8,Medium,Monitoring,0
+959,80,Vendor 080,2025-09-15,45.7,48.2,41.9,47.9,43.8,45.8,Medium,Monitoring,0
+960,80,Vendor 080,2025-11-15,42.7,44.5,36.6,22.0,23.6,40.1,Medium,Monitoring,0
+961,81,Vendor 081,2024-01-15,58.3,60.7,54.8,22.9,52.3,56.3,Medium,Monitoring,0
+962,81,Vendor 081,2024-03-15,57.0,55.1,48.2,16.5,50.6,52.2,Medium,Monitoring,0
+963,81,Vendor 081,2024-05-15,56.7,66.2,60.4,33.9,48.8,59.2,Medium,Monitoring,0
+964,81,Vendor 081,2024-07-15,60.4,59.1,54.9,15.8,32.1,55.2,Medium,Monitoring,0
+965,81,Vendor 081,2024-09-15,55.5,65.0,60.2,34.4,45.7,58.2,Medium,Monitoring,1
+966,81,Vendor 081,2024-11-15,57.8,63.6,60.6,26.1,55.2,58.7,Medium,Monitoring,0
+967,81,Vendor 081,2025-01-15,53.3,66.2,51.0,25.0,47.0,55.6,Medium,Monitoring,0
+968,81,Vendor 081,2025-03-15,59.5,56.2,51.7,28.1,48.6,54.7,Medium,Monitoring,0
+969,81,Vendor 081,2025-05-15,56.4,51.8,51.7,30.7,28.8,51.2,Medium,Monitoring,0
+970,81,Vendor 081,2025-07-15,63.2,54.7,49.1,47.6,48.6,55.9,Medium,Monitoring,0
+971,81,Vendor 081,2025-09-15,60.6,65.2,60.8,28.4,29.5,59.1,Medium,Monitoring,0
+972,81,Vendor 081,2025-11-15,57.7,52.7,54.1,30.4,54.1,53.7,Medium,Monitoring,0
+973,82,Vendor 082,2024-01-15,52.3,45.6,42.5,37.8,27.3,46.0,Medium,Monitoring,0
+974,82,Vendor 082,2024-03-15,51.5,53.6,46.1,41.1,31.3,49.6,Medium,Monitoring,0
+975,82,Vendor 082,2024-05-15,50.9,69.4,55.9,25.7,44.6,56.8,Medium,Monitoring,1
+976,82,Vendor 082,2024-07-15,53.4,49.8,42.0,0.0,49.6,47.0,Medium,Monitoring,0
+977,82,Vendor 082,2024-09-15,53.6,45.8,42.3,12.8,42.2,46.0,Medium,Monitoring,0
+978,82,Vendor 082,2024-11-15,52.4,55.6,49.8,20.8,45.9,51.1,Medium,Monitoring,0
+979,82,Vendor 082,2025-01-15,47.9,55.5,46.7,25.9,39.7,48.8,Medium,Monitoring,0
+980,82,Vendor 082,2025-03-15,54.7,46.2,49.5,16.9,34.0,47.7,Medium,Monitoring,0
+981,82,Vendor 082,2025-05-15,55.1,50.6,42.8,42.8,31.5,49.2,Medium,Monitoring,0
+982,82,Vendor 082,2025-07-15,43.5,49.2,42.5,26.0,38.2,44.2,Medium,Monitoring,0
+983,82,Vendor 082,2025-09-15,48.5,43.4,41.1,19.0,57.2,44.2,Medium,Monitoring,0
+984,82,Vendor 082,2025-11-15,56.3,43.7,47.7,16.5,54.2,48.1,Medium,Monitoring,0
+985,83,Vendor 083,2024-01-15,57.8,64.1,52.5,32.2,40.6,56.8,Medium,Monitoring,0
+986,83,Vendor 083,2024-03-15,66.8,63.6,60.3,1.3,58.0,60.7,Medium,Monitoring,0
+987,83,Vendor 083,2024-05-15,63.0,74.5,54.4,33.8,47.3,63.1,Medium,Monitoring,0
+988,83,Vendor 083,2024-07-15,63.6,86.2,57.4,39.0,51.7,68.4,High,Monitoring,1
+989,83,Vendor 083,2024-09-15,61.8,57.2,59.1,45.0,46.6,58.0,Medium,Monitoring,0
+990,83,Vendor 083,2024-11-15,56.2,64.8,60.4,39.0,56.2,59.2,Medium,Monitoring,0
+991,83,Vendor 083,2025-01-15,61.3,67.7,57.5,34.5,22.4,59.5,Medium,Monitoring,0
+992,83,Vendor 083,2025-03-15,67.7,74.9,65.4,43.2,63.2,68.3,High,In Progress,1
+993,83,Vendor 083,2025-05-15,57.0,59.7,62.1,17.0,34.7,55.9,Medium,Monitoring,0
+994,83,Vendor 083,2025-07-15,63.4,72.7,63.2,22.5,81.0,65.4,High,In Progress,0
+995,83,Vendor 083,2025-09-15,56.4,58.7,55.3,20.1,47.5,54.7,Medium,Monitoring,0
+996,83,Vendor 083,2025-11-15,67.5,82.0,58.4,42.8,37.6,68.0,High,Monitoring,1
+997,84,Vendor 084,2024-01-15,60.2,67.8,64.4,36.6,37.2,61.4,Medium,Monitoring,0
+998,84,Vendor 084,2024-03-15,56.5,66.1,62.1,51.7,32.7,59.6,Medium,Monitoring,0
+999,84,Vendor 084,2024-05-15,60.1,56.0,64.7,45.5,57.8,58.8,Medium,Monitoring,0
+1000,84,Vendor 084,2024-07-15,63.8,58.1,56.5,31.8,39.7,57.6,Medium,Monitoring,0
+1001,84,Vendor 084,2024-09-15,54.9,73.9,54.4,38.8,32.7,59.5,Medium,Monitoring,1
+1002,84,Vendor 084,2024-11-15,64.6,53.0,49.1,41.8,37.4,54.9,Medium,Monitoring,0
+1003,84,Vendor 084,2025-01-15,58.6,65.3,55.2,38.3,29.3,57.8,Medium,Monitoring,0
+1004,84,Vendor 084,2025-03-15,62.0,65.0,48.7,29.4,56.7,58.5,Medium,Monitoring,0
+1005,84,Vendor 084,2025-05-15,58.2,71.6,57.5,28.6,49.9,60.9,Medium,Monitoring,1
+1006,84,Vendor 084,2025-07-15,58.0,58.7,55.1,34.2,33.6,55.3,Medium,Monitoring,0
+1007,84,Vendor 084,2025-09-15,60.1,67.7,63.3,21.8,35.8,60.2,Medium,Monitoring,0
+1008,84,Vendor 084,2025-11-15,62.4,65.6,56.4,26.9,57.3,60.3,Medium,Monitoring,0
+1009,85,Vendor 085,2024-01-15,45.7,40.9,33.6,31.5,46.5,40.9,Medium,Monitoring,0
+1010,85,Vendor 085,2024-03-15,41.1,48.9,41.1,26.5,41.3,43.1,Medium,Monitoring,0
+1011,85,Vendor 085,2024-05-15,53.1,41.8,41.1,29.2,35.4,44.7,Medium,Monitoring,0
+1012,85,Vendor 085,2024-07-15,41.4,43.7,34.8,19.0,31.2,39.3,Medium,Monitoring,0
+1013,85,Vendor 085,2024-09-15,43.2,41.7,29.2,41.8,42.1,39.8,Medium,Monitoring,0
+1014,85,Vendor 085,2024-11-15,37.4,57.1,35.3,32.5,41.3,43.8,Medium,Monitoring,1
+1015,85,Vendor 085,2025-01-15,40.1,42.6,34.6,27.3,20.8,38.3,Medium,Monitoring,0
+1016,85,Vendor 085,2025-03-15,48.0,42.4,40.7,28.8,25.9,42.5,Medium,Monitoring,0
+1017,85,Vendor 085,2025-05-15,44.0,41.8,43.1,34.2,18.6,41.3,Medium,Monitoring,0
+1018,85,Vendor 085,2025-07-15,52.2,50.1,37.8,32.1,27.8,46.4,Medium,Monitoring,0
+1019,85,Vendor 085,2025-09-15,41.9,40.1,35.2,41.6,26.2,39.2,Medium,Monitoring,0
+1020,85,Vendor 085,2025-11-15,41.4,39.0,40.4,11.8,37.7,38.7,Medium,Monitoring,0
+1021,86,Vendor 086,2024-01-15,36.6,33.2,38.7,22.3,27.5,34.6,Low,Completed,0
+1022,86,Vendor 086,2024-03-15,34.1,40.9,30.0,8.8,22.9,33.8,Low,Completed,0
+1023,86,Vendor 086,2024-05-15,38.1,31.6,27.2,25.5,28.7,32.6,Low,Completed,0
+1024,86,Vendor 086,2024-07-15,42.7,36.3,33.8,8.5,35.2,36.6,Medium,Monitoring,0
+1025,86,Vendor 086,2024-09-15,42.3,35.0,32.4,19.7,42.6,36.6,Medium,Monitoring,0
+1026,86,Vendor 086,2024-11-15,33.4,41.0,28.1,33.5,33.6,35.0,Low,Completed,0
+1027,86,Vendor 086,2025-01-15,42.8,41.5,32.4,30.8,21.3,38.6,Medium,Monitoring,0
+1028,86,Vendor 086,2025-03-15,33.1,37.3,20.0,22.5,25.6,31.0,Low,Completed,0
+1029,86,Vendor 086,2025-05-15,37.4,33.9,35.6,21.7,25.7,34.4,Low,Completed,0
+1030,86,Vendor 086,2025-07-15,40.6,36.2,31.1,37.1,28.7,36.4,Medium,Monitoring,0
+1031,86,Vendor 086,2025-09-15,34.1,37.0,30.2,18.9,19.7,32.9,Low,Completed,0
+1032,86,Vendor 086,2025-11-15,34.4,40.2,26.4,29.8,33.1,34.5,Low,Completed,0
+1033,87,Vendor 087,2024-01-15,41.2,43.5,33.6,9.4,22.0,37.9,Medium,Monitoring,0
+1034,87,Vendor 087,2024-03-15,39.5,32.0,27.3,15.1,31.0,32.8,Low,Completed,0
+1035,87,Vendor 087,2024-05-15,32.4,32.4,21.0,0.0,32.9,28.5,Low,Completed,0
+1036,87,Vendor 087,2024-07-15,38.0,43.0,23.1,1.7,16.8,33.9,Low,Completed,0
+1037,87,Vendor 087,2024-09-15,36.7,40.6,32.0,32.8,31.8,36.7,Medium,Monitoring,0
+1038,87,Vendor 087,2024-11-15,36.5,51.8,23.8,0.0,34.2,37.4,Medium,Monitoring,1
+1039,87,Vendor 087,2025-01-15,39.3,34.6,26.1,19.7,37.6,34.0,Low,Completed,0
+1040,87,Vendor 087,2025-03-15,41.3,36.0,24.3,34.1,38.7,35.6,Medium,Monitoring,0
+1041,87,Vendor 087,2025-05-15,39.2,37.0,28.5,19.9,18.9,34.3,Low,Completed,0
+1042,87,Vendor 087,2025-07-15,41.4,39.2,32.0,32.1,24.4,37.5,Medium,Monitoring,0
+1043,87,Vendor 087,2025-09-15,37.8,36.3,34.7,27.6,38.2,36.2,Medium,Monitoring,0
+1044,87,Vendor 087,2025-11-15,35.8,36.9,28.8,43.4,18.3,34.3,Low,Completed,0
+1045,88,Vendor 088,2024-01-15,57.8,56.1,51.0,32.4,50.0,54.2,Medium,Monitoring,0
+1046,88,Vendor 088,2024-03-15,54.7,57.0,51.7,41.8,54.9,54.3,Medium,Monitoring,0
+1047,88,Vendor 088,2024-05-15,60.1,55.6,55.8,31.1,26.8,54.5,Medium,Monitoring,0
+1048,88,Vendor 088,2024-07-15,59.2,58.0,59.0,23.2,38.4,55.9,Medium,Monitoring,0
+1049,88,Vendor 088,2024-09-15,49.2,53.8,53.2,14.4,35.2,49.2,Medium,Monitoring,0
+1050,88,Vendor 088,2024-11-15,59.0,62.6,64.7,36.2,30.4,58.8,Medium,Monitoring,0
+1051,88,Vendor 088,2025-01-15,64.8,53.9,50.6,17.7,34.5,54.3,Medium,Monitoring,0
+1052,88,Vendor 088,2025-03-15,64.2,62.6,58.3,32.4,44.1,59.9,Medium,Monitoring,0
+1053,88,Vendor 088,2025-05-15,62.9,57.2,57.2,27.8,41.3,56.9,Medium,Monitoring,0
+1054,88,Vendor 088,2025-07-15,54.3,63.6,63.8,31.6,43.5,57.8,Medium,Monitoring,0
+1055,88,Vendor 088,2025-09-15,59.0,60.9,53.7,26.4,45.4,56.3,Medium,Monitoring,0
+1056,88,Vendor 088,2025-11-15,62.4,67.1,49.6,43.0,38.7,59.3,Medium,Monitoring,1
+1057,89,Vendor 089,2024-01-15,43.6,46.2,35.9,38.8,44.6,42.8,Medium,Monitoring,0
+1058,89,Vendor 089,2024-03-15,36.8,50.3,38.8,42.2,25.8,41.7,Medium,Monitoring,0
+1059,89,Vendor 089,2024-05-15,43.2,36.2,28.8,1.5,61.4,36.7,Medium,Monitoring,0
+1060,89,Vendor 089,2024-07-15,36.9,44.7,32.1,9.3,3.1,35.6,Medium,Monitoring,0
+1061,89,Vendor 089,2024-09-15,39.6,45.5,39.6,26.3,27.3,40.4,Medium,Monitoring,0
+1062,89,Vendor 089,2024-11-15,40.9,39.1,34.9,40.6,27.9,38.4,Medium,Monitoring,0
+1063,89,Vendor 089,2025-01-15,45.1,38.5,42.7,22.7,46.8,41.3,Medium,Monitoring,0
+1064,89,Vendor 089,2025-03-15,47.5,46.3,35.8,27.3,24.3,42.6,Medium,Monitoring,0
+1065,89,Vendor 089,2025-05-15,39.7,47.3,51.7,17.4,34.0,43.3,Medium,Monitoring,0
+1066,89,Vendor 089,2025-07-15,42.7,50.6,51.1,19.5,49.2,46.3,Medium,Monitoring,0
+1067,89,Vendor 089,2025-09-15,40.4,42.2,41.4,24.4,39.2,40.4,Medium,Monitoring,0
+1068,89,Vendor 089,2025-11-15,49.7,45.6,43.9,16.9,29.8,44.5,Medium,Monitoring,0
+1069,90,Vendor 090,2024-01-15,68.6,68.7,73.2,44.2,48.6,67.3,High,In Progress,0
+1070,90,Vendor 090,2024-03-15,66.7,70.5,68.0,39.0,52.4,66.2,High,Monitoring,0
+1071,90,Vendor 090,2024-05-15,72.8,79.9,65.2,25.2,32.7,69.4,High,In Progress,0
+1072,90,Vendor 090,2024-07-15,69.0,75.9,69.2,55.6,55.4,70.1,High,In Progress,0
+1073,90,Vendor 090,2024-09-15,75.0,68.1,77.1,35.1,55.6,70.0,High,In Progress,0
+1074,90,Vendor 090,2024-11-15,70.8,71.5,81.0,34.6,78.3,71.7,High,In Progress,0
+1075,90,Vendor 090,2025-01-15,66.3,80.7,68.8,45.8,70.7,71.0,High,Monitoring,0
+1076,90,Vendor 090,2025-03-15,73.0,79.3,75.7,25.0,60.8,72.7,High,Monitoring,0
+1077,90,Vendor 090,2025-05-15,73.2,78.5,68.3,22.4,53.1,70.5,High,In Progress,0
+1078,90,Vendor 090,2025-07-15,68.9,71.5,59.1,36.0,35.0,64.5,Medium,Monitoring,0
+1079,90,Vendor 090,2025-09-15,73.8,74.4,75.9,40.0,49.4,71.5,High,Monitoring,0
+1080,90,Vendor 090,2025-11-15,76.0,86.6,69.5,49.8,45.9,75.6,High,Monitoring,1
+1081,91,Vendor 091,2024-01-15,28.5,22.1,26.2,0.0,14.7,23.7,Low,Completed,0
+1082,91,Vendor 091,2024-03-15,27.1,26.8,25.0,22.5,18.9,25.9,Low,Completed,0
+1083,91,Vendor 091,2024-05-15,35.9,21.7,21.4,18.5,31.2,26.9,Low,Completed,0
+1084,91,Vendor 091,2024-07-15,31.5,21.8,16.6,21.4,19.1,24.0,Low,Completed,0
+1085,91,Vendor 091,2024-09-15,32.1,41.7,19.3,33.4,37.4,33.2,Low,Completed,0
+1086,91,Vendor 091,2024-11-15,27.9,29.3,21.5,39.7,28.3,27.7,Low,Completed,0
+1087,91,Vendor 091,2025-01-15,38.1,26.4,26.4,26.5,27.7,30.6,Low,Completed,0
+1088,91,Vendor 091,2025-03-15,34.0,24.5,27.4,16.7,37.6,28.6,Low,Completed,0
+1089,91,Vendor 091,2025-05-15,33.3,27.8,26.6,25.2,0.0,27.9,Low,Completed,0
+1090,91,Vendor 091,2025-07-15,31.5,29.3,29.8,35.0,30.1,30.5,Low,Completed,0
+1091,91,Vendor 091,2025-09-15,33.5,36.6,21.8,21.6,19.3,30.9,Low,Completed,0
+1092,91,Vendor 091,2025-11-15,30.0,31.7,25.5,20.1,29.1,29.1,Low,Completed,0
+1093,92,Vendor 092,2024-01-15,65.1,63.9,61.7,24.4,32.1,60.3,Medium,Monitoring,0
+1094,92,Vendor 092,2024-03-15,61.8,61.5,53.5,39.9,34.1,57.6,Medium,Monitoring,0
+1095,92,Vendor 092,2024-05-15,60.2,58.1,52.5,33.4,41.2,55.6,Medium,Monitoring,0
+1096,92,Vendor 092,2024-07-15,61.8,65.4,63.8,35.2,35.9,60.8,Medium,Monitoring,0
+1097,92,Vendor 092,2024-09-15,59.4,61.0,59.2,31.0,22.0,56.6,Medium,Monitoring,0
+1098,92,Vendor 092,2024-11-15,61.2,60.7,46.9,23.7,33.2,54.9,Medium,Monitoring,0
+1099,92,Vendor 092,2025-01-15,57.0,63.5,68.0,47.1,49.0,60.6,Medium,Monitoring,1
+1100,92,Vendor 092,2025-03-15,55.8,60.1,56.9,29.4,38.7,55.4,Medium,Monitoring,0
+1101,92,Vendor 092,2025-05-15,60.4,60.9,63.7,24.0,50.0,58.9,Medium,Monitoring,0
+1102,92,Vendor 092,2025-07-15,60.0,64.3,57.9,28.9,43.2,58.7,Medium,Monitoring,0
+1103,92,Vendor 092,2025-09-15,57.5,63.1,63.9,28.2,57.7,59.3,Medium,Monitoring,0
+1104,92,Vendor 092,2025-11-15,64.6,66.3,46.0,18.8,39.5,57.9,Medium,Monitoring,0
+1105,93,Vendor 093,2024-01-15,51.6,34.1,45.8,25.6,28.9,41.9,Medium,Monitoring,0
+1106,93,Vendor 093,2024-03-15,47.4,39.5,45.2,31.2,32.5,42.6,Medium,Monitoring,0
+1107,93,Vendor 093,2024-05-15,49.9,53.3,46.5,40.0,31.0,49.0,Medium,Monitoring,0
+1108,93,Vendor 093,2024-07-15,46.7,43.5,48.8,30.3,42.2,44.9,Medium,Monitoring,0
+1109,93,Vendor 093,2024-09-15,51.6,41.2,40.8,20.3,39.2,43.6,Medium,Monitoring,0
+1110,93,Vendor 093,2024-11-15,42.9,44.5,45.9,28.6,26.8,42.6,Medium,Monitoring,0
+1111,93,Vendor 093,2025-01-15,44.7,66.8,49.0,36.4,18.7,51.6,Medium,Monitoring,1
+1112,93,Vendor 093,2025-03-15,42.2,49.9,42.8,28.1,27.8,43.6,Medium,Monitoring,0
+1113,93,Vendor 093,2025-05-15,43.2,51.5,39.9,12.1,35.5,43.5,Medium,Monitoring,1
+1114,93,Vendor 093,2025-07-15,52.2,48.3,35.3,28.0,13.2,44.3,Medium,Monitoring,0
+1115,93,Vendor 093,2025-09-15,50.4,53.1,46.5,21.3,27.4,47.9,Medium,Monitoring,0
+1116,93,Vendor 093,2025-11-15,52.4,51.2,43.6,33.6,34.3,48.4,Medium,Monitoring,0
+1117,94,Vendor 094,2024-01-15,32.8,38.1,24.5,18.6,26.8,32.0,Low,Completed,0
+1118,94,Vendor 094,2024-03-15,31.4,30.3,21.4,28.5,31.9,28.9,Low,Completed,0
+1119,94,Vendor 094,2024-05-15,32.4,41.7,29.4,16.2,39.8,34.6,Low,Completed,0
+1120,94,Vendor 094,2024-07-15,37.9,28.9,22.8,6.7,48.8,30.7,Low,Completed,0
+1121,94,Vendor 094,2024-09-15,37.6,37.4,28.3,20.8,26.2,34.3,Low,Completed,0
+1122,94,Vendor 094,2024-11-15,35.3,38.7,25.2,18.0,4.9,32.1,Low,Completed,0
+1123,94,Vendor 094,2025-01-15,32.3,39.7,29.0,29.4,31.8,34.1,Low,Completed,0
+1124,94,Vendor 094,2025-03-15,33.3,35.1,31.1,44.4,24.5,33.6,Low,Completed,0
+1125,94,Vendor 094,2025-05-15,35.8,30.2,35.4,41.3,30.5,33.8,Low,Completed,0
+1126,94,Vendor 094,2025-07-15,39.6,37.1,45.1,29.8,18.6,38.3,Medium,Monitoring,0
+1127,94,Vendor 094,2025-09-15,40.0,39.1,33.9,32.5,32.3,37.7,Medium,Monitoring,0
+1128,94,Vendor 094,2025-11-15,38.7,35.7,31.0,23.2,24.8,34.6,Low,Completed,0
+1129,95,Vendor 095,2024-01-15,64.9,57.0,67.3,37.8,37.2,59.9,Medium,Monitoring,0
+1130,95,Vendor 095,2024-03-15,62.2,62.4,63.6,48.6,46.1,61.1,Medium,Monitoring,0
+1131,95,Vendor 095,2024-05-15,62.4,68.6,63.0,43.9,47.2,63.0,Medium,Monitoring,0
+1132,95,Vendor 095,2024-07-15,71.9,57.7,74.1,43.7,69.5,65.8,High,Monitoring,0
+1133,95,Vendor 095,2024-09-15,65.1,69.8,65.4,37.9,51.1,64.8,Medium,Monitoring,0
+1134,95,Vendor 095,2024-11-15,61.4,66.2,61.1,33.1,28.9,60.0,Medium,Monitoring,0
+1135,95,Vendor 095,2025-01-15,60.0,64.1,59.4,34.1,52.3,59.7,Medium,Monitoring,0
+1136,95,Vendor 095,2025-03-15,60.5,68.9,66.2,38.6,38.6,62.4,Medium,Monitoring,0
+1137,95,Vendor 095,2025-05-15,62.0,63.3,53.2,24.5,55.8,58.5,Medium,Monitoring,0
+1138,95,Vendor 095,2025-07-15,69.4,70.4,63.2,31.3,52.9,65.8,High,Monitoring,0
+1139,95,Vendor 095,2025-09-15,69.3,66.5,60.8,31.8,42.7,63.4,Medium,Monitoring,0
+1140,95,Vendor 095,2025-11-15,64.7,65.2,59.5,42.2,29.2,60.9,Medium,Monitoring,0
+1141,96,Vendor 096,2024-01-15,49.3,48.1,43.6,34.2,14.5,45.2,Medium,Monitoring,0
+1142,96,Vendor 096,2024-03-15,52.5,46.6,50.3,17.4,36.6,47.5,Medium,Monitoring,0
+1143,96,Vendor 096,2024-05-15,60.7,56.0,53.5,19.9,34.3,54.3,Medium,Monitoring,0
+1144,96,Vendor 096,2024-07-15,54.5,55.1,50.5,32.9,35.4,51.9,Medium,Monitoring,0
+1145,96,Vendor 096,2024-09-15,52.0,49.2,56.8,33.6,55.1,51.2,Medium,Monitoring,0
+1146,96,Vendor 096,2024-11-15,63.0,70.5,55.1,29.8,43.0,61.4,Medium,Monitoring,1
+1147,96,Vendor 096,2025-01-15,53.6,57.5,52.5,43.6,41.3,53.6,Medium,Monitoring,0
+1148,96,Vendor 096,2025-03-15,51.1,51.4,50.8,42.7,48.4,50.6,Medium,Monitoring,0
+1149,96,Vendor 096,2025-05-15,61.9,49.6,48.7,18.6,21.5,50.8,Medium,Monitoring,0
+1150,96,Vendor 096,2025-07-15,57.6,56.9,45.3,30.5,45.1,52.9,Medium,Monitoring,0
+1151,96,Vendor 096,2025-09-15,60.5,58.2,55.0,41.5,16.6,55.4,Medium,Monitoring,0
+1152,96,Vendor 096,2025-11-15,58.4,52.9,52.4,44.0,44.1,53.9,Medium,Monitoring,0
+1153,97,Vendor 097,2024-01-15,64.6,54.4,61.5,41.1,43.8,58.2,Medium,Monitoring,0
+1154,97,Vendor 097,2024-03-15,63.6,63.7,69.1,24.0,56.2,62.4,Medium,Monitoring,0
+1155,97,Vendor 097,2024-05-15,64.1,58.5,65.7,25.5,36.7,59.2,Medium,Monitoring,0
+1156,97,Vendor 097,2024-07-15,59.1,62.1,54.0,40.1,58.7,58.2,Medium,Monitoring,0
+1157,97,Vendor 097,2024-09-15,58.1,58.3,59.8,41.8,41.4,56.8,Medium,Monitoring,0
+1158,97,Vendor 097,2024-11-15,64.8,54.4,63.5,22.3,37.8,57.4,Medium,Monitoring,0
+1159,97,Vendor 097,2025-01-15,66.9,64.8,62.4,55.7,34.5,63.1,Medium,Monitoring,0
+1160,97,Vendor 097,2025-03-15,64.5,62.9,55.8,25.2,49.6,59.5,Medium,Monitoring,0
+1161,97,Vendor 097,2025-05-15,62.6,56.8,61.3,49.8,33.4,58.2,Medium,Monitoring,0
+1162,97,Vendor 097,2025-07-15,63.1,68.8,60.3,39.5,57.3,63.1,Medium,Monitoring,0
+1163,97,Vendor 097,2025-09-15,58.5,64.3,67.2,38.0,54.1,61.0,Medium,Monitoring,0
+1164,97,Vendor 097,2025-11-15,64.4,49.4,70.4,46.6,40.1,58.2,Medium,Monitoring,0
+1165,98,Vendor 098,2024-01-15,21.7,24.6,13.0,34.9,16.9,21.4,Low,Completed,0
+1166,98,Vendor 098,2024-03-15,13.8,14.3,5.8,23.7,7.8,12.6,Low,Completed,0
+1167,98,Vendor 098,2024-05-15,25.5,20.2,12.5,5.8,25.9,20.1,Low,Completed,0
+1168,98,Vendor 098,2024-07-15,25.2,26.0,9.1,29.5,21.7,22.3,Low,Completed,0
+1169,98,Vendor 098,2024-09-15,17.8,16.4,9.7,29.8,16.3,16.2,Low,Completed,0
+1170,98,Vendor 098,2024-11-15,23.2,18.6,5.0,0.0,16.4,16.5,Low,Completed,0
+1171,98,Vendor 098,2025-01-15,18.0,18.3,20.5,31.2,19.6,19.4,Low,Completed,0
+1172,98,Vendor 098,2025-03-15,24.8,19.8,14.1,18.6,20.3,20.4,Low,Completed,0
+1173,98,Vendor 098,2025-05-15,23.1,6.6,12.3,0.0,21.9,14.0,Low,Completed,0
+1174,98,Vendor 098,2025-07-15,27.9,19.9,13.3,19.8,10.6,20.9,Low,Completed,0
+1175,98,Vendor 098,2025-09-15,25.1,16.0,11.2,11.5,17.7,18.1,Low,Completed,0
+1176,98,Vendor 098,2025-11-15,20.5,15.8,10.3,13.3,23.7,16.6,Low,Completed,0
+1177,99,Vendor 099,2024-01-15,42.7,40.8,33.5,30.5,2.2,37.5,Medium,Monitoring,0
+1178,99,Vendor 099,2024-03-15,36.9,37.5,33.0,29.2,36.9,35.9,Medium,Monitoring,0
+1179,99,Vendor 099,2024-05-15,40.5,31.0,37.0,19.0,21.6,34.5,Low,Completed,0
+1180,99,Vendor 099,2024-07-15,41.1,34.3,25.3,25.6,39.3,34.7,Low,Completed,0
+1181,99,Vendor 099,2024-09-15,34.7,38.0,37.5,22.3,32.9,35.7,Medium,Monitoring,0
+1182,99,Vendor 099,2024-11-15,38.9,35.2,36.1,30.5,24.1,35.9,Medium,Monitoring,0
+1183,99,Vendor 099,2025-01-15,34.7,37.8,28.7,12.4,16.0,32.5,Low,Completed,0
+1184,99,Vendor 099,2025-03-15,42.2,34.9,38.1,22.9,23.8,37.0,Medium,Monitoring,0
+1185,99,Vendor 099,2025-05-15,32.5,41.8,25.3,16.6,28.8,33.3,Low,Completed,0
+1186,99,Vendor 099,2025-07-15,40.9,52.0,40.5,43.9,30.5,44.4,Medium,Monitoring,1
+1187,99,Vendor 099,2025-09-15,44.5,65.6,22.4,22.0,54.9,46.9,Medium,Monitoring,1
+1188,99,Vendor 099,2025-11-15,44.5,45.3,37.1,17.2,34.1,41.4,Medium,Monitoring,0
+1189,100,Vendor 100,2024-01-15,34.3,40.9,38.6,15.9,17.5,35.7,Medium,Monitoring,0
+1190,100,Vendor 100,2024-03-15,40.1,31.5,38.3,18.7,32.8,35.3,Medium,Monitoring,0
+1191,100,Vendor 100,2024-05-15,41.5,40.4,28.9,16.5,27.6,36.6,Medium,Monitoring,0
+1192,100,Vendor 100,2024-07-15,43.8,35.7,34.6,28.2,28.1,37.6,Medium,Monitoring,0
+1193,100,Vendor 100,2024-09-15,35.6,54.7,26.2,22.3,29.4,39.4,Medium,Monitoring,1
+1194,100,Vendor 100,2024-11-15,40.9,41.3,27.5,28.4,14.0,36.4,Medium,Monitoring,0
+1195,100,Vendor 100,2025-01-15,47.5,42.5,28.6,4.7,33.2,39.1,Medium,Monitoring,1
+1196,100,Vendor 100,2025-03-15,37.3,38.8,33.9,24.6,36.7,36.5,Medium,Monitoring,0
+1197,100,Vendor 100,2025-05-15,44.4,46.0,34.9,30.6,22.9,41.3,Medium,Monitoring,1
+1198,100,Vendor 100,2025-07-15,37.9,38.4,25.6,23.6,27.0,34.3,Low,Completed,0
+1199,100,Vendor 100,2025-09-15,37.9,44.8,37.5,23.0,41.9,39.7,Medium,Monitoring,0
+1200,100,Vendor 100,2025-11-15,40.5,36.4,34.7,9.1,16.1,35.1,Medium,Monitoring,0
+1201,101,Vendor 101,2024-01-15,33.9,24.7,42.5,5.7,30.4,30.8,Low,Completed,0
+1202,101,Vendor 101,2024-03-15,38.3,25.8,22.1,1.4,45.0,29.2,Low,Completed,0
+1203,101,Vendor 101,2024-05-15,25.0,26.3,26.4,19.5,18.7,25.1,Low,Completed,0
+1204,101,Vendor 101,2024-07-15,30.4,27.3,28.2,40.9,30.6,29.4,Low,Completed,0
+1205,101,Vendor 101,2024-09-15,30.4,22.5,20.9,12.1,23.7,24.5,Low,Completed,0
+1206,101,Vendor 101,2024-11-15,26.6,37.8,24.3,16.2,13.1,28.9,Low,Completed,0
+1207,101,Vendor 101,2025-01-15,27.6,22.2,25.4,14.8,31.7,24.8,Low,Completed,0
+1208,101,Vendor 101,2025-03-15,31.9,29.2,25.4,11.1,33.2,28.6,Low,Completed,0
+1209,101,Vendor 101,2025-05-15,31.6,22.7,22.2,28.4,29.7,26.3,Low,Completed,0
+1210,101,Vendor 101,2025-07-15,30.1,33.2,18.7,14.9,25.5,27.9,Low,Completed,0
+1211,101,Vendor 101,2025-09-15,30.7,34.2,25.7,22.8,15.6,29.8,Low,Completed,0
+1212,101,Vendor 101,2025-11-15,31.8,31.5,20.0,6.6,2.9,26.6,Low,Completed,0
+1213,102,Vendor 102,2024-01-15,53.1,38.4,47.3,23.8,46.7,45.0,Medium,Monitoring,0
+1214,102,Vendor 102,2024-03-15,50.9,45.6,39.2,35.2,45.4,45.7,Medium,Monitoring,0
+1215,102,Vendor 102,2024-05-15,53.6,43.3,31.5,27.7,39.6,43.6,Medium,Monitoring,0
+1216,102,Vendor 102,2024-07-15,41.2,45.7,42.4,41.2,34.7,42.7,Medium,Monitoring,0
+1217,102,Vendor 102,2024-09-15,50.0,56.1,42.2,26.7,18.9,47.8,Medium,Monitoring,0
+1218,102,Vendor 102,2024-11-15,54.0,53.2,42.4,12.7,33.7,48.3,Medium,Monitoring,0
+1219,102,Vendor 102,2025-01-15,53.0,46.3,42.7,49.3,42.6,47.9,Medium,Monitoring,0
+1220,102,Vendor 102,2025-03-15,46.7,42.3,48.5,42.5,21.7,44.1,Medium,Monitoring,0
+1221,102,Vendor 102,2025-05-15,46.7,52.4,48.8,23.9,30.9,47.2,Medium,Monitoring,0
+1222,102,Vendor 102,2025-07-15,46.5,65.4,45.5,36.8,33.7,51.8,Medium,Monitoring,1
+1223,102,Vendor 102,2025-09-15,54.8,45.1,40.5,19.6,14.9,44.8,Medium,Monitoring,0
+1224,102,Vendor 102,2025-11-15,57.2,53.5,45.7,46.1,39.2,52.1,Medium,Monitoring,0
+1225,103,Vendor 103,2024-01-15,38.4,37.2,29.9,30.9,17.3,34.9,Low,Completed,0
+1226,103,Vendor 103,2024-03-15,33.3,36.6,44.7,29.6,39.9,36.9,Medium,Monitoring,0
+1227,103,Vendor 103,2024-05-15,28.1,34.5,34.6,1.7,25.4,30.2,Low,Completed,0
+1228,103,Vendor 103,2024-07-15,32.7,30.6,38.8,0.0,30.9,31.5,Low,Completed,0
+1229,103,Vendor 103,2024-09-15,38.3,43.5,27.7,13.6,28.1,36.3,Medium,Monitoring,0
+1230,103,Vendor 103,2024-11-15,36.2,35.8,24.2,14.2,17.0,31.6,Low,Completed,0
+1231,103,Vendor 103,2025-01-15,34.2,30.0,28.6,24.7,34.9,31.1,Low,Completed,0
+1232,103,Vendor 103,2025-03-15,38.5,38.1,31.8,27.2,32.6,36.2,Medium,Monitoring,0
+1233,103,Vendor 103,2025-05-15,33.4,42.2,33.5,33.1,17.2,35.7,Medium,Monitoring,0
+1234,103,Vendor 103,2025-07-15,33.7,40.9,28.0,17.1,47.8,35.0,Low,Completed,0
+1235,103,Vendor 103,2025-09-15,42.2,32.2,19.5,32.3,5.8,31.9,Low,Completed,0
+1236,103,Vendor 103,2025-11-15,35.5,32.3,28.9,12.0,16.0,30.9,Low,Completed,0
+1237,104,Vendor 104,2024-01-15,45.6,31.0,33.2,29.5,34.6,36.7,Medium,Monitoring,0
+1238,104,Vendor 104,2024-03-15,38.4,42.6,32.4,5.2,27.9,36.5,Medium,Monitoring,0
+1239,104,Vendor 104,2024-05-15,36.2,37.3,40.1,15.8,32.5,36.2,Medium,Monitoring,0
+1240,104,Vendor 104,2024-07-15,36.8,43.2,39.3,12.3,39.7,38.5,Medium,Monitoring,0
+1241,104,Vendor 104,2024-09-15,33.3,33.6,38.5,7.9,24.0,32.7,Low,Completed,0
+1242,104,Vendor 104,2024-11-15,44.4,42.4,40.6,16.0,31.1,40.8,Medium,Monitoring,0
+1243,104,Vendor 104,2025-01-15,44.4,45.1,32.5,30.6,20.9,40.4,Medium,Monitoring,0
+1244,104,Vendor 104,2025-03-15,42.5,43.3,38.1,25.0,29.3,40.4,Medium,Monitoring,0
+1245,104,Vendor 104,2025-05-15,50.7,44.8,34.9,10.4,21.7,42.0,Medium,Monitoring,0
+1246,104,Vendor 104,2025-07-15,44.8,34.6,38.5,25.3,33.7,38.4,Medium,Monitoring,0
+1247,104,Vendor 104,2025-09-15,40.2,36.5,39.7,23.3,19.4,36.9,Medium,Monitoring,0
+1248,104,Vendor 104,2025-11-15,55.7,39.5,42.7,0.0,27.4,43.2,Medium,Monitoring,0
+1249,105,Vendor 105,2024-01-15,37.8,32.3,32.0,32.5,49.7,35.1,Medium,Monitoring,0
+1250,105,Vendor 105,2024-03-15,35.7,34.3,29.7,14.0,26.8,32.5,Low,Completed,0
+1251,105,Vendor 105,2024-05-15,33.6,40.6,36.1,16.3,29.8,35.5,Medium,Monitoring,0
+1252,105,Vendor 105,2024-07-15,35.8,39.3,35.4,17.5,31.4,35.8,Medium,Monitoring,0
+1253,105,Vendor 105,2024-09-15,34.7,36.1,32.5,25.7,11.4,33.1,Low,Completed,0
+1254,105,Vendor 105,2024-11-15,38.4,26.8,26.5,27.6,42.2,31.6,Low,Completed,0
+1255,105,Vendor 105,2025-01-15,42.2,26.8,38.3,20.3,21.2,33.9,Low,Completed,0
+1256,105,Vendor 105,2025-03-15,34.4,38.8,30.9,0.0,20.2,32.8,Low,Completed,0
+1257,105,Vendor 105,2025-05-15,41.9,37.0,34.1,13.7,35.6,36.9,Medium,Monitoring,0
+1258,105,Vendor 105,2025-07-15,31.7,41.6,32.6,19.9,25.3,34.4,Low,Completed,0
+1259,105,Vendor 105,2025-09-15,40.5,37.4,38.6,23.5,30.4,37.7,Medium,Monitoring,0
+1260,105,Vendor 105,2025-11-15,43.4,40.4,30.7,21.3,10.6,37.1,Medium,Monitoring,0
+1261,106,Vendor 106,2024-01-15,47.9,55.0,40.7,20.8,24.8,46.4,Medium,Monitoring,0
+1262,106,Vendor 106,2024-03-15,45.5,63.2,42.4,22.1,30.9,49.2,Medium,Monitoring,1
+1263,106,Vendor 106,2024-05-15,44.2,45.2,46.2,28.8,42.7,44.1,Medium,Monitoring,0
+1264,106,Vendor 106,2024-07-15,51.9,60.0,46.3,28.4,39.7,51.8,Medium,Monitoring,0
+1265,106,Vendor 106,2024-09-15,46.3,49.9,37.1,31.5,40.1,44.6,Medium,Monitoring,0
+1266,106,Vendor 106,2024-11-15,50.4,48.0,50.9,40.6,42.9,48.8,Medium,Monitoring,0
+1267,106,Vendor 106,2025-01-15,47.9,49.9,42.8,17.5,35.3,45.4,Medium,Monitoring,0
+1268,106,Vendor 106,2025-03-15,48.1,47.7,45.1,36.4,28.7,45.8,Medium,Monitoring,0
+1269,106,Vendor 106,2025-05-15,51.5,52.0,45.6,16.1,33.2,47.8,Medium,Monitoring,0
+1270,106,Vendor 106,2025-07-15,45.3,45.0,45.9,39.3,36.8,44.6,Medium,Monitoring,0
+1271,106,Vendor 106,2025-09-15,48.2,44.7,39.4,34.7,15.3,42.9,Medium,Monitoring,0
+1272,106,Vendor 106,2025-11-15,57.4,48.4,38.2,39.1,37.3,48.5,Medium,Monitoring,0
+1273,107,Vendor 107,2024-01-15,50.8,52.3,52.3,39.2,40.9,50.5,Medium,Monitoring,0
+1274,107,Vendor 107,2024-03-15,54.6,60.2,51.2,48.7,31.5,54.4,Medium,Monitoring,0
+1275,107,Vendor 107,2024-05-15,63.7,59.8,55.0,33.2,38.6,57.8,Medium,Monitoring,0
+1276,107,Vendor 107,2024-07-15,53.5,48.0,53.7,14.9,44.6,49.2,Medium,Monitoring,0
+1277,107,Vendor 107,2024-09-15,51.8,62.6,48.4,23.6,32.3,52.5,Medium,Monitoring,0
+1278,107,Vendor 107,2024-11-15,53.1,62.8,44.4,71.1,27.5,54.4,Medium,Monitoring,0
+1279,107,Vendor 107,2025-01-15,60.0,55.0,53.8,26.5,41.5,54.4,Medium,Monitoring,0
+1280,107,Vendor 107,2025-03-15,57.4,54.9,44.5,34.5,41.7,52.0,Medium,Monitoring,0
+1281,107,Vendor 107,2025-05-15,52.4,56.0,59.2,28.9,47.4,53.6,Medium,Monitoring,0
+1282,107,Vendor 107,2025-07-15,60.8,57.6,49.9,39.2,36.2,55.2,Medium,Monitoring,0
+1283,107,Vendor 107,2025-09-15,52.5,51.6,45.0,17.0,32.2,47.9,Medium,Monitoring,0
+1284,107,Vendor 107,2025-11-15,57.8,50.1,49.6,30.3,56.2,52.0,Medium,Monitoring,0
+1285,108,Vendor 108,2024-01-15,56.1,55.5,57.1,26.4,64.6,55.0,Medium,Monitoring,0
+1286,108,Vendor 108,2024-03-15,60.6,71.8,58.1,28.9,36.9,61.3,Medium,Monitoring,0
+1287,108,Vendor 108,2024-05-15,61.0,69.1,56.8,42.1,23.4,60.2,Medium,Monitoring,0
+1288,108,Vendor 108,2024-07-15,55.2,60.3,49.9,45.4,39.6,54.7,Medium,Monitoring,0
+1289,108,Vendor 108,2024-09-15,60.7,67.7,50.7,32.5,46.6,59.0,Medium,Monitoring,0
+1290,108,Vendor 108,2024-11-15,60.6,54.0,62.8,29.1,38.5,56.0,Medium,Monitoring,0
+1291,108,Vendor 108,2025-01-15,62.2,59.8,57.2,39.5,33.4,57.8,Medium,Monitoring,0
+1292,108,Vendor 108,2025-03-15,65.2,60.5,64.0,32.3,34.7,60.1,Medium,Monitoring,0
+1293,108,Vendor 108,2025-05-15,62.4,63.2,65.9,41.9,62.2,62.4,Medium,Monitoring,0
+1294,108,Vendor 108,2025-07-15,63.1,76.6,66.1,23.7,57.6,66.2,High,In Progress,1
+1295,108,Vendor 108,2025-09-15,56.3,63.4,59.0,30.1,36.8,57.0,Medium,Monitoring,0
+1296,108,Vendor 108,2025-11-15,63.5,58.1,63.1,27.3,37.3,58.4,Medium,Monitoring,0
+1297,109,Vendor 109,2024-01-15,56.0,46.8,40.8,36.5,21.7,47.1,Medium,Monitoring,0
+1298,109,Vendor 109,2024-03-15,52.7,48.8,50.4,42.3,14.7,48.4,Medium,Monitoring,0
+1299,109,Vendor 109,2024-05-15,55.6,48.2,48.2,30.1,43.4,49.6,Medium,Monitoring,0
+1300,109,Vendor 109,2024-07-15,52.7,52.1,49.8,55.4,28.7,50.9,Medium,Monitoring,0
+1301,109,Vendor 109,2024-09-15,49.5,49.9,44.5,13.4,47.9,46.7,Medium,Monitoring,0
+1302,109,Vendor 109,2024-11-15,52.4,47.2,46.8,17.1,35.8,46.9,Medium,Monitoring,0
+1303,109,Vendor 109,2025-01-15,49.4,47.2,45.8,36.8,38.1,46.7,Medium,Monitoring,0
+1304,109,Vendor 109,2025-03-15,53.3,52.0,49.0,45.1,36.3,50.7,Medium,Monitoring,0
+1305,109,Vendor 109,2025-05-15,52.1,53.4,46.9,22.2,45.8,49.7,Medium,Monitoring,0
+1306,109,Vendor 109,2025-07-15,57.1,53.5,34.4,30.3,36.4,48.9,Medium,Monitoring,0
+1307,109,Vendor 109,2025-09-15,57.0,55.6,37.2,20.4,32.4,49.5,Medium,Monitoring,0
+1308,109,Vendor 109,2025-11-15,52.4,58.5,49.9,19.5,27.7,51.2,Medium,Monitoring,0
+1309,110,Vendor 110,2024-01-15,44.4,47.3,43.3,22.2,32.2,43.5,Medium,Monitoring,0
+1310,110,Vendor 110,2024-03-15,38.9,46.5,43.4,23.0,32.3,41.3,Medium,Monitoring,0
+1311,110,Vendor 110,2024-05-15,42.8,39.0,39.1,44.5,28.1,40.1,Medium,Monitoring,0
+1312,110,Vendor 110,2024-07-15,49.3,44.2,36.7,31.0,24.0,42.8,Medium,Monitoring,0
+1313,110,Vendor 110,2024-09-15,43.8,54.6,35.6,27.2,19.2,43.9,Medium,Monitoring,0
+1314,110,Vendor 110,2024-11-15,44.9,42.9,38.1,51.1,36.9,42.7,Medium,Monitoring,0
+1315,110,Vendor 110,2025-01-15,34.0,51.0,38.3,17.4,24.8,39.5,Medium,Monitoring,0
+1316,110,Vendor 110,2025-03-15,44.4,35.3,40.0,17.6,36.1,38.5,Medium,Monitoring,0
+1317,110,Vendor 110,2025-05-15,38.8,58.0,41.0,13.4,17.7,43.6,Medium,Monitoring,1
+1318,110,Vendor 110,2025-07-15,49.1,35.4,40.8,32.6,30.7,40.9,Medium,Monitoring,0
+1319,110,Vendor 110,2025-09-15,44.6,44.4,30.2,29.6,32.5,40.3,Medium,Monitoring,0
+1320,110,Vendor 110,2025-11-15,49.7,41.9,49.0,23.2,22.9,44.2,Medium,Monitoring,0
+1321,111,Vendor 111,2024-01-15,74.1,69.9,73.5,34.8,44.8,69.1,High,Monitoring,0
+1322,111,Vendor 111,2024-03-15,77.5,72.3,76.6,43.2,36.9,71.8,High,Monitoring,0
+1323,111,Vendor 111,2024-05-15,76.5,80.4,77.4,27.7,38.6,73.7,High,Monitoring,0
+1324,111,Vendor 111,2024-07-15,74.3,76.8,72.7,40.7,23.5,70.6,High,In Progress,0
+1325,111,Vendor 111,2024-09-15,71.5,76.3,80.3,39.1,52.1,72.4,High,Monitoring,0
+1326,111,Vendor 111,2024-11-15,82.0,70.2,72.7,47.7,54.0,72.9,High,In Progress,0
+1327,111,Vendor 111,2025-01-15,66.4,98.0,79.7,42.3,48.3,78.0,High,In Progress,1
+1328,111,Vendor 111,2025-03-15,69.6,91.5,78.5,33.6,61.5,76.9,High,In Progress,1
+1329,111,Vendor 111,2025-05-15,75.6,76.0,80.5,44.1,46.3,73.7,High,Monitoring,0
+1330,111,Vendor 111,2025-07-15,65.4,83.9,78.9,38.3,61.6,73.0,High,In Progress,1
+1331,111,Vendor 111,2025-09-15,72.4,72.1,78.1,42.7,50.0,70.8,High,In Progress,0
+1332,111,Vendor 111,2025-11-15,75.4,76.4,72.0,53.4,37.0,72.0,High,In Progress,0
+1333,112,Vendor 112,2024-01-15,30.5,19.3,5.1,13.5,4.9,19.4,Low,Completed,0
+1334,112,Vendor 112,2024-03-15,25.9,26.7,20.5,14.8,25.2,24.5,Low,Completed,0
+1335,112,Vendor 112,2024-05-15,31.3,15.4,19.0,4.9,31.3,21.9,Low,Completed,0
+1336,112,Vendor 112,2024-07-15,20.4,18.1,7.9,20.1,31.8,17.6,Low,Completed,0
+1337,112,Vendor 112,2024-09-15,23.2,15.1,15.9,30.1,17.8,19.0,Low,Completed,0
+1338,112,Vendor 112,2024-11-15,17.0,29.8,19.9,0.0,26.1,21.7,Low,Completed,0
+1339,112,Vendor 112,2025-01-15,21.5,13.9,5.0,15.4,38.5,16.1,Low,Completed,0
+1340,112,Vendor 112,2025-03-15,25.9,23.6,17.5,35.8,29.1,24.1,Low,Completed,0
+1341,112,Vendor 112,2025-05-15,17.6,22.0,20.3,8.1,0.0,18.3,Low,Completed,0
+1342,112,Vendor 112,2025-07-15,19.7,21.6,12.4,15.9,13.5,18.4,Low,Completed,0
+1343,112,Vendor 112,2025-09-15,23.8,17.7,15.7,29.7,8.1,19.6,Low,Completed,0
+1344,112,Vendor 112,2025-11-15,18.2,11.9,17.5,35.9,16.3,16.6,Low,Completed,0
+1345,113,Vendor 113,2024-01-15,27.2,25.4,31.6,10.2,33.2,26.9,Low,Completed,0
+1346,113,Vendor 113,2024-03-15,28.1,25.7,11.4,32.0,26.3,24.0,Low,Completed,0
+1347,113,Vendor 113,2024-05-15,27.0,28.1,29.1,16.6,33.7,27.6,Low,Completed,0
+1348,113,Vendor 113,2024-07-15,29.3,31.0,24.0,6.8,23.5,27.4,Low,Completed,0
+1349,113,Vendor 113,2024-09-15,29.9,33.9,25.4,18.2,24.0,29.5,Low,Completed,0
+1350,113,Vendor 113,2024-11-15,33.0,39.1,23.3,6.0,21.4,31.3,Low,Completed,1
+1351,113,Vendor 113,2025-01-15,29.4,24.5,28.4,21.9,28.3,27.0,Low,Completed,0
+1352,113,Vendor 113,2025-03-15,28.5,37.0,26.3,16.8,40.0,31.0,Low,Completed,1
+1353,113,Vendor 113,2025-05-15,29.3,27.3,27.2,37.6,33.2,28.8,Low,Completed,0
+1354,113,Vendor 113,2025-07-15,26.9,27.4,18.5,7.9,19.8,24.1,Low,Completed,0
+1355,113,Vendor 113,2025-09-15,34.4,27.7,19.4,10.9,29.1,27.6,Low,Completed,0
+1356,113,Vendor 113,2025-11-15,34.3,28.5,16.5,15.9,32.6,27.7,Low,Completed,0
+1357,114,Vendor 114,2024-01-15,50.2,51.3,51.9,22.0,34.0,48.7,Medium,Monitoring,0
+1358,114,Vendor 114,2024-03-15,47.8,54.7,49.5,25.8,39.7,49.0,Medium,Monitoring,0
+1359,114,Vendor 114,2024-05-15,58.6,38.2,42.4,25.5,33.9,45.3,Medium,Monitoring,0
+1360,114,Vendor 114,2024-07-15,49.3,53.1,51.8,36.4,33.8,49.7,Medium,Monitoring,0
+1361,114,Vendor 114,2024-09-15,50.3,62.6,55.5,20.4,38.7,53.5,Medium,Monitoring,1
+1362,114,Vendor 114,2024-11-15,55.8,51.5,44.0,18.9,34.1,49.0,Medium,Monitoring,0
+1363,114,Vendor 114,2025-01-15,49.6,48.2,40.2,50.5,33.2,46.4,Medium,Monitoring,0
+1364,114,Vendor 114,2025-03-15,45.3,46.9,54.0,26.3,31.4,46.0,Medium,Monitoring,0
+1365,114,Vendor 114,2025-05-15,53.0,51.5,45.6,17.0,27.7,47.9,Medium,Monitoring,0
+1366,114,Vendor 114,2025-07-15,50.0,48.3,41.8,30.8,28.6,45.7,Medium,Monitoring,0
+1367,114,Vendor 114,2025-09-15,49.0,50.3,45.1,14.6,39.7,46.5,Medium,Monitoring,0
+1368,114,Vendor 114,2025-11-15,52.2,50.6,48.2,23.9,39.6,48.8,Medium,Monitoring,0
+1369,115,Vendor 115,2024-01-15,60.0,60.1,64.4,28.0,35.1,58.1,Medium,Monitoring,0
+1370,115,Vendor 115,2024-03-15,60.7,69.1,57.0,25.3,42.2,60.2,Medium,Monitoring,0
+1371,115,Vendor 115,2024-05-15,63.1,64.8,59.2,44.9,25.7,60.2,Medium,Monitoring,0
+1372,115,Vendor 115,2024-07-15,63.5,60.8,59.3,23.7,40.2,58.5,Medium,Monitoring,0
+1373,115,Vendor 115,2024-09-15,61.8,72.7,57.6,44.6,54.7,63.6,Medium,Monitoring,1
+1374,115,Vendor 115,2024-11-15,68.5,65.3,61.5,49.5,33.0,63.3,Medium,Monitoring,0
+1375,115,Vendor 115,2025-01-15,68.5,67.1,56.9,25.4,28.2,61.5,Medium,Monitoring,0
+1376,115,Vendor 115,2025-03-15,58.1,66.8,55.5,59.1,28.7,59.2,Medium,Monitoring,0
+1377,115,Vendor 115,2025-05-15,67.4,59.6,65.5,30.7,46.1,61.4,Medium,Monitoring,0
+1378,115,Vendor 115,2025-07-15,61.3,71.2,64.3,53.0,33.9,63.6,Medium,Monitoring,0
+1379,115,Vendor 115,2025-09-15,62.8,58.7,66.0,32.8,30.8,58.9,Medium,Monitoring,0
+1380,115,Vendor 115,2025-11-15,59.8,77.7,62.2,32.2,43.4,64.3,Medium,Monitoring,1
+1381,116,Vendor 116,2024-01-15,49.4,43.4,48.3,13.5,40.3,44.8,Medium,Monitoring,0
+1382,116,Vendor 116,2024-03-15,53.0,57.0,29.4,16.4,49.6,47.7,Medium,Monitoring,1
+1383,116,Vendor 116,2024-05-15,44.1,49.7,33.4,26.2,26.0,42.1,Medium,Monitoring,0
+1384,116,Vendor 116,2024-07-15,42.7,39.4,40.5,10.9,36.5,39.2,Medium,Monitoring,0
+1385,116,Vendor 116,2024-09-15,45.3,43.0,38.2,37.8,28.5,41.9,Medium,Monitoring,0
+1386,116,Vendor 116,2024-11-15,48.6,43.4,33.5,16.9,45.0,42.0,Medium,Monitoring,0
+1387,116,Vendor 116,2025-01-15,46.5,42.2,45.8,17.0,33.6,42.7,Medium,Monitoring,0
+1388,116,Vendor 116,2025-03-15,39.9,40.1,40.0,34.3,27.8,39.1,Medium,Monitoring,0
+1389,116,Vendor 116,2025-05-15,38.4,55.1,31.8,33.4,49.0,43.2,Medium,Monitoring,1
+1390,116,Vendor 116,2025-07-15,48.5,39.8,38.3,32.8,34.9,41.9,Medium,Monitoring,0
+1391,116,Vendor 116,2025-09-15,41.7,40.4,39.5,18.9,17.0,38.4,Medium,Monitoring,0
+1392,116,Vendor 116,2025-11-15,44.7,52.9,35.3,25.1,52.6,45.1,Medium,Monitoring,0
+1393,117,Vendor 117,2024-01-15,42.2,34.3,33.9,46.2,36.5,37.7,Medium,Monitoring,0
+1394,117,Vendor 117,2024-03-15,34.8,35.7,30.0,8.4,7.3,31.4,Low,Completed,0
+1395,117,Vendor 117,2024-05-15,37.7,41.1,28.6,24.8,11.5,35.1,Medium,Monitoring,0
+1396,117,Vendor 117,2024-07-15,28.5,47.3,36.6,24.5,33.9,36.8,Medium,Monitoring,0
+1397,117,Vendor 117,2024-09-15,37.6,32.7,42.2,10.6,41.5,35.6,Medium,Monitoring,0
+1398,117,Vendor 117,2024-11-15,40.3,29.4,45.5,19.1,21.5,35.5,Medium,Monitoring,0
+1399,117,Vendor 117,2025-01-15,36.4,39.3,29.3,24.3,22.5,34.7,Low,Completed,0
+1400,117,Vendor 117,2025-03-15,34.3,40.2,32.7,21.0,32.8,35.3,Medium,Monitoring,0
+1401,117,Vendor 117,2025-05-15,34.9,37.6,29.0,20.8,39.2,34.2,Low,Completed,0
+1402,117,Vendor 117,2025-07-15,35.1,35.7,34.3,35.1,11.6,34.0,Low,Completed,0
+1403,117,Vendor 117,2025-09-15,41.4,36.3,22.1,17.2,38.8,34.4,Low,Completed,0
+1404,117,Vendor 117,2025-11-15,39.0,33.2,34.5,21.4,26.2,34.5,Low,Completed,0
+1405,118,Vendor 118,2024-01-15,63.6,63.1,57.1,28.8,26.2,58.5,Medium,Monitoring,0
+1406,118,Vendor 118,2024-03-15,62.3,63.6,64.4,27.0,32.4,59.9,Medium,Monitoring,0
+1407,118,Vendor 118,2024-05-15,73.0,70.7,71.8,22.0,42.3,67.9,High,Monitoring,0
+1408,118,Vendor 118,2024-07-15,71.7,71.5,63.8,12.1,32.6,65.1,High,In Progress,0
+1409,118,Vendor 118,2024-09-15,66.6,71.4,69.9,27.2,50.1,66.1,High,Monitoring,0
+1410,118,Vendor 118,2024-11-15,72.2,64.9,65.2,42.5,44.4,65.4,High,In Progress,0
+1411,118,Vendor 118,2025-01-15,62.7,63.6,56.9,36.1,52.8,60.0,Medium,Monitoring,0
+1412,118,Vendor 118,2025-03-15,58.0,67.5,61.5,37.1,37.0,59.9,Medium,Monitoring,0
+1413,118,Vendor 118,2025-05-15,69.5,68.7,61.0,20.0,46.4,63.9,Medium,Monitoring,0
+1414,118,Vendor 118,2025-07-15,66.9,76.7,76.1,34.3,74.1,70.9,High,In Progress,1
+1415,118,Vendor 118,2025-09-15,61.4,67.6,66.1,16.6,54.4,61.9,Medium,Monitoring,0
+1416,118,Vendor 118,2025-11-15,57.4,70.3,76.4,17.1,39.5,62.8,Medium,Monitoring,0
+1417,119,Vendor 119,2024-01-15,39.7,31.5,27.4,25.6,42.3,33.8,Low,Completed,0
+1418,119,Vendor 119,2024-03-15,32.7,30.5,28.1,8.1,26.5,29.5,Low,Completed,0
+1419,119,Vendor 119,2024-05-15,30.4,23.1,26.0,32.2,6.8,25.9,Low,Completed,0
+1420,119,Vendor 119,2024-07-15,32.9,27.8,29.8,34.5,41.6,31.0,Low,Completed,0
+1421,119,Vendor 119,2024-09-15,35.2,35.1,42.3,18.5,38.0,35.9,Medium,Monitoring,0
+1422,119,Vendor 119,2024-11-15,32.4,42.3,24.9,23.6,32.1,33.9,Low,Completed,0
+1423,119,Vendor 119,2025-01-15,33.6,29.8,29.5,25.1,20.7,30.4,Low,Completed,0
+1424,119,Vendor 119,2025-03-15,34.2,32.1,35.2,12.7,21.4,31.9,Low,Completed,0
+1425,119,Vendor 119,2025-05-15,30.0,32.7,39.5,39.7,35.6,33.6,Low,Completed,0
+1426,119,Vendor 119,2025-07-15,37.3,30.9,35.8,11.9,36.3,33.4,Low,Completed,0
+1427,119,Vendor 119,2025-09-15,34.2,36.6,38.8,35.7,30.0,35.8,Medium,Monitoring,0
+1428,119,Vendor 119,2025-11-15,38.3,39.5,23.3,20.1,16.1,33.7,Low,Completed,0
+1429,120,Vendor 120,2024-01-15,51.2,47.1,46.7,25.2,44.5,47.2,Medium,Monitoring,0
+1430,120,Vendor 120,2024-03-15,53.1,58.5,58.7,47.8,48.0,55.6,Medium,Monitoring,0
+1431,120,Vendor 120,2024-05-15,52.4,58.2,52.1,27.5,21.6,51.6,Medium,Monitoring,0
+1432,120,Vendor 120,2024-07-15,61.1,56.7,51.0,25.8,55.8,55.5,Medium,Monitoring,0
+1433,120,Vendor 120,2024-09-15,58.2,60.5,61.5,22.2,24.7,56.2,Medium,Monitoring,0
+1434,120,Vendor 120,2024-11-15,60.2,67.5,56.8,24.1,50.5,59.8,Medium,Monitoring,0
+1435,120,Vendor 120,2025-01-15,52.8,54.3,49.1,23.7,50.9,51.0,Medium,Monitoring,0
+1436,120,Vendor 120,2025-03-15,48.9,57.6,46.4,21.5,45.7,49.9,Medium,Monitoring,0
+1437,120,Vendor 120,2025-05-15,55.9,58.3,51.6,26.4,15.2,52.4,Medium,Monitoring,0
+1438,120,Vendor 120,2025-07-15,62.6,71.7,49.4,35.4,55.6,61.4,Medium,Monitoring,1
+1439,120,Vendor 120,2025-09-15,55.5,64.8,41.2,19.0,45.1,53.5,Medium,Monitoring,0
+1440,120,Vendor 120,2025-11-15,63.1,45.1,54.8,18.3,42.8,51.9,Medium,Monitoring,0

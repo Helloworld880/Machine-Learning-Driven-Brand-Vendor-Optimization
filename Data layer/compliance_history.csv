@@ -1,393 +1,481 @@
 compliance_id,vendor_id,vendor_name,audit_date,compliance_score,compliance_status,certifications,major_findings,minor_findings,regulatory_breach_flag,corrective_action_status,next_audit_date
-1,1,TechCorp Inc,2023-06-15,78.7,Under Review,GDPR; ISO 27001; SOC 2,1,4,0,In Progress,2023-12-12
-2,1,TechCorp Inc,2023-12-15,77.4,Under Review,SOC 2,1,2,0,In Progress,2024-06-12
-3,1,TechCorp Inc,2024-06-15,82.5,Compliant,HIPAA; ISO 9001; SOC 2,1,3,0,Closed,2024-12-12
-4,1,TechCorp Inc,2024-12-15,73.3,Under Review,GDPR; ISO 27001; PCI DSS,1,2,0,In Progress,2025-06-13
-5,2,Global Supplies Ltd,2023-06-15,87.7,Compliant,PCI DSS,0,0,0,Closed,2023-12-12
-6,2,Global Supplies Ltd,2023-12-15,93.6,Compliant,ISO 27001; ISO 9001; SOC 2,0,0,0,Closed,2024-06-12
-7,2,Global Supplies Ltd,2024-06-15,87.7,Compliant,GDPR; ISO 27001; ISO 9001,0,2,0,Closed,2024-12-12
-8,2,Global Supplies Ltd,2024-12-15,99.5,Compliant,HIPAA; ISO 9001,0,0,0,Closed,2025-06-13
-9,3,Quality Parts Co,2023-06-15,51.0,Non-Compliant,GDPR,2,4,0,Open,2023-12-12
-10,3,Quality Parts Co,2023-12-15,48.7,Non-Compliant,HIPAA; PCI DSS; SOC 2,1,1,1,Open,2024-06-12
-11,3,Quality Parts Co,2024-06-15,54.0,Non-Compliant,ISO 27001; SOC 2,3,2,1,Open,2024-12-12
-12,3,Quality Parts Co,2024-12-15,50.4,Non-Compliant,HIPAA; PCI DSS; SOC 2,3,3,0,Open,2025-06-13
-13,4,Innovative Solutions,2023-06-15,98.6,Compliant,GDPR; PCI DSS; SOC 2,0,2,0,Closed,2023-12-12
-14,4,Innovative Solutions,2023-12-15,99.5,Compliant,GDPR; HIPAA; ISO 14001,0,2,0,Closed,2024-06-12
-15,4,Innovative Solutions,2024-06-15,99.4,Compliant,HIPAA; ISO 27001,0,0,0,Closed,2024-12-12
-16,4,Innovative Solutions,2024-12-15,99.5,Compliant,GDPR; PCI DSS,0,2,0,Closed,2025-06-13
-17,5,Reliable Services LLC,2023-06-15,81.7,Compliant,HIPAA,1,4,0,Closed,2023-12-12
-18,5,Reliable Services LLC,2023-12-15,65.9,Under Review,SOC 2,1,1,0,In Progress,2024-06-12
-19,5,Reliable Services LLC,2024-06-15,77.6,Under Review,ISO 14001; ISO 9001; SOC 2,1,3,0,In Progress,2024-12-12
-20,5,Reliable Services LLC,2024-12-15,76.8,Under Review,ISO 27001; PCI DSS,1,1,0,In Progress,2025-06-13
-21,6,Apex Delivery Co,2023-06-15,57.6,Non-Compliant,HIPAA; ISO 14001; ISO 27001,3,2,0,Open,2023-12-12
-22,6,Apex Delivery Co,2023-12-15,72.3,Under Review,GDPR; ISO 27001; ISO 9001,1,3,0,In Progress,2024-06-12
-23,6,Apex Delivery Co,2024-06-15,66.1,Under Review,ISO 9001; PCI DSS; SOC 2,3,3,0,In Progress,2024-12-12
-24,6,Apex Delivery Co,2024-12-15,63.2,Non-Compliant,GDPR; PCI DSS; SOC 2,2,2,0,Open,2025-06-13
-25,7,BlueStar Tech,2023-06-15,95.4,Compliant,PCI DSS,0,2,0,Closed,2023-12-12
-26,7,BlueStar Tech,2023-12-15,94.3,Compliant,GDPR,0,1,0,Closed,2024-06-12
-27,7,BlueStar Tech,2024-06-15,84.6,Compliant,ISO 27001; ISO 9001,1,1,0,Closed,2024-12-12
-28,7,BlueStar Tech,2024-12-15,84.9,Compliant,ISO 9001; PCI DSS; SOC 2,1,2,0,Closed,2025-06-13
-29,8,PrimeCast Mfg,2023-06-15,66.7,Under Review,SOC 2,1,1,0,In Progress,2023-12-12
-30,8,PrimeCast Mfg,2023-12-15,73.0,Under Review,HIPAA; PCI DSS,1,3,0,In Progress,2024-06-12
-31,8,PrimeCast Mfg,2024-06-15,69.5,Under Review,HIPAA; ISO 14001; PCI DSS,3,3,0,In Progress,2024-12-12
-32,8,PrimeCast Mfg,2024-12-15,62.3,Non-Compliant,SOC 2,2,4,0,Open,2025-06-13
-33,9,SwiftRoute Express,2023-06-15,79.1,Under Review,PCI DSS; SOC 2,1,3,0,In Progress,2023-12-12
-34,9,SwiftRoute Express,2023-12-15,80.0,Under Review,GDPR; ISO 9001; PCI DSS,1,4,0,In Progress,2024-06-12
-35,9,SwiftRoute Express,2024-06-15,76.7,Under Review,HIPAA; ISO 14001; PCI DSS,1,2,0,In Progress,2024-12-12
-36,9,SwiftRoute Express,2024-12-15,96.0,Compliant,ISO 9001; PCI DSS,0,1,0,Closed,2025-06-13
-37,10,Omega Consult Group,2023-06-15,74.9,Under Review,HIPAA,1,3,0,In Progress,2023-12-12
-38,10,Omega Consult Group,2023-12-15,83.6,Compliant,ISO 9001; SOC 2,1,4,0,Closed,2024-06-12
-39,10,Omega Consult Group,2024-06-15,84.1,Compliant,ISO 14001,1,1,0,Closed,2024-12-12
-40,10,Omega Consult Group,2024-12-15,89.4,Compliant,GDPR,0,2,0,Closed,2025-06-13
-41,11,NovaMat Supplies,2023-06-15,69.7,Under Review,ISO 14001,1,4,0,In Progress,2023-12-12
-42,11,NovaMat Supplies,2023-12-15,79.9,Under Review,ISO 14001; ISO 9001; PCI DSS,1,4,0,In Progress,2024-06-12
-43,11,NovaMat Supplies,2024-06-15,70.5,Under Review,ISO 9001,1,1,0,In Progress,2024-12-12
-44,11,NovaMat Supplies,2024-12-15,72.4,Under Review,ISO 14001; PCI DSS; SOC 2,1,1,0,In Progress,2025-06-13
-45,12,DataStream Inc,2023-06-15,83.9,Compliant,ISO 9001; SOC 2,1,4,0,Closed,2023-12-12
-46,12,DataStream Inc,2023-12-15,82.8,Compliant,GDPR; HIPAA; ISO 9001,1,1,0,Closed,2024-06-12
-47,12,DataStream Inc,2024-06-15,91.7,Compliant,SOC 2,0,2,0,Closed,2024-12-12
-48,12,DataStream Inc,2024-12-15,92.1,Compliant,HIPAA; ISO 9001,0,2,0,Closed,2025-06-13
-49,13,SteelWorks Co,2023-06-15,74.6,Under Review,GDPR; PCI DSS,1,4,0,In Progress,2023-12-12
-50,13,SteelWorks Co,2023-12-15,69.0,Under Review,HIPAA; ISO 27001; SOC 2,1,2,0,In Progress,2024-06-12
-51,13,SteelWorks Co,2024-06-15,86.9,Compliant,GDPR; ISO 9001; SOC 2,0,2,0,Closed,2024-12-12
-52,13,SteelWorks Co,2024-12-15,81.2,Compliant,ISO 9001,1,1,0,Closed,2025-06-13
-53,14,RapidFreight Ltd,2023-06-15,73.0,Under Review,GDPR; ISO 14001,1,1,0,In Progress,2023-12-12
-54,14,RapidFreight Ltd,2023-12-15,77.1,Under Review,GDPR; HIPAA,1,2,0,In Progress,2024-06-12
-55,14,RapidFreight Ltd,2024-06-15,63.3,Non-Compliant,ISO 9001,3,3,0,Open,2024-12-12
-56,14,RapidFreight Ltd,2024-12-15,68.1,Under Review,HIPAA; ISO 9001; SOC 2,1,4,0,In Progress,2025-06-13
-57,15,GreenSource Corp,2023-06-15,85.2,Compliant,HIPAA; ISO 27001; SOC 2,0,0,0,Closed,2023-12-12
-58,15,GreenSource Corp,2023-12-15,79.6,Under Review,SOC 2,1,2,0,In Progress,2024-06-12
-59,15,GreenSource Corp,2024-06-15,86.7,Compliant,ISO 27001; SOC 2,0,1,0,Closed,2024-12-12
-60,15,GreenSource Corp,2024-12-15,83.4,Compliant,GDPR; HIPAA; SOC 2,1,2,0,Closed,2025-06-13
-61,16,CloudNine Systems,2023-06-15,93.1,Compliant,PCI DSS,0,1,0,Closed,2023-12-12
-62,16,CloudNine Systems,2023-12-15,79.2,Under Review,PCI DSS; SOC 2,1,4,0,In Progress,2024-06-12
-63,16,CloudNine Systems,2024-06-15,78.3,Under Review,ISO 27001; SOC 2,1,4,0,In Progress,2024-12-12
-64,16,CloudNine Systems,2024-12-15,90.0,Compliant,GDPR,0,0,0,Closed,2025-06-13
-65,17,FastLane Logistics,2023-06-15,84.2,Compliant,ISO 14001; ISO 9001; SOC 2,1,2,0,Closed,2023-12-12
-66,17,FastLane Logistics,2023-12-15,87.9,Compliant,GDPR; HIPAA; ISO 9001,0,2,0,Closed,2024-06-12
-67,17,FastLane Logistics,2024-06-15,81.2,Compliant,GDPR; HIPAA; SOC 2,1,1,0,Closed,2024-12-12
-68,17,FastLane Logistics,2024-12-15,84.4,Compliant,HIPAA; ISO 14001,1,3,0,Closed,2025-06-13
-69,18,PrecisionForge Ltd,2023-06-15,68.2,Under Review,HIPAA; SOC 2,2,1,0,In Progress,2023-12-12
-70,18,PrecisionForge Ltd,2023-12-15,53.3,Non-Compliant,ISO 27001,3,2,0,Open,2024-06-12
-71,18,PrecisionForge Ltd,2024-06-15,57.5,Non-Compliant,ISO 9001; SOC 2,3,2,0,Open,2024-12-12
-72,18,PrecisionForge Ltd,2024-12-15,58.5,Non-Compliant,GDPR,1,3,1,Open,2025-06-13
-73,19,StratEdge Consulting,2023-06-15,72.7,Under Review,ISO 27001; PCI DSS,1,3,0,In Progress,2023-12-12
-74,19,StratEdge Consulting,2023-12-15,85.3,Compliant,GDPR; ISO 9001,0,2,0,Closed,2024-06-12
-75,19,StratEdge Consulting,2024-06-15,89.1,Compliant,GDPR; HIPAA; SOC 2,0,1,0,Closed,2024-12-12
-76,19,StratEdge Consulting,2024-12-15,79.8,Under Review,GDPR; HIPAA,1,4,0,In Progress,2025-06-13
-77,20,EcoRaw Materials,2023-06-15,99.5,Compliant,HIPAA; ISO 14001,0,1,0,Closed,2023-12-12
-78,20,EcoRaw Materials,2023-12-15,91.0,Compliant,ISO 27001; PCI DSS,0,1,0,Closed,2024-06-12
-79,20,EcoRaw Materials,2024-06-15,97.6,Compliant,ISO 14001; PCI DSS,0,0,0,Closed,2024-12-12
-80,20,EcoRaw Materials,2024-12-15,85.2,Compliant,ISO 14001,0,0,0,Closed,2025-06-13
-81,21,NexGen IT Solutions,2023-06-15,86.0,Compliant,ISO 14001; ISO 27001; SOC 2,0,0,0,Closed,2023-12-12
-82,21,NexGen IT Solutions,2023-12-15,97.5,Compliant,HIPAA; ISO 14001,0,1,0,Closed,2024-06-12
-83,21,NexGen IT Solutions,2024-06-15,88.3,Compliant,ISO 9001,0,0,0,Closed,2024-12-12
-84,21,NexGen IT Solutions,2024-12-15,86.9,Compliant,HIPAA; ISO 9001; PCI DSS,0,0,0,Closed,2025-06-13
-85,22,CargoWise Corp,2023-06-15,80.3,Compliant,GDPR; HIPAA; ISO 27001,1,2,0,Closed,2023-12-12
-86,22,CargoWise Corp,2023-12-15,91.3,Compliant,ISO 9001; PCI DSS; SOC 2,0,2,0,Closed,2024-06-12
-87,22,CargoWise Corp,2024-06-15,82.8,Compliant,ISO 14001; PCI DSS,1,4,0,Closed,2024-12-12
-88,22,CargoWise Corp,2024-12-15,95.5,Compliant,HIPAA,0,2,0,Closed,2025-06-13
-89,23,MetalPlus Manufacturing,2023-06-15,97.3,Compliant,HIPAA; ISO 27001; SOC 2,0,2,0,Closed,2023-12-12
-90,23,MetalPlus Manufacturing,2023-12-15,95.5,Compliant,ISO 9001,0,1,0,Closed,2024-06-12
-91,23,MetalPlus Manufacturing,2024-06-15,85.0,Compliant,HIPAA; ISO 14001; ISO 27001,0,2,0,Closed,2024-12-12
-92,23,MetalPlus Manufacturing,2024-12-15,86.6,Compliant,GDPR; HIPAA; ISO 9001,0,2,0,Closed,2025-06-13
-93,24,Alpha Advisors,2023-06-15,53.0,Non-Compliant,ISO 27001; ISO 9001; PCI DSS,3,2,0,Open,2023-12-12
-94,24,Alpha Advisors,2023-12-15,48.4,Non-Compliant,ISO 27001; PCI DSS,1,4,1,Open,2024-06-12
-95,24,Alpha Advisors,2024-06-15,47.0,Non-Compliant,ISO 14001; ISO 27001,3,1,0,Open,2024-12-12
-96,24,Alpha Advisors,2024-12-15,53.8,Non-Compliant,GDPR,3,4,1,Open,2025-06-13
-97,25,TerraMat Co,2023-06-15,69.5,Under Review,ISO 14001; ISO 27001; ISO 9001,3,1,0,In Progress,2023-12-12
-98,25,TerraMat Co,2023-12-15,68.1,Under Review,ISO 27001,2,1,0,In Progress,2024-06-12
-99,25,TerraMat Co,2024-06-15,66.9,Under Review,HIPAA; PCI DSS; SOC 2,3,4,0,In Progress,2024-12-12
-100,25,TerraMat Co,2024-12-15,74.4,Under Review,HIPAA; PCI DSS,1,2,0,In Progress,2025-06-13
-101,26,CyberEdge Technologies,2023-06-15,80.0,Compliant,HIPAA; SOC 2,1,4,0,Closed,2023-12-12
-102,26,CyberEdge Technologies,2023-12-15,78.1,Under Review,GDPR; ISO 14001; ISO 9001,1,2,0,In Progress,2024-06-12
-103,26,CyberEdge Technologies,2024-06-15,80.8,Compliant,ISO 14001,1,2,0,Closed,2024-12-12
-104,26,CyberEdge Technologies,2024-12-15,83.5,Compliant,ISO 27001,1,1,0,Closed,2025-06-13
-105,27,SpeedFreight Inc,2023-06-15,64.9,Non-Compliant,HIPAA; ISO 27001,1,2,0,Open,2023-12-12
-106,27,SpeedFreight Inc,2023-12-15,47.0,Non-Compliant,HIPAA; ISO 27001; PCI DSS,2,1,0,Open,2024-06-12
-107,27,SpeedFreight Inc,2024-06-15,58.2,Non-Compliant,GDPR,3,1,0,Open,2024-12-12
-108,27,SpeedFreight Inc,2024-12-15,52.6,Non-Compliant,HIPAA; ISO 14001; PCI DSS,3,3,1,Open,2025-06-13
-109,28,Ironclad Manufacturing,2023-06-15,87.5,Compliant,GDPR,0,1,0,Closed,2023-12-12
-110,28,Ironclad Manufacturing,2023-12-15,74.6,Under Review,GDPR; SOC 2,1,3,0,In Progress,2024-06-12
-111,28,Ironclad Manufacturing,2024-06-15,84.0,Compliant,GDPR; ISO 9001; PCI DSS,1,1,0,Closed,2024-12-12
-112,28,Ironclad Manufacturing,2024-12-15,88.6,Compliant,GDPR; PCI DSS; SOC 2,0,2,0,Closed,2025-06-13
-113,29,ProConsult Partners,2023-06-15,50.3,Non-Compliant,ISO 14001; ISO 27001,2,4,0,Open,2023-12-12
-114,29,ProConsult Partners,2023-12-15,56.3,Non-Compliant,PCI DSS,3,3,1,Open,2024-06-12
-115,29,ProConsult Partners,2024-06-15,55.4,Non-Compliant,HIPAA; ISO 27001,3,3,0,Open,2024-12-12
-116,29,ProConsult Partners,2024-12-15,63.9,Non-Compliant,ISO 27001; ISO 9001; PCI DSS,2,4,0,Open,2025-06-13
-117,30,NaturalRes Corp,2023-06-15,81.9,Compliant,GDPR; ISO 14001; SOC 2,1,2,0,Closed,2023-12-12
-118,30,NaturalRes Corp,2023-12-15,87.7,Compliant,GDPR,0,2,0,Closed,2024-06-12
-119,30,NaturalRes Corp,2024-06-15,95.5,Compliant,GDPR; PCI DSS,0,0,0,Closed,2024-12-12
-120,30,NaturalRes Corp,2024-12-15,93.6,Compliant,PCI DSS; SOC 2,0,0,0,Closed,2025-06-13
-121,31,Quantum IT Group,2023-06-15,79.8,Under Review,GDPR; ISO 14001; ISO 27001,1,2,0,In Progress,2023-12-12
-122,31,Quantum IT Group,2023-12-15,89.7,Compliant,ISO 14001; PCI DSS,0,0,0,Closed,2024-06-12
-123,31,Quantum IT Group,2024-06-15,78.7,Under Review,PCI DSS,1,3,0,In Progress,2024-12-12
-124,31,Quantum IT Group,2024-12-15,81.4,Compliant,HIPAA; ISO 9001; PCI DSS,1,4,0,Closed,2025-06-13
-125,32,GlobalLink Logistics,2023-06-15,81.5,Compliant,HIPAA; SOC 2,1,3,0,Closed,2023-12-12
-126,32,GlobalLink Logistics,2023-12-15,75.8,Under Review,HIPAA; ISO 14001,1,3,0,In Progress,2024-06-12
-127,32,GlobalLink Logistics,2024-06-15,67.7,Under Review,HIPAA; ISO 9001; SOC 2,2,4,0,In Progress,2024-12-12
-128,32,GlobalLink Logistics,2024-12-15,74.5,Under Review,GDPR; ISO 9001,1,2,0,In Progress,2025-06-13
-129,33,Summit Manufacturing,2023-06-15,73.1,Under Review,GDPR,1,1,0,In Progress,2023-12-12
-130,33,Summit Manufacturing,2023-12-15,67.4,Under Review,ISO 14001; PCI DSS; SOC 2,2,3,0,In Progress,2024-06-12
-131,33,Summit Manufacturing,2024-06-15,72.9,Under Review,ISO 14001; PCI DSS; SOC 2,1,4,0,In Progress,2024-12-12
-132,33,Summit Manufacturing,2024-12-15,71.3,Under Review,ISO 27001; PCI DSS,1,3,0,In Progress,2025-06-13
-133,34,Insight Consulting,2023-06-15,70.9,Under Review,GDPR; ISO 14001; ISO 9001,1,2,0,In Progress,2023-12-12
-134,34,Insight Consulting,2023-12-15,80.7,Compliant,ISO 14001; PCI DSS,1,4,0,Closed,2024-06-12
-135,34,Insight Consulting,2024-06-15,83.0,Compliant,ISO 14001,1,4,0,Closed,2024-12-12
-136,34,Insight Consulting,2024-12-15,71.7,Under Review,PCI DSS; SOC 2,1,3,0,In Progress,2025-06-13
-137,35,PureSource Materials,2023-06-15,67.0,Under Review,ISO 14001; ISO 9001; PCI DSS,2,1,0,In Progress,2023-12-12
-138,35,PureSource Materials,2023-12-15,72.3,Under Review,GDPR; SOC 2,1,1,0,In Progress,2024-06-12
-139,35,PureSource Materials,2024-06-15,60.8,Non-Compliant,ISO 27001; ISO 9001,3,3,0,Open,2024-12-12
-140,35,PureSource Materials,2024-12-15,61.7,Non-Compliant,GDPR; HIPAA; PCI DSS,3,2,0,Open,2025-06-13
-141,36,InnovateTech Ltd,2023-06-15,85.2,Compliant,GDPR; HIPAA,0,1,0,Closed,2023-12-12
-142,36,InnovateTech Ltd,2023-12-15,92.3,Compliant,HIPAA; SOC 2,0,0,0,Closed,2024-06-12
-143,36,InnovateTech Ltd,2024-06-15,93.8,Compliant,ISO 27001; PCI DSS; SOC 2,0,0,0,Closed,2024-12-12
-144,36,InnovateTech Ltd,2024-12-15,95.6,Compliant,ISO 14001,0,0,0,Closed,2025-06-13
-145,37,AirCargo Express,2023-06-15,55.6,Non-Compliant,GDPR; ISO 27001; SOC 2,3,3,0,Open,2023-12-12
-146,37,AirCargo Express,2023-12-15,67.4,Under Review,ISO 14001; PCI DSS,2,4,0,In Progress,2024-06-12
-147,37,AirCargo Express,2024-06-15,64.4,Non-Compliant,GDPR; ISO 9001; PCI DSS,1,3,0,Open,2024-12-12
-148,37,AirCargo Express,2024-12-15,52.9,Non-Compliant,HIPAA; ISO 9001,1,1,0,Open,2025-06-13
-149,38,PowerForge Mfg,2023-06-15,67.5,Under Review,HIPAA; ISO 14001,1,1,0,In Progress,2023-12-12
-150,38,PowerForge Mfg,2023-12-15,70.0,Under Review,ISO 14001; PCI DSS,1,4,0,In Progress,2024-06-12
-151,38,PowerForge Mfg,2024-06-15,82.0,Compliant,HIPAA,1,2,0,Closed,2024-12-12
-152,38,PowerForge Mfg,2024-12-15,81.0,Compliant,ISO 27001; PCI DSS,1,3,0,Closed,2025-06-13
-153,39,Clarity Consulting,2023-06-15,54.8,Non-Compliant,HIPAA; ISO 14001; PCI DSS,2,4,1,Open,2023-12-12
-154,39,Clarity Consulting,2023-12-15,58.0,Non-Compliant,GDPR; HIPAA; SOC 2,3,4,0,Open,2024-06-12
-155,39,Clarity Consulting,2024-06-15,54.3,Non-Compliant,ISO 14001; SOC 2,1,4,1,Open,2024-12-12
-156,39,Clarity Consulting,2024-12-15,48.6,Non-Compliant,GDPR; ISO 27001; ISO 9001,1,3,1,Open,2025-06-13
-157,40,GoldMine Resources,2023-06-15,95.8,Compliant,PCI DSS; SOC 2,0,0,0,Closed,2023-12-12
-158,40,GoldMine Resources,2023-12-15,89.8,Compliant,ISO 14001; ISO 27001,0,2,0,Closed,2024-06-12
-159,40,GoldMine Resources,2024-06-15,94.7,Compliant,GDPR,0,0,0,Closed,2024-12-12
-160,40,GoldMine Resources,2024-12-15,91.6,Compliant,SOC 2,0,1,0,Closed,2025-06-13
-161,41,SkyNet IT Services,2023-06-15,76.5,Under Review,GDPR; PCI DSS,1,3,0,In Progress,2023-12-12
-162,41,SkyNet IT Services,2023-12-15,85.2,Compliant,ISO 14001,0,0,0,Closed,2024-06-12
-163,41,SkyNet IT Services,2024-06-15,76.2,Under Review,HIPAA; ISO 27001; SOC 2,1,4,0,In Progress,2024-12-12
-164,41,SkyNet IT Services,2024-12-15,84.1,Compliant,HIPAA,1,2,0,Closed,2025-06-13
-165,42,TruckPro Logistics,2023-06-15,76.7,Under Review,GDPR; ISO 14001,1,3,0,In Progress,2023-12-12
-166,42,TruckPro Logistics,2023-12-15,84.1,Compliant,ISO 9001,1,1,0,Closed,2024-06-12
-167,42,TruckPro Logistics,2024-06-15,85.9,Compliant,ISO 27001; SOC 2,0,1,0,Closed,2024-12-12
-168,42,TruckPro Logistics,2024-12-15,87.5,Compliant,ISO 9001,0,0,0,Closed,2025-06-13
-169,43,Alliance Manufacturing,2023-06-15,84.4,Compliant,ISO 14001,1,4,0,Closed,2023-12-12
-170,43,Alliance Manufacturing,2023-12-15,96.6,Compliant,ISO 9001,0,1,0,Closed,2024-06-12
-171,43,Alliance Manufacturing,2024-06-15,99.5,Compliant,GDPR; ISO 14001,0,1,0,Closed,2024-12-12
-172,43,Alliance Manufacturing,2024-12-15,97.5,Compliant,HIPAA,0,2,0,Closed,2025-06-13
-173,44,Vision Consulting,2023-06-15,97.1,Compliant,ISO 14001; PCI DSS; SOC 2,0,1,0,Closed,2023-12-12
-174,44,Vision Consulting,2023-12-15,95.5,Compliant,ISO 27001; ISO 9001; SOC 2,0,2,0,Closed,2024-06-12
-175,44,Vision Consulting,2024-06-15,95.6,Compliant,ISO 14001; ISO 9001; PCI DSS,0,0,0,Closed,2024-12-12
-176,44,Vision Consulting,2024-12-15,95.9,Compliant,HIPAA; ISO 9001,0,0,0,Closed,2025-06-13
-177,45,EarthCore Supplies,2023-06-15,85.3,Compliant,GDPR; ISO 27001; PCI DSS,0,0,0,Closed,2023-12-12
-178,45,EarthCore Supplies,2023-12-15,90.6,Compliant,ISO 14001,0,0,0,Closed,2024-06-12
-179,45,EarthCore Supplies,2024-06-15,88.8,Compliant,ISO 9001; PCI DSS; SOC 2,0,1,0,Closed,2024-12-12
-180,45,EarthCore Supplies,2024-12-15,92.6,Compliant,ISO 27001,0,0,0,Closed,2025-06-13
-181,46,DataForce Inc,2023-06-15,77.6,Under Review,GDPR; ISO 14001,1,3,0,In Progress,2023-12-12
-182,46,DataForce Inc,2023-12-15,73.3,Under Review,ISO 27001; ISO 9001,1,2,0,In Progress,2024-06-12
-183,46,DataForce Inc,2024-06-15,87.8,Compliant,HIPAA; ISO 14001; ISO 27001,0,2,0,Closed,2024-12-12
-184,46,DataForce Inc,2024-12-15,76.2,Under Review,HIPAA; PCI DSS,1,4,0,In Progress,2025-06-13
-185,47,OceanFreight Ltd,2023-06-15,83.3,Compliant,ISO 14001; ISO 27001; SOC 2,1,1,0,Closed,2023-12-12
-186,47,OceanFreight Ltd,2023-12-15,81.7,Compliant,PCI DSS,1,4,0,Closed,2024-06-12
-187,47,OceanFreight Ltd,2024-06-15,77.7,Under Review,HIPAA,1,2,0,In Progress,2024-12-12
-188,47,OceanFreight Ltd,2024-12-15,85.0,Compliant,GDPR; ISO 9001,1,2,0,Closed,2025-06-13
-189,48,CraftWorks Mfg,2023-06-15,82.1,Compliant,HIPAA,1,4,0,Closed,2023-12-12
-190,48,CraftWorks Mfg,2023-12-15,83.5,Compliant,ISO 27001; PCI DSS; SOC 2,1,2,0,Closed,2024-06-12
-191,48,CraftWorks Mfg,2024-06-15,80.3,Compliant,PCI DSS,1,1,0,Closed,2024-12-12
-192,48,CraftWorks Mfg,2024-12-15,86.0,Compliant,ISO 9001,0,0,0,Closed,2025-06-13
-193,49,Summit Advisors,2023-06-15,94.5,Compliant,GDPR; ISO 27001; PCI DSS,0,2,0,Closed,2023-12-12
-194,49,Summit Advisors,2023-12-15,96.1,Compliant,SOC 2,0,1,0,Closed,2024-06-12
-195,49,Summit Advisors,2024-06-15,90.8,Compliant,GDPR,0,0,0,Closed,2024-12-12
-196,49,Summit Advisors,2024-12-15,98.3,Compliant,GDPR; PCI DSS,0,0,0,Closed,2025-06-13
-197,50,RockBase Materials,2023-06-15,80.1,Compliant,GDPR; PCI DSS,1,4,0,Closed,2023-12-12
-198,50,RockBase Materials,2023-12-15,80.6,Compliant,ISO 9001; PCI DSS; SOC 2,1,1,0,Closed,2024-06-12
-199,50,RockBase Materials,2024-06-15,99.5,Compliant,GDPR,0,0,0,Closed,2024-12-12
-200,50,RockBase Materials,2024-12-15,83.4,Compliant,GDPR; HIPAA; ISO 14001,1,2,0,Closed,2025-06-13
-201,51,ByteWise Solutions,2023-06-15,49.5,Non-Compliant,HIPAA; ISO 27001; SOC 2,3,4,0,Open,2023-12-12
-202,51,ByteWise Solutions,2023-12-15,51.1,Non-Compliant,HIPAA; ISO 27001; SOC 2,1,2,0,Open,2024-06-12
-203,51,ByteWise Solutions,2024-06-15,50.8,Non-Compliant,HIPAA; SOC 2,3,4,0,Open,2024-12-12
-204,51,ByteWise Solutions,2024-12-15,54.0,Non-Compliant,HIPAA; ISO 14001,3,4,0,Open,2025-06-13
-205,52,LogiTrack Systems,2023-06-15,73.0,Under Review,ISO 27001; PCI DSS,1,3,0,In Progress,2023-12-12
-206,52,LogiTrack Systems,2023-12-15,79.9,Under Review,HIPAA; ISO 9001,1,1,0,In Progress,2024-06-12
-207,52,LogiTrack Systems,2024-06-15,75.0,Under Review,SOC 2,1,3,0,In Progress,2024-12-12
-208,52,LogiTrack Systems,2024-12-15,80.0,Under Review,PCI DSS,1,3,0,In Progress,2025-06-13
-209,53,FusionParts Mfg,2023-06-15,99.5,Compliant,GDPR; HIPAA; PCI DSS,0,1,0,Closed,2023-12-12
-210,53,FusionParts Mfg,2023-12-15,99.5,Compliant,ISO 14001; SOC 2,0,0,0,Closed,2024-06-12
-211,53,FusionParts Mfg,2024-06-15,85.9,Compliant,ISO 14001,0,2,0,Closed,2024-12-12
-212,53,FusionParts Mfg,2024-12-15,87.7,Compliant,HIPAA; ISO 14001,0,2,0,Closed,2025-06-13
-213,54,Elite Strategy Group,2023-06-15,78.7,Under Review,ISO 27001,1,4,0,In Progress,2023-12-12
-214,54,Elite Strategy Group,2023-12-15,81.2,Compliant,GDPR; ISO 9001; SOC 2,1,1,0,Closed,2024-06-12
-215,54,Elite Strategy Group,2024-06-15,79.5,Under Review,PCI DSS,1,1,0,In Progress,2024-12-12
-216,54,Elite Strategy Group,2024-12-15,74.3,Under Review,ISO 9001; PCI DSS,1,4,0,In Progress,2025-06-13
-217,55,CoreMin Resources,2023-06-15,94.8,Compliant,GDPR; ISO 27001; ISO 9001,0,2,0,Closed,2023-12-12
-218,55,CoreMin Resources,2023-12-15,78.8,Under Review,HIPAA; ISO 14001; SOC 2,1,3,0,In Progress,2024-06-12
-219,55,CoreMin Resources,2024-06-15,86.6,Compliant,GDPR; ISO 27001; PCI DSS,0,0,0,Closed,2024-12-12
-220,55,CoreMin Resources,2024-12-15,93.8,Compliant,ISO 27001,0,0,0,Closed,2025-06-13
-221,56,NetSphere Technologies,2023-06-15,83.7,Compliant,ISO 27001; ISO 9001,1,2,0,Closed,2023-12-12
-222,56,NetSphere Technologies,2023-12-15,88.5,Compliant,ISO 27001; ISO 9001,0,1,0,Closed,2024-06-12
-223,56,NetSphere Technologies,2024-06-15,89.8,Compliant,ISO 27001,0,0,0,Closed,2024-12-12
-224,56,NetSphere Technologies,2024-12-15,89.7,Compliant,GDPR; HIPAA; ISO 14001,0,2,0,Closed,2025-06-13
-225,57,SeaRoute Logistics,2023-06-15,89.3,Compliant,SOC 2,0,0,0,Closed,2023-12-12
-226,57,SeaRoute Logistics,2023-12-15,84.7,Compliant,GDPR,1,1,0,Closed,2024-06-12
-227,57,SeaRoute Logistics,2024-06-15,77.5,Under Review,HIPAA; SOC 2,1,2,0,In Progress,2024-12-12
-228,57,SeaRoute Logistics,2024-12-15,85.3,Compliant,HIPAA; ISO 27001,0,0,0,Closed,2025-06-13
-229,58,AutoPrecision Mfg,2023-06-15,77.0,Under Review,GDPR,1,2,0,In Progress,2023-12-12
-230,58,AutoPrecision Mfg,2023-12-15,72.9,Under Review,GDPR,1,1,0,In Progress,2024-06-12
-231,58,AutoPrecision Mfg,2024-06-15,68.3,Under Review,SOC 2,1,3,0,In Progress,2024-12-12
-232,58,AutoPrecision Mfg,2024-12-15,76.2,Under Review,ISO 9001; SOC 2,1,4,0,In Progress,2025-06-13
-233,59,BrightMind Consulting,2023-06-15,81.8,Compliant,HIPAA; PCI DSS; SOC 2,1,2,0,Closed,2023-12-12
-234,59,BrightMind Consulting,2023-12-15,88.1,Compliant,GDPR; ISO 9001; PCI DSS,0,0,0,Closed,2024-06-12
-235,59,BrightMind Consulting,2024-06-15,87.7,Compliant,SOC 2,0,2,0,Closed,2024-12-12
-236,59,BrightMind Consulting,2024-12-15,80.1,Compliant,ISO 27001,1,3,0,Closed,2025-06-13
-237,60,TerraFlex Supplies,2023-06-15,81.1,Compliant,GDPR; PCI DSS; SOC 2,1,4,0,Closed,2023-12-12
-238,60,TerraFlex Supplies,2023-12-15,84.3,Compliant,ISO 27001,1,4,0,Closed,2024-06-12
-239,60,TerraFlex Supplies,2024-06-15,79.7,Under Review,HIPAA; PCI DSS,1,3,0,In Progress,2024-12-12
-240,60,TerraFlex Supplies,2024-12-15,77.0,Under Review,GDPR; ISO 9001; PCI DSS,1,4,0,In Progress,2025-06-13
-241,61,PixelCloud IT,2023-06-15,89.1,Compliant,GDPR; ISO 27001,0,1,0,Closed,2023-12-12
-242,61,PixelCloud IT,2023-12-15,87.2,Compliant,GDPR; SOC 2,0,1,0,Closed,2024-06-12
-243,61,PixelCloud IT,2024-06-15,91.8,Compliant,ISO 9001; PCI DSS,0,2,0,Closed,2024-12-12
-244,61,PixelCloud IT,2024-12-15,99.5,Compliant,GDPR; ISO 14001; SOC 2,0,0,0,Closed,2025-06-13
-245,62,SwiftCargo Networks,2023-06-15,85.0,Compliant,GDPR,0,0,0,Closed,2023-12-12
-246,62,SwiftCargo Networks,2023-12-15,87.2,Compliant,GDPR; ISO 14001; ISO 27001,0,2,0,Closed,2024-06-12
-247,62,SwiftCargo Networks,2024-06-15,81.8,Compliant,HIPAA; ISO 27001; SOC 2,1,3,0,Closed,2024-12-12
-248,62,SwiftCargo Networks,2024-12-15,82.7,Compliant,SOC 2,1,2,0,Closed,2025-06-13
-249,63,HeavyDuty Mfg,2023-06-15,88.6,Compliant,ISO 14001; PCI DSS,0,0,0,Closed,2023-12-12
-250,63,HeavyDuty Mfg,2023-12-15,88.3,Compliant,HIPAA; ISO 9001,0,0,0,Closed,2024-06-12
-251,63,HeavyDuty Mfg,2024-06-15,87.1,Compliant,ISO 14001; PCI DSS,0,0,0,Closed,2024-12-12
-252,63,HeavyDuty Mfg,2024-12-15,92.1,Compliant,ISO 27001; SOC 2,0,1,0,Closed,2025-06-13
-253,64,Nexus Strategy Firm,2023-06-15,85.6,Compliant,GDPR; ISO 14001; SOC 2,0,2,0,Closed,2023-12-12
-254,64,Nexus Strategy Firm,2023-12-15,72.3,Under Review,HIPAA; ISO 14001; PCI DSS,1,3,0,In Progress,2024-06-12
-255,64,Nexus Strategy Firm,2024-06-15,81.8,Compliant,GDPR; ISO 9001,1,1,0,Closed,2024-12-12
-256,64,Nexus Strategy Firm,2024-12-15,84.3,Compliant,GDPR; ISO 14001; SOC 2,1,4,0,Closed,2025-06-13
-257,65,AgriMat Resources,2023-06-15,52.8,Non-Compliant,ISO 27001,1,2,1,Open,2023-12-12
-258,65,AgriMat Resources,2023-12-15,50.1,Non-Compliant,ISO 14001; ISO 9001; PCI DSS,2,4,1,Open,2024-06-12
-259,65,AgriMat Resources,2024-06-15,42.1,Non-Compliant,ISO 14001; ISO 27001,2,4,0,Open,2024-12-12
-260,65,AgriMat Resources,2024-12-15,41.2,Non-Compliant,GDPR; HIPAA,3,4,0,Open,2025-06-13
-261,66,CodeBridge Technologies,2023-06-15,94.3,Compliant,HIPAA; ISO 9001; PCI DSS,0,2,0,Closed,2023-12-12
-262,66,CodeBridge Technologies,2023-12-15,85.2,Compliant,HIPAA,0,0,0,Closed,2024-06-12
-263,66,CodeBridge Technologies,2024-06-15,96.6,Compliant,HIPAA; ISO 27001; ISO 9001,0,0,0,Closed,2024-12-12
-264,66,CodeBridge Technologies,2024-12-15,87.0,Compliant,ISO 14001; ISO 27001,0,1,0,Closed,2025-06-13
-265,67,PrimePath Logistics,2023-06-15,72.1,Under Review,HIPAA; ISO 14001; ISO 27001,1,1,0,In Progress,2023-12-12
-266,67,PrimePath Logistics,2023-12-15,80.4,Compliant,PCI DSS,1,1,0,Closed,2024-06-12
-267,67,PrimePath Logistics,2024-06-15,77.9,Under Review,ISO 27001; SOC 2,1,2,0,In Progress,2024-12-12
-268,67,PrimePath Logistics,2024-12-15,71.1,Under Review,ISO 9001; SOC 2,1,2,0,In Progress,2025-06-13
-269,68,MegaForge Industries,2023-06-15,91.9,Compliant,GDPR,0,2,0,Closed,2023-12-12
-270,68,MegaForge Industries,2023-12-15,99.3,Compliant,GDPR; SOC 2,0,2,0,Closed,2024-06-12
-271,68,MegaForge Industries,2024-06-15,88.6,Compliant,HIPAA; ISO 14001; ISO 27001,0,2,0,Closed,2024-12-12
-272,68,MegaForge Industries,2024-12-15,93.7,Compliant,GDPR; HIPAA,0,0,0,Closed,2025-06-13
-273,69,TrueNorth Consulting,2023-06-15,67.0,Under Review,ISO 27001; ISO 9001; SOC 2,1,2,0,In Progress,2023-12-12
-274,69,TrueNorth Consulting,2023-12-15,56.8,Non-Compliant,ISO 14001,2,3,0,Open,2024-06-12
-275,69,TrueNorth Consulting,2024-06-15,66.9,Under Review,ISO 27001; PCI DSS,2,1,0,In Progress,2024-12-12
-276,69,TrueNorth Consulting,2024-12-15,57.6,Non-Compliant,GDPR; ISO 27001; PCI DSS,2,2,1,Open,2025-06-13
-277,70,BaseMet Resources,2023-06-15,88.3,Compliant,HIPAA,0,0,0,Closed,2023-12-12
-278,70,BaseMet Resources,2023-12-15,85.6,Compliant,ISO 14001,0,0,0,Closed,2024-06-12
-279,70,BaseMet Resources,2024-06-15,83.7,Compliant,PCI DSS,1,1,0,Closed,2024-12-12
-280,70,BaseMet Resources,2024-12-15,81.5,Compliant,ISO 9001; PCI DSS,1,3,0,Closed,2025-06-13
-281,71,ClearPath IT Group,2023-06-15,82.4,Compliant,GDPR; HIPAA; SOC 2,1,2,0,Closed,2023-12-12
-282,71,ClearPath IT Group,2023-12-15,92.1,Compliant,HIPAA; ISO 9001; SOC 2,0,1,0,Closed,2024-06-12
-283,71,ClearPath IT Group,2024-06-15,81.6,Compliant,ISO 9001; PCI DSS,1,3,0,Closed,2024-12-12
-284,71,ClearPath IT Group,2024-12-15,98.7,Compliant,ISO 14001; ISO 27001,0,0,0,Closed,2025-06-13
-285,72,BlueOcean Freight,2023-06-15,52.7,Non-Compliant,HIPAA; ISO 14001; ISO 9001,2,4,0,Open,2023-12-12
-286,72,BlueOcean Freight,2023-12-15,53.3,Non-Compliant,GDPR; HIPAA; SOC 2,3,1,0,Open,2024-06-12
-287,72,BlueOcean Freight,2024-06-15,61.1,Non-Compliant,HIPAA,2,3,0,Open,2024-12-12
-288,72,BlueOcean Freight,2024-12-15,62.5,Non-Compliant,ISO 14001; PCI DSS,3,4,0,Open,2025-06-13
-289,73,PeakCraft Manufacturing,2023-06-15,86.5,Compliant,ISO 9001,0,1,0,Closed,2023-12-12
-290,73,PeakCraft Manufacturing,2023-12-15,71.3,Under Review,HIPAA; ISO 14001; PCI DSS,1,1,0,In Progress,2024-06-12
-291,73,PeakCraft Manufacturing,2024-06-15,88.8,Compliant,GDPR; HIPAA,0,1,0,Closed,2024-12-12
-292,73,PeakCraft Manufacturing,2024-12-15,74.9,Under Review,ISO 9001; PCI DSS,1,3,0,In Progress,2025-06-13
-293,74,Axis Strategy Partners,2023-06-15,56.7,Non-Compliant,ISO 27001; SOC 2,2,1,1,Open,2023-12-12
-294,74,Axis Strategy Partners,2023-12-15,65.5,Under Review,SOC 2,1,2,0,In Progress,2024-06-12
-295,74,Axis Strategy Partners,2024-06-15,69.8,Under Review,GDPR,2,4,0,In Progress,2024-12-12
-296,74,Axis Strategy Partners,2024-12-15,51.4,Non-Compliant,GDPR; ISO 9001,2,3,0,Open,2025-06-13
-297,75,SunMat Corp,2023-06-15,78.9,Under Review,HIPAA; ISO 14001; ISO 9001,1,3,0,In Progress,2023-12-12
-298,75,SunMat Corp,2023-12-15,73.6,Under Review,ISO 14001,1,3,0,In Progress,2024-06-12
-299,75,SunMat Corp,2024-06-15,66.0,Under Review,HIPAA; ISO 14001; ISO 27001,2,2,0,In Progress,2024-12-12
-300,75,SunMat Corp,2024-12-15,77.6,Under Review,ISO 9001; PCI DSS; SOC 2,1,3,0,In Progress,2025-06-13
-301,76,HorizonTech Inc,2023-06-15,63.6,Non-Compliant,PCI DSS; SOC 2,1,3,0,Open,2023-12-12
-302,76,HorizonTech Inc,2023-12-15,62.3,Non-Compliant,PCI DSS,1,3,0,Open,2024-06-12
-303,76,HorizonTech Inc,2024-06-15,60.7,Non-Compliant,HIPAA; ISO 14001,3,1,0,Open,2024-12-12
-304,76,HorizonTech Inc,2024-12-15,65.9,Under Review,ISO 14001; ISO 9001,3,3,0,In Progress,2025-06-13
-305,77,FlexFreight Solutions,2023-06-15,92.7,Compliant,ISO 14001,0,2,0,Closed,2023-12-12
-306,77,FlexFreight Solutions,2023-12-15,90.9,Compliant,ISO 9001; PCI DSS; SOC 2,0,2,0,Closed,2024-06-12
-307,77,FlexFreight Solutions,2024-06-15,96.4,Compliant,SOC 2,0,2,0,Closed,2024-12-12
-308,77,FlexFreight Solutions,2024-12-15,83.0,Compliant,HIPAA,1,3,0,Closed,2025-06-13
-309,78,ProMold Manufacturing,2023-06-15,74.3,Under Review,ISO 14001; PCI DSS,1,2,0,In Progress,2023-12-12
-310,78,ProMold Manufacturing,2023-12-15,65.2,Under Review,ISO 14001; PCI DSS,2,1,0,In Progress,2024-06-12
-311,78,ProMold Manufacturing,2024-06-15,62.6,Non-Compliant,HIPAA,3,1,0,Open,2024-12-12
-312,78,ProMold Manufacturing,2024-12-15,65.5,Under Review,ISO 14001; ISO 9001; PCI DSS,1,3,0,In Progress,2025-06-13
-313,79,GrowthPoint Consulting,2023-06-15,56.5,Non-Compliant,ISO 27001,3,4,1,Open,2023-12-12
-314,79,GrowthPoint Consulting,2023-12-15,67.5,Under Review,ISO 27001,2,1,0,In Progress,2024-06-12
-315,79,GrowthPoint Consulting,2024-06-15,59.7,Non-Compliant,ISO 14001; SOC 2,3,4,0,Open,2024-12-12
-316,79,GrowthPoint Consulting,2024-12-15,66.6,Under Review,HIPAA; ISO 14001,3,1,0,In Progress,2025-06-13
-317,80,NordicRaw Materials,2023-06-15,61.1,Non-Compliant,ISO 27001,3,4,0,Open,2023-12-12
-318,80,NordicRaw Materials,2023-12-15,66.0,Under Review,ISO 14001,2,4,0,In Progress,2024-06-12
-319,80,NordicRaw Materials,2024-06-15,64.6,Non-Compliant,GDPR; ISO 14001,2,3,0,Open,2024-12-12
-320,80,NordicRaw Materials,2024-12-15,77.0,Under Review,ISO 27001; ISO 9001,1,3,0,In Progress,2025-06-13
-321,81,CatalystIT Systems,2023-06-15,59.5,Non-Compliant,PCI DSS; SOC 2,2,4,0,Open,2023-12-12
-322,81,CatalystIT Systems,2023-12-15,69.6,Under Review,ISO 9001; PCI DSS; SOC 2,1,4,0,In Progress,2024-06-12
-323,81,CatalystIT Systems,2024-06-15,67.7,Under Review,HIPAA; ISO 27001,2,4,0,In Progress,2024-12-12
-324,81,CatalystIT Systems,2024-12-15,61.8,Non-Compliant,ISO 9001; SOC 2,1,4,0,Open,2025-06-13
-325,82,CargoNation Ltd,2023-06-15,89.2,Compliant,HIPAA; SOC 2,0,1,0,Closed,2023-12-12
-326,82,CargoNation Ltd,2023-12-15,95.5,Compliant,GDPR; HIPAA; ISO 9001,0,2,0,Closed,2024-06-12
-327,82,CargoNation Ltd,2024-06-15,99.5,Compliant,HIPAA; SOC 2,0,2,0,Closed,2024-12-12
-328,82,CargoNation Ltd,2024-12-15,87.3,Compliant,HIPAA; ISO 9001,0,1,0,Closed,2025-06-13
-329,83,BoltWorks Mfg,2023-06-15,79.7,Under Review,GDPR; ISO 27001,1,4,0,In Progress,2023-12-12
-330,83,BoltWorks Mfg,2023-12-15,89.9,Compliant,GDPR; ISO 9001; PCI DSS,0,0,0,Closed,2024-06-12
-331,83,BoltWorks Mfg,2024-06-15,93.9,Compliant,HIPAA; ISO 27001; SOC 2,0,1,0,Closed,2024-12-12
-332,83,BoltWorks Mfg,2024-12-15,87.5,Compliant,HIPAA; SOC 2,0,2,0,Closed,2025-06-13
-333,84,PinnacleConsult Inc,2023-06-15,55.6,Non-Compliant,GDPR; HIPAA; ISO 9001,2,3,0,Open,2023-12-12
-334,84,PinnacleConsult Inc,2023-12-15,47.1,Non-Compliant,HIPAA; ISO 9001; PCI DSS,2,1,1,Open,2024-06-12
-335,84,PinnacleConsult Inc,2024-06-15,55.9,Non-Compliant,HIPAA; ISO 27001; SOC 2,2,1,1,Open,2024-12-12
-336,84,PinnacleConsult Inc,2024-12-15,54.0,Non-Compliant,ISO 14001; PCI DSS,2,2,0,Open,2025-06-13
-337,85,EcoMine Supplies,2023-06-15,46.9,Non-Compliant,ISO 14001; ISO 9001; PCI DSS,2,4,1,Open,2023-12-12
-338,85,EcoMine Supplies,2023-12-15,40.0,Non-Compliant,ISO 9001,3,4,0,Open,2024-06-12
-339,85,EcoMine Supplies,2024-06-15,40.6,Non-Compliant,HIPAA; ISO 27001,2,4,0,Open,2024-12-12
-340,85,EcoMine Supplies,2024-12-15,47.2,Non-Compliant,HIPAA; ISO 27001; ISO 9001,2,2,1,Open,2025-06-13
-341,86,InfoTech Dynamics,2023-06-15,98.4,Compliant,HIPAA; ISO 27001,0,2,0,Closed,2023-12-12
-342,86,InfoTech Dynamics,2023-12-15,92.1,Compliant,GDPR; ISO 27001; SOC 2,0,0,0,Closed,2024-06-12
-343,86,InfoTech Dynamics,2024-06-15,84.2,Compliant,GDPR,1,1,0,Closed,2024-12-12
-344,86,InfoTech Dynamics,2024-12-15,99.5,Compliant,HIPAA; ISO 9001,0,1,0,Closed,2025-06-13
-345,87,JetRoute Logistics,2023-06-15,79.0,Under Review,GDPR; PCI DSS,1,2,0,In Progress,2023-12-12
-346,87,JetRoute Logistics,2023-12-15,82.4,Compliant,HIPAA; ISO 9001; SOC 2,1,3,0,Closed,2024-06-12
-347,87,JetRoute Logistics,2024-06-15,84.4,Compliant,GDPR; ISO 27001; SOC 2,1,4,0,Closed,2024-12-12
-348,87,JetRoute Logistics,2024-12-15,79.9,Under Review,ISO 14001; ISO 9001,1,3,0,In Progress,2025-06-13
-349,88,CoreCast Mfg,2023-06-15,83.4,Compliant,HIPAA; PCI DSS; SOC 2,1,3,0,Closed,2023-12-12
-350,88,CoreCast Mfg,2023-12-15,70.9,Under Review,GDPR; ISO 9001; SOC 2,1,2,0,In Progress,2024-06-12
-351,88,CoreCast Mfg,2024-06-15,86.8,Compliant,ISO 14001; ISO 9001,0,1,0,Closed,2024-12-12
-352,88,CoreCast Mfg,2024-12-15,83.0,Compliant,HIPAA; ISO 14001,1,3,0,Closed,2025-06-13
-353,89,TrueConsult Global,2023-06-15,83.3,Compliant,HIPAA; ISO 14001; ISO 9001,1,1,0,Closed,2023-12-12
-354,89,TrueConsult Global,2023-12-15,96.8,Compliant,ISO 14001; SOC 2,0,2,0,Closed,2024-06-12
-355,89,TrueConsult Global,2024-06-15,84.4,Compliant,PCI DSS,1,4,0,Closed,2024-12-12
-356,89,TrueConsult Global,2024-12-15,85.5,Compliant,HIPAA,0,0,0,Closed,2025-06-13
-357,90,MarbleMat Resources,2023-06-15,79.6,Under Review,ISO 27001; PCI DSS,1,4,0,In Progress,2023-12-12
-358,90,MarbleMat Resources,2023-12-15,65.8,Under Review,HIPAA,3,2,0,In Progress,2024-06-12
-359,90,MarbleMat Resources,2024-06-15,75.3,Under Review,ISO 9001,1,3,0,In Progress,2024-12-12
-360,90,MarbleMat Resources,2024-12-15,64.2,Non-Compliant,HIPAA; ISO 14001; PCI DSS,2,4,0,Open,2025-06-13
-361,91,TechSphere Solutions,2023-06-15,42.0,Non-Compliant,ISO 9001; SOC 2,2,3,1,Open,2023-12-12
-362,91,TechSphere Solutions,2023-12-15,53.1,Non-Compliant,HIPAA; ISO 9001; PCI DSS,3,3,0,Open,2024-06-12
-363,91,TechSphere Solutions,2024-06-15,49.9,Non-Compliant,ISO 9001; PCI DSS,2,3,1,Open,2024-12-12
-364,91,TechSphere Solutions,2024-12-15,40.9,Non-Compliant,HIPAA; ISO 14001; PCI DSS,2,2,0,Open,2025-06-13
-365,92,AquaFreight Corp,2023-06-15,87.4,Compliant,HIPAA; ISO 9001,0,0,0,Closed,2023-12-12
-366,92,AquaFreight Corp,2023-12-15,95.2,Compliant,HIPAA; ISO 9001,0,0,0,Closed,2024-06-12
-367,92,AquaFreight Corp,2024-06-15,83.0,Compliant,ISO 14001; PCI DSS; SOC 2,1,2,0,Closed,2024-12-12
-368,92,AquaFreight Corp,2024-12-15,83.0,Compliant,GDPR; HIPAA; ISO 14001,1,1,0,Closed,2025-06-13
-369,93,StrongBuild Mfg,2023-06-15,95.9,Compliant,PCI DSS,0,0,0,Closed,2023-12-12
-370,93,StrongBuild Mfg,2023-12-15,95.1,Compliant,ISO 14001; ISO 9001; PCI DSS,0,2,0,Closed,2024-06-12
-371,93,StrongBuild Mfg,2024-06-15,96.3,Compliant,GDPR; ISO 27001; ISO 9001,0,1,0,Closed,2024-12-12
-372,93,StrongBuild Mfg,2024-12-15,99.5,Compliant,GDPR; PCI DSS; SOC 2,0,1,0,Closed,2025-06-13
-373,94,Vantage Consulting,2023-06-15,77.5,Under Review,ISO 27001; SOC 2,1,1,0,In Progress,2023-12-12
-374,94,Vantage Consulting,2023-12-15,93.9,Compliant,ISO 27001,0,1,0,Closed,2024-06-12
-375,94,Vantage Consulting,2024-06-15,78.6,Under Review,ISO 14001; ISO 27001; PCI DSS,1,2,0,In Progress,2024-12-12
-376,94,Vantage Consulting,2024-12-15,77.5,Under Review,HIPAA,1,4,0,In Progress,2025-06-13
-377,95,ForestMat Supplies,2023-06-15,90.7,Compliant,ISO 9001; PCI DSS,0,2,0,Closed,2023-12-12
-378,95,ForestMat Supplies,2023-12-15,79.7,Under Review,ISO 27001; ISO 9001,1,3,0,In Progress,2024-06-12
-379,95,ForestMat Supplies,2024-06-15,82.0,Compliant,ISO 14001; ISO 27001; SOC 2,1,1,0,Closed,2024-12-12
-380,95,ForestMat Supplies,2024-12-15,95.6,Compliant,HIPAA,0,2,0,Closed,2025-06-13
-381,96,ClearVision IT,2023-06-15,97.4,Compliant,GDPR; ISO 27001,0,1,0,Closed,2023-12-12
-382,96,ClearVision IT,2023-12-15,99.5,Compliant,ISO 9001,0,2,0,Closed,2024-06-12
-383,96,ClearVision IT,2024-06-15,92.3,Compliant,HIPAA,0,1,0,Closed,2024-12-12
-384,96,ClearVision IT,2024-12-15,98.3,Compliant,ISO 27001; ISO 9001; SOC 2,0,1,0,Closed,2025-06-13
-385,97,NightOwl Logistics,2023-06-15,55.3,Non-Compliant,ISO 27001; ISO 9001,1,3,0,Open,2023-12-12
-386,97,NightOwl Logistics,2023-12-15,57.6,Non-Compliant,GDPR; ISO 14001,1,2,0,Open,2024-06-12
-387,97,NightOwl Logistics,2024-06-15,48.6,Non-Compliant,GDPR; ISO 14001; ISO 27001,1,3,0,Open,2024-12-12
-388,97,NightOwl Logistics,2024-12-15,43.9,Non-Compliant,PCI DSS,3,2,0,Open,2025-06-13
-389,98,TitanForge Mfg,2023-06-15,85.1,Compliant,ISO 9001; PCI DSS,0,2,0,Closed,2023-12-12
-390,98,TitanForge Mfg,2023-12-15,80.9,Compliant,ISO 14001; ISO 9001,1,1,0,Closed,2024-06-12
-391,98,TitanForge Mfg,2024-06-15,91.8,Compliant,HIPAA; ISO 14001; PCI DSS,0,1,0,Closed,2024-12-12
-392,98,TitanForge Mfg,2024-12-15,87.9,Compliant,GDPR,0,0,0,Closed,2025-06-13
+1,1,TechCorp Inc,2024-01-15,82.8,Compliant,GDPR; ISO 14001; SOC 2,0,0,0,Closed,2024-07-15
+2,1,TechCorp Inc,2024-07-15,89.2,Compliant,ISO 27001,0,0,0,Closed,2025-01-15
+3,1,TechCorp Inc,2025-01-15,90.7,Compliant,ISO 14001; ISO 27001,0,0,0,Closed,2025-07-15
+4,1,TechCorp Inc,2025-07-15,83.5,Compliant,ISO 14001; SOC 2,0,0,0,Closed,2026-01-15
+5,2,Global Supplies Ltd,2024-01-15,70.5,Under Review,GDPR; HIPAA,1,2,0,In Progress,2024-07-15
+6,2,Global Supplies Ltd,2024-07-15,78.9,Under Review,PCI DSS,0,0,0,In Progress,2025-01-15
+7,2,Global Supplies Ltd,2025-01-15,64.6,Non-Compliant,GDPR; SOC 2,0,2,0,Open,2025-07-15
+8,2,Global Supplies Ltd,2025-07-15,74.6,Under Review,ISO 9001; SOC 2,0,0,0,In Progress,2026-01-15
+9,3,Quality Parts Co,2024-01-15,80.6,Compliant,HIPAA; ISO 14001; PCI DSS,0,0,0,Closed,2024-07-15
+10,3,Quality Parts Co,2024-07-15,73.4,Under Review,ISO 27001; ISO 9001,0,1,0,In Progress,2025-01-15
+11,3,Quality Parts Co,2025-01-15,73.7,Under Review,ISO 14001; ISO 27001,0,2,0,In Progress,2025-07-15
+12,3,Quality Parts Co,2025-07-15,92.8,Compliant,ISO 14001; SOC 2,0,0,0,Closed,2026-01-15
+13,4,Innovative Solutions,2024-01-15,87.1,Compliant,GDPR; SOC 2,0,0,0,Closed,2024-07-15
+14,4,Innovative Solutions,2024-07-15,93.2,Compliant,ISO 14001,0,0,0,Closed,2025-01-15
+15,4,Innovative Solutions,2025-01-15,86.4,Compliant,ISO 9001; SOC 2,0,0,0,Closed,2025-07-15
+16,4,Innovative Solutions,2025-07-15,85.8,Compliant,ISO 14001; PCI DSS,0,0,0,Closed,2026-01-15
+17,5,Reliable Services LLC,2024-01-15,75.1,Under Review,SOC 2,0,0,0,In Progress,2024-07-15
+18,5,Reliable Services LLC,2024-07-15,83.7,Compliant,ISO 9001,0,0,0,Closed,2025-01-15
+19,5,Reliable Services LLC,2025-01-15,94.6,Compliant,ISO 14001; ISO 27001,0,0,0,Closed,2025-07-15
+20,5,Reliable Services LLC,2025-07-15,88.7,Compliant,GDPR; ISO 14001; SOC 2,0,0,0,Closed,2026-01-15
+21,6,Apex Delivery Co,2024-01-15,80.2,Compliant,GDPR; HIPAA; SOC 2,0,1,0,Closed,2024-07-15
+22,6,Apex Delivery Co,2024-07-15,90.4,Compliant,PCI DSS; SOC 2,0,0,0,Closed,2025-01-15
+23,6,Apex Delivery Co,2025-01-15,82.5,Compliant,GDPR,0,1,0,Closed,2025-07-15
+24,6,Apex Delivery Co,2025-07-15,93.2,Compliant,HIPAA; ISO 9001; PCI DSS,0,0,0,Closed,2026-01-15
+25,7,BlueStar Tech,2024-01-15,73.9,Under Review,GDPR,0,2,0,In Progress,2024-07-15
+26,7,BlueStar Tech,2024-07-15,79.1,Under Review,HIPAA; ISO 14001; PCI DSS,0,2,0,In Progress,2025-01-15
+27,7,BlueStar Tech,2025-01-15,75.0,Under Review,GDPR; HIPAA; ISO 9001,0,1,0,In Progress,2025-07-15
+28,7,BlueStar Tech,2025-07-15,87.9,Compliant,HIPAA; ISO 27001; PCI DSS,0,0,0,Closed,2026-01-15
+29,8,PrimeCast Mfg,2024-01-15,88.1,Compliant,GDPR,0,0,0,Closed,2024-07-15
+30,8,PrimeCast Mfg,2024-07-15,84.4,Compliant,HIPAA,0,0,0,Closed,2025-01-15
+31,8,PrimeCast Mfg,2025-01-15,76.3,Under Review,HIPAA; ISO 27001,0,1,0,In Progress,2025-07-15
+32,8,PrimeCast Mfg,2025-07-15,78.8,Under Review,HIPAA,0,0,0,In Progress,2026-01-15
+33,9,SwiftRoute Express,2024-01-15,83.0,Compliant,ISO 27001,0,1,0,Closed,2024-07-15
+34,9,SwiftRoute Express,2024-07-15,99.8,Compliant,ISO 9001; PCI DSS,0,0,0,Closed,2025-01-15
+35,9,SwiftRoute Express,2025-01-15,89.1,Compliant,ISO 27001; SOC 2,0,0,0,Closed,2025-07-15
+36,9,SwiftRoute Express,2025-07-15,86.6,Compliant,HIPAA; ISO 27001,0,0,0,Closed,2026-01-15
+37,10,Omega Consult Group,2024-01-15,93.7,Compliant,ISO 27001,0,0,0,Closed,2024-07-15
+38,10,Omega Consult Group,2024-07-15,88.9,Compliant,ISO 9001,0,0,0,Closed,2025-01-15
+39,10,Omega Consult Group,2025-01-15,98.9,Compliant,HIPAA; ISO 27001,0,0,0,Closed,2025-07-15
+40,10,Omega Consult Group,2025-07-15,88.3,Compliant,ISO 14001; ISO 9001,0,0,0,Closed,2026-01-15
+41,11,NovaMat Supplies,2024-01-15,82.4,Compliant,ISO 9001; PCI DSS,0,1,0,Closed,2024-07-15
+42,11,NovaMat Supplies,2024-07-15,77.1,Under Review,ISO 14001,0,1,0,In Progress,2025-01-15
+43,11,NovaMat Supplies,2025-01-15,86.2,Compliant,GDPR,0,0,0,Closed,2025-07-15
+44,11,NovaMat Supplies,2025-07-15,87.6,Compliant,GDPR,0,0,0,Closed,2026-01-15
+45,12,DataStream Inc,2024-01-15,87.0,Compliant,ISO 9001; PCI DSS; SOC 2,0,0,0,Closed,2024-07-15
+46,12,DataStream Inc,2024-07-15,90.2,Compliant,GDPR; HIPAA; SOC 2,0,0,0,Closed,2025-01-15
+47,12,DataStream Inc,2025-01-15,77.3,Under Review,HIPAA; SOC 2,0,0,0,In Progress,2025-07-15
+48,12,DataStream Inc,2025-07-15,81.5,Compliant,HIPAA; ISO 27001,0,1,0,Closed,2026-01-15
+49,13,SteelWorks Co,2024-01-15,89.4,Compliant,HIPAA; ISO 27001,0,0,0,Closed,2024-07-15
+50,13,SteelWorks Co,2024-07-15,86.5,Compliant,ISO 14001; ISO 9001,0,0,0,Closed,2025-01-15
+51,13,SteelWorks Co,2025-01-15,89.9,Compliant,ISO 14001; ISO 27001; PCI DSS,0,0,0,Closed,2025-07-15
+52,13,SteelWorks Co,2025-07-15,92.6,Compliant,HIPAA; PCI DSS; SOC 2,0,0,0,Closed,2026-01-15
+53,14,RapidFreight Ltd,2024-01-15,93.0,Compliant,ISO 27001; PCI DSS,0,0,0,Closed,2024-07-15
+54,14,RapidFreight Ltd,2024-07-15,81.6,Compliant,GDPR; ISO 27001; PCI DSS,0,1,0,Closed,2025-01-15
+55,14,RapidFreight Ltd,2025-01-15,85.4,Compliant,GDPR,0,0,0,Closed,2025-07-15
+56,14,RapidFreight Ltd,2025-07-15,79.7,Under Review,GDPR; HIPAA; PCI DSS,0,1,0,In Progress,2026-01-15
+57,15,GreenSource Corp,2024-01-15,75.8,Under Review,ISO 27001; ISO 9001,0,0,0,In Progress,2024-07-15
+58,15,GreenSource Corp,2024-07-15,62.9,Non-Compliant,GDPR; ISO 14001,0,3,0,Open,2025-01-15
+59,15,GreenSource Corp,2025-01-15,78.2,Under Review,HIPAA,0,1,0,In Progress,2025-07-15
+60,15,GreenSource Corp,2025-07-15,77.8,Under Review,GDPR; ISO 27001; SOC 2,0,0,0,In Progress,2026-01-15
+61,16,CloudNine Systems,2024-01-15,85.5,Compliant,HIPAA; ISO 9001; SOC 2,0,0,0,Closed,2024-07-15
+62,16,CloudNine Systems,2024-07-15,98.4,Compliant,HIPAA,0,0,0,Closed,2025-01-15
+63,16,CloudNine Systems,2025-01-15,99.8,Compliant,HIPAA; ISO 27001; PCI DSS,0,0,0,Closed,2025-07-15
+64,16,CloudNine Systems,2025-07-15,85.6,Compliant,GDPR,0,0,0,Closed,2026-01-15
+65,17,FastLane Logistics,2024-01-15,85.3,Compliant,PCI DSS,0,0,0,Closed,2024-07-15
+66,17,FastLane Logistics,2024-07-15,87.0,Compliant,GDPR; ISO 27001; PCI DSS,0,0,0,Closed,2025-01-15
+67,17,FastLane Logistics,2025-01-15,90.6,Compliant,HIPAA; PCI DSS; SOC 2,0,0,0,Closed,2025-07-15
+68,17,FastLane Logistics,2025-07-15,94.3,Compliant,ISO 27001; PCI DSS,0,0,0,Closed,2026-01-15
+69,18,PrecisionForge Ltd,2024-01-15,98.8,Compliant,HIPAA; ISO 27001,0,0,0,Closed,2024-07-15
+70,18,PrecisionForge Ltd,2024-07-15,87.2,Compliant,ISO 27001; SOC 2,0,0,0,Closed,2025-01-15
+71,18,PrecisionForge Ltd,2025-01-15,86.9,Compliant,SOC 2,0,0,0,Closed,2025-07-15
+72,18,PrecisionForge Ltd,2025-07-15,88.4,Compliant,GDPR; ISO 9001; SOC 2,0,0,0,Closed,2026-01-15
+73,19,StratEdge Consulting,2024-01-15,83.8,Compliant,HIPAA; ISO 14001,0,0,0,Closed,2024-07-15
+74,19,StratEdge Consulting,2024-07-15,82.8,Compliant,GDPR; ISO 14001; ISO 27001,0,1,0,Closed,2025-01-15
+75,19,StratEdge Consulting,2025-01-15,94.0,Compliant,ISO 14001,0,0,0,Closed,2025-07-15
+76,19,StratEdge Consulting,2025-07-15,83.9,Compliant,ISO 27001,0,0,0,Closed,2026-01-15
+77,20,EcoRaw Materials,2024-01-15,98.1,Compliant,HIPAA; ISO 27001,0,0,0,Closed,2024-07-15
+78,20,EcoRaw Materials,2024-07-15,91.2,Compliant,HIPAA; ISO 9001; PCI DSS,0,0,0,Closed,2025-01-15
+79,20,EcoRaw Materials,2025-01-15,99.8,Compliant,HIPAA; PCI DSS; SOC 2,0,0,0,Closed,2025-07-15
+80,20,EcoRaw Materials,2025-07-15,96.7,Compliant,GDPR; ISO 9001,0,0,0,Closed,2026-01-15
+81,21,NexGen IT Solutions,2024-01-15,77.9,Under Review,ISO 9001,0,1,0,In Progress,2024-07-15
+82,21,NexGen IT Solutions,2024-07-15,83.0,Compliant,HIPAA; ISO 14001,0,0,0,Closed,2025-01-15
+83,21,NexGen IT Solutions,2025-01-15,79.6,Under Review,GDPR,0,0,0,In Progress,2025-07-15
+84,21,NexGen IT Solutions,2025-07-15,88.3,Compliant,ISO 27001,0,0,0,Closed,2026-01-15
+85,22,CargoWise Corp,2024-01-15,68.0,Under Review,GDPR; HIPAA; ISO 27001,1,4,0,In Progress,2024-07-15
+86,22,CargoWise Corp,2024-07-15,73.3,Under Review,GDPR,0,2,0,In Progress,2025-01-15
+87,22,CargoWise Corp,2025-01-15,66.8,Under Review,GDPR; HIPAA; PCI DSS,0,1,0,In Progress,2025-07-15
+88,22,CargoWise Corp,2025-07-15,82.8,Compliant,GDPR; ISO 14001,0,0,0,Closed,2026-01-15
+89,23,MetalPlus Manufacturing,2024-01-15,94.6,Compliant,GDPR; ISO 9001; SOC 2,0,0,0,Closed,2024-07-15
+90,23,MetalPlus Manufacturing,2024-07-15,92.2,Compliant,GDPR; PCI DSS; SOC 2,0,0,0,Closed,2025-01-15
+91,23,MetalPlus Manufacturing,2025-01-15,92.9,Compliant,HIPAA; ISO 27001; ISO 9001,0,0,0,Closed,2025-07-15
+92,23,MetalPlus Manufacturing,2025-07-15,91.1,Compliant,GDPR; ISO 27001; PCI DSS,0,0,0,Closed,2026-01-15
+93,24,Alpha Advisors,2024-01-15,83.9,Compliant,HIPAA; ISO 14001; PCI DSS,0,0,0,Closed,2024-07-15
+94,24,Alpha Advisors,2024-07-15,84.2,Compliant,ISO 27001; SOC 2,0,0,0,Closed,2025-01-15
+95,24,Alpha Advisors,2025-01-15,80.5,Compliant,ISO 14001; ISO 27001; ISO 9001,0,0,0,Closed,2025-07-15
+96,24,Alpha Advisors,2025-07-15,73.3,Under Review,GDPR; HIPAA; ISO 27001,0,1,0,In Progress,2026-01-15
+97,25,TerraMat Co,2024-01-15,75.8,Under Review,GDPR; PCI DSS,0,1,0,In Progress,2024-07-15
+98,25,TerraMat Co,2024-07-15,91.1,Compliant,HIPAA; ISO 14001,0,0,0,Closed,2025-01-15
+99,25,TerraMat Co,2025-01-15,78.2,Under Review,HIPAA; ISO 9001,0,1,0,In Progress,2025-07-15
+100,25,TerraMat Co,2025-07-15,79.2,Under Review,ISO 14001; ISO 9001,0,0,0,In Progress,2026-01-15
+101,26,CyberEdge Technologies,2024-01-15,90.2,Compliant,ISO 14001,0,0,0,Closed,2024-07-15
+102,26,CyberEdge Technologies,2024-07-15,91.9,Compliant,GDPR; HIPAA,0,0,0,Closed,2025-01-15
+103,26,CyberEdge Technologies,2025-01-15,86.1,Compliant,ISO 27001,0,0,0,Closed,2025-07-15
+104,26,CyberEdge Technologies,2025-07-15,97.8,Compliant,SOC 2,0,0,0,Closed,2026-01-15
+105,27,SpeedFreight Inc,2024-01-15,70.4,Under Review,PCI DSS,0,2,0,In Progress,2024-07-15
+106,27,SpeedFreight Inc,2024-07-15,82.1,Compliant,ISO 9001; SOC 2,0,0,0,Closed,2025-01-15
+107,27,SpeedFreight Inc,2025-01-15,80.7,Compliant,ISO 14001; ISO 27001,0,0,0,Closed,2025-07-15
+108,27,SpeedFreight Inc,2025-07-15,67.5,Under Review,SOC 2,1,1,0,In Progress,2026-01-15
+109,28,Ironclad Manufacturing,2024-01-15,78.5,Under Review,PCI DSS; SOC 2,0,0,0,In Progress,2024-07-15
+110,28,Ironclad Manufacturing,2024-07-15,78.1,Under Review,HIPAA; ISO 14001,0,1,0,In Progress,2025-01-15
+111,28,Ironclad Manufacturing,2025-01-15,75.8,Under Review,ISO 14001,0,0,0,In Progress,2025-07-15
+112,28,Ironclad Manufacturing,2025-07-15,74.0,Under Review,GDPR; ISO 27001,0,1,0,In Progress,2026-01-15
+113,29,ProConsult Partners,2024-01-15,72.1,Under Review,ISO 27001,0,2,0,In Progress,2024-07-15
+114,29,ProConsult Partners,2024-07-15,68.6,Under Review,ISO 27001; ISO 9001; PCI DSS,0,1,0,In Progress,2025-01-15
+115,29,ProConsult Partners,2025-01-15,62.0,Non-Compliant,HIPAA; ISO 27001; ISO 9001,2,4,0,Open,2025-07-15
+116,29,ProConsult Partners,2025-07-15,70.5,Under Review,GDPR; HIPAA; ISO 14001,0,2,0,In Progress,2026-01-15
+117,30,NaturalRes Corp,2024-01-15,83.6,Compliant,GDPR,0,0,0,Closed,2024-07-15
+118,30,NaturalRes Corp,2024-07-15,82.1,Compliant,HIPAA,0,0,0,Closed,2025-01-15
+119,30,NaturalRes Corp,2025-01-15,83.6,Compliant,PCI DSS,0,0,0,Closed,2025-07-15
+120,30,NaturalRes Corp,2025-07-15,81.8,Compliant,PCI DSS,0,0,0,Closed,2026-01-15
+121,31,Quantum IT Group,2024-01-15,83.3,Compliant,ISO 9001,0,0,0,Closed,2024-07-15
+122,31,Quantum IT Group,2024-07-15,83.3,Compliant,HIPAA; ISO 9001; PCI DSS,0,0,0,Closed,2025-01-15
+123,31,Quantum IT Group,2025-01-15,87.6,Compliant,HIPAA; PCI DSS,0,0,0,Closed,2025-07-15
+124,31,Quantum IT Group,2025-07-15,83.3,Compliant,GDPR,0,1,0,Closed,2026-01-15
+125,32,GlobalLink Logistics,2024-01-15,93.4,Compliant,HIPAA; ISO 27001; SOC 2,0,0,0,Closed,2024-07-15
+126,32,GlobalLink Logistics,2024-07-15,93.4,Compliant,PCI DSS,0,0,0,Closed,2025-01-15
+127,32,GlobalLink Logistics,2025-01-15,86.2,Compliant,ISO 27001; ISO 9001; SOC 2,0,0,0,Closed,2025-07-15
+128,32,GlobalLink Logistics,2025-07-15,92.3,Compliant,GDPR; ISO 14001,0,0,0,Closed,2026-01-15
+129,33,Summit Manufacturing,2024-01-15,72.8,Under Review,HIPAA; ISO 14001,0,0,0,In Progress,2024-07-15
+130,33,Summit Manufacturing,2024-07-15,95.3,Compliant,ISO 14001; ISO 27001; SOC 2,0,0,0,Closed,2025-01-15
+131,33,Summit Manufacturing,2025-01-15,90.4,Compliant,HIPAA; SOC 2,0,0,0,Closed,2025-07-15
+132,33,Summit Manufacturing,2025-07-15,96.1,Compliant,GDPR; HIPAA,0,0,0,Closed,2026-01-15
+133,34,Insight Consulting,2024-01-15,73.4,Under Review,ISO 27001; PCI DSS,0,0,0,In Progress,2024-07-15
+134,34,Insight Consulting,2024-07-15,92.1,Compliant,ISO 14001; ISO 9001,0,0,0,Closed,2025-01-15
+135,34,Insight Consulting,2025-01-15,85.0,Compliant,ISO 9001; PCI DSS; SOC 2,0,0,0,Closed,2025-07-15
+136,34,Insight Consulting,2025-07-15,76.0,Under Review,HIPAA; SOC 2,0,0,0,In Progress,2026-01-15
+137,35,PureSource Materials,2024-01-15,78.2,Under Review,HIPAA,0,1,0,In Progress,2024-07-15
+138,35,PureSource Materials,2024-07-15,73.6,Under Review,HIPAA; ISO 27001,0,2,0,In Progress,2025-01-15
+139,35,PureSource Materials,2025-01-15,73.3,Under Review,SOC 2,0,2,0,In Progress,2025-07-15
+140,35,PureSource Materials,2025-07-15,72.3,Under Review,GDPR; ISO 9001,0,2,0,In Progress,2026-01-15
+141,36,InnovateTech Ltd,2024-01-15,88.1,Compliant,ISO 14001; SOC 2,0,0,0,Closed,2024-07-15
+142,36,InnovateTech Ltd,2024-07-15,86.0,Compliant,GDPR; ISO 14001; ISO 27001,0,0,0,Closed,2025-01-15
+143,36,InnovateTech Ltd,2025-01-15,87.3,Compliant,GDPR; PCI DSS,0,0,0,Closed,2025-07-15
+144,36,InnovateTech Ltd,2025-07-15,93.5,Compliant,ISO 9001,0,0,0,Closed,2026-01-15
+145,37,AirCargo Express,2024-01-15,79.9,Under Review,ISO 9001; SOC 2,0,0,0,In Progress,2024-07-15
+146,37,AirCargo Express,2024-07-15,84.9,Compliant,GDPR; ISO 14001,0,0,0,Closed,2025-01-15
+147,37,AirCargo Express,2025-01-15,81.3,Compliant,ISO 27001; PCI DSS,0,0,0,Closed,2025-07-15
+148,37,AirCargo Express,2025-07-15,81.1,Compliant,ISO 9001; PCI DSS,0,0,0,Closed,2026-01-15
+149,38,PowerForge Mfg,2024-01-15,83.0,Compliant,ISO 27001; PCI DSS; SOC 2,0,1,0,Closed,2024-07-15
+150,38,PowerForge Mfg,2024-07-15,92.5,Compliant,ISO 14001,0,0,0,Closed,2025-01-15
+151,38,PowerForge Mfg,2025-01-15,81.3,Compliant,HIPAA; ISO 14001; ISO 27001,0,0,0,Closed,2025-07-15
+152,38,PowerForge Mfg,2025-07-15,98.2,Compliant,HIPAA,0,0,0,Closed,2026-01-15
+153,39,Clarity Consulting,2024-01-15,94.5,Compliant,HIPAA; ISO 14001; PCI DSS,0,0,0,Closed,2024-07-15
+154,39,Clarity Consulting,2024-07-15,81.5,Compliant,ISO 27001; PCI DSS,0,0,0,Closed,2025-01-15
+155,39,Clarity Consulting,2025-01-15,86.3,Compliant,HIPAA; ISO 14001; ISO 27001,0,0,0,Closed,2025-07-15
+156,39,Clarity Consulting,2025-07-15,97.5,Compliant,PCI DSS,0,0,0,Closed,2026-01-15
+157,40,NightOwl Logistics,2024-01-15,86.1,Compliant,ISO 14001; ISO 9001; SOC 2,0,0,0,Closed,2024-07-15
+158,40,NightOwl Logistics,2024-07-15,84.9,Compliant,ISO 14001; ISO 27001,0,0,0,Closed,2025-01-15
+159,40,NightOwl Logistics,2025-01-15,94.8,Compliant,GDPR; ISO 14001; ISO 9001,0,0,0,Closed,2025-07-15
+160,40,NightOwl Logistics,2025-07-15,83.3,Compliant,GDPR; HIPAA; PCI DSS,0,0,0,Closed,2026-01-15
+161,41,Vendor 041,2024-01-15,88.0,Compliant,HIPAA; ISO 14001; PCI DSS,0,0,0,Closed,2024-07-15
+162,41,Vendor 041,2024-07-15,87.1,Compliant,GDPR; ISO 27001; SOC 2,0,0,0,Closed,2025-01-15
+163,41,Vendor 041,2025-01-15,76.5,Under Review,GDPR; ISO 27001; ISO 9001,0,0,0,In Progress,2025-07-15
+164,41,Vendor 041,2025-07-15,82.2,Compliant,SOC 2,0,0,0,Closed,2026-01-15
+165,42,Vendor 042,2024-01-15,83.6,Compliant,GDPR; ISO 27001; PCI DSS,0,0,0,Closed,2024-07-15
+166,42,Vendor 042,2024-07-15,88.5,Compliant,ISO 9001,0,0,0,Closed,2025-01-15
+167,42,Vendor 042,2025-01-15,98.1,Compliant,HIPAA; ISO 14001; ISO 27001,0,0,0,Closed,2025-07-15
+168,42,Vendor 042,2025-07-15,88.8,Compliant,GDPR; HIPAA; ISO 9001,0,0,0,Closed,2026-01-15
+169,43,Vendor 043,2024-01-15,77.2,Under Review,GDPR; ISO 27001; SOC 2,0,1,0,In Progress,2024-07-15
+170,43,Vendor 043,2024-07-15,68.7,Under Review,ISO 27001,0,1,0,In Progress,2025-01-15
+171,43,Vendor 043,2025-01-15,79.2,Under Review,GDPR,0,0,0,In Progress,2025-07-15
+172,43,Vendor 043,2025-07-15,71.8,Under Review,ISO 14001,0,1,0,In Progress,2026-01-15
+173,44,Vendor 044,2024-01-15,82.2,Compliant,ISO 14001; SOC 2,0,0,0,Closed,2024-07-15
+174,44,Vendor 044,2024-07-15,76.3,Under Review,HIPAA,0,1,0,In Progress,2025-01-15
+175,44,Vendor 044,2025-01-15,83.2,Compliant,PCI DSS,0,0,0,Closed,2025-07-15
+176,44,Vendor 044,2025-07-15,75.7,Under Review,ISO 9001,0,1,0,In Progress,2026-01-15
+177,45,Vendor 045,2024-01-15,74.6,Under Review,HIPAA; SOC 2,0,0,0,In Progress,2024-07-15
+178,45,Vendor 045,2024-07-15,77.6,Under Review,ISO 27001; ISO 9001,0,0,0,In Progress,2025-01-15
+179,45,Vendor 045,2025-01-15,81.5,Compliant,ISO 27001; PCI DSS; SOC 2,0,1,0,Closed,2025-07-15
+180,45,Vendor 045,2025-07-15,69.2,Under Review,PCI DSS; SOC 2,0,0,0,In Progress,2026-01-15
+181,46,Vendor 046,2024-01-15,89.5,Compliant,GDPR; HIPAA; PCI DSS,0,0,0,Closed,2024-07-15
+182,46,Vendor 046,2024-07-15,72.9,Under Review,GDPR; ISO 9001; SOC 2,1,0,0,In Progress,2025-01-15
+183,46,Vendor 046,2025-01-15,73.7,Under Review,GDPR; ISO 9001,0,2,0,In Progress,2025-07-15
+184,46,Vendor 046,2025-07-15,74.4,Under Review,HIPAA; SOC 2,0,0,0,In Progress,2026-01-15
+185,47,Vendor 047,2024-01-15,75.3,Under Review,GDPR; HIPAA; ISO 14001,0,2,0,In Progress,2024-07-15
+186,47,Vendor 047,2024-07-15,82.1,Compliant,PCI DSS,0,0,0,Closed,2025-01-15
+187,47,Vendor 047,2025-01-15,72.1,Under Review,PCI DSS,0,1,0,In Progress,2025-07-15
+188,47,Vendor 047,2025-07-15,77.8,Under Review,GDPR; ISO 27001; SOC 2,0,1,0,In Progress,2026-01-15
+189,48,Vendor 048,2024-01-15,78.1,Under Review,GDPR; HIPAA,0,0,0,In Progress,2024-07-15
+190,48,Vendor 048,2024-07-15,75.2,Under Review,GDPR; HIPAA; PCI DSS,0,1,0,In Progress,2025-01-15
+191,48,Vendor 048,2025-01-15,85.7,Compliant,ISO 14001; ISO 9001; PCI DSS,0,0,0,Closed,2025-07-15
+192,48,Vendor 048,2025-07-15,80.0,Under Review,HIPAA,0,0,0,In Progress,2026-01-15
+193,49,Vendor 049,2024-01-15,84.6,Compliant,GDPR; HIPAA; PCI DSS,0,0,0,Closed,2024-07-15
+194,49,Vendor 049,2024-07-15,89.6,Compliant,ISO 14001; ISO 9001,0,0,0,Closed,2025-01-15
+195,49,Vendor 049,2025-01-15,85.0,Compliant,ISO 9001; SOC 2,0,0,0,Closed,2025-07-15
+196,49,Vendor 049,2025-07-15,85.0,Compliant,ISO 27001; PCI DSS; SOC 2,0,0,0,Closed,2026-01-15
+197,50,Vendor 050,2024-01-15,86.4,Compliant,ISO 14001; ISO 9001; PCI DSS,0,0,0,Closed,2024-07-15
+198,50,Vendor 050,2024-07-15,81.8,Compliant,GDPR,0,0,0,Closed,2025-01-15
+199,50,Vendor 050,2025-01-15,76.9,Under Review,HIPAA; ISO 14001,0,0,0,In Progress,2025-07-15
+200,50,Vendor 050,2025-07-15,84.3,Compliant,ISO 27001; PCI DSS; SOC 2,0,0,0,Closed,2026-01-15
+201,51,Vendor 051,2024-01-15,83.3,Compliant,GDPR,0,0,0,Closed,2024-07-15
+202,51,Vendor 051,2024-07-15,74.8,Under Review,ISO 14001; ISO 9001,0,2,0,In Progress,2025-01-15
+203,51,Vendor 051,2025-01-15,92.4,Compliant,ISO 9001,0,0,0,Closed,2025-07-15
+204,51,Vendor 051,2025-07-15,86.2,Compliant,ISO 9001; PCI DSS,0,0,0,Closed,2026-01-15
+205,52,Vendor 052,2024-01-15,98.8,Compliant,GDPR; ISO 9001,0,0,0,Closed,2024-07-15
+206,52,Vendor 052,2024-07-15,81.3,Compliant,GDPR,0,0,0,Closed,2025-01-15
+207,52,Vendor 052,2025-01-15,91.2,Compliant,ISO 14001; ISO 27001; ISO 9001,0,0,0,Closed,2025-07-15
+208,52,Vendor 052,2025-07-15,96.3,Compliant,ISO 9001; SOC 2,0,0,0,Closed,2026-01-15
+209,53,Vendor 053,2024-01-15,68.5,Under Review,ISO 14001,0,1,0,In Progress,2024-07-15
+210,53,Vendor 053,2024-07-15,75.2,Under Review,HIPAA,0,1,0,In Progress,2025-01-15
+211,53,Vendor 053,2025-01-15,75.6,Under Review,HIPAA; SOC 2,0,0,0,In Progress,2025-07-15
+212,53,Vendor 053,2025-07-15,71.2,Under Review,ISO 14001,0,2,0,In Progress,2026-01-15
+213,54,Vendor 054,2024-01-15,78.0,Under Review,ISO 14001; ISO 9001; SOC 2,0,0,0,In Progress,2024-07-15
+214,54,Vendor 054,2024-07-15,80.8,Compliant,PCI DSS,0,0,0,Closed,2025-01-15
+215,54,Vendor 054,2025-01-15,75.3,Under Review,ISO 14001; ISO 27001,0,1,0,In Progress,2025-07-15
+216,54,Vendor 054,2025-07-15,81.8,Compliant,HIPAA; ISO 14001,0,1,0,Closed,2026-01-15
+217,55,Vendor 055,2024-01-15,75.3,Under Review,HIPAA; SOC 2,0,0,0,In Progress,2024-07-15
+218,55,Vendor 055,2024-07-15,81.2,Compliant,GDPR; ISO 14001; SOC 2,0,0,0,Closed,2025-01-15
+219,55,Vendor 055,2025-01-15,80.1,Compliant,GDPR; PCI DSS; SOC 2,0,1,0,Closed,2025-07-15
+220,55,Vendor 055,2025-07-15,72.2,Under Review,PCI DSS,0,0,0,In Progress,2026-01-15
+221,56,Vendor 056,2024-01-15,73.9,Under Review,ISO 27001,0,1,0,In Progress,2024-07-15
+222,56,Vendor 056,2024-07-15,77.6,Under Review,GDPR; ISO 9001,0,0,0,In Progress,2025-01-15
+223,56,Vendor 056,2025-01-15,70.0,Under Review,ISO 14001; ISO 27001; ISO 9001,0,1,0,In Progress,2025-07-15
+224,56,Vendor 056,2025-07-15,69.2,Under Review,ISO 27001; SOC 2,0,1,0,In Progress,2026-01-15
+225,57,Vendor 057,2024-01-15,89.3,Compliant,PCI DSS,0,0,0,Closed,2024-07-15
+226,57,Vendor 057,2024-07-15,78.3,Under Review,ISO 9001,0,1,0,In Progress,2025-01-15
+227,57,Vendor 057,2025-01-15,68.0,Under Review,PCI DSS,1,2,0,In Progress,2025-07-15
+228,57,Vendor 057,2025-07-15,88.7,Compliant,ISO 14001; ISO 9001; PCI DSS,0,0,0,Closed,2026-01-15
+229,58,Vendor 058,2024-01-15,96.7,Compliant,ISO 14001; PCI DSS,0,0,0,Closed,2024-07-15
+230,58,Vendor 058,2024-07-15,99.7,Compliant,HIPAA; ISO 27001; ISO 9001,0,0,0,Closed,2025-01-15
+231,58,Vendor 058,2025-01-15,96.8,Compliant,ISO 9001,0,0,0,Closed,2025-07-15
+232,58,Vendor 058,2025-07-15,89.2,Compliant,HIPAA; ISO 9001; PCI DSS,0,0,0,Closed,2026-01-15
+233,59,Vendor 059,2024-01-15,84.3,Compliant,ISO 14001,0,0,0,Closed,2024-07-15
+234,59,Vendor 059,2024-07-15,73.6,Under Review,HIPAA; ISO 9001; SOC 2,0,3,0,In Progress,2025-01-15
+235,59,Vendor 059,2025-01-15,82.1,Compliant,ISO 27001; PCI DSS,0,0,0,Closed,2025-07-15
+236,59,Vendor 059,2025-07-15,88.0,Compliant,ISO 14001,0,0,0,Closed,2026-01-15
+237,60,Vendor 060,2024-01-15,86.3,Compliant,PCI DSS,0,0,0,Closed,2024-07-15
+238,60,Vendor 060,2024-07-15,89.4,Compliant,HIPAA; ISO 9001; PCI DSS,0,0,0,Closed,2025-01-15
+239,60,Vendor 060,2025-01-15,92.6,Compliant,ISO 14001; ISO 9001,0,0,0,Closed,2025-07-15
+240,60,Vendor 060,2025-07-15,82.9,Compliant,ISO 14001,0,0,0,Closed,2026-01-15
+241,61,Vendor 061,2024-01-15,91.2,Compliant,ISO 27001; PCI DSS,0,0,0,Closed,2024-07-15
+242,61,Vendor 061,2024-07-15,83.3,Compliant,GDPR; ISO 27001,0,0,0,Closed,2025-01-15
+243,61,Vendor 061,2025-01-15,92.9,Compliant,PCI DSS,0,0,0,Closed,2025-07-15
+244,61,Vendor 061,2025-07-15,95.0,Compliant,ISO 9001; SOC 2,0,0,0,Closed,2026-01-15
+245,62,Vendor 062,2024-01-15,87.9,Compliant,ISO 27001; PCI DSS; SOC 2,0,0,0,Closed,2024-07-15
+246,62,Vendor 062,2024-07-15,92.9,Compliant,ISO 14001,0,0,0,Closed,2025-01-15
+247,62,Vendor 062,2025-01-15,91.9,Compliant,GDPR; ISO 14001; SOC 2,0,0,0,Closed,2025-07-15
+248,62,Vendor 062,2025-07-15,93.5,Compliant,GDPR; HIPAA,0,0,0,Closed,2026-01-15
+249,63,Vendor 063,2024-01-15,87.1,Compliant,HIPAA; ISO 14001; ISO 27001,0,0,0,Closed,2024-07-15
+250,63,Vendor 063,2024-07-15,92.4,Compliant,HIPAA; ISO 14001; ISO 9001,0,0,0,Closed,2025-01-15
+251,63,Vendor 063,2025-01-15,89.2,Compliant,PCI DSS,0,0,0,Closed,2025-07-15
+252,63,Vendor 063,2025-07-15,91.0,Compliant,HIPAA; ISO 27001; ISO 9001,0,0,0,Closed,2026-01-15
+253,64,Vendor 064,2024-01-15,99.8,Compliant,ISO 14001; ISO 27001; PCI DSS,0,0,0,Closed,2024-07-15
+254,64,Vendor 064,2024-07-15,91.3,Compliant,GDPR; ISO 14001; PCI DSS,0,0,0,Closed,2025-01-15
+255,64,Vendor 064,2025-01-15,83.7,Compliant,ISO 14001,0,0,0,Closed,2025-07-15
+256,64,Vendor 064,2025-07-15,89.9,Compliant,SOC 2,0,0,0,Closed,2026-01-15
+257,65,Vendor 065,2024-01-15,89.0,Compliant,HIPAA,0,0,0,Closed,2024-07-15
+258,65,Vendor 065,2024-07-15,81.2,Compliant,HIPAA; ISO 14001,0,0,0,Closed,2025-01-15
+259,65,Vendor 065,2025-01-15,94.9,Compliant,HIPAA; ISO 27001,0,0,0,Closed,2025-07-15
+260,65,Vendor 065,2025-07-15,80.9,Compliant,ISO 14001; ISO 27001,0,0,0,Closed,2026-01-15
+261,66,Vendor 066,2024-01-15,84.8,Compliant,GDPR; PCI DSS; SOC 2,0,0,0,Closed,2024-07-15
+262,66,Vendor 066,2024-07-15,77.7,Under Review,ISO 27001; ISO 9001; SOC 2,0,0,0,In Progress,2025-01-15
+263,66,Vendor 066,2025-01-15,82.8,Compliant,GDPR; HIPAA; SOC 2,0,0,0,Closed,2025-07-15
+264,66,Vendor 066,2025-07-15,98.3,Compliant,ISO 9001; PCI DSS; SOC 2,0,0,0,Closed,2026-01-15
+265,67,Vendor 067,2024-01-15,82.9,Compliant,HIPAA; ISO 27001; PCI DSS,0,0,0,Closed,2024-07-15
+266,67,Vendor 067,2024-07-15,91.5,Compliant,GDPR,0,0,0,Closed,2025-01-15
+267,67,Vendor 067,2025-01-15,78.6,Under Review,ISO 14001; PCI DSS; SOC 2,0,0,0,In Progress,2025-07-15
+268,67,Vendor 067,2025-07-15,82.8,Compliant,ISO 27001; PCI DSS,0,0,0,Closed,2026-01-15
+269,68,Vendor 068,2024-01-15,77.3,Under Review,PCI DSS; SOC 2,0,2,0,In Progress,2024-07-15
+270,68,Vendor 068,2024-07-15,74.8,Under Review,GDPR,0,1,0,In Progress,2025-01-15
+271,68,Vendor 068,2025-01-15,72.6,Under Review,GDPR; ISO 14001; ISO 27001,0,2,0,In Progress,2025-07-15
+272,68,Vendor 068,2025-07-15,79.1,Under Review,ISO 9001; SOC 2,0,0,0,In Progress,2026-01-15
+273,69,Vendor 069,2024-01-15,82.2,Compliant,GDPR; HIPAA,0,1,0,Closed,2024-07-15
+274,69,Vendor 069,2024-07-15,88.8,Compliant,GDPR; HIPAA; ISO 9001,0,0,0,Closed,2025-01-15
+275,69,Vendor 069,2025-01-15,78.6,Under Review,GDPR; HIPAA; ISO 27001,0,0,0,In Progress,2025-07-15
+276,69,Vendor 069,2025-07-15,79.9,Under Review,ISO 27001; ISO 9001,0,0,0,In Progress,2026-01-15
+277,70,Vendor 070,2024-01-15,64.7,Non-Compliant,ISO 27001; SOC 2,1,3,0,Open,2024-07-15
+278,70,Vendor 070,2024-07-15,65.2,Under Review,ISO 14001,0,4,0,In Progress,2025-01-15
+279,70,Vendor 070,2025-01-15,69.2,Under Review,GDPR,0,2,0,In Progress,2025-07-15
+280,70,Vendor 070,2025-07-15,66.1,Under Review,PCI DSS,0,2,0,In Progress,2026-01-15
+281,71,Vendor 071,2024-01-15,77.1,Under Review,GDPR; HIPAA,0,1,0,In Progress,2024-07-15
+282,71,Vendor 071,2024-07-15,71.9,Under Review,HIPAA,0,0,0,In Progress,2025-01-15
+283,71,Vendor 071,2025-01-15,76.0,Under Review,HIPAA; ISO 14001; SOC 2,0,0,0,In Progress,2025-07-15
+284,71,Vendor 071,2025-07-15,90.3,Compliant,ISO 27001; SOC 2,0,0,0,Closed,2026-01-15
+285,72,Vendor 072,2024-01-15,88.5,Compliant,GDPR; ISO 14001; PCI DSS,0,0,0,Closed,2024-07-15
+286,72,Vendor 072,2024-07-15,96.9,Compliant,PCI DSS,0,0,0,Closed,2025-01-15
+287,72,Vendor 072,2025-01-15,97.5,Compliant,HIPAA; ISO 9001,0,0,0,Closed,2025-07-15
+288,72,Vendor 072,2025-07-15,89.9,Compliant,GDPR; ISO 14001; SOC 2,0,0,0,Closed,2026-01-15
+289,73,Vendor 073,2024-01-15,95.9,Compliant,PCI DSS,0,0,0,Closed,2024-07-15
+290,73,Vendor 073,2024-07-15,85.5,Compliant,ISO 9001,0,0,0,Closed,2025-01-15
+291,73,Vendor 073,2025-01-15,83.1,Compliant,ISO 27001,0,0,0,Closed,2025-07-15
+292,73,Vendor 073,2025-07-15,78.0,Under Review,ISO 14001; PCI DSS,0,0,0,In Progress,2026-01-15
+293,74,Vendor 074,2024-01-15,88.6,Compliant,ISO 27001,0,0,0,Closed,2024-07-15
+294,74,Vendor 074,2024-07-15,90.4,Compliant,HIPAA; ISO 9001,0,0,0,Closed,2025-01-15
+295,74,Vendor 074,2025-01-15,87.4,Compliant,GDPR; HIPAA,0,0,0,Closed,2025-07-15
+296,74,Vendor 074,2025-07-15,82.5,Compliant,PCI DSS,0,0,0,Closed,2026-01-15
+297,75,Vendor 075,2024-01-15,74.4,Under Review,ISO 27001,0,2,0,In Progress,2024-07-15
+298,75,Vendor 075,2024-07-15,81.1,Compliant,GDPR; ISO 14001; SOC 2,0,0,0,Closed,2025-01-15
+299,75,Vendor 075,2025-01-15,78.5,Under Review,ISO 27001; ISO 9001,0,1,0,In Progress,2025-07-15
+300,75,Vendor 075,2025-07-15,82.1,Compliant,PCI DSS,0,0,0,Closed,2026-01-15
+301,76,Vendor 076,2024-01-15,75.1,Under Review,GDPR; ISO 27001; PCI DSS,0,0,0,In Progress,2024-07-15
+302,76,Vendor 076,2024-07-15,87.3,Compliant,GDPR; PCI DSS; SOC 2,0,0,0,Closed,2025-01-15
+303,76,Vendor 076,2025-01-15,84.8,Compliant,GDPR; HIPAA,0,0,0,Closed,2025-07-15
+304,76,Vendor 076,2025-07-15,78.0,Under Review,GDPR; ISO 27001; PCI DSS,0,0,0,In Progress,2026-01-15
+305,77,Vendor 077,2024-01-15,87.6,Compliant,HIPAA; ISO 9001; PCI DSS,0,0,0,Closed,2024-07-15
+306,77,Vendor 077,2024-07-15,90.8,Compliant,GDPR; HIPAA; ISO 9001,0,0,0,Closed,2025-01-15
+307,77,Vendor 077,2025-01-15,78.3,Under Review,PCI DSS,0,0,0,In Progress,2025-07-15
+308,77,Vendor 077,2025-07-15,81.4,Compliant,HIPAA; SOC 2,0,0,0,Closed,2026-01-15
+309,78,Vendor 078,2024-01-15,70.2,Under Review,HIPAA; ISO 14001; ISO 9001,0,3,0,In Progress,2024-07-15
+310,78,Vendor 078,2024-07-15,75.0,Under Review,GDPR; HIPAA; ISO 9001,0,1,0,In Progress,2025-01-15
+311,78,Vendor 078,2025-01-15,79.2,Under Review,ISO 9001; PCI DSS,0,0,0,In Progress,2025-07-15
+312,78,Vendor 078,2025-07-15,76.2,Under Review,ISO 9001; PCI DSS,0,0,0,In Progress,2026-01-15
+313,79,Vendor 079,2024-01-15,94.5,Compliant,ISO 9001,0,0,0,Closed,2024-07-15
+314,79,Vendor 079,2024-07-15,92.7,Compliant,GDPR; HIPAA; ISO 9001,0,0,0,Closed,2025-01-15
+315,79,Vendor 079,2025-01-15,93.6,Compliant,GDPR,0,0,0,Closed,2025-07-15
+316,79,Vendor 079,2025-07-15,95.1,Compliant,GDPR; ISO 27001; PCI DSS,0,0,0,Closed,2026-01-15
+317,80,Vendor 080,2024-01-15,79.1,Under Review,GDPR; HIPAA; PCI DSS,0,0,0,In Progress,2024-07-15
+318,80,Vendor 080,2024-07-15,74.8,Under Review,ISO 14001,0,0,0,In Progress,2025-01-15
+319,80,Vendor 080,2025-01-15,76.1,Under Review,ISO 27001,0,1,0,In Progress,2025-07-15
+320,80,Vendor 080,2025-07-15,77.9,Under Review,HIPAA; ISO 27001,0,2,0,In Progress,2026-01-15
+321,81,Vendor 081,2024-01-15,75.2,Under Review,ISO 9001,0,2,0,In Progress,2024-07-15
+322,81,Vendor 081,2024-07-15,75.7,Under Review,ISO 27001,0,1,0,In Progress,2025-01-15
+323,81,Vendor 081,2025-01-15,75.9,Under Review,GDPR; SOC 2,0,0,0,In Progress,2025-07-15
+324,81,Vendor 081,2025-07-15,78.1,Under Review,HIPAA; ISO 9001; SOC 2,0,0,0,In Progress,2026-01-15
+325,82,Vendor 082,2024-01-15,84.0,Compliant,ISO 27001; PCI DSS,0,0,0,Closed,2024-07-15
+326,82,Vendor 082,2024-07-15,86.7,Compliant,ISO 27001,0,0,0,Closed,2025-01-15
+327,82,Vendor 082,2025-01-15,81.0,Compliant,GDPR,0,0,0,Closed,2025-07-15
+328,82,Vendor 082,2025-07-15,82.8,Compliant,GDPR; ISO 27001; SOC 2,0,0,0,Closed,2026-01-15
+329,83,Vendor 083,2024-01-15,72.0,Under Review,ISO 14001; PCI DSS,0,1,0,In Progress,2024-07-15
+330,83,Vendor 083,2024-07-15,78.8,Under Review,HIPAA; ISO 9001,0,1,0,In Progress,2025-01-15
+331,83,Vendor 083,2025-01-15,74.5,Under Review,PCI DSS,0,2,0,In Progress,2025-07-15
+332,83,Vendor 083,2025-07-15,75.6,Under Review,GDPR; ISO 9001,0,0,0,In Progress,2026-01-15
+333,84,Vendor 084,2024-01-15,70.7,Under Review,GDPR; ISO 9001; SOC 2,0,2,0,In Progress,2024-07-15
+334,84,Vendor 084,2024-07-15,79.5,Under Review,HIPAA,0,0,0,In Progress,2025-01-15
+335,84,Vendor 084,2025-01-15,79.1,Under Review,GDPR; ISO 27001,0,1,0,In Progress,2025-07-15
+336,84,Vendor 084,2025-07-15,83.8,Compliant,GDPR; ISO 27001; SOC 2,0,0,0,Closed,2026-01-15
+337,85,Vendor 085,2024-01-15,92.7,Compliant,GDPR; ISO 9001; PCI DSS,0,0,0,Closed,2024-07-15
+338,85,Vendor 085,2024-07-15,85.9,Compliant,ISO 27001; PCI DSS,0,0,0,Closed,2025-01-15
+339,85,Vendor 085,2025-01-15,84.3,Compliant,ISO 27001; SOC 2,0,0,0,Closed,2025-07-15
+340,85,Vendor 085,2025-07-15,84.7,Compliant,ISO 9001; SOC 2,0,0,0,Closed,2026-01-15
+341,86,Vendor 086,2024-01-15,95.5,Compliant,GDPR; HIPAA,0,0,0,Closed,2024-07-15
+342,86,Vendor 086,2024-07-15,84.6,Compliant,ISO 9001,0,0,0,Closed,2025-01-15
+343,86,Vendor 086,2025-01-15,99.4,Compliant,ISO 14001; PCI DSS; SOC 2,0,0,0,Closed,2025-07-15
+344,86,Vendor 086,2025-07-15,80.1,Compliant,HIPAA; ISO 27001,0,0,0,Closed,2026-01-15
+345,87,Vendor 087,2024-01-15,97.9,Compliant,ISO 9001,0,0,0,Closed,2024-07-15
+346,87,Vendor 087,2024-07-15,90.3,Compliant,ISO 14001; ISO 27001,0,0,0,Closed,2025-01-15
+347,87,Vendor 087,2025-01-15,90.7,Compliant,ISO 14001,0,0,0,Closed,2025-07-15
+348,87,Vendor 087,2025-07-15,90.3,Compliant,ISO 9001,0,0,0,Closed,2026-01-15
+349,88,Vendor 088,2024-01-15,80.1,Compliant,GDPR; SOC 2,0,1,0,Closed,2024-07-15
+350,88,Vendor 088,2024-07-15,72.9,Under Review,PCI DSS,0,2,0,In Progress,2025-01-15
+351,88,Vendor 088,2025-01-15,76.3,Under Review,HIPAA; ISO 9001,0,2,0,In Progress,2025-07-15
+352,88,Vendor 088,2025-07-15,75.7,Under Review,ISO 9001,0,2,0,In Progress,2026-01-15
+353,89,Vendor 089,2024-01-15,86.3,Compliant,GDPR; HIPAA; ISO 14001,0,0,0,Closed,2024-07-15
+354,89,Vendor 089,2024-07-15,79.4,Under Review,ISO 27001,0,0,0,In Progress,2025-01-15
+355,89,Vendor 089,2025-01-15,75.8,Under Review,SOC 2,0,0,0,In Progress,2025-07-15
+356,89,Vendor 089,2025-07-15,85.2,Compliant,ISO 27001; SOC 2,0,0,0,Closed,2026-01-15
+357,90,Vendor 090,2024-01-15,76.5,Under Review,PCI DSS,0,1,0,In Progress,2024-07-15
+358,90,Vendor 090,2024-07-15,72.7,Under Review,ISO 14001; ISO 27001; ISO 9001,0,2,0,In Progress,2025-01-15
+359,90,Vendor 090,2025-01-15,67.2,Under Review,ISO 9001,0,1,0,In Progress,2025-07-15
+360,90,Vendor 090,2025-07-15,72.1,Under Review,PCI DSS; SOC 2,0,3,0,In Progress,2026-01-15
+361,91,Vendor 091,2024-01-15,82.3,Compliant,PCI DSS,0,0,0,Closed,2024-07-15
+362,91,Vendor 091,2024-07-15,99.8,Compliant,GDPR,0,0,0,Closed,2025-01-15
+363,91,Vendor 091,2025-01-15,89.0,Compliant,HIPAA; ISO 14001,0,0,0,Closed,2025-07-15
+364,91,Vendor 091,2025-07-15,85.8,Compliant,ISO 27001,0,0,0,Closed,2026-01-15
+365,92,Vendor 092,2024-01-15,85.4,Compliant,ISO 14001; ISO 9001,0,0,0,Closed,2024-07-15
+366,92,Vendor 092,2024-07-15,68.5,Under Review,PCI DSS; SOC 2,1,3,0,In Progress,2025-01-15
+367,92,Vendor 092,2025-01-15,75.1,Under Review,PCI DSS; SOC 2,0,1,0,In Progress,2025-07-15
+368,92,Vendor 092,2025-07-15,77.2,Under Review,GDPR; PCI DSS; SOC 2,0,1,0,In Progress,2026-01-15
+369,93,Vendor 093,2024-01-15,88.5,Compliant,HIPAA,0,0,0,Closed,2024-07-15
+370,93,Vendor 093,2024-07-15,85.5,Compliant,ISO 14001; ISO 9001,0,0,0,Closed,2025-01-15
+371,93,Vendor 093,2025-01-15,86.6,Compliant,ISO 14001,0,0,0,Closed,2025-07-15
+372,93,Vendor 093,2025-07-15,87.4,Compliant,ISO 9001,0,0,0,Closed,2026-01-15
+373,94,Vendor 094,2024-01-15,87.3,Compliant,SOC 2,0,0,0,Closed,2024-07-15
+374,94,Vendor 094,2024-07-15,86.0,Compliant,ISO 27001,0,0,0,Closed,2025-01-15
+375,94,Vendor 094,2025-01-15,88.3,Compliant,HIPAA; ISO 27001,0,0,0,Closed,2025-07-15
+376,94,Vendor 094,2025-07-15,80.3,Compliant,PCI DSS,0,0,0,Closed,2026-01-15
+377,95,Vendor 095,2024-01-15,82.3,Compliant,ISO 27001,0,0,0,Closed,2024-07-15
+378,95,Vendor 095,2024-07-15,70.8,Under Review,HIPAA,0,2,0,In Progress,2025-01-15
+379,95,Vendor 095,2025-01-15,72.7,Under Review,GDPR; ISO 14001; PCI DSS,0,2,0,In Progress,2025-07-15
+380,95,Vendor 095,2025-07-15,67.1,Under Review,GDPR; ISO 27001; ISO 9001,1,3,0,In Progress,2026-01-15
+381,96,Vendor 096,2024-01-15,79.2,Under Review,ISO 14001; ISO 9001,0,0,0,In Progress,2024-07-15
+382,96,Vendor 096,2024-07-15,80.5,Compliant,GDPR; ISO 14001,0,0,0,Closed,2025-01-15
+383,96,Vendor 096,2025-01-15,83.9,Compliant,ISO 14001,0,0,0,Closed,2025-07-15
+384,96,Vendor 096,2025-07-15,79.4,Under Review,HIPAA; ISO 9001,0,1,0,In Progress,2026-01-15
+385,97,Vendor 097,2024-01-15,76.4,Under Review,ISO 27001; ISO 9001,0,2,0,In Progress,2024-07-15
+386,97,Vendor 097,2024-07-15,74.6,Under Review,ISO 14001,0,3,0,In Progress,2025-01-15
+387,97,Vendor 097,2025-01-15,68.8,Under Review,GDPR; PCI DSS; SOC 2,0,2,0,In Progress,2025-07-15
+388,97,Vendor 097,2025-07-15,72.0,Under Review,GDPR; HIPAA; ISO 27001,0,2,0,In Progress,2026-01-15
+389,98,Vendor 098,2024-01-15,99.8,Compliant,ISO 27001,0,0,0,Closed,2024-07-15
+390,98,Vendor 098,2024-07-15,92.1,Compliant,HIPAA,0,0,0,Closed,2025-01-15
+391,98,Vendor 098,2025-01-15,99.8,Compliant,ISO 27001; ISO 9001; PCI DSS,0,0,0,Closed,2025-07-15
+392,98,Vendor 098,2025-07-15,94.4,Compliant,ISO 9001,0,0,0,Closed,2026-01-15
+393,99,Vendor 099,2024-01-15,88.1,Compliant,GDPR; ISO 14001,0,0,0,Closed,2024-07-15
+394,99,Vendor 099,2024-07-15,91.4,Compliant,ISO 9001,0,0,0,Closed,2025-01-15
+395,99,Vendor 099,2025-01-15,81.4,Compliant,PCI DSS,0,0,0,Closed,2025-07-15
+396,99,Vendor 099,2025-07-15,89.1,Compliant,ISO 14001; ISO 9001; PCI DSS,0,0,0,Closed,2026-01-15
+397,100,Vendor 100,2024-01-15,87.6,Compliant,ISO 9001; SOC 2,0,0,0,Closed,2024-07-15
+398,100,Vendor 100,2024-07-15,87.5,Compliant,ISO 14001; ISO 9001; PCI DSS,0,0,0,Closed,2025-01-15
+399,100,Vendor 100,2025-01-15,91.0,Compliant,ISO 27001,0,0,0,Closed,2025-07-15
+400,100,Vendor 100,2025-07-15,83.0,Compliant,GDPR; ISO 14001; SOC 2,0,0,0,Closed,2026-01-15
+401,101,Vendor 101,2024-01-15,81.8,Compliant,ISO 14001; ISO 9001; PCI DSS,0,0,0,Closed,2024-07-15
+402,101,Vendor 101,2024-07-15,79.4,Under Review,HIPAA; ISO 14001; ISO 27001,0,0,0,In Progress,2025-01-15
+403,101,Vendor 101,2025-01-15,87.9,Compliant,HIPAA; SOC 2,0,0,0,Closed,2025-07-15
+404,101,Vendor 101,2025-07-15,99.2,Compliant,HIPAA,0,0,0,Closed,2026-01-15
+405,102,Vendor 102,2024-01-15,79.7,Under Review,GDPR; ISO 14001,0,1,0,In Progress,2024-07-15
+406,102,Vendor 102,2024-07-15,75.2,Under Review,GDPR; PCI DSS,0,1,0,In Progress,2025-01-15
+407,102,Vendor 102,2025-01-15,75.2,Under Review,HIPAA; ISO 27001; PCI DSS,0,1,0,In Progress,2025-07-15
+408,102,Vendor 102,2025-07-15,83.4,Compliant,GDPR; PCI DSS,0,0,0,Closed,2026-01-15
+409,103,Vendor 103,2024-01-15,91.6,Compliant,HIPAA; ISO 14001; ISO 27001,0,0,0,Closed,2024-07-15
+410,103,Vendor 103,2024-07-15,82.0,Compliant,GDPR; HIPAA; SOC 2,0,0,0,Closed,2025-01-15
+411,103,Vendor 103,2025-01-15,86.2,Compliant,HIPAA; ISO 14001; PCI DSS,0,0,0,Closed,2025-07-15
+412,103,Vendor 103,2025-07-15,88.0,Compliant,GDPR; ISO 14001; ISO 27001,0,0,0,Closed,2026-01-15
+413,104,Vendor 104,2024-01-15,87.6,Compliant,ISO 27001,0,0,0,Closed,2024-07-15
+414,104,Vendor 104,2024-07-15,86.7,Compliant,HIPAA,0,0,0,Closed,2025-01-15
+415,104,Vendor 104,2025-01-15,87.5,Compliant,HIPAA; ISO 9001,0,0,0,Closed,2025-07-15
+416,104,Vendor 104,2025-07-15,87.4,Compliant,ISO 14001; ISO 9001; PCI DSS,0,0,0,Closed,2026-01-15
+417,105,Vendor 105,2024-01-15,87.3,Compliant,GDPR,0,0,0,Closed,2024-07-15
+418,105,Vendor 105,2024-07-15,81.2,Compliant,ISO 27001,0,0,0,Closed,2025-01-15
+419,105,Vendor 105,2025-01-15,88.6,Compliant,PCI DSS; SOC 2,0,0,0,Closed,2025-07-15
+420,105,Vendor 105,2025-07-15,87.1,Compliant,GDPR; HIPAA; ISO 9001,0,0,0,Closed,2026-01-15
+421,106,Vendor 106,2024-01-15,83.8,Compliant,PCI DSS,0,0,0,Closed,2024-07-15
+422,106,Vendor 106,2024-07-15,76.6,Under Review,HIPAA; PCI DSS; SOC 2,0,1,0,In Progress,2025-01-15
+423,106,Vendor 106,2025-01-15,86.1,Compliant,GDPR; HIPAA; SOC 2,0,0,0,Closed,2025-07-15
+424,106,Vendor 106,2025-07-15,73.5,Under Review,ISO 14001; SOC 2,0,1,0,In Progress,2026-01-15
+425,107,Vendor 107,2024-01-15,85.8,Compliant,GDPR; ISO 9001,0,0,0,Closed,2024-07-15
+426,107,Vendor 107,2024-07-15,83.8,Compliant,GDPR; ISO 27001; SOC 2,0,0,0,Closed,2025-01-15
+427,107,Vendor 107,2025-01-15,74.7,Under Review,GDPR; ISO 14001,0,1,0,In Progress,2025-07-15
+428,107,Vendor 107,2025-07-15,68.3,Under Review,GDPR; ISO 9001; PCI DSS,0,2,0,In Progress,2026-01-15
+429,108,Vendor 108,2024-01-15,71.5,Under Review,HIPAA; PCI DSS,0,3,0,In Progress,2024-07-15
+430,108,Vendor 108,2024-07-15,79.7,Under Review,ISO 27001; PCI DSS,0,0,0,In Progress,2025-01-15
+431,108,Vendor 108,2025-01-15,76.4,Under Review,ISO 27001,0,2,0,In Progress,2025-07-15
+432,108,Vendor 108,2025-07-15,66.3,Under Review,PCI DSS,0,2,0,In Progress,2026-01-15
+433,109,Vendor 109,2024-01-15,87.0,Compliant,HIPAA; PCI DSS,0,0,0,Closed,2024-07-15
+434,109,Vendor 109,2024-07-15,85.2,Compliant,PCI DSS,0,0,0,Closed,2025-01-15
+435,109,Vendor 109,2025-01-15,77.0,Under Review,GDPR; ISO 9001,0,2,0,In Progress,2025-07-15
+436,109,Vendor 109,2025-07-15,89.8,Compliant,HIPAA; ISO 14001; SOC 2,0,0,0,Closed,2026-01-15
+437,110,Vendor 110,2024-01-15,88.1,Compliant,HIPAA; ISO 14001,0,0,0,Closed,2024-07-15
+438,110,Vendor 110,2024-07-15,82.2,Compliant,HIPAA,0,0,0,Closed,2025-01-15
+439,110,Vendor 110,2025-01-15,85.6,Compliant,HIPAA,0,0,0,Closed,2025-07-15
+440,110,Vendor 110,2025-07-15,82.4,Compliant,ISO 27001; ISO 9001; SOC 2,0,0,0,Closed,2026-01-15
+441,111,Vendor 111,2024-01-15,76.4,Under Review,HIPAA; ISO 9001,0,1,0,In Progress,2024-07-15
+442,111,Vendor 111,2024-07-15,61.4,Non-Compliant,GDPR; ISO 27001; SOC 2,1,4,0,Open,2025-01-15
+443,111,Vendor 111,2025-01-15,62.6,Non-Compliant,HIPAA; SOC 2,1,4,0,Open,2025-07-15
+444,111,Vendor 111,2025-07-15,64.4,Non-Compliant,GDPR; HIPAA; ISO 9001,1,2,0,Open,2026-01-15
+445,112,Vendor 112,2024-01-15,99.8,Compliant,ISO 27001; PCI DSS; SOC 2,0,0,0,Closed,2024-07-15
+446,112,Vendor 112,2024-07-15,95.2,Compliant,ISO 14001; PCI DSS,0,0,0,Closed,2025-01-15
+447,112,Vendor 112,2025-01-15,96.1,Compliant,HIPAA; ISO 14001; ISO 27001,0,0,0,Closed,2025-07-15
+448,112,Vendor 112,2025-07-15,93.3,Compliant,PCI DSS,0,0,0,Closed,2026-01-15
+449,113,Vendor 113,2024-01-15,90.8,Compliant,GDPR; ISO 27001; ISO 9001,0,0,0,Closed,2024-07-15
+450,113,Vendor 113,2024-07-15,82.3,Compliant,HIPAA; ISO 9001; SOC 2,0,0,0,Closed,2025-01-15
+451,113,Vendor 113,2025-01-15,95.0,Compliant,GDPR; HIPAA,0,0,0,Closed,2025-07-15
+452,113,Vendor 113,2025-07-15,91.4,Compliant,HIPAA; ISO 27001; SOC 2,0,0,0,Closed,2026-01-15
+453,114,Vendor 114,2024-01-15,84.9,Compliant,HIPAA; ISO 27001; ISO 9001,0,0,0,Closed,2024-07-15
+454,114,Vendor 114,2024-07-15,69.6,Under Review,GDPR; ISO 14001; ISO 9001,0,2,0,In Progress,2025-01-15
+455,114,Vendor 114,2025-01-15,84.5,Compliant,GDPR; ISO 27001; ISO 9001,0,0,0,Closed,2025-07-15
+456,114,Vendor 114,2025-07-15,86.3,Compliant,ISO 9001; SOC 2,0,0,0,Closed,2026-01-15
+457,115,Vendor 115,2024-01-15,74.1,Under Review,GDPR; PCI DSS; SOC 2,0,1,0,In Progress,2024-07-15
+458,115,Vendor 115,2024-07-15,68.0,Under Review,SOC 2,0,3,0,In Progress,2025-01-15
+459,115,Vendor 115,2025-01-15,78.3,Under Review,GDPR,0,0,0,In Progress,2025-07-15
+460,115,Vendor 115,2025-07-15,68.3,Under Review,HIPAA; ISO 14001; ISO 9001,0,1,0,In Progress,2026-01-15
+461,116,Vendor 116,2024-01-15,84.5,Compliant,GDPR; ISO 9001; SOC 2,0,0,0,Closed,2024-07-15
+462,116,Vendor 116,2024-07-15,85.1,Compliant,ISO 14001,0,0,0,Closed,2025-01-15
+463,116,Vendor 116,2025-01-15,88.6,Compliant,GDPR,0,0,0,Closed,2025-07-15
+464,116,Vendor 116,2025-07-15,69.6,Under Review,ISO 14001; PCI DSS,0,1,0,In Progress,2026-01-15
+465,117,Vendor 117,2024-01-15,89.7,Compliant,GDPR; HIPAA; SOC 2,0,0,0,Closed,2024-07-15
+466,117,Vendor 117,2024-07-15,82.2,Compliant,SOC 2,0,0,0,Closed,2025-01-15
+467,117,Vendor 117,2025-01-15,82.9,Compliant,ISO 27001,0,0,0,Closed,2025-07-15
+468,117,Vendor 117,2025-07-15,89.2,Compliant,GDPR; HIPAA,0,0,0,Closed,2026-01-15
+469,118,Vendor 118,2024-01-15,80.5,Compliant,HIPAA,0,0,0,Closed,2024-07-15
+470,118,Vendor 118,2024-07-15,72.6,Under Review,GDPR; ISO 14001; ISO 27001,0,1,0,In Progress,2025-01-15
+471,118,Vendor 118,2025-01-15,79.3,Under Review,GDPR,0,0,0,In Progress,2025-07-15
+472,118,Vendor 118,2025-07-15,69.0,Under Review,ISO 9001; PCI DSS; SOC 2,0,2,0,In Progress,2026-01-15
+473,119,Vendor 119,2024-01-15,86.2,Compliant,ISO 14001; ISO 27001; PCI DSS,0,0,0,Closed,2024-07-15
+474,119,Vendor 119,2024-07-15,88.6,Compliant,ISO 27001,0,0,0,Closed,2025-01-15
+475,119,Vendor 119,2025-01-15,94.0,Compliant,GDPR,0,0,0,Closed,2025-07-15
+476,119,Vendor 119,2025-07-15,86.7,Compliant,GDPR; ISO 14001,0,0,0,Closed,2026-01-15
+477,120,Vendor 120,2024-01-15,78.4,Under Review,GDPR; ISO 9001; SOC 2,0,0,0,In Progress,2024-07-15
+478,120,Vendor 120,2024-07-15,65.4,Under Review,ISO 14001; PCI DSS,0,3,0,In Progress,2025-01-15
+479,120,Vendor 120,2025-01-15,74.8,Under Review,ISO 9001; PCI DSS,0,0,0,In Progress,2025-07-15
+480,120,Vendor 120,2025-07-15,86.7,Compliant,ISO 9001,0,0,0,Closed,2026-01-15

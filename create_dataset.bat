@@ -15,14 +15,10 @@
 @REM echo V001,2023-08,99.1,99.4,-1.2,96.8,94.7,312,256.8,0.06,3.9 >> data/performance.csv
 @REM REM ... Add all 600 performance records ...
 
-@REM echo Creating brand.csv with 50 brand records...
-@REM echo vendor_id,brand_impact_score,customer_satisfaction,innovation_score,sustainability_score,brand_safety_incidents,social_sentiment,market_reputation,esg_rating > data/brand.csv
-@REM echo V001,94.2,96.5,91.8,89.3,0,88.7,Excellent,AAA >> data/brand.csv
-@REM echo V002,92.7,95.2,90.1,87.6,0,86.9,Excellent,AA >> data/brand.csv
-@REM REM ... Add all 50 brand records ...
+@REM Sustainability/brand datasets were removed from this project.
 
 @REM echo.
 @REM echo ✅ Dataset created successfully!
-@REM echo 📊 50 Vendors, 600 Performance Records, 50 Brand Records
+@REM echo 📊 50 Vendors, 600 Performance Records
 @REM echo 🚀 Run: python run.py
 @REM pause

@@ -84,3 +84,4 @@ def render_settings(dashboard):
                 st.success(f"Dataset saved to {path}")
 
         st.warning("⚠️ Re-seeding replaces all demo data. This cannot be undone.")
+

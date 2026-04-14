@@ -48,10 +48,6 @@ class ReportGenerator:
                 "Data layer/financial_metrics.csv",
                 "./Data layer/financial_metrics.csv"
             ],
-            "Brand & ESG": [
-                "Data layer/brand.csv",
-                "./Data layer/brand.csv"
-            ],
             "Risk Assessment": [
                 "Data layer/industry_benchmarks.csv",
                 "./Data layer/industry_benchmarks.csv"
@@ -69,8 +65,6 @@ class ReportGenerator:
         # Font detection: prefer DejaVuSans in enhancements/fonts
         self.fonts_to_try = [
             os.path.join("enhancements", "fonts", "DejaVuSans.ttf"),
-            r"C:\Users\yashd\Desktop\Machine-Learning-Driven-Brand-Vendor-Optimization\enhancements\fonts\DejaVuSans.ttf",
-            r"C:\Users\yashd\Desktop\Machine-Learning-Driven-Brand-Vendor-Optimization\fonts\DejaVuSans.ttf",
             "/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf",
         ]
 

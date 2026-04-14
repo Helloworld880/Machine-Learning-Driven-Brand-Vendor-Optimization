@@ -1,129 +1,108 @@
-# Vendor-Insight-360
+<!-- # Vendor-Insight-360
 
-A data-driven analytics platform designed to help organizations evaluate vendor performance, monitor compliance, and optimize vendor relationships using analytics, automation, and reporting tools.
-
-The system provides a Streamlit dashboard, automated workflows, predictive analytics modules, and report generation to support data-driven vendor management.
+A Streamlit-based vendor analytics platform for tracking **performance**, **financials**, **risk**, and **compliance**, with automation scripts for **alerting** and **scheduled reporting**. Includes a realistic demo dataset generator to keep the dashboard outputs believable.
 
 ---
 
-# Overview
+## Tech Stack
 
-Machine-Learning-Driven-Brand-Vendor-Optimization enables organizations to:
-
-• Analyze vendor performance
-• Track compliance and risk metrics
-• Generate automated reports
-• Monitor vendor financial and operational indicators
-• Automate vendor management workflows
-
-The platform integrates analytics modules, workflow automation, and reporting features into a centralized dashboard for better decision-making.
+- Python
+- Streamlit
+- SQLite (local DB)
+- Plotly / Matplotlib (charts)
+- Pytest (tests)
 
 ---
 
-# Tech Stack
+## What this app does
 
-• Python
-• Streamlit (Dashboard UI)
-• SQLite (Database)
-• JWT Authentication
-• Hashlib (Password Hashing)
-• Python Logging Module
-• Argparse (CLI Interface)
+- **Vendor Performance**: KPIs + trends across vendors
+- **Financial Analytics**: spend/variance/overdues/ROI-style signals
+- **Risk Management**: portfolio view + drill-down + trend movement
+- **Compliance**: audit score/status tracking
+- **Reports**: generate **PDF / Excel / HTML** outputs
+- **AI features** (LLM-assisted, with safe fallback):
+  - Ask questions over your vendor datasets (“Ask Data”)
+  - Generate executive briefs / summaries
+  - Explain alerts in plain English with recommended actions
+- **Automation**:
+  - Alert monitoring (threshold breaches)
+  - Scheduled report generation loop
 
----
-
-# Features
-
-### Vendor Performance Analytics
-
-Analyze vendor performance metrics using financial and operational data.
-
-### Predictive Analytics
-
-Identify vendor performance trends and potential risks using analytics modules.
-
-### Compliance Monitoring
-
-Track vendor compliance and regulatory metrics.
-
-### Automated Report Generation
-
-Generate detailed reports in **PDF and HTML formats**.
-
-### Vendor Collaboration Tools
-
-Manage vendor relationships and maintain vendor performance records.
-
-### Workflow Automation
-
-Automated workflows for vendor onboarding, performance reviews, and issue escalation.
-
-### API Support
-
-API modules allow programmatic access to vendor data and performance metrics.
-
-### Monitoring and Alerts
-
-Monitor system health and track alerts related to vendor performance.
-
----
-
-# Project Structure
+  
+## Project Structure (full)
 
 ```
+<<<<<<< HEAD
 Vendor-Insight-360
 │
+=======
+Vendor - inslight-360
+├── ai_integration.py
+>>>>>>> a7071ca (update)
 ├── app.py
+├── create_dataset.bat
+├── DATASET_IMPROVEMENT_PLAN.md
+├── pytest.ini
+├── requirements.txt
 ├── run.py
 ├── run_api.py
-├── requirements.txt
-│
-├── api
-│   ├── alerts.py
-│   ├── performance.py
-│   └── vendors.py
-│
-├── core_modules
+├── setup.py
+├── tests/
+│   └── test_data_health.py
+├── core_modules/
+│   ├── __init__.py
 │   ├── analytics.py
+│   ├── api.py
 │   ├── auth.py
-│   ├── database.py
 │   ├── config.py
-│   └── email_service.py
-│
-├── enhancements
+│   ├── database.py
+│   ├── email_service.py
+│   ├── import_dataset.py
+│   ├── ml_engine.py
+│   ├── realistic_dataset.py
+│   ├── risk_model.py
+│   ├── vendor_clustering.py
+│   └── ... (other helpers)
+├── enhancements/
 │   ├── benchmarking.py
-│   ├── predictive_analytics.py
-│   ├── financial_analytics.py
-│   ├── workflow_engine.py
-│   └── report_generator.py
-│
-├── Data layer
-│   ├── vendors.db
+│   ├── ml_engine.py
+│   ├── report_generator.py
+│   └── ... (optional modules)
+├── ui_pages/
+│   ├── __init__.py
+│   ├── ai_page.py
+│   ├── reports_page.py
+│   ├── risk_page.py
+│   └── settings_page.py
+├── Data layer/
 │   ├── vendors.csv
 │   ├── performance.csv
-│   └── financial_metrics.csv
-│
-├── WORKFLOWS & AUTOMATION
-│   ├── scripts
-│   │   ├── auto_backup.py
+│   ├── financial_metrics.csv
+│   ├── risk_history.csv
+│   ├── compliance_history.csv
+│   ├── vendor_outcomes.csv
+│   ├── industry_benchmarks.csv
+│   └── vendors.db
+├── WORKFLOWS & AUTOMATION/
+│   ├── scripts/
 │   │   ├── alert_monitor.py
-│   │   ├── data_sync.py
 │   │   └── report_scheduler.py
-│   │
-│   └── workflows
-│       ├── vendor_onboarding.yaml
+│   └── workflows/
+│       ├── issue_escalation.yaml
 │       ├── performance_review.yaml
-│       └── issue_escalation.yaml
-│
-└── reports
+│       └── vendor_onboarding.yaml
+├── reports/
+└── generated_reports/
 ```
 
 ---
 
-# Installation
+## Setup
 
-Clone the repository
+Install dependencies:
 
+<<<<<<< HEAD
 ```
 git clone https://github.com/Helloworld880/Vendor-Insight-360.git
 ```
@@ -137,104 +116,176 @@ cd Vendor-Insight-360
 Install dependencies
 
 ```
+=======
+```bash
+>>>>>>> a7071ca (update)
 pip install -r requirements.txt
 ```
 
----
+Run the dashboard:
 
-# Running the Dashboard
-
-Start the Streamlit dashboard
-
-```
+```bash
 streamlit run app.py
 ```
 
-Open in browser:
+---
 
+## Realistic demo dataset (recommended)
+
+Generate/overwrite realistic CSVs in `Data layer/`:
+
+```bash
+python -c "from core_modules.realistic_dataset import DatasetSpec, write_to_data_layer; print(write_to_data_layer('Data layer', DatasetSpec(n_vendors=120, months=24, start_month='2024-01-01', seed=42), overwrite=True))"
 ```
-http://localhost:8501
+
+You can also regenerate from the app via **Settings → Re-seed Database** (this refreshes the demo CSVs too).
+
+---
+
+## Automation scripts
+
+Alert monitor (safe dry run):
+
+```bash
+python "WORKFLOWS & AUTOMATION/scripts/alert_monitor.py" --dry-run
+```
+
+Report scheduler (runs continuously; supports daily `08:00` and weekly `monday 09:00` patterns):
+
+```bash
+python "WORKFLOWS & AUTOMATION/scripts/report_scheduler.py" --run
 ```
 
 ---
 
-# Generated Reports
+## Reports output
 
-Reports generated by the system include:
+Generated reports are stored under:
 
-• Vendor Performance Reports
-• Compliance Status Reports
-• Financial Analytics Reports
-• Risk Assessment Reports
-• Trend Analysis
-
-Reports are stored in:
-
-```
-/reports
-/generated_reports
+```text
+reports/
+generated_reports/
 ```
 
 ---
 
-# Automation Workflows
+## Author
 
-The platform supports automated workflows for vendor management including:
-
-• Vendor onboarding
-• Performance review automation
-• Issue escalation workflows
-• Automated backups
-• Scheduled report generation
-
-Workflow configurations are defined using **YAML files**.
+Yash Dudhani  
+GitHub: `https://github.com/Helloworld880`
 
 ---
 
-# Future Enhancements
+## License
 
-The following improvements can further enhance the platform:
+Educational and research use. -->
 
-### Machine Learning Integration
-• Implement vendor performance prediction models  
-• Risk scoring using ML algorithms  
-• Demand forecasting for vendor supply chains  
 
-### Advanced Analytics
-• Real-time analytics dashboards  
-• Interactive data visualization  
-• Vendor benchmarking against industry standards  
 
-### Cloud Deployment
-• Deploy dashboard using cloud platforms (AWS / Azure / GCP)  
-• Containerization using Docker  
-• CI/CD pipeline for automated deployment  
 
-### Security Improvements
-• Role-based access control (RBAC)  
-• OAuth authentication integration  
-• API security enhancements  
+# Vendor Insight360 (Vendor Optimization Platform)
 
-### Data Integration
-• Integration with ERP systems  
-• External vendor data APIs  
-• Real-time data ingestion pipelines  
+A Streamlit-based vendor analytics platform for tracking **performance**, **financials**, **risk**, and **compliance**, with automation scripts for **alerting** and **scheduled reporting**. Includes a realistic demo dataset generator to keep the dashboard outputs believable.
 
-### Mobile Accessibility
-• Mobile optimized dashboard interface  
-• Vendor mobile monitoring app
+---
+
+## Tech Stack
+
+- Python
+- Streamlit
+- SQLite (local DB)
+- Plotly / Matplotlib (charts)
+- Pytest (tests)
+
+---
+
+## What this app does
+
+- **Vendor Performance**: KPIs + trends across vendors
+- **Financial Analytics**: spend/variance/overdues/ROI-style signals
+- **Risk Management**: portfolio view + drill-down + trend movement
+- **Compliance**: audit score/status tracking
+- **Reports**: generate **PDF / Excel / HTML** outputs
+- **AI features**:
+  - Ask questions over your vendor datasets
+  - Generate executive summaries
+  - Explain alerts with recommendations
+- **Automation**:
+  - Alert monitoring
+  - Scheduled report generation
+
+---
+
+## Project Structure
+├── app.py
+├── create_dataset.bat
+├── DATASET_IMPROVEMENT_PLAN.md
+├── pytest.ini
+├── requirements.txt
+├── run.py
+├── run_api.py
+├── setup.py
+├── tests/
+│   └── test_data_health.py
+├── core_modules/
+│   ├── __init__.py
+│   ├── analytics.py
+│   ├── api.py
+│   ├── auth.py
+│   ├── config.py
+│   ├── database.py
+│   ├── email_service.py
+│   ├── import_dataset.py
+│   ├── ml_engine.py
+│   ├── realistic_dataset.py
+│   ├── risk_model.py
+│   ├── vendor_clustering.py
+│   └── ... (other helpers)
+├── enhancements/
+│   ├── benchmarking.py
+│   ├── ml_engine.py
+│   ├── report_generator.py
+│   └── ... (optional modules)
+├── ui_pages/
+│   ├── __init__.py
+│   ├── ai_page.py
+│   ├── reports_page.py
+│   ├── risk_page.py
+│   └── settings_page.py
+├── Data layer/
+│   ├── vendors.csv
+│   ├── performance.csv
+│   ├── financial_metrics.csv
+│   ├── risk_history.csv
+│   ├── compliance_history.csv
+│   ├── vendor_outcomes.csv
+│   ├── industry_benchmarks.csv
+│   └── vendors.db
+├── WORKFLOWS & AUTOMATION/
+│   ├── scripts/
+│   │   ├── alert_monitor.py
+│   │   └── report_scheduler.py
+│   └── workflows/
+│       ├── issue_escalation.yaml
+│       ├── performance_review.yaml
+│       └── vendor_onboarding.yaml
+├── reports/
+└── generated_reports/
+
 
 
 ---
-# Author
+
+## Setup
+
+```bash
+git clone https://github.com/Helloworld880/Vendor-Insight-360.git
+cd Vendor-Insight-360
+pip install -r requirements.txt
+streamlit run app.py
+
+
+Author
 
 Yash Dudhani
-
-GitHub:
-https://github.com/Helloworld880
-
----
-
-# License
-
-This project is intended for educational and research purposes.
+GitHub: https://github.com/Helloworld880

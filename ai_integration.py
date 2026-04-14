@@ -4,9 +4,15 @@ import os
 import json
 import re
 import textwrap
+import warnings
 from typing import Optional
 import pandas as pd
 import anthropic
+
+warnings.filterwarnings(
+    "ignore",
+    message="urllib3 .* or chardet .*/charset_normalizer .* doesn't match a supported version!",
+)
 import requests
 
 # ───────────── ENV LOADING ─────────────
