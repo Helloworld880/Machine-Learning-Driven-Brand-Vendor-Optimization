@@ -30,8 +30,9 @@ A Streamlit-based vendor analytics platform for tracking **performance**, **fina
   - Scheduled report generation loop
 
   
-## Project Structure (full)
+## 📁 Project Structure
 
+```text
 .
 ├── app.py
 ├── run.py
@@ -94,6 +95,8 @@ A Streamlit-based vendor analytics platform for tracking **performance**, **fina
 
 ├── reports/
 └── generated_reports/
+```
+
 
 
 ## Setup
