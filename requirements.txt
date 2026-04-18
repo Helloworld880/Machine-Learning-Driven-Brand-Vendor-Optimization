@@ -10,7 +10,7 @@ xlsxwriter==3.2.2
 openpyxl==3.1.5
 matplotlib==3.10.1
 jinja2==3.1.6
-python-dotenv==1.1.0
+python-dotenv==1.1.1
 python-dateutil==2.9.0.post0
 pytz==2025.2
 requests==2.32.3
