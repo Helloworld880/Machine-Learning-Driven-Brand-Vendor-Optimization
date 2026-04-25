@@ -1,4 +1,7 @@
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    def load_dotenv(*args, **kwargs): pass
 from pathlib import Path
 import os
 import json
@@ -67,14 +70,11 @@ class AnthropicProvider(AIProvider):
         )
         return message.content[0].text.strip()
 
+
 def _get_client() -> anthropic.Anthropic:
     api_key = os.getenv("ANTHROPIC_API_KEY")
-
     if not api_key:
-        raise EnvironmentError(
-            "ANTHROPIC_API_KEY not found. Add it to your .env file."
-        )
-
+        raise EnvironmentError("ANTHROPIC_API_KEY not found. Add it to your .env file.")
     return anthropic.Anthropic(api_key=api_key)
 
 
@@ -85,16 +85,11 @@ def _has_anthropic_key() -> bool:
 def _call_ollama(system: str, user: str) -> str:
     response = requests.post(
         f"{OLLAMA_URL.rstrip('/')}/api/generate",
-        json={
-            "model": OLLAMA_MODEL,
-            "prompt": f"{system}\n\n{user}",
-            "stream": False,
-        },
+        json={"model": OLLAMA_MODEL, "prompt": f"{system}\n\n{user}", "stream": False},
         timeout=45,
     )
     response.raise_for_status()
-    payload = response.json()
-    return payload.get("response", "").strip()
+    return response.json().get("response", "").strip()
 
 
 # ───────────── MOCK AI HELPERS ─────────────
@@ -115,11 +110,9 @@ def _extract_threshold(text: str, default: float = 70.0) -> float:
     match = re.search(r"(?:below|under|less than)\s+(\d+(?:\.\d+)?)", text.lower())
     if match:
         return float(match.group(1))
-
     match = re.search(r"(\d+(?:\.\d+)?)\s*%", text)
     if match:
         return float(match.group(1))
-
     return default
 
 
@@ -136,16 +129,13 @@ def _extract_datasets_from_prompt(user: str) -> dict[str, pd.DataFrame]:
         r"--- (?P<label>.+?) DATA ---\n.*?JSON_DATA:\n(?P<json>\[.*?\])\n\nSTATISTICS:",
         re.DOTALL,
     )
-
     for match in pattern.finditer(user):
         label = match.group("label").strip().lower()
         payload = match.group("json")
         try:
-            records = json.loads(payload)
-            datasets[label] = pd.DataFrame(records)
+            datasets[label] = pd.DataFrame(json.loads(payload))
         except json.JSONDecodeError:
             continue
-
     return datasets
 
 
@@ -153,11 +143,9 @@ def _pick_dataset(datasets: dict[str, pd.DataFrame], required_cols: tuple[str, .
     for df in datasets.values():
         if all(_find_column(df, col) for col in required_cols):
             return df.copy()
-
     for df in datasets.values():
         if any(_find_column(df, col) for col in required_cols):
             return df.copy()
-
     return pd.DataFrame()
 
 
@@ -176,7 +164,6 @@ def _percent(value: float) -> str:
 def _performance_dataframe(df: pd.DataFrame) -> tuple[pd.DataFrame, Optional[str]]:
     if df.empty:
         return df, None
-
     vendor_col = _vendor_column(df)
     metric_cols = [
         col for col in (
@@ -187,35 +174,28 @@ def _performance_dataframe(df: pd.DataFrame) -> tuple[pd.DataFrame, Optional[str
         )
         if col
     ]
-
     perf_df = df.copy()
     for col in metric_cols:
         perf_df[col] = pd.to_numeric(perf_df[col], errors="coerce")
-
     if metric_cols:
         perf_df["_composite_score"] = perf_df[metric_cols].mean(axis=1, skipna=True)
-
     return perf_df, vendor_col
 
 
 def _financial_dataframe(df: pd.DataFrame) -> tuple[pd.DataFrame, Optional[str], Optional[str]]:
     if df.empty:
         return df, None, None
-
     vendor_col = _vendor_column(df)
     variance_col = _find_column(df, "cost_variance", "cost_overrun", "variance")
     actual_col = _find_column(df, "actual_cost", "actual_spend")
     contract_col = _find_column(df, "contract_value", "budget", "planned_cost")
-
     fin_df = df.copy()
     for col in (variance_col, actual_col, contract_col):
         if col:
             fin_df[col] = pd.to_numeric(fin_df[col], errors="coerce")
-
     if not variance_col and actual_col and contract_col:
         variance_col = "_derived_cost_variance"
         fin_df[variance_col] = fin_df[actual_col] - fin_df[contract_col]
-
     return fin_df, vendor_col, variance_col
 
 
@@ -232,31 +212,26 @@ def _build_alert_json(user: str) -> str:
     current_value = float(values.get("CURRENT VALUE", "0"))
     pct_change = float(str(values.get("CHANGE", "0")).replace("%", ""))
     threshold = float(values.get("ALERT THRESHOLD", "0"))
-
     threshold_gap_pct = 0.0 if threshold == 0 else ((threshold - current_value) / threshold) * 100
 
     if pct_change <= -20 or threshold_gap_pct > 30:
-        severity = "critical"
-        urgency = "immediate"
+        severity, urgency = "critical", "immediate"
     elif pct_change <= -10 or threshold_gap_pct > 10:
-        severity = "warning"
-        urgency = "within 48 hours"
+        severity, urgency = "warning", "within 48 hours"
     else:
-        severity = "info"
-        urgency = "this week"
+        severity, urgency = "info", "this week"
 
-    payload = {
+    return json.dumps({
         "severity": severity,
         "subject": f"{metric.title()} alert for {vendor_name}",
         "headline": f"{vendor_name} {metric} moved from {previous_value:g} to {current_value:g}.",
         "explanation": (
             f"The latest {metric} reading is now below the target threshold of {threshold:g}. "
-            f"This change suggests rising vendor risk and should be reviewed against recent operating performance."
+            "This change suggests rising vendor risk and should be reviewed against recent operating performance."
         ),
         "recommendation": f"Review {vendor_name}'s {metric} trend and agree a corrective plan with the vendor owner.",
         "urgency": urgency,
-    }
-    return json.dumps(payload)
+    })
 
 
 def _answer_data_question(question: str, datasets: dict[str, pd.DataFrame]) -> str:
@@ -266,12 +241,10 @@ def _answer_data_question(question: str, datasets: dict[str, pd.DataFrame]) -> s
     fin_df, fin_vendor_col, variance_col = _financial_dataframe(
         _pick_dataset(datasets, ("cost_variance", "actual_cost", "contract_value"))
     )
-
     question_lower = question.lower()
 
     if "how many vendor" in question_lower and perf_vendor_col:
-        vendor_count = perf_df[perf_vendor_col].nunique()
-        return f"There are {vendor_count} vendors in the available performance dataset."
+        return f"There are {perf_df[perf_vendor_col].nunique()} vendors in the available performance dataset."
 
     if ("average compliance" in question_lower or "mean compliance" in question_lower) and not perf_df.empty:
         compliance_col = _find_column(perf_df, "compliance_score", "compliance")
@@ -279,7 +252,7 @@ def _answer_data_question(question: str, datasets: dict[str, pd.DataFrame]) -> s
             avg = pd.to_numeric(perf_df[compliance_col], errors="coerce").mean()
             return f"The average compliance score is {_percent(avg)}."
 
-    if ("compliance" in question_lower and any(term in question_lower for term in ("below", "under", "less than"))) and not perf_df.empty:
+    if ("compliance" in question_lower and any(t in question_lower for t in ("below", "under", "less than"))) and not perf_df.empty:
         compliance_col = _find_column(perf_df, "compliance_score", "compliance")
         if compliance_col and perf_vendor_col:
             threshold = _extract_threshold(question)
@@ -292,17 +265,17 @@ def _answer_data_question(question: str, datasets: dict[str, pd.DataFrame]) -> s
             )
             return f"The vendors below {_percent(threshold)} compliance are {vendors}."
 
-    if any(term in question_lower for term in ("highest cost", "cost overrun", "cost escalation", "highest variance")) and not fin_df.empty:
+    if any(t in question_lower for t in ("highest cost", "cost overrun", "cost escalation", "highest variance")) and not fin_df.empty:
         if variance_col and fin_vendor_col:
             row = fin_df.sort_values(variance_col, ascending=False).iloc[0]
             return f"{row[fin_vendor_col]} has the highest cost variance at {_currency(float(row[variance_col]))}."
 
-    if any(term in question_lower for term in ("top vendor", "best vendor", "top performing", "highest performer")) and not perf_df.empty:
+    if any(t in question_lower for t in ("top vendor", "best vendor", "top performing", "highest performer")) and not perf_df.empty:
         if "_composite_score" in perf_df.columns and perf_vendor_col:
             row = perf_df.sort_values("_composite_score", ascending=False).iloc[0]
             return f"{row[perf_vendor_col]} is the top performing vendor with a composite score of {_percent(float(row['_composite_score']))}."
 
-    if any(term in question_lower for term in ("at risk", "risk vendor", "lowest performing", "underperforming")) and not perf_df.empty:
+    if any(t in question_lower for t in ("at risk", "risk vendor", "lowest performing", "underperforming")) and not perf_df.empty:
         if "_composite_score" in perf_df.columns and perf_vendor_col:
             risk_rows = perf_df.sort_values("_composite_score").head(3)
             vendors = ", ".join(
@@ -311,25 +284,11 @@ def _answer_data_question(question: str, datasets: dict[str, pd.DataFrame]) -> s
             )
             return f"The highest-risk vendors are {vendors} based on the lowest combined performance metrics."
 
-    if "on-time" in question_lower and any(term in question_lower for term in ("best", "highest", "top")) and not perf_df.empty:
-        delivery_col = _find_column(perf_df, "on_time_delivery", "on_time_delivery_rate", "delivery_rate")
-        if delivery_col and perf_vendor_col:
-            row = perf_df.sort_values(delivery_col, ascending=False).iloc[0]
-            return f"{row[perf_vendor_col]} has the strongest on-time delivery performance at {_percent(float(row[delivery_col]))}."
-
-    if "quality" in question_lower and any(term in question_lower for term in ("best", "highest", "top")) and not perf_df.empty:
-        quality_col = _find_column(perf_df, "quality_score", "quality")
-        if quality_col and perf_vendor_col:
-            row = perf_df.sort_values(quality_col, ascending=False).iloc[0]
-            return f"{row[perf_vendor_col]} has the highest quality score at {_percent(float(row[quality_col]))}."
-
     if not perf_df.empty and perf_vendor_col:
-        vendor_count = perf_df[perf_vendor_col].nunique()
         return (
-            f"I found data for {vendor_count} vendors, but the mock AI cannot answer that question precisely yet. "
-            "Try asking about compliance thresholds, top vendors, cost variance, average compliance, or risk."
+            f"I found data for {perf_df[perf_vendor_col].nunique()} vendors, but the mock AI cannot answer "
+            "that question precisely yet. Try asking about compliance thresholds, top vendors, cost variance, or risk."
         )
-
     return "I could not find enough structured vendor data in the prompt to answer reliably."
 
 
@@ -350,59 +309,52 @@ def _build_summary(task: str, datasets: dict[str, pd.DataFrame]) -> str:
     low_row = risk_rows.iloc[0]
     task_lower = task.lower()
 
-    if "compliance-focused" in task_lower or "compliance threshold" in task_lower:
+    if "compliance" in task_lower:
         if not compliance_col:
-            return "Compliance data is not available for a compliance summary."
+            return "Compliance data is not available."
         below = perf_df[pd.to_numeric(perf_df[compliance_col], errors="coerce") < 70]
         if below.empty:
             return (
-                f"Vendor compliance is currently stable, with no vendors below the 70.0% threshold. "
-                f"{top_row[perf_vendor_col]} remains the strongest overall performer at {_percent(float(top_row['_composite_score']))}. "
-                "Leadership should continue routine monitoring and maintain the current compliance review cadence."
+                f"Vendor compliance is currently stable with no vendors below 70%. "
+                f"{top_row[perf_vendor_col]} leads overall at {_percent(float(top_row['_composite_score']))}."
             )
         names = ", ".join(
             f"{row[perf_vendor_col]} ({_percent(float(row[compliance_col]))})"
             for _, row in below.sort_values(compliance_col).iterrows()
         )
         return (
-            f"Compliance performance is mixed, with {names} currently below the 70.0% threshold. "
-            f"{low_row[perf_vendor_col]} presents the most immediate concern based on the weakest overall operating score of {_percent(float(low_row['_composite_score']))}. "
-            "Management should prioritize remediation plans for the non-compliant vendors and review progress in the next reporting cycle."
+            f"Compliance is mixed: {names} are below 70%. "
+            f"{low_row[perf_vendor_col]} needs the most urgent attention with an overall score of {_percent(float(low_row['_composite_score']))}."
         )
 
-    if "financial analytics" in task_lower or "financial" in task_lower:
+    if "financial" in task_lower:
         if fin_df.empty or not fin_vendor_col or not variance_col:
-            return "Financial data is not available for a financial summary."
-        highest_variance = fin_df.sort_values(variance_col, ascending=False).iloc[0]
+            return "Financial data is not available."
+        highest = fin_df.sort_values(variance_col, ascending=False).iloc[0]
         return (
-            f"Financial performance shows concentrated cost pressure across the vendor base. "
-            f"{highest_variance[fin_vendor_col]} has the highest cost variance at {_currency(float(highest_variance[variance_col]))}, creating the clearest near-term financial exposure. "
-            f"Operationally, {low_row[perf_vendor_col]} remains the weakest performer, which may increase downstream spend risk if performance declines continue. "
-            "Leadership should review the highest-variance contracts and tighten cost controls on the most volatile suppliers."
+            f"{highest[fin_vendor_col]} carries the highest cost variance at {_currency(float(highest[variance_col]))}. "
+            f"Operationally, {low_row[perf_vendor_col]} remains the weakest performer at {_percent(float(low_row['_composite_score']))}."
         )
 
-    if "risk assessment" in task_lower or "top 3 at-risk" in task_lower or "high risk" in task_lower:
+    if "risk" in task_lower:
         risk_text = ", ".join(
             f"{row[perf_vendor_col]} ({_percent(float(row['_composite_score']))})"
             for _, row in risk_rows.iterrows()
         )
         return (
-            f"Current vendor risk is concentrated in {risk_text}, based on the weakest combined performance metrics. "
-            f"{low_row[perf_vendor_col]} is the most exposed vendor in the portfolio and should be treated as the highest intervention priority. "
-            f"In contrast, {top_row[perf_vendor_col]} continues to set the benchmark with a composite score of {_percent(float(top_row['_composite_score']))}. "
-            "Procurement leaders should assign recovery owners to the highest-risk vendors and monitor progress weekly."
+            f"Highest-risk vendors: {risk_text}. "
+            f"{low_row[perf_vendor_col]} is the priority intervention case. "
+            f"{top_row[perf_vendor_col]} sets the benchmark at {_percent(float(top_row['_composite_score']))}."
         )
 
     summary_parts = [
-        f"Overall vendor performance is stable, led by {top_row[perf_vendor_col]} with a composite score of {_percent(float(top_row['_composite_score']))}.",
-        f"{low_row[perf_vendor_col]} is currently the most at-risk vendor at {_percent(float(low_row['_composite_score']))} based on combined operational metrics.",
+        f"Overall performance is stable, led by {top_row[perf_vendor_col]} at {_percent(float(top_row['_composite_score']))}.",
+        f"{low_row[perf_vendor_col]} is the most at-risk vendor at {_percent(float(low_row['_composite_score']))}.",
     ]
     if not fin_df.empty and fin_vendor_col and variance_col:
-        highest_variance = fin_df.sort_values(variance_col, ascending=False).iloc[0]
-        summary_parts.append(
-            f"Financial exposure is highest for {highest_variance[fin_vendor_col]}, which shows a cost variance of {_currency(float(highest_variance[variance_col]))}."
-        )
-    summary_parts.append("Leadership should focus on stabilizing the lowest-performing vendors while preserving momentum with the strongest suppliers.")
+        highest = fin_df.sort_values(variance_col, ascending=False).iloc[0]
+        summary_parts.append(f"Highest cost exposure: {highest[fin_vendor_col]} at {_currency(float(highest[variance_col]))}.")
+    summary_parts.append("Leadership should focus remediation on the lowest-performing vendors.")
     return " ".join(summary_parts)
 
 
@@ -410,13 +362,10 @@ def _mock_claude_response(user: str) -> str:
     prompt_focus = _extract_prompt_focus(user)
     datasets = _extract_datasets_from_prompt(user)
     user_lower = prompt_focus.lower()
-
     if '"severity"' in user or "return valid json" in user_lower:
         return _build_alert_json(user)
-
-    if "summary" in user_lower or "write " in user_lower:
+    if "summary" in user_lower or "write " in user_lower or "brief" in user_lower:
         return _build_summary(prompt_focus, datasets)
-
     return _answer_data_question(prompt_focus, datasets)
 
 
@@ -447,9 +396,7 @@ def _call_claude(system: str, user: str, max_tokens: int = 1024) -> str:
             raise
 
     if mode == "real":
-        raise EnvironmentError(
-            "AI_MODE is set to 'real' but ANTHROPIC_API_KEY is missing."
-        )
+        raise EnvironmentError("AI_MODE is set to 'real' but ANTHROPIC_API_KEY is missing.")
 
     LAST_AI_BACKEND = mock_provider.name
     return mock_provider.generate(system, user, max_tokens=max_tokens)
@@ -468,73 +415,87 @@ def _dataframe_to_context(df: pd.DataFrame, max_rows: int = 50) -> str:
     )
 
 
+def _trend_signals(df: pd.DataFrame, score_col: str = "overall_score", date_col: str = "metric_date") -> str:
+    """Compute plain-English trend signals from a time-series dataframe."""
+    if df.empty or score_col not in df.columns or date_col not in df.columns:
+        return "No trend data available."
+    df = df.copy()
+    df[date_col] = pd.to_datetime(df[date_col], errors="coerce")
+    df = df.dropna(subset=[date_col, score_col]).sort_values(date_col)
+    if len(df) < 2:
+        return "Insufficient history for trend analysis."
+    first, last = float(df[score_col].iloc[0]), float(df[score_col].iloc[-1])
+    delta = last - first
+    direction = "improving" if delta > 2 else ("declining" if delta < -2 else "stable")
+    return (
+        f"Score moved from {first:.1f} to {last:.1f} over {len(df)} periods "
+        f"({delta:+.1f} points) — trend is {direction}."
+    )
+
+
 # ═══════════════════════════════════════════════════════════════════════════════
-# FEATURE 1 — Ask Your Data
+# FEATURE 1 — Ask Your Data  (upgraded: multi-turn, step-by-step reasoning)
 # ═══════════════════════════════════════════════════════════════════════════════
 
 class VendorDataChat:
     """
     Natural language interface over vendor DataFrames.
-
-    Usage (standalone):
-        chat = VendorDataChat(performance_df, financial_df)
-        answer = chat.ask("Which vendors have compliance below 70% this month?")
-        print(answer)
-
-    Usage (Streamlit):
-        Add to app.py — see streamlit_chat_widget() below.
+    Upgraded: stronger system prompt with chain-of-thought reasoning,
+    richer multi-turn history, and follow-up suggestion generation.
     """
 
+    # ── UPGRADED system prompt ────────────────────────────────────────────────
     SYSTEM_PROMPT = textwrap.dedent("""
-        You are a senior data analyst assistant for VendorInsight360, a vendor 
-        performance analytics platform. You have access to vendor performance, 
-        compliance, and financial data provided below.
+        You are a senior procurement data analyst for VendorInsight360, an enterprise 
+        vendor performance platform. You have direct access to vendor performance, 
+        compliance, financial, and risk data provided in each message.
 
-        Rules:
-        - Answer only based on the data provided. Never make up numbers.
-        - Be concise and specific. Lead with the direct answer, then support with data.
-        - When listing vendors, include their metric values.
-        - If the data does not contain enough information to answer, say so clearly.
-        - Format numbers cleanly: percentages as X%, currency with 2 decimal places.
-        - Keep responses under 150 words unless a detailed breakdown is explicitly requested.
+        Your job is to answer questions precisely, reason through the data step by step,
+        and surface insights that a procurement manager or CPO would find immediately 
+        actionable.
+
+        RULES:
+        1. Always base answers strictly on the provided data — never invent numbers.
+        2. Reason step by step before giving your final answer. Show brief working 
+           (e.g. "Compliance scores: A=82%, B=61%, C=55% → B and C are below 70%").
+        3. Lead with a direct, specific answer. Support it with 1-2 data points.
+        4. When listing vendors always include metric values in parentheses.
+        5. End every answer with exactly ONE short follow-up suggestion framed as:
+           "Follow-up you might ask: <question>" — make it relevant to your answer.
+        6. Format numbers cleanly: percentages as X.X%, currency with commas.
+        7. Keep responses under 180 words unless a detailed breakdown is requested.
+        8. If the data is insufficient, say so clearly and suggest what data would help.
     """).strip()
 
     def __init__(self, *dataframes: pd.DataFrame, labels: Optional[list[str]] = None):
-        """
-        Pass one or more DataFrames. Optionally name them with labels=[...].
-        Example:
-            VendorDataChat(perf_df, fin_df, labels=["performance", "financial"])
-        """
         if labels and len(labels) != len(dataframes):
             raise ValueError("labels length must match number of dataframes")
-
         self._context_parts = []
         for i, df in enumerate(dataframes):
             label = labels[i] if labels else f"Dataset {i + 1}"
             self._context_parts.append(
                 f"--- {label.upper()} DATA ---\n{_dataframe_to_context(df)}"
             )
-
         self._context = "\n\n".join(self._context_parts)
         self._history: list[dict] = []
 
     def ask(self, question: str, use_history: bool = True) -> str:
         """Ask a plain-English question. Returns the AI answer as a string."""
         user_prompt = f"DATA CONTEXT:\n{self._context}\n\nQUESTION: {question}"
-
         if use_history and self._history:
-            # Append history as prior context summary to keep tokens low
             prior = "\n".join(
-                f"Q: {h['q']}\nA: {h['a']}" for h in self._history[-3:]
+                f"Q: {h['q']}\nA: {h['a']}" for h in self._history[-4:]
             )
-            user_prompt = f"PRIOR CONVERSATION:\n{prior}\n\n{user_prompt}"
-
-        answer = _call_claude(self.SYSTEM_PROMPT, user_prompt, max_tokens=512)
-
+            user_prompt = f"PRIOR CONVERSATION (for context only):\n{prior}\n\n{user_prompt}"
+        answer = _call_claude(self.SYSTEM_PROMPT, user_prompt, max_tokens=600)
         if use_history:
             self._history.append({"q": question, "a": answer})
-
         return answer
+
+    def extract_followup(self, answer: str) -> Optional[str]:
+        """Parse the follow-up suggestion out of an answer string."""
+        match = re.search(r"Follow-up you might ask:\s*(.+)", answer)
+        return match.group(1).strip() if match else None
 
     def reset_history(self):
         self._history = []
@@ -542,21 +503,7 @@ class VendorDataChat:
 
 def streamlit_chat_widget(chat: VendorDataChat):
     """
-    Drop-in Streamlit widget for the Ask Your Data feature.
-
-    Add this to app.py:
-
-        from ai_integration import VendorDataChat, streamlit_chat_widget
-        import pandas as pd
-        import streamlit as st
-
-        perf_df = pd.read_csv("Data layer/performance.csv")
-        fin_df  = pd.read_csv("Data layer/financial_metrics.csv")
-
-        chat = VendorDataChat(perf_df, fin_df, labels=["performance", "financial"])
-
-        st.header("Ask Your Vendor Data")
-        streamlit_chat_widget(chat)
+    Upgraded Streamlit chat widget with follow-up suggestion chips.
     """
     try:
         import streamlit as st
@@ -571,77 +518,86 @@ def streamlit_chat_widget(chat: VendorDataChat):
         with st.chat_message(msg["role"]):
             st.markdown(msg["content"])
 
+    # Follow-up chip from last assistant message
+    last_followup = None
+    for msg in reversed(st.session_state.chat_history):
+        if msg["role"] == "assistant":
+            last_followup = chat.extract_followup(msg["content"])
+            break
+
+    if last_followup:
+        if st.button(f"💡 {last_followup}", key="followup_chip", use_container_width=False):
+            st.session_state["__ai_suggested_prompt"] = last_followup
+
     # Input
-    if prompt := st.chat_input("Ask about your vendors e.g. 'Which vendors are at risk?'"):
+    if prompt := st.chat_input("Ask about your vendors e.g. 'Which vendors are trending worse?'"):
         st.session_state.chat_history.append({"role": "user", "content": prompt})
         with st.chat_message("user"):
             st.markdown(prompt)
-
         with st.chat_message("assistant"):
-            with st.spinner("Analyzing..."):
+            with st.spinner("Analyzing…"):
                 answer = chat.ask(prompt)
             st.markdown(answer)
-
         st.session_state.chat_history.append({"role": "assistant", "content": answer})
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# FEATURE 2 — AI Report Summary Generator
+# FEATURE 2 — AI Report Summary Generator  (upgraded: trend-aware, richer prompts)
 # ═══════════════════════════════════════════════════════════════════════════════
 
 class ReportSummaryGenerator:
     """
-    Generates AI-written executive summaries for vendor reports.
-
-    Usage:
-        gen = ReportSummaryGenerator()
-
-        summary = gen.generate(
-            vendor_df=performance_df,
-            financial_df=financial_df,
-            period="Q1 2025",
-            summary_type="executive"   # or "compliance" / "financial" / "risk"
-        )
-
-        # Inject into report_generator.py before PDF/HTML render
-        print(summary)
+    Generates AI-written executive summaries.
+    Upgraded: includes trend direction signals, risk trajectory language,
+    and stronger action orientation per audience type.
     """
 
     SYSTEM_PROMPT = textwrap.dedent("""
-        You are a senior data analyst writing formal vendor performance reports 
-        for VendorInsight360. Your summaries are read by C-level executives and 
-        procurement managers.
+        You are a senior analyst writing formal vendor performance summaries for 
+        VendorInsight360. Your audience is C-level executives and procurement 
+        leadership. Every summary must be grounded in the data provided.
 
         Writing rules:
-        - Use formal, professional language.
-        - Be data-specific: always include real numbers from the data.
-        - Structure: 1 sentence on overall status, 2-3 sentences on key findings, 
-          1 sentence on recommended action.
-        - Never use bullet points — write in flowing paragraphs.
-        - Keep to 4-5 sentences maximum unless instructed otherwise.
-        - Do not invent data. Only reference figures present in the provided dataset.
+        - Use formal, authoritative language. Avoid hedging phrases like "may" or "might".
+        - Always include real numbers from the data (percentages, dollar amounts, counts).
+        - Structure: 
+            Sentence 1 — Overall portfolio status with one headline number.
+            Sentences 2-3 — Key findings: name the top and bottom performer with values.
+            Sentence 4 — Risk trajectory: is the situation improving, stable, or worsening?
+            Sentence 5 — Single, specific recommended action with a named owner or timeline.
+        - Never use bullet points. Write in flowing, boardroom-ready paragraphs.
+        - Maximum 5 sentences unless explicitly asked for more.
+        - Do not invent data. Only reference figures present in the dataset.
+        - Use decisive language: "requires immediate escalation", "is the priority 
+          intervention case", "leadership must act before the next review cycle".
     """).strip()
 
+    # ── UPGRADED prompts with trend + trajectory language ─────────────────────
     SUMMARY_PROMPTS = {
         "executive": (
             "Write an executive summary of overall vendor performance. "
-            "Highlight the top performing vendor, the most at-risk vendor, "
-            "and one clear recommendation for leadership."
+            "Name the single highest-performing vendor and the single most at-risk vendor with their scores. "
+            "Comment on whether the overall portfolio risk trajectory is improving or worsening. "
+            "Close with one clear action that the CPO should take before the next board review."
         ),
         "compliance": (
-            "Write a compliance-focused summary. Identify vendors below the 70% "
-            "compliance threshold, note the trend direction, and recommend "
-            "a specific compliance action."
+            "Write a compliance-focused summary. "
+            "State exactly how many vendors are below the 70% compliance threshold and name them with scores. "
+            "Identify the vendor with the fastest-declining compliance trend. "
+            "Recommend a specific compliance remediation action with a 30-day deadline framing."
         ),
         "financial": (
-            "Write a financial analytics summary. Highlight cost trends, identify "
-            "the vendor with the highest cost escalation, and recommend "
-            "a financial risk mitigation step."
+            "Write a financial risk summary. "
+            "Identify the vendor with the highest cost variance and state the exact amount. "
+            "Assess whether overall portfolio cost pressure is rising or contained. "
+            "Recommend one financial control action — such as contract renegotiation, spend cap, or audit — "
+            "and name which vendor it should target first."
         ),
         "risk": (
-            "Write a risk assessment summary. Identify the top 3 at-risk vendors "
-            "based on combined performance and compliance metrics, explain what "
-            "makes each high risk, and suggest priority actions."
+            "Write a risk assessment summary. "
+            "Rank the top 3 at-risk vendors by combined performance and compliance scores, with values. "
+            "For each, give one specific reason they are high risk. "
+            "Conclude with a prioritized intervention sequence: which vendor to escalate first and why."
         ),
     }
 
@@ -650,6 +606,7 @@ class ReportSummaryGenerator:
         vendor_df: pd.DataFrame,
         period: str = "Current Period",
         financial_df: Optional[pd.DataFrame] = None,
+        history_df: Optional[pd.DataFrame] = None,
         summary_type: str = "executive",
     ) -> str:
         """
@@ -659,60 +616,42 @@ class ReportSummaryGenerator:
             vendor_df:     Performance/compliance DataFrame
             period:        Reporting period label e.g. "Q1 2025"
             financial_df:  Optional financial metrics DataFrame
+            history_df:    Optional time-series performance DataFrame for trend signals
             summary_type:  One of: executive | compliance | financial | risk
-
-        Returns:
-            A formatted string ready to embed in PDF/HTML reports.
         """
         if summary_type not in self.SUMMARY_PROMPTS:
-            raise ValueError(
-                f"summary_type must be one of: {list(self.SUMMARY_PROMPTS.keys())}"
-            )
+            raise ValueError(f"summary_type must be one of: {list(self.SUMMARY_PROMPTS.keys())}")
 
         data_context = f"REPORTING PERIOD: {period}\n\n"
         data_context += f"--- PERFORMANCE DATA ---\n{_dataframe_to_context(vendor_df)}"
 
         if financial_df is not None:
-            data_context += (
-                f"\n\n--- FINANCIAL DATA ---\n{_dataframe_to_context(financial_df)}"
-            )
+            data_context += f"\n\n--- FINANCIAL DATA ---\n{_dataframe_to_context(financial_df)}"
+
+        # ── NEW: inject trend signals if history is available ─────────────────
+        if history_df is not None and not history_df.empty:
+            trend_text = _trend_signals(history_df)
+            data_context += f"\n\nPORTFOLIO TREND SIGNAL: {trend_text}"
 
         task = self.SUMMARY_PROMPTS[summary_type]
         user_prompt = f"{data_context}\n\nTASK: {task}"
-
-        return _call_claude(self.SYSTEM_PROMPT, user_prompt, max_tokens=400)
+        return _call_claude(self.SYSTEM_PROMPT, user_prompt, max_tokens=500)
 
     def generate_all(
         self,
         vendor_df: pd.DataFrame,
         period: str = "Current Period",
         financial_df: Optional[pd.DataFrame] = None,
+        history_df: Optional[pd.DataFrame] = None,
     ) -> dict[str, str]:
-        """Generate all 4 summary types at once. Returns a dict keyed by type."""
+        """Generate all 4 summary types at once."""
         return {
-            stype: self.generate(vendor_df, period, financial_df, stype)
+            stype: self.generate(vendor_df, period, financial_df, history_df, stype)
             for stype in self.SUMMARY_PROMPTS
         }
 
 
 def inject_summary_into_report(html_template: str, summaries: dict[str, str]) -> str:
-    """
-    Helper to inject AI summaries into an existing HTML report template.
-
-    Expects placeholders in the HTML like:
-        {{AI_EXECUTIVE_SUMMARY}}
-        {{AI_COMPLIANCE_SUMMARY}}
-        {{AI_FINANCIAL_SUMMARY}}
-        {{AI_RISK_SUMMARY}}
-
-    Usage:
-        with open("report_template.html") as f:
-            html = f.read()
-
-        gen = ReportSummaryGenerator()
-        summaries = gen.generate_all(perf_df, "Q1 2025", fin_df)
-        final_html = inject_summary_into_report(html, summaries)
-    """
     replacements = {
         "{{AI_EXECUTIVE_SUMMARY}}": summaries.get("executive", ""),
         "{{AI_COMPLIANCE_SUMMARY}}": summaries.get("compliance", ""),
@@ -725,37 +664,15 @@ def inject_summary_into_report(html_template: str, summaries: dict[str, str]) ->
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# FEATURE 3 — Smart Alert Explanations
+# FEATURE 3 — Smart Alert Explanations  (unchanged, kept intact)
 # ═══════════════════════════════════════════════════════════════════════════════
 
 class SmartAlertEngine:
-    """
-    Generates contextual, plain-English alert explanations with recommended actions.
-
-    Usage:
-        engine = SmartAlertEngine()
-
-        alert = engine.explain(
-            vendor_name="Vendor B",
-            metric="compliance score",
-            current_value=62,
-            previous_value=78,
-            threshold=70,
-            historical_df=performance_df   # optional — for richer context
-        )
-
-        print(alert.subject)
-        print(alert.body)
-        print(alert.severity)   # "critical" | "warning" | "info"
-
-        # Pass to email_service.py
-        email_service.send(to=manager_email, subject=alert.subject, body=alert.body)
-    """
+    """Generates contextual, plain-English alert explanations with recommended actions."""
 
     SYSTEM_PROMPT = textwrap.dedent("""
-        You are an intelligent alert system for VendorInsight360, a vendor analytics 
-        platform. Your job is to explain anomalies in vendor metrics clearly and 
-        concisely for procurement managers who are not data experts.
+        You are an intelligent alert system for VendorInsight360.
+        Explain anomalies in vendor metrics clearly for procurement managers.
 
         Response format — always return valid JSON exactly like this:
         {
@@ -784,26 +701,10 @@ class SmartAlertEngine:
         threshold: float,
         historical_df: Optional[pd.DataFrame] = None,
     ) -> "AlertResult":
-        """
-        Generate a smart alert explanation.
-
-        Args:
-            vendor_name:    Name of the vendor triggering the alert
-            metric:         Metric name e.g. "compliance score", "on-time delivery rate"
-            current_value:  Current metric value
-            previous_value: Previous period's value
-            threshold:      The alert threshold that was breached
-            historical_df:  Optional DataFrame with vendor's history for richer context
-
-        Returns:
-            AlertResult dataclass with severity, subject, body, recommendation etc.
-        """
         if previous_value == 0:
             pct_change = 0.0 if current_value == 0 else 100.0
         else:
-            pct_change = round(
-                ((current_value - previous_value) / previous_value) * 100, 1
-            )
+            pct_change = round(((current_value - previous_value) / previous_value) * 100, 1)
 
         user_prompt = (
             f"VENDOR: {vendor_name}\n"
@@ -816,22 +717,15 @@ class SmartAlertEngine:
 
         if historical_df is not None:
             vendor_history = historical_df[
-                historical_df.apply(
-                    lambda r: vendor_name.lower() in str(r.values).lower(), axis=1
-                )
+                historical_df.apply(lambda r: vendor_name.lower() in str(r.values).lower(), axis=1)
             ]
             if not vendor_history.empty:
-                user_prompt += (
-                    f"\nVENDOR HISTORICAL DATA:\n"
-                    f"{_dataframe_to_context(vendor_history, max_rows=10)}"
-                )
+                user_prompt += f"\nVENDOR HISTORICAL DATA:\n{_dataframe_to_context(vendor_history, max_rows=10)}"
 
         raw = _call_claude(self.SYSTEM_PROMPT, user_prompt, max_tokens=300)
-
         try:
             data = json.loads(raw)
         except json.JSONDecodeError:
-            # Fallback if model returns slightly malformed JSON
             data = {
                 "severity": "warning",
                 "subject": f"Alert: {vendor_name} {metric} dropped",
@@ -842,59 +736,25 @@ class SmartAlertEngine:
             }
 
         return AlertResult(
-            vendor_name=vendor_name,
-            metric=metric,
-            current_value=current_value,
-            previous_value=previous_value,
-            pct_change=pct_change,
-            threshold=threshold,
-            **data,
+            vendor_name=vendor_name, metric=metric,
+            current_value=current_value, previous_value=previous_value,
+            pct_change=pct_change, threshold=threshold, **data,
         )
 
     def batch_explain(
-        self,
-        alerts: list[dict],
-        historical_df: Optional[pd.DataFrame] = None,
+        self, alerts: list[dict], historical_df: Optional[pd.DataFrame] = None
     ) -> list["AlertResult"]:
-        """
-        Process multiple alerts at once.
-
-        Args:
-            alerts: list of dicts, each with keys:
-                    vendor_name, metric, current_value, previous_value, threshold
-            historical_df: optional shared historical DataFrame
-
-        Returns:
-            List of AlertResult objects sorted by severity (critical first)
-        """
-        results = [
-            self.explain(**alert, historical_df=historical_df)
-            for alert in alerts
-        ]
+        results = [self.explain(**alert, historical_df=historical_df) for alert in alerts]
         severity_order = {"critical": 0, "warning": 1, "info": 2}
         return sorted(results, key=lambda r: severity_order.get(r.severity, 3))
 
 
 class AlertResult:
-    """Structured result from SmartAlertEngine.explain()"""
-
     SEVERITY_EMOJI = {"critical": "[CRITICAL]", "warning": "[WARNING]", "info": "[INFO]"}
 
-    def __init__(
-        self,
-        vendor_name: str,
-        metric: str,
-        current_value: float,
-        previous_value: float,
-        pct_change: float,
-        threshold: float,
-        severity: str,
-        subject: str,
-        headline: str,
-        explanation: str,
-        recommendation: str,
-        urgency: str,
-    ):
+    def __init__(self, vendor_name, metric, current_value, previous_value,
+                 pct_change, threshold, severity, subject, headline,
+                 explanation, recommendation, urgency):
         self.vendor_name = vendor_name
         self.metric = metric
         self.current_value = current_value
@@ -910,15 +770,13 @@ class AlertResult:
 
     @property
     def email_subject(self) -> str:
-        emoji = self.SEVERITY_EMOJI.get(self.severity, "")
-        return f"{emoji} VendorInsight360 Alert: {self.subject}"
+        return f"{self.SEVERITY_EMOJI.get(self.severity, '')} VendorInsight360 Alert: {self.subject}"
 
     @property
     def email_body(self) -> str:
         return textwrap.dedent(f"""
             VendorInsight360 - Automated Alert
             {'=' * 40}
-
             Vendor  : {self.vendor_name}
             Metric  : {self.metric}
             Change  : {self.previous_value} -> {self.current_value} ({self.pct_change:+.1f}%)
@@ -939,36 +797,280 @@ class AlertResult:
         """).strip()
 
     def to_dict(self) -> dict:
-        return {
-            "vendor_name": self.vendor_name,
-            "metric": self.metric,
-            "current_value": self.current_value,
-            "previous_value": self.previous_value,
-            "pct_change": self.pct_change,
-            "severity": self.severity,
-            "subject": self.subject,
-            "headline": self.headline,
-            "explanation": self.explanation,
-            "recommendation": self.recommendation,
-            "urgency": self.urgency,
-        }
+        return {k: getattr(self, k) for k in (
+            "vendor_name", "metric", "current_value", "previous_value",
+            "pct_change", "severity", "subject", "headline",
+            "explanation", "recommendation", "urgency",
+        )}
 
     def __repr__(self):
-        return (
-            f"AlertResult(vendor={self.vendor_name!r}, "
-            f"metric={self.metric!r}, severity={self.severity!r})"
-        )
+        return f"AlertResult(vendor={self.vendor_name!r}, metric={self.metric!r}, severity={self.severity!r})"
 
 
 # ═══════════════════════════════════════════════════════════════════════════════
-# QUICK TEST — run this file directly to verify all 3 features work
-# python ai_integration.py
+# NEW FEATURE 4 — Executive Brief Builder
+# Audience-aware, structured, board-ready briefs with named sections
+# ═══════════════════════════════════════════════════════════════════════════════
+
+class ExecutiveBriefBuilder:
+    """
+    Generates structured, audience-aware executive briefs with named sections.
+
+    Audience types: "board", "procurement", "operations"
+    Tone types: "formal", "direct", "operational"
+
+    Returns a BriefResult with individual sections for flexible rendering.
+
+    Usage:
+        builder = ExecutiveBriefBuilder()
+        brief = builder.build(
+            vendor_df=perf_df,
+            review_df=review_df,
+            period="May 2025",
+            audience="board",
+            tone="formal",
+            financial_df=fin_df,
+            history_df=perf_history,
+        )
+        print(brief.situation)
+        print(brief.key_findings)
+        print(brief.risk_outlook)
+        print(brief.recommended_actions)
+        print(brief.as_text())  # full plain-text for download
+    """
+
+    # ── Audience-specific instruction overlays ────────────────────────────────
+    AUDIENCE_OVERLAYS = {
+        "board": (
+            "This brief is for a board of directors. Focus on financial exposure, "
+            "strategic risk, and governance implications. Use formal register. "
+            "Avoid operational jargon. Quantify impact in dollar terms where possible."
+        ),
+        "procurement": (
+            "This brief is for the Chief Procurement Officer and procurement leads. "
+            "Focus on vendor performance metrics, contract risk, compliance gaps, "
+            "and actionable sourcing decisions. Be specific about vendor names and scores."
+        ),
+        "operations": (
+            "This brief is for operations and delivery leadership. "
+            "Focus on SLA risk, delivery reliability, capacity concerns, and escalation needs. "
+            "Use plain, direct language. Name the vendors that need hands-on intervention."
+        ),
+    }
+
+    TONE_OVERLAYS = {
+        "formal": "Write in formal, board-ready prose. No contractions. Authoritative tone.",
+        "direct": "Write directly and concisely. Short sentences. State the problem, then the action.",
+        "operational": "Write in plain operational language. Focus on what needs to happen next week.",
+    }
+
+    SYSTEM_PROMPT = textwrap.dedent("""
+        You are a senior strategy analyst writing structured executive briefs for 
+        VendorInsight360. You must return your response as valid JSON with exactly 
+        these four keys:
+
+        {
+          "situation": "1-2 sentences: current portfolio status with key headline number",
+          "key_findings": "2-3 sentences: top and bottom performers named with values, compliance/cost highlights",
+          "risk_outlook": "1-2 sentences: is portfolio risk improving, stable, or worsening and why",
+          "recommended_actions": "2-3 specific, named actions the audience should take, each on its own sentence"
+        }
+
+        Rules:
+        - Every section must reference real numbers from the data.
+        - Never invent data. If a number is not in the data, omit it.
+        - Recommended actions must name specific vendors or metrics, not vague guidance.
+        - Only return the JSON object. No preamble, no markdown outside the JSON.
+    """).strip()
+
+    def build(
+        self,
+        vendor_df: pd.DataFrame,
+        review_df: pd.DataFrame,
+        period: str = "Current Period",
+        audience: str = "board",
+        tone: str = "formal",
+        financial_df: Optional[pd.DataFrame] = None,
+        history_df: Optional[pd.DataFrame] = None,
+    ) -> "BriefResult":
+        audience_note = self.AUDIENCE_OVERLAYS.get(audience, self.AUDIENCE_OVERLAYS["board"])
+        tone_note = self.TONE_OVERLAYS.get(tone, self.TONE_OVERLAYS["formal"])
+
+        data_context = f"REPORTING PERIOD: {period}\n\n"
+        data_context += f"--- PERFORMANCE & RISK REVIEW DATA ---\n{_dataframe_to_context(review_df)}"
+
+        if financial_df is not None and not financial_df.empty:
+            data_context += f"\n\n--- FINANCIAL DATA ---\n{_dataframe_to_context(financial_df)}"
+
+        if history_df is not None and not history_df.empty:
+            trend_text = _trend_signals(history_df)
+            data_context += f"\n\nPORTFOLIO TREND SIGNAL: {trend_text}"
+
+        user_prompt = (
+            f"AUDIENCE CONTEXT: {audience_note}\n"
+            f"TONE: {tone_note}\n\n"
+            f"{data_context}\n\n"
+            f"TASK: Write a structured executive brief for the {audience} audience "
+            f"covering the current vendor portfolio situation as of {period}."
+        )
+
+        raw = _call_claude(self.SYSTEM_PROMPT, user_prompt, max_tokens=700)
+
+        try:
+            data = json.loads(raw)
+        except json.JSONDecodeError:
+            # Graceful fallback
+            data = {
+                "situation": "Portfolio data has been loaded but the AI response could not be parsed. Please retry.",
+                "key_findings": "Check that ANTHROPIC_API_KEY is set and AI_MODE=real.",
+                "risk_outlook": "Risk data is available in the review queue.",
+                "recommended_actions": "Review the Risk Management tab for manual analysis.",
+            }
+
+        return BriefResult(
+            period=period,
+            audience=audience,
+            tone=tone,
+            situation=data.get("situation", ""),
+            key_findings=data.get("key_findings", ""),
+            risk_outlook=data.get("risk_outlook", ""),
+            recommended_actions=data.get("recommended_actions", ""),
+        )
+
+
+class BriefResult:
+    """Structured result from ExecutiveBriefBuilder.build()"""
+
+    def __init__(self, period: str, audience: str, tone: str,
+                 situation: str, key_findings: str, risk_outlook: str,
+                 recommended_actions: str):
+        self.period = period
+        self.audience = audience
+        self.tone = tone
+        self.situation = situation
+        self.key_findings = key_findings
+        self.risk_outlook = risk_outlook
+        self.recommended_actions = recommended_actions
+
+    def as_text(self) -> str:
+        return textwrap.dedent(f"""
+            VendorInsight360 — Executive Brief
+            Audience : {self.audience.title()}
+            Period   : {self.period}
+            Tone     : {self.tone.title()}
+            {'=' * 50}
+
+            SITUATION
+            {self.situation}
+
+            KEY FINDINGS
+            {self.key_findings}
+
+            RISK OUTLOOK
+            {self.risk_outlook}
+
+            RECOMMENDED ACTIONS
+            {self.recommended_actions}
+
+            {'=' * 50}
+            Generated by VendorInsight360 AI Engine
+        """).strip()
+
+    def as_dict(self) -> dict:
+        return {
+            "period": self.period,
+            "audience": self.audience,
+            "tone": self.tone,
+            "situation": self.situation,
+            "key_findings": self.key_findings,
+            "risk_outlook": self.risk_outlook,
+            "recommended_actions": self.recommended_actions,
+        }
+
+    def __repr__(self):
+        return f"BriefResult(audience={self.audience!r}, period={self.period!r})"
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# NEW FEATURE 5 — Vendor Narrative Engine
+# One-click AI health paragraph per vendor for risk review drill-downs
+# ═══════════════════════════════════════════════════════════════════════════════
+
+class VendorNarrativeEngine:
+    """
+    Generates a concise, plain-English health narrative for a single vendor.
+    Designed for the Risk Review drill-down in the AI Insights tab.
+
+    Usage:
+        engine = VendorNarrativeEngine()
+        narrative = engine.narrate(vendor_row, peer_avg_dict, history_df)
+        print(narrative)
+    """
+
+    SYSTEM_PROMPT = textwrap.dedent("""
+        You are a procurement risk analyst writing a single-vendor health assessment 
+        for VendorInsight360. Your narrative will appear in a risk review dashboard 
+        and be read by a procurement manager in 30 seconds.
+
+        Write exactly 3 short paragraphs:
+        Paragraph 1 — Current health: summarise performance, compliance, and risk scores 
+                       with actual values. State whether this vendor is above or below 
+                       peer averages.
+        Paragraph 2 — Risk drivers: identify the 1-2 specific factors driving concern 
+                       (e.g. declining compliance, cost overrun, operational risk score).
+        Paragraph 3 — Recommended intervention: one specific action the vendor owner 
+                       should take in the next 2 weeks, and what "good" looks like 
+                       (i.e. what metric needs to move and by how much).
+
+        Rules:
+        - Use real numbers from the data only.
+        - Be direct. No hedging. No bullet points. Pure prose.
+        - Maximum 120 words total across all 3 paragraphs.
+    """).strip()
+
+    def narrate(
+        self,
+        vendor_row: dict,
+        peer_averages: Optional[dict] = None,
+        history_df: Optional[pd.DataFrame] = None,
+    ) -> str:
+        """
+        Generate a health narrative for one vendor.
+
+        Args:
+            vendor_row:    dict (or pd.Series row) with vendor metrics
+            peer_averages: dict with keys like 'avg_performance', 'avg_compliance', 
+                           'avg_risk' for peer comparison
+            history_df:    Optional performance history for this vendor
+
+        Returns:
+            Plain-text 3-paragraph narrative string.
+        """
+        vendor_name = vendor_row.get("vendor_name", "This vendor")
+        user_prompt = f"VENDOR: {vendor_name}\n\nMETRICS:\n"
+        for k, v in vendor_row.items():
+            if k != "vendor_name" and v is not None:
+                user_prompt += f"  {k}: {v}\n"
+
+        if peer_averages:
+            user_prompt += "\nPEER AVERAGES:\n"
+            for k, v in peer_averages.items():
+                user_prompt += f"  {k}: {v:.1f}\n"
+
+        if history_df is not None and not history_df.empty:
+            trend = _trend_signals(history_df)
+            user_prompt += f"\nPERFORMANCE TREND: {trend}\n"
+
+        return _call_claude(self.SYSTEM_PROMPT, user_prompt, max_tokens=300)
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# QUICK TEST — python ai_integration.py
 # ═══════════════════════════════════════════════════════════════════════════════
 
 if __name__ == "__main__":
     import io
 
-    # ── Synthetic test data ──────────────────────────────────────────────────
     PERF_CSV = """vendor_name,compliance_score,on_time_delivery,quality_score,month
 Vendor A,85,92,88,2025-01
 Vendor B,62,74,70,2025-01
@@ -986,42 +1088,58 @@ Vendor E,90000,91000,1000,2025-01"""
     perf_df = pd.read_csv(io.StringIO(PERF_CSV))
     fin_df  = pd.read_csv(io.StringIO(FIN_CSV))
 
-    print(f"AI mode: {AI_MODE}")
+    print(f"AI mode: {AI_MODE}\n")
 
-    print("\n" + "=" * 60)
-    print("FEATURE 1 - Ask Your Data")
+    print("=" * 60)
+    print("FEATURE 1 — Ask Your Data (multi-turn + follow-up chips)")
     print("=" * 60)
     chat = VendorDataChat(perf_df, fin_df, labels=["performance", "financial"])
     q1 = "Which vendors have compliance below 70%?"
     print(f"\nQ: {q1}")
-    print(f"A: {chat.ask(q1)}")
-    print(f"Backend used: {LAST_AI_BACKEND}")
-
-    q2 = "Which vendor has the highest cost overrun?"
-    print(f"\nQ: {q2}")
-    print(f"A: {chat.ask(q2)}")
-    print(f"Backend used: {LAST_AI_BACKEND}")
+    a1 = chat.ask(q1)
+    print(f"A: {a1}")
+    followup = chat.extract_followup(a1)
+    if followup:
+        print(f"\n💡 Follow-up chip: {followup}")
+    print(f"Backend: {LAST_AI_BACKEND}")
 
     print("\n" + "=" * 60)
-    print("FEATURE 2 - AI Report Summary")
+    print("FEATURE 2 — Report Summary (trend-aware)")
     print("=" * 60)
     gen = ReportSummaryGenerator()
     summary = gen.generate(perf_df, period="Q1 2025", financial_df=fin_df, summary_type="executive")
-    print(f"\nExecutive Summary:\n{summary}")
-    print(f"Backend used: {LAST_AI_BACKEND}")
+    print(f"\n{summary}")
+    print(f"Backend: {LAST_AI_BACKEND}")
 
     print("\n" + "=" * 60)
-    print("FEATURE 3 - Smart Alert Explanation")
+    print("NEW FEATURE 4 — Executive Brief Builder")
     print("=" * 60)
-    engine = SmartAlertEngine()
-    alert = engine.explain(
-        vendor_name="Vendor B",
-        metric="compliance score",
-        current_value=62,
-        previous_value=78,
-        threshold=70,
-        historical_df=perf_df,
+    builder = ExecutiveBriefBuilder()
+    brief = builder.build(
+        vendor_df=perf_df,
+        review_df=perf_df,
+        period="Q1 2025",
+        audience="board",
+        tone="formal",
+        financial_df=fin_df,
     )
-    print(f"\n{alert.email_subject}")
-    print(f"\n{alert.email_body}")
-    print(f"\nBackend used: {LAST_AI_BACKEND}")
+    print(brief.as_text())
+    print(f"Backend: {LAST_AI_BACKEND}")
+
+    print("\n" + "=" * 60)
+    print("NEW FEATURE 5 — Vendor Narrative Engine")
+    print("=" * 60)
+    engine = VendorNarrativeEngine()
+    vendor_row = {
+        "vendor_name": "Vendor B",
+        "compliance_score": 62,
+        "on_time_delivery": 74,
+        "quality_score": 70,
+        "overall_risk": 71,
+        "cost_variance": 15000,
+        "risk_level": "High",
+    }
+    peer_avg = {"avg_performance": 78.0, "avg_compliance": 74.2, "avg_risk": 55.0}
+    narrative = engine.narrate(vendor_row, peer_avg)
+    print(f"\n{narrative}")
+    print(f"Backend: {LAST_AI_BACKEND}")

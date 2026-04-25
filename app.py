@@ -32,6 +32,7 @@ from core_modules.auth import Authentication
 from core_modules.database import DatabaseManager
 from core_modules.analytics import AnalyticsEngine
 from core_modules.config import Config
+from core_modules.email_service import EmailService
 from ui_pages.ai_page import render_ai_workspace as render_ai_workspace_page
 from ui_pages.reports_page import render_reports as render_reports_page
 from ui_pages.risk_page import render_risk_management as render_risk_management_page
@@ -158,12 +159,149 @@ def inject_styles():
         border-radius: 16px;
         padding: 14px 16px;
         margin-bottom: 12px;
+        color: #1f2937 !important;
+        box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
     }
 
     .insight-title {
         font-weight: 800;
         color: #12264d;
         margin-bottom: 6px;
+    }
+
+    .insight-box,
+    .insight-box * {
+        color: #1f2937 !important;
+    }
+
+    .insight-box .insight-title {
+        color: #0f2f63 !important;
+    }
+
+    .insight-box strong {
+        color: #0f172a !important;
+    }
+
+    .ai-map {
+        background: #050505;
+        border: 1px solid #1f2937;
+        border-radius: 28px;
+        padding: 28px 26px;
+        margin: 18px 0 22px 0;
+        color: #f3f4f6 !important;
+        box-shadow: 0 18px 50px rgba(0, 0, 0, 0.32);
+    }
+
+    .ai-map, .ai-map * {
+        color: inherit;
+    }
+
+    .ai-map-title {
+        text-align: center;
+        font-size: 1.8rem;
+        font-weight: 800;
+        margin-bottom: 20px;
+        color: #f9fafb !important;
+        text-shadow: 0 1px 0 rgba(0,0,0,0.35);
+    }
+
+    .ai-map-box {
+        border-radius: 22px;
+        padding: 20px 18px;
+        text-align: center;
+        border: 1px solid rgba(255,255,255,0.14);
+        margin: 10px 0;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
+    }
+
+    .ai-map-wide { background: #4b4a46; color: #f5f5f4 !important; }
+    .ai-map-core { background: #43398f; color: #f4f0ff !important; }
+    .ai-map-green { background: #0f5f4f; color: #ecfff8 !important; }
+    .ai-map-amber { background: #7b4b05; color: #fff1cc !important; }
+    .ai-map-rust { background: #8a3617; color: #ffe3d8 !important; }
+    .ai-map-blue { background: #154f8c; color: #eaf4ff !important; }
+    .ai-map-bottom-green { background: #2e5f08; color: #f0ffd6 !important; }
+    .ai-map-bottom-blue { background: #1c4e88; color: #e8f3ff !important; }
+
+    .ai-map-head {
+        font-size: 1.05rem;
+        font-weight: 800;
+        margin-bottom: 6px;
+        color: inherit !important;
+    }
+
+    .ai-map-sub {
+        font-size: 0.92rem;
+        opacity: 1;
+        line-height: 1.45;
+        color: inherit !important;
+    }
+
+    .ai-map-arrow {
+        text-align: center;
+        color: #e5e7eb !important;
+        font-size: 2rem;
+        line-height: 1;
+        margin: 2px 0;
+    }
+
+    .ai-map-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 18px;
+        margin: 8px 0 10px 0;
+    }
+
+    .ai-impact {
+        border: 1px solid rgba(255,255,255,0.18);
+        border-radius: 24px;
+        padding: 24px 18px;
+        margin-top: 18px;
+    }
+
+    .ai-impact-title {
+        text-align: center;
+        font-size: 1.2rem;
+        font-weight: 800;
+        margin-bottom: 18px;
+        color: #f9fafb !important;
+    }
+
+    .ai-impact-grid {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 14px;
+    }
+
+    .ai-impact-chip {
+        border-radius: 18px;
+        padding: 14px 12px;
+        border: 1px solid rgba(255,255,255,0.14);
+        text-align: center;
+    }
+
+    .ai-impact-chip strong {
+        display: block;
+        font-size: 0.98rem;
+        margin-bottom: 4px;
+        color: inherit !important;
+    }
+
+    .ai-impact-chip span {
+        color: inherit !important;
+        opacity: 1;
+    }
+
+    @media (max-width: 900px) {
+        .ai-map-grid, .ai-impact-grid {
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+
+    @media (max-width: 640px) {
+        .ai-map-grid, .ai-impact-grid {
+            grid-template-columns: 1fr;
+        }
     }
 
     
@@ -191,6 +329,24 @@ def fmt_currency(val):
     if val >= 1_000:
         return f"${val/1_000:.0f}K"
     return f"${val:,.0f}"
+
+
+def bubble_size_series(series, min_size=12, max_size=42):
+    numeric = pd.to_numeric(series, errors="coerce").fillna(0).abs()
+    if numeric.empty:
+        return numeric
+    upper = numeric.max()
+    if upper <= 0:
+        return pd.Series([min_size] * len(numeric), index=numeric.index, dtype=float)
+    scaled = min_size + (numeric / upper) * (max_size - min_size)
+    return scaled.clip(lower=min_size, upper=max_size)
+
+
+def vendor_label_column(df, default="vendor_name"):
+    for column in ("vendor_name", "name"):
+        if column in df.columns:
+            return column
+    return default
 
 
 def risk_color(level: str) -> str:
@@ -224,6 +380,7 @@ class VendorDashboard:
         self.db = DatabaseManager()
         self.auth = Authentication(self.db)
         self.analytics = AnalyticsEngine(self.db)
+        self.email_service = EmailService()
         self._ml: object = None
         self._report_gen: object = None
         self._init_session()
@@ -964,7 +1121,9 @@ class VendorDashboard:
                 st.error("ML engine could not be loaded.")
                 return
 
-            tab1, tab2, tab3, tab4 = st.tabs([
+            tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs([
+                "🔮 Predictive Analytics",
+                "⭐ Vendor Ratings",
                 "🎯 Risk Predictions",
                 "📉 Churn Probability",
                 "📈 Performance Forecast",
@@ -973,12 +1132,265 @@ class VendorDashboard:
 
             # ── Tab 1: Risk Predictions ──────────────────────────────────────────
             with tab1:
+                st.subheader("🔮 AI-Based Predictive Analytics")
+                st.caption("Forward-looking outlook for vendor performance, risk movement, and procurement cost fluctuation based on historical trends.")
+                with st.spinner("Running predictive outlook model…"):
+                    outlook = to_df(ml.forecast_vendor_outlook(periods_ahead=3))
+
+                if not outlook.empty:
+                    outlook = outlook.copy()
+                    outlook["predicted_cost_variance_bubble_size"] = bubble_size_series(
+                        outlook["predicted_cost_variance"]
+                    )
+                    m1, m2, m3, m4 = st.columns(4)
+                    m1.metric("Critical Outlook", int((outlook["vendor_outlook"] == "Critical").sum()))
+                    m2.metric("Needs Attention", int((outlook["vendor_outlook"] == "Needs Attention").sum()))
+                    m3.metric("Avg Predicted Risk", f"{outlook['predicted_risk'].mean():.1f}%")
+                    m4.metric("Avg Predicted Performance", f"{outlook['predicted_performance'].mean():.1f}%")
+
+                    c1, c2 = st.columns(2)
+                    with c1:
+                        fig = px.scatter(
+                            outlook,
+                            x="predicted_performance",
+                            y="predicted_risk",
+                            color="vendor_outlook",
+                            size="predicted_cost_variance_bubble_size",
+                            hover_name="vendor_name",
+                            title="Predicted vendor outlook matrix",
+                            labels={
+                                "predicted_performance": "Predicted Performance",
+                                "predicted_risk": "Predicted Risk",
+                                "predicted_cost_variance": "Predicted Cost Variance",
+                            },
+                            color_discrete_map={
+                                "Positive": "#22c55e",
+                                "Stable": "#3b82f6",
+                                "Needs Attention": "#f59e0b",
+                                "Critical": "#ef4444",
+                            },
+                        )
+                        st.plotly_chart(fig, use_container_width=True)
+
+                    with c2:
+                        top_cost = outlook.sort_values("cost_variance_delta", ascending=False).head(12)
+                        fig = px.bar(
+                            top_cost,
+                            x="cost_variance_delta",
+                            y="vendor_name",
+                            orientation="h",
+                            color="procurement_cost_outlook",
+                            title="Expected procurement cost fluctuation",
+                            labels={"cost_variance_delta": "Projected change in cost variance", "vendor_name": ""},
+                            color_discrete_map={"Rising": "#ef4444", "Improving": "#22c55e"},
+                        )
+                        fig.update_layout(yaxis={"categoryorder": "total ascending"})
+                        st.plotly_chart(fig, use_container_width=True)
+
+                    st.subheader("📋 Predictive Outlook Table")
+                    st.dataframe(
+                        outlook[
+                            [
+                                "vendor_name",
+                                "category",
+                                "current_performance",
+                                "predicted_performance",
+                                "performance_delta",
+                                "current_risk",
+                                "predicted_risk",
+                                "risk_delta",
+                                "predicted_cost_variance",
+                                "cost_variance_delta",
+                                "vendor_outlook",
+                            ]
+                        ].round(2),
+                        use_container_width=True,
+                    )
+
+                    st.subheader("🔎 Predictive Drill-Down")
+                    selected_vendor = st.selectbox(
+                        "Select vendor for outlook review",
+                        outlook["vendor_name"].tolist(),
+                        key="predictive_vendor_drilldown",
+                    )
+                    selected_outlook = outlook[outlook["vendor_name"] == selected_vendor].iloc[0]
+                    d1, d2, d3, d4 = st.columns(4)
+                    d1.metric("Predicted Performance", f"{selected_outlook['predicted_performance']:.1f}%", f"{selected_outlook['performance_delta']:+.1f}")
+                    d2.metric("Predicted Risk", f"{selected_outlook['predicted_risk']:.1f}%", f"{selected_outlook['risk_delta']:+.1f}")
+                    d3.metric("Cost Variance Outlook", fmt_currency(selected_outlook["predicted_cost_variance"]), fmt_currency(selected_outlook["cost_variance_delta"]))
+                    d4.metric("Outlook", selected_outlook["vendor_outlook"])
+
+                    st.info(
+                        f"Primary driver: **{selected_outlook['primary_driver']}**\n\n"
+                        f"Recommended action: **{selected_outlook['recommended_action']}**"
+                    )
+
+                    watchlist = outlook[outlook["vendor_outlook"].isin(["Critical", "Needs Attention"])].copy()
+                    if not watchlist.empty:
+                        st.markdown("**Priority predictive watchlist**")
+                        st.dataframe(
+                            watchlist[
+                                [
+                                    "vendor_name",
+                                    "vendor_outlook",
+                                    "predicted_risk_label",
+                                    "primary_driver",
+                                    "recommended_action",
+                                ]
+                            ],
+                            use_container_width=True,
+                        )
+                else:
+                    st.info("Predictive outlook is not available yet.")
+
+            with tab2:
+                st.subheader("⭐ Automated Vendor Rating System")
+                st.caption("AI-driven vendor scoring based on delivery consistency, quality, compliance history, savings, and risk exposure.")
+                with st.spinner("Calculating automated vendor ratings…"):
+                    ratings = to_df(ml.auto_rate_vendors())
+
+                if not ratings.empty:
+                    r1, r2, r3, r4 = st.columns(4)
+                    r1.metric("A Rated Vendors", int((ratings["vendor_rating"] == "A").sum()))
+                    r2.metric("Average Rating Score", f"{ratings['rating_score'].mean():.1f}")
+                    r3.metric("Average Star Rating", f"{ratings['star_rating'].mean():.1f} / 5")
+                    r4.metric("Low Rated Vendors", int((ratings["vendor_rating"] == "D").sum()))
+
+                    c1, c2 = st.columns(2)
+                    with c1:
+                        fig = px.bar(
+                            ratings.head(15),
+                            x="rating_score",
+                            y="vendor_name",
+                            orientation="h",
+                            color="vendor_rating",
+                            title="Top automated vendor ratings",
+                            labels={"rating_score": "Rating Score", "vendor_name": ""},
+                            color_discrete_map={"A": "#22c55e", "B": "#3b82f6", "C": "#f59e0b", "D": "#ef4444"},
+                        )
+                        fig.update_layout(yaxis={"categoryorder": "total ascending"})
+                        st.plotly_chart(fig, use_container_width=True)
+
+                    with c2:
+                        dist = ratings["vendor_rating"].value_counts().reset_index()
+                        dist.columns = ["vendor_rating", "count"]
+                        fig = px.pie(
+                            dist,
+                            names="vendor_rating",
+                            values="count",
+                            hole=0.45,
+                            title="Automated rating distribution",
+                            color="vendor_rating",
+                            color_discrete_map={"A": "#22c55e", "B": "#3b82f6", "C": "#f59e0b", "D": "#ef4444"},
+                        )
+                        st.plotly_chart(fig, use_container_width=True)
+
+                    st.subheader("📋 Vendor Scorecard")
+                    st.dataframe(
+                        ratings[
+                            [
+                                "vendor_name",
+                                "category",
+                                "rating_score",
+                                "vendor_rating",
+                                "star_rating",
+                                "delivery_consistency",
+                                "quality_consistency",
+                                "compliance_score",
+                                "savings_rate",
+                                "overall_risk",
+                                "rating_summary",
+                            ]
+                        ].round(2),
+                        use_container_width=True,
+                    )
+
+                    st.subheader("🔎 Rating Drill-Down")
+                    selected_rating_vendor = st.selectbox(
+                        "Select vendor for score breakdown",
+                        ratings["vendor_name"].tolist(),
+                        key="rating_vendor_drilldown",
+                    )
+                    selected_rating = ratings[ratings["vendor_name"] == selected_rating_vendor].iloc[0]
+                    breakdown = pd.DataFrame(
+                        {
+                            "component": [
+                                "delivery_component",
+                                "quality_component",
+                                "compliance_component",
+                                "performance_component",
+                                "savings_component",
+                                "risk_component",
+                                "defect_penalty_component",
+                            ],
+                            "value": [
+                                selected_rating["delivery_component"],
+                                selected_rating["quality_component"],
+                                selected_rating["compliance_component"],
+                                selected_rating["performance_component"],
+                                selected_rating["savings_component"],
+                                selected_rating["risk_component"],
+                                -selected_rating["defect_penalty_component"],
+                            ],
+                        }
+                    )
+
+                    c1, c2 = st.columns([1.2, 1])
+                    with c1:
+                        fig = px.bar(
+                            breakdown,
+                            x="component",
+                            y="value",
+                            color="value",
+                            color_continuous_scale="Blues",
+                            title=f"{selected_rating_vendor} rating component breakdown",
+                        )
+                        fig.update_xaxes(tickangle=-25)
+                        st.plotly_chart(fig, use_container_width=True)
+                    with c2:
+                        st.metric("Rating Score", f"{selected_rating['rating_score']:.1f}")
+                        st.metric("Grade", selected_rating["vendor_rating"])
+                        st.metric("Stars", f"{selected_rating['star_rating']:.1f} / 5")
+                        st.metric("Gap to A", f"{selected_rating['improvement_gap_to_a']:.1f}")
+                        st.info(selected_rating["rating_summary"])
+
+                    st.subheader("🧪 Rating Simulator")
+                    s1, s2, s3 = st.columns(3)
+                    sim_delivery = s1.slider("Delivery Consistency", 0, 100, int(round(selected_rating["delivery_consistency"])), key="sim_delivery")
+                    sim_quality = s2.slider("Quality Score", 0, 100, int(round(selected_rating["quality_consistency"])), key="sim_quality")
+                    sim_compliance = s3.slider("Compliance Score", 0, 100, int(round(selected_rating["compliance_score"])), key="sim_compliance")
+                    s4, s5, s6, s7 = st.columns(4)
+                    sim_performance = s4.slider("Performance Score", 0, 100, int(round(selected_rating["avg_performance"])), key="sim_performance")
+                    sim_savings = s5.slider("Savings Rate %", 0, 100, int(round(selected_rating["savings_rate"] * 100)), key="sim_savings")
+                    sim_risk = s6.slider("Overall Risk", 0, 100, int(round(selected_rating["overall_risk"])), key="sim_risk")
+                    sim_defect = s7.slider("Defect Rate", 0, 20, int(round(selected_rating["avg_defect_rate"])), key="sim_defect")
+
+                    simulation = ml.simulate_vendor_rating(
+                        delivery_consistency=sim_delivery,
+                        quality_score=sim_quality,
+                        compliance_score=sim_compliance,
+                        performance_score=sim_performance,
+                        savings_rate_pct=sim_savings,
+                        overall_risk=sim_risk,
+                        defect_rate=sim_defect,
+                    )
+                    st.success(
+                        f"Simulated score: **{simulation['rating_score']}** | "
+                        f"Grade: **{simulation['vendor_rating']}** | "
+                        f"Stars: **{simulation['star_rating']} / 5**"
+                    )
+                else:
+                    st.info("Vendor rating engine is not available yet.")
+
+            # ── Tab 3: Risk Predictions ──────────────────────────────────────────
+            with tab3:
                 st.subheader("🎯 ML-Predicted Risk Labels")
                 st.caption("Random Forest classifier trained on performance, financial, and operational features.")
                 with st.spinner("Running risk model…"):
                     risk_pred = to_df(ml.predict_vendor_risks())
 
                 if not risk_pred.empty:
+                    risk_label_col = vendor_label_column(risk_pred)
                     # Agreement rate
                     if "risk_level" in risk_pred.columns and "ml_risk_label" in risk_pred.columns:
                         agree = (risk_pred["risk_level"] == risk_pred["ml_risk_label"]).mean() * 100
@@ -998,7 +1410,7 @@ class VendorDashboard:
                         fig = px.scatter(risk_pred, x="avg_performance", y="overall_risk",
                                         color="ml_risk_label",
                                         color_discrete_map={"High": "#ef4444", "Medium": "#f59e0b", "Low": "#22c55e"},
-                                        hover_name="name", title="Performance vs Risk Score",
+                                        hover_name=risk_label_col, title="Performance vs Risk Score",
                                         labels={"avg_performance": "Avg Performance (%)",
                                                 "overall_risk": "Overall Risk Score (%)"})
                         st.plotly_chart(fig, use_container_width=True)
@@ -1007,7 +1419,7 @@ class VendorDashboard:
                     prob_cols = [c for c in risk_pred.columns if c.startswith("prob_")]
                     if prob_cols:
                         st.subheader("🎲 Risk Probability Matrix")
-                        show_cols = ["name", "category", "ml_risk_label"] + prob_cols
+                        show_cols = [risk_label_col, "category", "ml_risk_label"] + prob_cols
                         show_cols = [c for c in show_cols if c in risk_pred.columns]
                         st.dataframe(risk_pred[show_cols].round(3), use_container_width=True)
 
@@ -1021,7 +1433,7 @@ class VendorDashboard:
                     st.success("✅ Models retrained successfully!")
 
             # ── Tab 2: Churn Probability ─────────────────────────────────────────
-            with tab2:
+            with tab4:
                 st.subheader("📉 Vendor Churn Probability")
                 st.caption("Gradient Boosting Regressor predicts likelihood of vendor churn (0 = low, 1 = high).")
                 outcomes = to_df(self.db.get_vendor_outcomes())
@@ -1041,6 +1453,7 @@ class VendorDashboard:
                     churn = to_df(ml.predict_churn())
 
                 if not churn.empty:
+                    churn_label_col = vendor_label_column(churn)
                     k1, k2, k3 = st.columns(3)
                     k1.metric("High Churn Risk",   int((churn["churn_risk"] == "High").sum()))
                     k2.metric("Medium Churn Risk",  int((churn["churn_risk"] == "Medium").sum()))
@@ -1049,11 +1462,11 @@ class VendorDashboard:
                     col1, col2 = st.columns(2)
                     with col1:
                         fig = px.bar(churn.sort_values("churn_probability", ascending=False).head(15),
-                                    x="churn_probability", y="name", orientation="h",
+                                    x="churn_probability", y=churn_label_col, orientation="h",
                                     color="churn_risk",
                                     color_discrete_map={"High": "#ef4444", "Medium": "#f59e0b", "Low": "#22c55e"},
                                     title="Top 15 Vendors by Churn Probability",
-                                    labels={"churn_probability": "Churn Probability", "name": ""})
+                                    labels={"churn_probability": "Churn Probability", churn_label_col: ""})
                         fig.update_layout(yaxis={"categoryorder": "total ascending"})
                         st.plotly_chart(fig, use_container_width=True)
                     with col2:
@@ -1069,7 +1482,7 @@ class VendorDashboard:
                     st.info("No churn predictions available.")
 
             # ── Tab 3: Performance Forecast ──────────────────────────────────────
-            with tab3:
+            with tab5:
                 st.subheader("📈 6-Month Performance Forecast")
                 st.caption("Linear Regression trend extrapolation per vendor using historical performance data.")
                 with st.spinner("Generating forecasts…"):
@@ -1103,13 +1516,14 @@ class VendorDashboard:
                     st.info("Not enough historical data for forecasts. Need at least 3 months of data per vendor.")
 
             # ── Tab 4: Anomaly Detection ──────────────────────────────────────────
-            with tab4:
+            with tab6:
                 st.subheader("🔍 Anomaly Detection")
                 st.caption("Isolation Forest detects vendors whose metrics deviate significantly from the norm.")
                 with st.spinner("Running anomaly detection…"):
                     anomalies = to_df(ml.detect_anomalies())
 
                 if not anomalies.empty:
+                    anomaly_label_col = vendor_label_column(anomalies)
                     num_anomalies = int(anomalies["is_anomaly"].sum())
                     k1, k2 = st.columns(2)
                     k1.metric("Anomalous Vendors Detected", num_anomalies)
@@ -1120,7 +1534,7 @@ class VendorDashboard:
                         fig = px.scatter(anomalies, x="avg_performance", y="anomaly_score",
                                         color="is_anomaly",
                                         color_discrete_map={True: "#ef4444", False: "#22c55e"},
-                                        hover_name="name",
+                                        hover_name=anomaly_label_col,
                                         title="Anomaly Score vs Performance",
                                         labels={"avg_performance": "Avg Performance (%)",
                                                 "anomaly_score": "Anomaly Score (lower = more anomalous)"})
@@ -1129,9 +1543,9 @@ class VendorDashboard:
                     with col2:
                         anom_only = anomalies[anomalies["is_anomaly"]]
                         if not anom_only.empty:
-                            fig = px.bar(anom_only, x="name", y="anomaly_score",
+                            fig = px.bar(anom_only, x=anomaly_label_col, y="anomaly_score",
                                         color="category", title="Anomalous Vendors",
-                                        labels={"anomaly_score": "Anomaly Score", "name": ""})
+                                        labels={"anomaly_score": "Anomaly Score", anomaly_label_col: ""})
                             fig.update_layout(xaxis_tickangle=-35)
                             st.plotly_chart(fig, use_container_width=True)
                         else:
@@ -1156,7 +1570,7 @@ class VendorDashboard:
                         unsafe_allow_html=True)
 
             vendors = to_df(self.db.get_vendors())
-            tab1, tab2, tab3 = st.tabs(["➕ Add Vendor", "📊 Performance View", "📝 Documents"])
+            tab1, tab2, tab3, tab4 = st.tabs(["➕ Add Vendor", "✏️ Manage Vendors", "📊 Performance View", "📝 Documents"])
 
             with tab1:
                 st.subheader("Add New Vendor")
@@ -1182,6 +1596,77 @@ class VendorDashboard:
                             st.rerun()
 
             with tab2:
+                st.subheader("Edit / Delete Vendor")
+                if vendors.empty:
+                    st.info("No vendors available.")
+                else:
+                    vendors = vendors.sort_values("name")
+                    selected_name = st.selectbox("Select vendor", vendors["name"].tolist(), key="manage_vendor_name")
+                    selected_vendor = vendors[vendors["name"] == selected_name].iloc[0]
+                    vendor_id = int(selected_vendor.get("id", selected_vendor.get("vendor_id")))
+
+                    with st.form("edit_vendor_form"):
+                        c1, c2 = st.columns(2)
+                        edit_name = c1.text_input("Company Name *", value=str(selected_vendor.get("name", "")))
+                        edit_category = c2.text_input("Category", value=str(selected_vendor.get("category", "")))
+                        edit_email = c1.text_input("Email", value=str(selected_vendor.get("email", "") or ""))
+                        edit_phone = c2.text_input("Phone", value=str(selected_vendor.get("phone", "") or ""))
+                        edit_contract = c1.number_input(
+                            "Contract Value ($)",
+                            min_value=0.0,
+                            max_value=100000000.0,
+                            value=float(selected_vendor.get("contract_value", 0) or 0),
+                            step=1000.0,
+                        )
+                        edit_rating = c2.number_input(
+                            "Rating",
+                            min_value=0.0,
+                            max_value=5.0,
+                            value=float(selected_vendor.get("rating", 0) or 0),
+                            step=0.1,
+                        )
+                        edit_risk = c1.selectbox("Risk Level", ["Low", "Medium", "High"], index=["Low", "Medium", "High"].index(str(selected_vendor.get("risk_level", "Low"))) if str(selected_vendor.get("risk_level", "Low")) in ["Low", "Medium", "High"] else 0)
+                        edit_status = c2.selectbox("Status", ["Active", "Inactive", "Under Review"], index=["Active", "Inactive", "Under Review"].index(str(selected_vendor.get("status", "Active"))) if str(selected_vendor.get("status", "Active")) in ["Active", "Inactive", "Under Review"] else 0)
+                        edit_country = c1.text_input("Country", value=str(selected_vendor.get("country", "USA") or "USA"))
+
+                        updated = st.form_submit_button("💾 Save Changes", type="primary")
+                        if updated:
+                            if not edit_name.strip():
+                                st.error("Company name is required.")
+                            else:
+                                ok = self.db.update_vendor(
+                                    vendor_id,
+                                    name=edit_name.strip(),
+                                    email=edit_email.strip(),
+                                    phone=edit_phone.strip(),
+                                    category=edit_category.strip(),
+                                    status=edit_status,
+                                    risk_level=edit_risk,
+                                    contract_value=float(edit_contract),
+                                    rating=float(edit_rating),
+                                    country=edit_country.strip() or "USA",
+                                )
+                                if ok:
+                                    st.success("Vendor updated successfully.")
+                                    st.rerun()
+                                else:
+                                    st.error("Could not update vendor.")
+
+                    st.markdown("---")
+                    st.caption("Danger zone")
+                    confirm_delete = st.checkbox("I understand this will remove the vendor and related records.", key=f"delete_confirm_{vendor_id}")
+                    if st.button("🗑️ Delete Vendor", type="secondary", key=f"delete_btn_{vendor_id}"):
+                        if not confirm_delete:
+                            st.error("Please confirm deletion first.")
+                        else:
+                            deleted = self.db.delete_vendor(vendor_id)
+                            if deleted:
+                                st.success(f"Vendor **{selected_name}** deleted.")
+                                st.rerun()
+                            else:
+                                st.error("Vendor not found or already deleted.")
+
+            with tab3:
                 st.subheader("Vendor Performance Summary")
                 vp = to_df(self.db.get_vendors_with_performance())
                 if not vp.empty:
@@ -1192,6 +1677,46 @@ class VendorDashboard:
                     m2.metric("Avg On-Time",       f"{v_row.get('avg_on_time', 0):.1f}%")
                     m3.metric("Avg Quality",       f"{v_row.get('avg_quality', 0):.1f}%")
                     m4.metric("Contract Value",    fmt_currency(v_row.get("contract_value", 0)))
+
+                    alert_col1, alert_col2 = st.columns(2)
+                    if alert_col1.button("📧 Send Performance Alert", key=f"perf_alert_{sel_vendor}"):
+                        perf_score = float(v_row.get("avg_performance", 0) or 0)
+                        sent = self.email_service.send_performance_alert(
+                            vendor_name=sel_vendor,
+                            performance_score=perf_score,
+                            threshold=st.session_state.get("perf_threshold", 70),
+                        )
+                        self.db.log_email(
+                            recipient=self.config.DEMO_ADMIN_EMAIL,
+                            subject=f"Performance alert for {sel_vendor}",
+                            body=f"Performance score: {perf_score:.1f}",
+                            status="sent" if sent else "failed",
+                        )
+                        if sent:
+                            st.success("Performance alert email sent.")
+                        else:
+                            st.warning("Email not sent. Check SMTP settings in environment variables.")
+
+                    if alert_col2.button("📧 Send Risk Alert", key=f"risk_alert_{sel_vendor}"):
+                        risk_df = to_df(self.db.get_risk_data())
+                        risk_row = risk_df[risk_df["vendor_name"] == sel_vendor].head(1) if not risk_df.empty and "vendor_name" in risk_df.columns else pd.DataFrame()
+                        risk_level = str(risk_row.iloc[0].get("risk_level", v_row.get("risk_level", "Low"))) if not risk_row.empty else str(v_row.get("risk_level", "Low"))
+                        risk_score = float(risk_row.iloc[0].get("overall_risk", 0) if not risk_row.empty else 0)
+                        sent = self.email_service.send_risk_alert(
+                            vendor_name=sel_vendor,
+                            risk_level=risk_level,
+                            risk_score=risk_score,
+                        )
+                        self.db.log_email(
+                            recipient=self.config.DEMO_ADMIN_EMAIL,
+                            subject=f"Risk alert for {sel_vendor}",
+                            body=f"Risk level: {risk_level}, score: {risk_score:.1f}",
+                            status="sent" if sent else "failed",
+                        )
+                        if sent:
+                            st.success("Risk alert email sent.")
+                        else:
+                            st.warning("Email not sent. Check SMTP settings in environment variables.")
 
                     # Performance history
                     perf = to_df(self.db.get_performance_data())
@@ -1204,7 +1729,7 @@ class VendorDashboard:
                             fig.update_layout(yaxis=dict(range=[0, 100]))
                             st.plotly_chart(fig, use_container_width=True)
 
-            with tab3:
+            with tab4:
                 st.subheader("Document Management")
                 docs = pd.DataFrame({
                     "Document": ["Certificate of Insurance", "W-9 / Tax Form",

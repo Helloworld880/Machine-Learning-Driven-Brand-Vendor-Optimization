@@ -5,5 +5,8 @@
     "python.analysis.diagnosticSeverityOverrides": {
         "reportMissingImports": "none"
     },
-    "git.ignoreLimitWarning": true
+    "git.ignoreLimitWarning": true,
+    "cursorpyright.analysis.diagnosticSeverityOverrides": {
+        "reportMissingImports": "none"
+    }
 }

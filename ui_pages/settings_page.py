@@ -1,6 +1,24 @@
 import os
+from pathlib import Path
 
 import streamlit as st
+
+
+def _upsert_env_values(updates: dict[str, str]) -> Path:
+    env_path = Path(".env")
+    existing: dict[str, str] = {}
+    if env_path.exists():
+        for raw_line in env_path.read_text(encoding="utf-8").splitlines():
+            line = raw_line.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            existing[key.strip()] = value.strip()
+
+    existing.update({k: str(v) for k, v in updates.items()})
+    body = "\n".join(f"{key}={value}" for key, value in sorted(existing.items()))
+    env_path.write_text(f"{body}\n", encoding="utf-8")
+    return env_path
 
 
 def render_settings(dashboard):
@@ -32,6 +50,42 @@ def render_settings(dashboard):
         )
         if st.button("💾 Update Config"):
             st.success("System config updated!")
+
+        st.divider()
+        st.subheader("Email & SMTP")
+        st.caption("Configure SMTP for dashboard alert emails.")
+        with st.form("email_settings_form"):
+            e1, e2 = st.columns(2)
+            smtp_host = e1.text_input("SMTP Host", value=str(getattr(dashboard.config, "EMAIL_HOST", "smtp.gmail.com")))
+            smtp_port = e2.number_input("SMTP Port", min_value=1, max_value=65535, value=int(getattr(dashboard.config, "EMAIL_PORT", 587)), step=1)
+            smtp_user = e1.text_input("SMTP Username", value=str(getattr(dashboard.config, "EMAIL_USER", "")))
+            smtp_password = e2.text_input("SMTP Password / App Password", value=str(getattr(dashboard.config, "EMAIL_PASSWORD", "")), type="password")
+            admin_email = st.text_input("Alert Recipient (Admin Email)", value=str(getattr(dashboard.config, "DEMO_ADMIN_EMAIL", "admin@company.com")))
+            save_email = st.form_submit_button("💾 Save Email Settings", type="primary")
+
+            if save_email:
+                if not smtp_host.strip():
+                    st.error("SMTP host is required.")
+                elif not admin_email.strip():
+                    st.error("Admin email is required.")
+                else:
+                    updates = {
+                        "EMAIL_HOST": smtp_host.strip(),
+                        "EMAIL_PORT": str(int(smtp_port)),
+                        "EMAIL_USER": smtp_user.strip(),
+                        "EMAIL_PASSWORD": smtp_password,
+                        "DEMO_ADMIN_EMAIL": admin_email.strip(),
+                    }
+                    env_path = _upsert_env_values(updates)
+
+                    for key, value in updates.items():
+                        os.environ[key] = value
+                        setattr(dashboard.config, key, int(value) if key == "EMAIL_PORT" else value)
+                        if hasattr(dashboard, "email_service") and getattr(dashboard, "email_service", None):
+                            setattr(dashboard.email_service.config, key, int(value) if key == "EMAIL_PORT" else value)
+
+                    st.success(f"Email settings saved to {env_path}. New values are active now.")
+                    st.caption("Restarting the app is recommended to ensure all modules pick up the new environment.")
 
     with tab3:
         st.subheader("Data Management")

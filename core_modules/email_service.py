@@ -4,11 +4,12 @@ from email.mime.multipart import MIMEMultipart
 import logging
 from datetime import datetime
 from ai_integration import SmartAlertEngine
+from core_modules.config import Config
 
 
 class EmailService:
     def __init__(self):
-        self.config = None
+        self.config = Config()
         self.logger = logging.getLogger(__name__)
         self.alert_engine = SmartAlertEngine()  # ← AI engine initialized once
 
@@ -19,10 +20,13 @@ class EmailService:
     def send_email(self, to_email, subject, body, html_body=None):
         """Send email notification via SMTP"""
         try:
-            smtp_server = "smtp.gmail.com"
-            smtp_port = 587
-            sender_email = "your_email@gmail.com"
-            sender_password = "your_app_password"  # Use Gmail App Password!
+            smtp_server = self.config.EMAIL_HOST
+            smtp_port = self.config.EMAIL_PORT
+            sender_email = self.config.EMAIL_USER
+            sender_password = self.config.EMAIL_PASSWORD
+            if not sender_email or not sender_password:
+                self.logger.warning("Email credentials are not configured. Set EMAIL_USER and EMAIL_PASSWORD.")
+                return False
 
             # Create message
             msg = MIMEMultipart("alternative")
@@ -41,12 +45,11 @@ class EmailService:
                 server.login(sender_email, sender_password)
                 server.send_message(msg)
 
-            print(f"✅ EMAIL SENT TO {to_email}")
+            self.logger.info("Email sent to %s", to_email)
             return True
 
         except Exception as e:
             self.logger.error(f"❌ Failed to send email: {e}")
-            print(f"❌ Failed to send email: {e}")
             return False
 
     def send_performance_alert(self, vendor_name, performance_score, threshold=70, previous_score=None):
@@ -83,7 +86,7 @@ Please review and take appropriate action.
 """
         # ────────────────────────────────────────────────────────────────────
 
-        admin_email = "admin@company.com"
+        admin_email = self.config.DEMO_ADMIN_EMAIL
         return self.send_email(admin_email, subject, body)
 
     def send_risk_alert(self, vendor_name, risk_level, risk_score, previous_risk_score=None):
@@ -120,5 +123,5 @@ Immediate attention recommended.
 """
         # ────────────────────────────────────────────────────────────────────
 
-        admin_email = "admin@company.com"
+        admin_email = self.config.DEMO_ADMIN_EMAIL
         return self.send_email(admin_email, subject, body)

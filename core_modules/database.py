@@ -341,6 +341,40 @@ class DatabaseManager:
                           contract_value, rating, datetime.now().strftime("%Y-%m-%d"), country))
             conn.commit()
 
+    def update_vendor(self, vendor_id, **updates):
+        allowed = {
+            "name",
+            "email",
+            "phone",
+            "category",
+            "status",
+            "risk_level",
+            "contract_value",
+            "rating",
+            "country",
+        }
+        clean_updates = {key: value for key, value in updates.items() if key in allowed}
+        if not clean_updates:
+            return False
+
+        assignments = ", ".join(f"{column} = ?" for column in clean_updates)
+        values = list(clean_updates.values()) + [vendor_id]
+        with sqlite3.connect(self.db_path) as conn:
+            cursor = conn.execute(f"UPDATE vendors SET {assignments} WHERE id = ?", values)
+            conn.commit()
+            return cursor.rowcount > 0
+
+    def delete_vendor(self, vendor_id):
+        with sqlite3.connect(self.db_path) as conn:
+            conn.execute("DELETE FROM performance_metrics WHERE vendor_id = ?", (vendor_id,))
+            conn.execute("DELETE FROM financial_metrics WHERE vendor_id = ?", (vendor_id,))
+            conn.execute("DELETE FROM risk_assessments WHERE vendor_id = ?", (vendor_id,))
+            conn.execute("DELETE FROM compliance_records WHERE vendor_id = ?", (vendor_id,))
+            conn.execute("DELETE FROM ml_predictions WHERE vendor_id = ?", (vendor_id,))
+            cursor = conn.execute("DELETE FROM vendors WHERE id = ?", (vendor_id,))
+            conn.commit()
+            return cursor.rowcount > 0
+
     # ─────────────────────────────────────────────
     # PERFORMANCE QUERIES
     # ─────────────────────────────────────────────
@@ -475,9 +509,14 @@ class DatabaseManager:
     def get_risk_history(self):
         csv_df = self._load_csv("risk_history.csv")
         if not csv_df.empty:
+            if "vendor_id" not in csv_df.columns:
+                logger.warning("risk_history.csv missing required column: vendor_id")
+                return pd.DataFrame()
+
             vendors = self.get_vendors()[["id", "category", "contract_value"]].rename(columns={"id": "vendor_id"})
             csv_df = csv_df.merge(vendors, on="vendor_id", how="left")
-            return csv_df.sort_values(["vendor_id", "assessment_date"])
+            sort_cols = [c for c in ["vendor_id", "assessment_date"] if c in csv_df.columns]
+            return csv_df.sort_values(sort_cols) if sort_cols else csv_df
 
         return pd.DataFrame()
 
@@ -506,10 +545,15 @@ class DatabaseManager:
     def get_compliance_history(self):
         csv_df = self._load_csv("compliance_history.csv")
         if not csv_df.empty:
+            if "vendor_id" not in csv_df.columns:
+                logger.warning("compliance_history.csv missing required column: vendor_id")
+                return pd.DataFrame()
+
             vendors = self.get_vendors()[["id", "category"]].rename(columns={"id": "vendor_id"})
             csv_df = csv_df.merge(vendors, on="vendor_id", how="left")
             csv_df = csv_df.rename(columns={"compliance_id": "id", "compliance_score": "audit_score"})
-            return csv_df.sort_values(["vendor_id", "audit_date"])
+            sort_cols = [c for c in ["vendor_id", "audit_date"] if c in csv_df.columns]
+            return csv_df.sort_values(sort_cols) if sort_cols else csv_df
 
         return pd.DataFrame()
 
