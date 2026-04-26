@@ -179,10 +179,5 @@ def main() -> None:
         st.error(f"Unable to reach the backend API: {exc}")
 
 
-
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-API_URL = os.getenv("STREAMLIT_API_BASE_URL")
+if __name__ == "__main__":
+    main()

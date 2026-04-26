@@ -10,7 +10,7 @@ from sqlalchemy.orm import Session, sessionmaker
 
 from config.settings import get_settings
 from database.models import Base, User
-from utils.security import hash_password
+from utils.security import hash_password, verify_password
 
 
 settings = get_settings()
@@ -88,6 +88,20 @@ def seed_default_admin() -> None:
                 is_active=True,
             )
             session.add(admin)
+            session.commit()
+            return
+
+        updated = False
+        if not verify_password(settings.admin_password, admin.password_hash):
+            admin.password_hash = hash_password(settings.admin_password)
+            updated = True
+        if admin.role != settings.admin_role:
+            admin.role = settings.admin_role
+            updated = True
+        if not admin.is_active:
+            admin.is_active = True
+            updated = True
+        if updated:
             session.commit()
 
 
