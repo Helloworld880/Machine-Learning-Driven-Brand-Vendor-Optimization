@@ -62,6 +62,9 @@ jobs:
       - name: Lint
         run: ruff check api config database services utils tests run_api.py
 
+      - name: Runtime import smoke check
+        run: python scripts/check_runtime_imports.py
+
       - name: Run tests
         run: pytest tests/test_api_integration.py
 
