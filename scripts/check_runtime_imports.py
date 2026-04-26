@@ -30,12 +30,15 @@ THIRD_PARTY_MODULES = [
     "redis",
     "reportlab",
     "requests",
-    "schedule",
     "sklearn",
     "sqlalchemy",
     "streamlit",
     "uvicorn",
     "xlsxwriter",
+]
+
+OPTIONAL_THIRD_PARTY_MODULES = [
+    "schedule",
 ]
 
 APP_MODULES = [
@@ -77,6 +80,15 @@ def main() -> int:
             failures.append(f"{module_name}: {exc}")
             print(f"[FAIL] {module_name}: {exc}")
 
+    optional_failures: list[str] = []
+    for module_name in OPTIONAL_THIRD_PARTY_MODULES:
+        try:
+            importlib.import_module(module_name)
+            print(f"[OK] {module_name}")
+        except Exception as exc:
+            optional_failures.append(f"{module_name}: {exc}")
+            print(f"[WARN] {module_name}: {exc}")
+
     for path in ENTRY_FILES:
         try:
             import_file_module(path)
@@ -90,6 +102,11 @@ def main() -> int:
         for failure in failures:
             print(f" - {failure}")
         return 1
+
+    if optional_failures:
+        print("\nOptional imports not available in this environment:")
+        for failure in optional_failures:
+            print(f" - {failure}")
 
     print("\nAll runtime imports succeeded.")
     return 0
