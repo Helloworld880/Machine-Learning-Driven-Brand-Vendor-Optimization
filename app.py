@@ -4,11 +4,13 @@ from typing import Any
 import pandas as pd
 import requests
 import streamlit as st
+from dotenv import load_dotenv
 
 
 REQUEST_TIMEOUT_SECONDS = int(os.getenv("STREAMLIT_REQUEST_TIMEOUT_SECONDS", "20"))
 DEFAULT_API_BASE_URL = "http://localhost:8000"
 
+load_dotenv(dotenv_path=".env", override=True)
 
 def _is_local_api_url(url: str) -> bool:
     lowered = url.lower()
