@@ -6,8 +6,34 @@ import requests
 import streamlit as st
 
 
-API_BASE_URL = os.getenv("STREAMLIT_API_BASE_URL", os.getenv("API_BASE_URL", "http://localhost:8000")).rstrip("/")
 REQUEST_TIMEOUT_SECONDS = int(os.getenv("STREAMLIT_REQUEST_TIMEOUT_SECONDS", "20"))
+
+
+def _get_secret(name: str) -> str | None:
+    try:
+        value = st.secrets.get(name)
+    except Exception:
+        return None
+    return str(value).strip() if value else None
+
+
+def _resolve_api_base_url() -> str:
+    configured = (
+        os.getenv("STREAMLIT_API_BASE_URL")
+        or os.getenv("API_BASE_URL")
+        or _get_secret("STREAMLIT_API_BASE_URL")
+        or _get_secret("API_BASE_URL")
+        or "http://localhost:8000"
+    )
+    return configured.rstrip("/")
+
+
+def _is_local_api_url(url: str) -> bool:
+    lowered = url.lower()
+    return "localhost" in lowered or "127.0.0.1" in lowered
+
+
+API_BASE_URL = _resolve_api_base_url()
 
 
 def _api_get(path: str, token: str) -> dict[str, Any]:
@@ -39,6 +65,11 @@ def _logout() -> None:
 
 def _render_connection_banner() -> None:
     st.caption(f"API base URL: `{API_BASE_URL}`")
+    if _is_local_api_url(API_BASE_URL):
+        st.warning(
+            "This frontend is still pointed at a local API URL. On Streamlit Cloud, set "
+            "`STREAMLIT_API_BASE_URL` or `API_BASE_URL` to your deployed backend URL."
+        )
 
 
 def _render_login() -> None:
