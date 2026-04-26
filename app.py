@@ -16,9 +16,18 @@ st.set_page_config(
     initial_sidebar_state="expanded",
 )
 import numpy as np
-import plotly.express as px
-import plotly.graph_objects as go
-from plotly.subplots import make_subplots
+try:
+    import plotly.express as px
+    import plotly.graph_objects as go
+    from plotly.subplots import make_subplots
+    _PLOTLY_AVAILABLE = True
+    _PLOTLY_IMPORT_ERROR = None
+except ImportError as e:
+    px = None
+    go = None
+    make_subplots = None
+    _PLOTLY_AVAILABLE = False
+    _PLOTLY_IMPORT_ERROR = e
 import os
 import warnings
 from datetime import datetime, timedelta
@@ -33,10 +42,6 @@ from core_modules.database import DatabaseManager
 from core_modules.analytics import AnalyticsEngine
 from core_modules.config import Config
 from core_modules.email_service import EmailService
-from ui_pages.ai_page import render_ai_workspace as render_ai_workspace_page
-from ui_pages.reports_page import render_reports as render_reports_page
-from ui_pages.risk_page import render_risk_management as render_risk_management_page
-from ui_pages.settings_page import render_settings as render_settings_page
 
 # ML Engine (lazy-loaded)
 _ML_AVAILABLE = False
@@ -412,6 +417,16 @@ class VendorDashboard:
             if k not in st.session_state:
                 st.session_state[k] = v
 
+    def _require_plotly(self):
+        if _PLOTLY_AVAILABLE:
+            return True
+        st.error(
+            "Plotly is not available in the current deployment, so chart-based pages cannot load yet."
+        )
+        if _PLOTLY_IMPORT_ERROR is not None:
+            st.caption(f"Import error: {_PLOTLY_IMPORT_ERROR}")
+        return False
+
     def _dataset_inventory(self):
         data_dir = os.path.join(os.getcwd(), "Data layer")
         if not os.path.exists(data_dir):
@@ -717,6 +732,8 @@ class VendorDashboard:
         return perf_df, fin_df, perf_history, compliance, risk
 
     def render_ai_workspace(self):
+        from ui_pages.ai_page import render_ai_workspace as render_ai_workspace_page
+
         render_ai_workspace_page(self)
 
     # ─────────────────────────────────────────────────────────────────────────
@@ -789,6 +806,8 @@ class VendorDashboard:
     # 1. OVERVIEW
     # ─────────────────────────────────────────────────────────────────────────
     def render_overview(self):
+        if not self._require_plotly():
+            return
         st.markdown('<div class="main-header">🏠 Vendor Performance Overview</div>',
                 unsafe_allow_html=True)
 
@@ -887,6 +906,8 @@ class VendorDashboard:
         # 2. VENDOR PERFORMANCE
         # ─────────────────────────────────────────────────────────────────────────
     def render_vendor_performance(self):
+            if not self._require_plotly():
+                return
             st.markdown('<div class="main-header">📊 Vendor Performance Analysis</div>',
                         unsafe_allow_html=True)
 
@@ -982,6 +1003,8 @@ class VendorDashboard:
         # 3. FINANCIAL ANALYTICS
         # ─────────────────────────────────────────────────────────────────────────
     def render_financial_analytics(self):
+            if not self._require_plotly():
+                return
             st.markdown('<div class="main-header">💰 Financial Analytics</div>',
                         unsafe_allow_html=True)
 
@@ -1045,12 +1068,16 @@ class VendorDashboard:
         # 4. RISK MANAGEMENT
         # ─────────────────────────────────────────────────────────────────────────
     def render_risk_management(self):
+            from ui_pages.risk_page import render_risk_management as render_risk_management_page
+
             render_risk_management_page(self)
 
         # ─────────────────────────────────────────────────────────────────────────
         # 6. COMPLIANCE
         # ─────────────────────────────────────────────────────────────────────────
     def render_compliance(self):
+            if not self._require_plotly():
+                return
             st.markdown('<div class="main-header">📋 Compliance Management</div>',
                         unsafe_allow_html=True)
 
@@ -1109,6 +1136,8 @@ class VendorDashboard:
         # 7. ML PREDICTIONS (NEW & REAL)
         # ─────────────────────────────────────────────────────────────────────────
     def render_ml_predictions(self):
+            if not self._require_plotly():
+                return
             st.markdown('<div class="main-header">🤖 ML Predictions & Insights</div>',
                         unsafe_allow_html=True)
 
@@ -1560,6 +1589,8 @@ class VendorDashboard:
         # 8. REPORTS
         # ─────────────────────────────────────────────────────────────────────────
     def render_reports(self):
+            from ui_pages.reports_page import render_reports as render_reports_page
+
             render_reports_page(self)
 
         # ─────────────────────────────────────────────────────────────────────────
@@ -1744,6 +1775,8 @@ class VendorDashboard:
         # 10. SETTINGS
         # ─────────────────────────────────────────────────────────────────────────
     def render_settings(self):
+            from ui_pages.settings_page import render_settings as render_settings_page
+
             render_settings_page(self)
 
         # ─────────────────────────────────────────────────────────────────────────

@@ -2,7 +2,14 @@ from datetime import datetime
 import json
 
 import pandas as pd
-import plotly.express as px
+try:
+    import plotly.express as px
+    _PLOTLY_AVAILABLE = True
+    _PLOTLY_IMPORT_ERROR = None
+except ImportError as e:
+    px = None
+    _PLOTLY_AVAILABLE = False
+    _PLOTLY_IMPORT_ERROR = e
 import streamlit as st
 
 import ai_integration as ai_tools
@@ -130,6 +137,11 @@ def _brief_section_card(icon: str, title: str, body: str, border_color: str = "#
 # ═══════════════════════════════════════════════════════════════════════════════
 
 def render_ai_workspace(dashboard):
+    if not _PLOTLY_AVAILABLE:
+        st.error("Plotly is not available in the current deployment, so the AI workspace charts cannot load.")
+        if _PLOTLY_IMPORT_ERROR is not None:
+            st.caption(f"Import error: {_PLOTLY_IMPORT_ERROR}")
+        return
     st.markdown(
         """
         <div class="hero-panel">

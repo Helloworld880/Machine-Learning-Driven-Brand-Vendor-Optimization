@@ -1,9 +1,18 @@
 import numpy as np
 import pandas as pd
-import plotly.express as px
-import plotly.graph_objects as go
+try:
+    import plotly.express as px
+    import plotly.graph_objects as go
+    from plotly.subplots import make_subplots
+    _PLOTLY_AVAILABLE = True
+    _PLOTLY_IMPORT_ERROR = None
+except ImportError as e:
+    px = None
+    go = None
+    make_subplots = None
+    _PLOTLY_AVAILABLE = False
+    _PLOTLY_IMPORT_ERROR = e
 import streamlit as st
-from plotly.subplots import make_subplots
 
 
 def _format_pct(val):
@@ -14,6 +23,11 @@ def _format_pct(val):
 
 
 def render_risk_management(dashboard):
+    if not _PLOTLY_AVAILABLE:
+        st.error("Plotly is not available in the current deployment, so the risk charts cannot load.")
+        if _PLOTLY_IMPORT_ERROR is not None:
+            st.caption(f"Import error: {_PLOTLY_IMPORT_ERROR}")
+        return
     st.markdown(
         """
         <div class="hero-panel">
