@@ -18,6 +18,15 @@ API_BASE_URL = (
 
 # load_dotenv(dotenv_path=".env", override=True)
 
+@app.post("/api/v1/login")
+def login(username: str = Form(...), password: str = Form(...)):
+    
+    # 🔥 TEMP BYPASS (for testing only)
+    if username == "admin" and password == "admin123":
+        return {"access_token": "dummy-token"}
+
+    return {"detail": "Invalid credentials"}
+
 def _is_local_api_url(url: str) -> bool:
     lowered = url.lower()
     return "localhost" in lowered or "127.0.0.1" in lowered
