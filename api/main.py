@@ -298,7 +298,7 @@ def create_app() -> FastAPI:
     @app.post(f"{settings.api_prefix}/login")
     def login(form_data: OAuth2PasswordRequestForm = Depends()) -> dict[str, str]:
         # 🔥 TEMP LOGIN (bypass DB)
-        if form_data.username == "admin" and form_data.password == "admin123":
+        if form_data.username == settings.admin_username and form_data.password == settings.admin_password:
             return {
                 "access_token": _create_token("1", "admin", "admin", "access"),
                 "refresh_token": _create_token("1", "admin", "admin", "refresh"),
